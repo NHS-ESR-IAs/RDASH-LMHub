@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class Calendar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container my-4">
+        <h1 class="mb-4">NHS Class Calendar</h1>
+
+        <!-- Search bar -->
+        <div class="input-group mb-3">
+            <span class="input-group-text">Search</span>
+            <input type="text" id="searchInput" class="form-control"
+                placeholder="Filter by course, category, trainer...">
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="classModalLabel">Class Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row" id="modalDetails"></dl>
+                </div>
+                <div class="modal-footer">
+                    <a id="modalLink" href="#" target="_blank" class="btn btn-primary">Go to Offering</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function excelDateToJSDate(serial) {
+            const excelEpoch = new Date(Date.UTC(1899, 11, 30));
+            return new Date(excelEpoch.getTime() + serial * 86400000);
+        }
+
+        let allEvents = [];
+        let calendar;
+
+        fetch("Data/ClassList.json")
+            .then(response => response.json())
+            .then(classData => {
+                allEvents = classData.map(item => {
+                    const startDate = excelDateToJSDate(item["Start Date"]);
+                    const endDate = excelDateToJSDate(item["End Date"]);
+
+                    let start = new Date(startDate);
+                    let end = new Date(endDate);
+
+                    if (item["Start Time"]) {
+                        const [h, m] = item["Start Time"].split(":");
+                        start.setHours(h, m);
+                    }
+                    if (item["End Time"]) {
+                        const [h, m] = item["End Time"].split(":");
+                        end.setHours(h, m);
+                    }
+
+                    return {
+                        title: item.Course,
+                        start: start,
+                        end: end,
+                        extendedProps: item
+                    };
+                });
+
+                const calendarEl = document.getElementById('calendar');
+                calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    events: allEvents,
+                    eventClick: function (info) {
+                        info.jsEvent.preventDefault();
+                        const data = info.event.extendedProps;
+
+                        const detailsEl = document.getElementById('modalDetails');
+                        detailsEl.innerHTML = "";
+                        for (const [key, value] of Object.entries(data)) {
+                            if (value !== null && key !== "Offering link") {
+                                const dt = document.createElement("dt");
+                                dt.className = "col-sm-4";
+                                dt.textContent = key;
+                                const dd = document.createElement("dd");
+                                dd.className = "col-sm-8";
+                                dd.textContent = value;
+                                detailsEl.appendChild(dt);
+                                detailsEl.appendChild(dd);
+                            }
+                        }
+
+                        const linkEl = document.getElementById('modalLink');
+                        if (data["Offering link"]) {
+                            linkEl.href = data["Offering link"];
+                            linkEl.style.display = "inline-block";
+                        } else {
+                            linkEl.style.display = "none";
+                        }
+
+                        const modal = new bootstrap.Modal(document.getElementById('classModal'));
+                        modal.show();
+                    }
+                });
+                calendar.render();
+            });
+
+        // Search filter
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            const filtered = allEvents.filter(ev => {
+                const props = ev.extendedProps;
+                return (
+                    ev.title.toLowerCase().includes(query) ||
+                    (props.Category && props.Category.toLowerCase().includes(query)) ||
+                    (props["Last Updated By"] && props["Last Updated By"].toLowerCase().includes(query))
+                );
+            });
+            calendar.removeAllEvents();
+            calendar.addEventSource(filtered);
+        });
+    </script>
+</body>
+
+</html>
