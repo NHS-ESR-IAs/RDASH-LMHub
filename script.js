@@ -101,3 +101,48 @@ window.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("theme-" + savedTheme, savedSize);
   updateDarkMode();
 });
+
+// Grab your search box element
+const searchBox = document.getElementById("searchInput"); // adjust ID if different
+
+// Simple debounce helper to avoid logging every keystroke
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+// Function to log search terms
+function logSearchTerm(term) {
+  if (term.length > 2) {
+    // only log meaningful queries
+    console.log("Search term:", term);
+
+    // Example: send to Google Analytics (GA4)
+    if (typeof gtag === "function") {
+      gtag("event", "search", {
+        search_term: term,
+      });
+    }
+
+    // Or: send to your own endpoint
+    /*
+    fetch('https://your-endpoint.example.com/log', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ search: term, timestamp: Date.now() })
+    });
+    */
+  }
+}
+
+// Attach listener with debounce
+searchBox.addEventListener(
+  "input",
+  debounce(function () {
+    const term = searchBox.value.trim();
+    logSearchTerm(term);
+  }, 500)
+); // waits 0.5s after typing stops
