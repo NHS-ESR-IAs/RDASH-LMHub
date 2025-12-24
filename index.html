@@ -2,17 +2,9 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCMBFWQ94L"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-ZCMBFWQ94L');
-  </script>
   <meta charset="UTF-8">
-  <title>RDaSH Line Manager Resource Hub</title>
+  <title>RDaSH Learning Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap 5 (only once) -->
@@ -21,7 +13,7 @@
   <!-- FullCalendar CSS -->
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -31,7 +23,7 @@
   <header class="nhs-header">
     <div class="container">
       <div class="row">
-        <h1>Line Manager Resource Hub</h1>
+        <h1>Learning Hub</h1>
         <!--<div class="banner-wrapper">
           <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
           <div class="banner-text-overlay">
@@ -47,13 +39,18 @@
 
           <div class="collapse navbar-collapse" id="navMenu">
             <div class="logo-container">
-              <img src="https://assets.codepen.io/8889025/RDaSH_LMRH8a.png" class="logo esr" />
-              <img src="https://assets.codepen.io/8889025/RDaSH_LMRH8a.png" class="logo nhs" />
+              <img src="Assets/LMHub_Logo.png" class="logo esr" />
+              <img src="Assets/LMHub_Logo.png" class="logo nhs" />
             </div>
 
             <ul class="navbar-nav mx-auto">
               <li class="nav-item"><a class="nav-link" onclick="showPage('home')">Home</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('Educator')">Educator</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('Learner')">Learner</a></li>
               <li class="nav-item"><a class="nav-link" onclick="showPage('Course_Catalogue')">Course Catalogue</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('Learner_VV')">Learners Video Vault</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('Training_Rooms')">Training Rooms</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('FAQs')">FAQs</a></li>
             </ul>
           </div>
         </div>
@@ -121,91 +118,138 @@
       <!--Alternate placng for banner-wrapper -->
       <div class="row">
         <div class="col">
-          <h5>The role of a line manager is vital to how we feel at work, and to delivering patient services. You give
-            direction, help clarify individual and team objectives, and are instrumental in ensuring colleagues feel
-            valued, supported, and cared for at work.</h5>
-          <h5>Here you will find information and resources to support you in your role as a Line Manager.</h5>
-          <h5>Click on the cogs to navigate your way around the hub.</h5>
+
 
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <div id="bod">
-            <div class="cog cog1" onclick="showPage('LMRH_MP');">
-              <div class="spoke"></div>
-              <div class="spoke spoke1"></div>
-              <div class="spoke spoke2"></div>
-              <div class="spoke spoke3"></div>
-              <div class="hole hole1">Managing People</div>
-            </div>
-            <div class="sm_cog sm_cog2">
-              <div class="sm_spoke"></div>
-              <div class="sm_spoke sm_spoke1"></div>
-              <div class="sm_spoke sm_spoke2"></div>
-              <div class="sm_spoke sm_spoke3"></div>
-              <div class="sm_hole sm_hole2"></div>
-            </div>
-            <div class="cog cog3" onclick="showPage('LMRH_SP');">
-              <div class="spoke"></div>
-              <div class="spoke spoke1"></div>
-              <div class="spoke spoke2"></div>
-              <div class="spoke spoke3"></div>
-              <div class="hole hole3">Systems and Processes</div>
-            </div>
-            <div class="sm_cog sm_cog4">
-              <div class="sm_spoke"></div>
-              <div class="sm_spoke sm_spoke1"></div>
-              <div class="sm_spoke sm_spoke2"></div>
-              <div class="sm_spoke sm_spoke3"></div>
-              <div class="sm_hole sm_hole4"></div>
-            </div>
-            <div class="cog cog5" onclick="showPage('LMRH_LC');">
-              <div class="spoke"></div>
-              <div class="spoke spoke1"></div>
-              <div class="spoke spoke2"></div>
-              <div class="spoke spoke3"></div>
-              <div class="hole hole5">Leadership and Culture</div>
-            </div>
-            <div class="sm_cog sm_cog6">
-              <div class="sm_spoke"></div>
-              <div class="sm_spoke sm_spoke1"></div>
-              <div class="sm_spoke sm_spoke2"></div>
-              <div class="sm_spoke sm_spoke3"></div>
-              <div class="sm_hole sm_hole6"></div>
-            </div>
-            <div class="cog cog7" onclick="showPage('LMRH_LMTP');">
-              <div class="spoke"></div>
-              <div class="spoke spoke1"></div>
-              <div class="spoke spoke2"></div>
-              <div class="spoke spoke3"></div>
-              <div class="hole hole7">Line Management Training Catalogue</div>
-            </div>
-            <div class="center-text" id="center-text"></div>
-          </div>
+          <h2>Welcome to the Learning Hub</h2>
+
+          <section class="learning-half-days">
+            <h3>What are learning half days?</h3>
+            <p>Learning half days happen once a month. They are half days set aside just for learning.</p>
+          </section>
+
+          <section class="why-learning-half-days">
+            <h3>Why do we have learning half days?</h3>
+            <p>Learning Half Days are a special thank you from the Trust. They give you time to learn, think, and grow
+              in your job. This space is here to help you work together, keep learning, and improve your skills. In this
+              hub, you’ll find lots of useful resources, fun classes, and chances to meet others who also want to learn.
+              Every course and tool is made to help you share ideas and do well. Whether you want to try something new,
+              get better at what you do, or share what you know, this is the place for you.
+              Jump in, explore, and let’s learn together!</p>
+          </section>
         </div>
       </div>
       <div class="row">
-        <div class="col">
-          <h5>What's new</h5>
-          <p><b>4th December 2024</b></p>
-          <ul>
-            <li><a href="#" onclick="showPage('LMRH_MP2b');">Apprenticeship First</a>
-          </ul>
-          <p><b>May 2025</b></p>
-          <ul>
-            <li><a href="#" onclick="showPage('LMRH_SP12');">Radar Healthcare page - outlining our new Risk, Audit and
-                Quality Assurance System</a>
-            <li><a href="#" onclick="showPage('LMRH_LMTP');">More learning sessions added to the Line Management
-                Training Catalogue</a>
-          </ul>
-          <p><b>June 2025</b></p>
-          <ul>
-            <li><a href="#" onclick="showPage('LMRH_LC4');">Leadership Apprenticeships
-              </a>
-          </ul>
+        <div class="col-4">
+          <!-- Compact vertical list (next 4 weeks) -->
+          <div class="card mb-4">
+            <div class="card-header">
+              Upcoming (next 4 weeks)
+            </div>
+            <div class="card-body p-0">
+              <div id="upcomingList" class="p-3"></div>
+            </div>
+            <div class="card-footer text-end">
+              <a href="#" onclick="showPage('Course_Catalogue')" class=" btn btn-sm btn-outline-primary">View full
+                calendar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-8">
+          <!-- Put this inside a container where you want the tiles to appear -->
+          <div class="container py-4">
+            <div class="row g-3">
+
+              <div class="col-12 col-sm-6 col-md-4">
+                <a href="#" onclick="showPage('Educator')"
+                  class="card tile-card text-white bg-primary text-decoration-none" aria-label="Educator">
+                  <div class="card-body d-flex align-items-center justify-content-center">
+                    <h3 class="h5 mb-0">Educator</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                <a href="#" onclick="showPage('Learner')"
+                  class="card tile-card text-white bg-success text-decoration-none" aria-label="Learner">
+                  <div class="card-body d-flex align-items-center justify-content-center">
+                    <h3 class="h5 mb-0">Learner</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                <a href="#" onclick="showPage('Course_Catalogue')"
+                  class="card tile-card text-white bg-info text-decoration-none" aria-label="Learners Catalogue">
+                  <div class="card-body d-flex align-items-center justify-content-center">
+                    <h3 class="h5 mb-0">Learner's Catalogue</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                <a href="#" onclick="showPage('Learner_VV')"
+                  class="card tile-card text-white bg-warning text-decoration-none" aria-label="Learners Video Vault">
+                  <div class="card-body d-flex align-items-center justify-content-center">
+                    <h3 class="h5 mb-0 text-dark">Learners Video Vault</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                <a href="#" onclick="showPage('Training_Rooms')"
+                  class="card tile-card text-white bg-danger text-decoration-none" aria-label="Training Rooms">
+                  <div class="card-body d-flex align-items-center justify-content-center">
+                    <h3 class="h5 mb-0">Training Rooms</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                <a href="#" onclick="showPage('FAQs')"
+                  class="card tile-card text-white bg-secondary text-decoration-none" aria-label="FAQs">
+                  <div class="card-body d-flex align-items-center justify-content-center">
+                    <h3 class="h5 mb-0">FAQ’s</h3>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Optional CSS: add to your stylesheet -->
+          <style>
+            .tile-card {
+              height: 140px;
+              /* consistent tile height */
+              border: 0;
+              transition: transform .15s ease, box-shadow .15s ease;
+            }
+
+            .tile-card:hover,
+            .tile-card:focus {
+              transform: translateY(-6px);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+              text-decoration: none;
+            }
+
+            /* Ensure text contrast for the warning tile */
+            .tile-card.bg-warning .h5 {
+              color: #212529;
+            }
+
+            /* Make headings wrap nicely on small screens */
+            .tile-card .h5 {
+              text-align: center;
+              line-height: 1.1;
+            }
+          </style>
         </div>
       </div>
+
       <div class="row">
         <div class="col">
           <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
@@ -215,7 +259,7 @@
     </div>
   </div>
   <!-- ======================================================
-  = Course Catalogue SECTION =
+  = Learners Catalogue SECTION =
   ========================================================= -->
   <div id="Course_Catalogue" class="page">
     <div class="container">
@@ -224,17 +268,24 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Course Catalogue</li>
+              <li class="breadcrumb-item active" aria-current="page">Learner's Catalogue</li>
             </ol>
           </nav>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Course Catalogue</h3>
+        <div class="col-4 col-sm-6 col-md-4">
+          <a href="#" onclick="showPage('Course_Catalogue')"
+            class="card tile-card text-white bg-info text-decoration-none" aria-label="Learners Catalogue">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <h3 class="h5 mb-0">Learners Catalogue</h3>
+            </div>
+          </a>
         </div>
-        <div class="col-md-8 text-start"></div>
+        <div class="col-8 col-sm-6 col-md-4">
+          Sample text to balance the layout
+        </div>
       </div>
       <!-- Search bar -->
       <div class="row mb-3">
@@ -253,24 +304,88 @@
         </div>
       </div>
 
-      <!-- Modal for class details -->
-      <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="classModalLabel">Class Details</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-              <dl class="row" id="modalDetails"></dl>
-            </div>
-            <div class="modal-footer">
-              <a id="modalLink" href="#" target="_blank" class="btn btn-primary">Go to Offering</a>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
+
+
+      <div class="row">
+        <div class="col">
+          <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
         </div>
       </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================================
+  = Educator SECTION =
+  ========================================================= -->
+  <div id="Educator" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Educator</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-4 col-sm-6 col-md-4">
+          <a href="#" onclick="showPage('Educator')" class="card tile-card text-white bg-primary text-decoration-none"
+            aria-label="Educator">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <h3 class="h5 mb-0">Educator</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-8 col-sm-6 col-md-4">
+          Sample text to balance the layout
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================
+  = Learner SECTION =
+  ========================================================= -->
+  <div id="Learner" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Learner</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-4 col-sm-6 col-md-4">
+          <a href="#" onclick="showPage('Learner')" class="card tile-card text-white bg-success text-decoration-none"
+            aria-label="Learner">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <h3 class="h5 mb-0">Learner</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-8 col-sm-6 col-md-4">
+          Sample text to balance the layout
+        </div>
+      </div>
+
 
       <div class="row">
         <div class="col">
@@ -282,113 +397,153 @@
 
 
 
+  <!-- ======================================================
+  = Learner's Video Vault SECTION =
+  ========================================================= -->
+  <div id="Learner_VV" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Learner's Video Vault</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-4 col-sm-6 col-md-4">
+          <a href="#" onclick="showPage('Learner_VV')" class="card tile-card text-white bg-warning text-decoration-none"
+            aria-label="Learners Video Vault">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <h3 class="h5 mb-0 text-dark">Learners Video Vault</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-8 col-sm-6 col-md-4">
+          Sample text to balance the layout
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================
+  = Training Rooms SECTION =
+  ========================================================= -->
+  <div id="Training_Rooms" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Training Rooms</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-4 col-sm-6 col-md-4">
+          <a href="#" onclick="showPage('Training_Rooms')"
+            class="card tile-card text-white bg-danger text-decoration-none" aria-label="Training Rooms">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <h3 class="h5 mb-0">Training Rooms</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-8 col-sm-6 col-md-4">
+          Sample text to balance the layout
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================
+  = FAQs SECTION =
+  ========================================================= -->
+  <div id="FAQs" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+              <li class="breadcrumb-item active" aria-current="page">FAQs</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-4 col-sm-6 col-md-4">
+          <a href="#" onclick="showPage('FAQs')" class="card tile-card text-white bg-secondary text-decoration-none"
+            aria-label="FAQs">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <h3 class="h5 mb-0">FAQs</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-8 col-sm-6 col-md-4">
+          Sample text to balance the layout
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for class details -->
+  <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="classModalLabel">Class Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <dl class="row" id="modalDetails"></dl>
+        </div>
+        <div class="modal-footer">
+          <a id="modalLink" href="#" target="_blank" class="btn btn-primary">Go to Offering</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- JS libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-  <script src="./script.js"></script>
+  <script src="script.js" defer></script>
   <script>
-    function excelDateToJSDate(serial) {
-      const excelEpoch = new Date(Date.UTC(1899, 11, 30));
-      return new Date(excelEpoch.getTime() + serial * 86400000);
-    }
 
-    let allEvents = [];
-    let calendar;
-    let calendarInitialized = false;
-
-    function initCalendar() {
-      if (calendarInitialized) return;
-      calendarInitialized = true;
-
-      fetch("Data/ClassList.json")
-        .then(response => response.json())
-        .then(classData => {
-          allEvents = classData.map(item => {
-            const startDate = excelDateToJSDate(item["Start Date"]);
-            const endDate = excelDateToJSDate(item["End Date"]);
-
-            let start = new Date(startDate);
-            let end = new Date(endDate);
-
-            if (item["Start Time"]) {
-              const [h, m] = item["Start Time"].split(":");
-              start.setHours(h, m);
-            }
-            if (item["End Time"]) {
-              const [h, m] = item["End Time"].split(":");
-              end.setHours(h, m);
-            }
-
-            return {
-              title: item.Course,
-              start: start,
-              end: end,
-              extendedProps: item
-            };
-          });
-
-          const calendarEl = document.getElementById('calendar');
-          calendar = new FullCalendar.Calendar(calendarEl, {
-            // Default view = weekly
-            initialView: 'timeGridWeek',
-
-            // Add navigation + view switcher
-            headerToolbar: {
-              left: 'prev,next today',
-              center: 'title',
-              right: 'timeGridDay,timeGridWeek,dayGridMonth'
-            },
-
-            events: allEvents,
-            eventClick: function (info) {
-              info.jsEvent.preventDefault();
-              const data = info.event.extendedProps;
-
-              const detailsEl = document.getElementById('modalDetails');
-              detailsEl.innerHTML = "";
-              for (const [key, value] of Object.entries(data)) {
-                if (value !== null && key !== "Offering link") {
-                  const dt = document.createElement("dt");
-                  dt.className = "col-sm-4";
-                  dt.textContent = key;
-                  const dd = document.createElement("dd");
-                  dd.className = "col-sm-8";
-                  dd.textContent = value;
-                  detailsEl.appendChild(dt);
-                  detailsEl.appendChild(dd);
-                }
-              }
-
-              const linkEl = document.getElementById('modalLink');
-              if (data["Offering link"]) {
-                linkEl.href = data["Offering link"];
-                linkEl.style.display = "inline-block";
-              } else {
-                linkEl.style.display = "none";
-              }
-
-              const modal = new bootstrap.Modal(document.getElementById('classModal'));
-              modal.show();
-            }
-          });
-          calendar.render();
-
-          // 🔍 Search filter
-          document.getElementById('calendarSearch').addEventListener('input', function () {
-            const query = this.value.toLowerCase();
-            const filtered = allEvents.filter(ev => {
-              const props = ev.extendedProps;
-              return (
-                ev.title.toLowerCase().includes(query) ||
-                (props.Category && props.Category.toLowerCase().includes(query)) ||
-                (props["Last Updated By"] && props["Last Updated By"].toLowerCase().includes(query))
-              );
-            });
-            calendar.removeAllEvents();
-            calendar.addEventSource(filtered);
-          });
-        });
-    }
 
   </script>
 </body>

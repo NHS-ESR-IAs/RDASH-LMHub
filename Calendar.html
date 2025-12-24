@@ -87,6 +87,10 @@
                 calendar = new FullCalendar.Calendar(calendarEl, {
                     initialView: 'dayGridMonth',
                     events: allEvents,
+
+
+
+
                     eventClick: function (info) {
                         info.jsEvent.preventDefault();
                         const data = info.event.extendedProps;
