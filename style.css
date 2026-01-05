@@ -33,6 +33,21 @@ body.scale-xlarge .btn-primary {
   text-align: center;
 }
 
+/* Put this in your custom stylesheet loaded after bootstrap.css */
+a.card.tile-card.bg-warning.bg-warning-dark {
+  background-color: #C68600 !important;
+  color: #ffffff !important;
+  border-color: #1f1f1f !important;
+}
+
+/* Ensure the inner card-body inherits the color */
+a.card.tile-card.bg-warning.bg-warning-dark .card-body,
+a.card.tile-card.bg-warning.bg-warning-dark h3,
+a.card.tile-card.bg-warning.bg-warning-dark span {
+  color: #ffffff !important;
+}
+
+
 /* ============================================================
    NAVIGATION
 ============================================================ */
