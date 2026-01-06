@@ -47,6 +47,52 @@ a.card.tile-card.bg-warning.bg-warning-dark span {
   color: #ffffff !important;
 }
 
+.learning-half-days-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Accent bar on the left */
+.upcoming-item {
+  border-left: 5px solid #0d6efd;
+  padding: 0.75rem 1rem;
+}
+
+/* Title */
+.upcoming-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Category text */
+.upcoming-meta {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+/* Right-side date badge */
+.upcoming-badge {
+  background: #e7f1ff;
+  color: #0d6efd;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* Layout helpers */
+.upcoming-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.upcoming-right {
+  display: flex;
+  align-items: center;
+}
 
 /* ============================================================
    NAVIGATION

@@ -504,24 +504,29 @@ function renderUpcomingList(
       const item = document.createElement("button");
       item.type = "button";
       item.className =
-        "list-group-item list-group-item-action d-flex justify-content-between align-items-start";
+        "list-group-item list-group-item-action upcoming-item d-flex justify-content-between align-items-center";
       // Build content without using innerHTML to avoid accidental injection
+      // LEFT SIDE (title + category)
       const left = document.createElement("div");
-      left.className = "ms-2 me-auto";
+      left.className = "upcoming-left";
+
       const title = document.createElement("div");
-      title.className = "fw-semibold";
+      title.className = "upcoming-title";
       title.textContent = ev.title || "(Untitled)";
-      const meta = document.createElement("small");
-      meta.className = "text-muted";
+
+      const meta = document.createElement("div");
+      meta.className = "upcoming-meta";
       meta.textContent = (ev.extendedProps && ev.extendedProps.Category) || "";
 
       left.appendChild(title);
       left.appendChild(meta);
 
+      // RIGHT SIDE (date badge)
       const right = document.createElement("div");
-      right.className = "text-end";
-      const when = document.createElement("small");
-      when.className = "text-muted";
+      right.className = "upcoming-right";
+
+      const when = document.createElement("span");
+      when.className = "upcoming-badge";
       when.textContent = formatEventDateTime(ev.start);
 
       right.appendChild(when);
