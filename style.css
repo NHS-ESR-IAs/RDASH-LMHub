@@ -94,6 +94,32 @@ a.card.tile-card.bg-warning.bg-warning-dark span {
   align-items: center;
 }
 
+/* This adds a slight dark overlay over the images so white text pops */
+.carousel-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* Black with 40% opacity */
+}
+
+/* Ensure captions sit on top of the overlay */
+.carousel-caption {
+  z-index: 2;
+}
+
+/* Standardize image height for consistency */
+.carousel-item img {
+  height: 525px;
+  object-fit: cover;
+  object-position: center;
+  /* Keeps the main subject in view */
+}
+
 /* ============================================================
    NAVIGATION
 ============================================================ */
@@ -1551,4 +1577,98 @@ body.dark-mode .control-toolbar {
   /* Centers horizontally */
   align-items: center;
   /* Centers vertically */
+}
+
+
+/* ============ Rooms ============ */
+
+/* SCOPED CSS FOR MEETING ROOM WIDGET */
+#mr-directory-widget {
+  font-family: inherit;
+  max-width: 100%;
+  margin: 20px 0;
+  background: #fff;
+  color: #333;
+}
+
+#mr-directory-widget .mr-search-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#mr-directory-widget .mr-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #eee;
+}
+
+#mr-directory-widget table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+#mr-directory-widget th,
+#mr-directory-widget td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+#mr-directory-widget th {
+  background-color: #0056b3;
+  color: #ffffff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#mr-directory-widget tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#mr-directory-widget tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Specific Columns */
+#mr-directory-widget .mr-site-cell {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+#mr-directory-widget .mr-venue-name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#mr-directory-widget .mr-contact-cell {
+  white-space: pre-wrap;
+  font-size: 0.9em;
+}
+
+/* Split Column Alignment */
+.mr-sub-row {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+  min-height: 24px;
+}
+
+.mr-sub-row:last-child {
+  border-bottom: none;
+}
+
+#mr-directory-widget .mr-no-results {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  margin-top: -1px;
 }

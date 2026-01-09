@@ -745,3 +745,88 @@ function showEventDetailsFromData(data = {}) {
     console.error("showEventDetailsFromData error:", err);
   }
 }
+
+/* rooms code */
+
+(function () {
+  let roomData = []; // Store fetched data here
+  const tableBody = document.getElementById("mrTableBody");
+  const searchInput = document.getElementById("mrSearchInput");
+  const noResultsMsg = document.getElementById("mrNoResults");
+
+  // 1. Fetch the JSON data
+  fetch("rooms.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("HTTP error " + response.status);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      roomData = data; // Save to variable
+      renderTable(roomData); // Initial Render
+    })
+    .catch((err) => {
+      console.error("Error loading meeting room data: ", err);
+      // Optional: Show error message in the table
+      if (tableBody)
+        tableBody.innerHTML =
+          '<tr><td colspan="6">Error loading data. Please try again later.</td></tr>';
+    });
+
+  // 2. Render Function
+  function renderTable(data) {
+    if (!tableBody) return;
+    tableBody.innerHTML = "";
+
+    if (data.length === 0) {
+      noResultsMsg.style.display = "block";
+    } else {
+      noResultsMsg.style.display = "none";
+      data.forEach((row) => {
+        let roomNamesHtml = "";
+        let roomCapsHtml = "";
+
+        row.rooms.forEach((r) => {
+          roomNamesHtml += `<div class="mr-sub-row">${r.n}</div>`;
+          roomCapsHtml += `<div class="mr-sub-row">${r.c}</div>`;
+        });
+
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+                    <td class="mr-site-cell">${row.site}</td>
+                    <td class="mr-venue-name">${row.venue}</td>
+                    <td class="mr-contact-cell">${row.contact}</td>
+                    <td>${row.address}</td>
+                    <td>${roomNamesHtml}</td>
+                    <td>${roomCapsHtml}</td>
+                `;
+        tableBody.appendChild(tr);
+      });
+    }
+  }
+
+  // 3. Search Logic
+  if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase();
+      const filteredData = roomData.filter((item) => {
+        if (
+          item.site.toLowerCase().includes(filter) ||
+          item.venue.toLowerCase().includes(filter) ||
+          item.contact.toLowerCase().includes(filter) ||
+          item.address.toLowerCase().includes(filter)
+        ) {
+          return true;
+        }
+        const roomsMatch = item.rooms.some(
+          (r) =>
+            r.n.toLowerCase().includes(filter) ||
+            r.c.toLowerCase().includes(filter)
+        );
+        return roomsMatch;
+      });
+      renderTable(filteredData);
+    });
+  }
+})();
