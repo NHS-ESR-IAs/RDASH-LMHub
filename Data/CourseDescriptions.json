@@ -1,0 +1,102 @@
+[
+  {
+    "Course": "Asbestos Awareness",
+    "Description": "This course provides essential knowledge on the risks associated with asbestos, how to identify it, and the procedures to follow if you encounter materials suspected of containing asbestos.",
+    "TargetAudience": "Maintenance and Facilities Staff"
+  },
+  {
+    "Course": "Business Writing Skills",
+    "Description": "Enhance your professional communication. This workshop covers structuring reports, writing clear emails, and ensuring your written correspondence projects a professional image.",
+    "TargetAudience": "All Staff"
+  },
+  {
+    "Course": "Conflict Resolution",
+    "Description": "Learn practical techniques to de-escalate tension and resolve workplace conflicts constructively. Topics include active listening, negotiation, and maintaining professional relationships.",
+    "TargetAudience": "Managers and Team Leaders"
+  },
+  {
+    "Course": "Customer Service Excellence",
+    "Description": "Delivering exceptional service is key to our success. This session focuses on understanding customer needs, handling difficult queries, and going the extra mile.",
+    "TargetAudience": "Front-line Staff"
+  },
+  {
+    "Course": "Display Screen Equipment",
+    "Description": "Essential health and safety training for anyone who uses a computer. Learn how to set up your workstation correctly to avoid strain and injury.",
+    "TargetAudience": "All Office Staff"
+  },
+  {
+    "Course": "Equality & Diversity",
+    "Description": "Promoting an inclusive workplace is everyone's responsibility. This course explores the Equality Act, unconscious bias, and how to foster a respectful environment.",
+    "TargetAudience": "All Staff"
+  },
+  {
+    "Course": "Fire Safety Awareness",
+    "Description": "A mandatory briefing on fire prevention, evacuation procedures, and the correct use of fire extinguishers. Ensure you know what to do in an emergency.",
+    "TargetAudience": "Mandatory for All Staff"
+  },
+  {
+    "Course": "Health & Safety Induction",
+    "Description": "An introduction to general health and safety policies, accident reporting, and risk assessment basics for new starters.",
+    "TargetAudience": "New Starters"
+  },
+  {
+    "Course": "Leadership Essentials",
+    "Description": "A development program for current and aspiring leaders. Covers motivation, delegation, performance management, and building high-performing teams.",
+    "TargetAudience": "Management"
+  },
+  {
+    "Course": "Manual Handling",
+    "Description": "Practical training on lifting and moving objects safely to prevent back injury and musculoskeletal disorders.",
+    "TargetAudience": "All Staff"
+  },
+  {
+    "Course": "Project Management Basics",
+    "Description": "An introduction to the lifecycle of a project, including planning, execution, monitoring, and closing. Learn standard terminology and simple tools for success.",
+    "TargetAudience": "Project Leads"
+  },
+  {
+    "Course": "Time Management",
+    "Description": "Struggling with deadlines? This course offers strategies to prioritize tasks, manage interruptions, and improve your personal productivity.",
+    "TargetAudience": "All Staff"
+  },
+  {
+    "Course": "An introduction to SCM",
+    "Description": "Learn the fundamentals of Supply Chain Management, including logistics, procurement, and inventory flow to optimize organizational efficiency.",
+    "TargetAudience": "Logistics and Procurement Staff"
+  },
+  {
+    "Course": "Armed Forces Healthcare Training",
+    "Description": "Specialized healthcare protocols and considerations for treating active personnel and veterans, including mental health awareness and specific physical rehabilitation needs.",
+    "TargetAudience": "Clinical Staff and Healthcare Support Workers"
+  },
+  {
+    "Course": "Aspire: Nalozone Training Session",
+    "Description": "Critical training on the administration of Naloxone and identifying overdose symptoms. This session provides the skills to potentially save lives in emergency situations.",
+    "TargetAudience": "Front-line Support and Emergency Response Teams"
+  },
+  {
+    "Course": "Carers Awareness Training",
+    "Description": "A guide to supporting carers in the community, understanding their rights, the challenges they face, and how to effectively signpost them to available resources.",
+    "TargetAudience": "Social Workers and Community Support Staff"
+  },
+  {
+    "Course": "Change Management & Organisation Transformation",
+    "Description": "Strategies for leading teams through structural change and cultural transformation. Learn how to manage resistance and communicate effectively during periods of transition.",
+    "TargetAudience": "Senior Leadership and Management"
+  },
+  {
+    "Course": "Citizens Advice: Benefits Calculator and Budgeting Tool",
+    "Description": "A practical guide to using official calculator tools to assist clients with financial planning, benefits checks, and sustainable budgeting.",
+    "TargetAudience": "Advisors and Support Workers"
+  },
+  {
+    "Course": "Continuous Improvement and Lean Methodology",
+    "Description": "Focuses on reducing waste and improving efficiency using Lean Six Sigma principles. Learn how to identify bottlenecks and streamline processes.",
+    "TargetAudience": "Operational Managers and Process Leads"
+  },
+  {
+    "Course": "Culture, Collaboration & Leadership",
+    "Description": "Building high-performance teams through psychological safety and collaborative leadership. This course explores how to foster an environment of trust and open communication.",
+    "TargetAudience": "Team Leaders and Supervisors"
+  }
+]

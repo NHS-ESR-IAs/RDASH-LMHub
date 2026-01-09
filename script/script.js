@@ -106,6 +106,18 @@ function searchPages() {
     homePage.classList.remove("active");
 
     pages.forEach((page) => {
+      // 1. EXCLUSION CHECK
+      // If the page is Home or Course_Catalogue, force hide and skip search logic
+      if (
+        page.id === "home" ||
+        page.id === "Course_Catalogue" ||
+        page.id === "Training_Rooms"
+      ) {
+        page.classList.remove("active");
+        return; // Skip to the next iteration
+      }
+
+      // 2. SEARCH LOGIC (For all other pages)
       const match = page.innerText.toLowerCase().includes(query);
       page.classList.toggle("active", match);
     });
@@ -755,7 +767,7 @@ function showEventDetailsFromData(data = {}) {
   const noResultsMsg = document.getElementById("mrNoResults");
 
   // 1. Fetch the JSON data
-  fetch("rooms.json")
+  fetch("Data/rooms.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("HTTP error " + response.status);
@@ -830,3 +842,170 @@ function showEventDetailsFromData(data = {}) {
     });
   }
 })();
+
+/* Prospectus */
+
+// CONFIGURATION
+// Set this to false if you ONLY want to show courses that have active dates
+(function () {
+  // --- Configuration (Local to this script only) ---
+  const CONTAINER_ID = "courseList";
+  const SHOW_COURSES_WITHOUT_DATES = true;
+
+  // --- Helper Functions (Local) ---
+  function _local_excelDateToJSDate(serial) {
+    if (!serial) return null;
+    const utc_days = Math.floor(serial - 25569);
+    const utc_value = utc_days * 86400;
+    const date_info = new Date(utc_value * 1000);
+    return date_info.toLocaleDateString("en-GB");
+  }
+
+  function _local_renderCatalogue(classList, courseDescriptions) {
+    const container = document.getElementById(CONTAINER_ID);
+    if (!container) return; // Stop if container doesn't exist
+
+    const combinedData = {};
+
+    // 1. Process Descriptions
+    courseDescriptions.forEach((desc) => {
+      const courseName = desc["Course"].trim();
+      combinedData[courseName] = {
+        details: desc,
+        sessions: [],
+      };
+    });
+
+    // 2. Process Classes
+    classList.forEach((session) => {
+      const courseName = session["Course"]
+        ? session["Course"].trim()
+        : "Unknown Course";
+
+      if (!combinedData[courseName]) {
+        combinedData[courseName] = {
+          details: {
+            Course: courseName,
+            Description:
+              "Please contact the training team for full details on this module.",
+            TargetAudience: "General Staff",
+          },
+          sessions: [],
+        };
+      }
+      combinedData[courseName].sessions.push(session);
+    });
+
+    let htmlContent = "";
+    let index = 0;
+
+    // 3. Sort Alpha-Numerically
+    const sortedCourseNames = Object.keys(combinedData).sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" })
+    );
+
+    // 4. Generate HTML
+    sortedCourseNames.forEach((courseName) => {
+      const data = combinedData[courseName];
+
+      // Filter check
+      if (!SHOW_COURSES_WITHOUT_DATES && data.sessions.length === 0) return;
+
+      index++;
+      // Create a unique ID for the collapse element to avoid conflicts with other UI elements
+      const uniqueId = `cat_course_${index}`;
+
+      const sessionCount = data.sessions.length;
+      const badgeClass = sessionCount > 0 ? "bg-primary" : "bg-secondary";
+      const badgeText =
+        sessionCount > 0 ? `${sessionCount} Session(s)` : "Coming Soon";
+
+      // Sort sessions by date
+      data.sessions.sort(
+        (a, b) => (a["Start Date"] || 0) - (b["Start Date"] || 0)
+      );
+
+      htmlContent += `
+            <div class="course-item mb-2">
+                <button class="btn btn-primary w-100 text-start d-flex justify-content-between align-items-center" 
+                        type="button" data-bs-toggle="collapse" data-bs-target="#${uniqueId}">
+                    <span class="fw-bold">${courseName}</span>
+                    <span class="badge ${badgeClass}">${badgeText}</span>
+                </button>
+                
+                <div class="collapse" id="${uniqueId}">
+                    <div class="card card-body border-top-0 rounded-0 rounded-bottom">
+                        <div class="mb-3">
+                            <h5>Course Overview</h5>
+                            <p>${data.details.Description}</p>
+                            <small class="text-muted"><strong>Audience:</strong> ${
+                              data.details.TargetAudience || "Open to all"
+                            }</small>
+                        </div>
+            `;
+
+      if (sessionCount > 0) {
+        htmlContent += `
+                        <div class="table-responsive mt-3">
+                            <table class="table table-hover align-middle table-sm border">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Venue</th>
+                                        <th class="text-center">Booking</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+
+        data.sessions.forEach((session) => {
+          const dateStr =
+            _local_excelDateToJSDate(session["Start Date"]) || "TBD";
+          let timeStr = "All Day";
+          if (session["Start Time"]) {
+            timeStr = `${session["Start Time"]}`;
+            if (session["End Time"]) timeStr += ` - ${session["End Time"]}`;
+          }
+          const venue = session["Primary Venue"] || "Virtual / TBD";
+          const link = session["Offering link"] || "#";
+
+          htmlContent += `
+                                    <tr>
+                                        <td>${dateStr}</td>
+                                        <td>${timeStr}</td>
+                                        <td>${venue}</td>
+                                        <td class="text-center">
+                                            <a href="${link}" class="btn btn-primary btn-sm">Book</a>
+                                        </td>
+                                    </tr>`;
+        });
+
+        htmlContent += `</tbody></table></div>`;
+      } else {
+        htmlContent += `<div class="alert alert-warning mt-2">No active dates are currently scheduled for this course. Please check back later.</div>`;
+      }
+
+      htmlContent += `</div></div></div>`;
+    });
+
+    container.innerHTML = htmlContent || "<p>No courses found.</p>";
+  }
+
+  // --- Execution ---
+  // We use Promise.all to fetch data, but variables 'classList' and 'courseDescriptions'
+  // are now local to this scope.
+  Promise.all([
+    fetch("Data/ClassList.json").then((r) => r.json()),
+    fetch("Data/CourseDescriptions.json").then((r) => r.json()),
+  ])
+    .then(([classList, courseDescriptions]) => {
+      _local_renderCatalogue(classList, courseDescriptions);
+    })
+    .catch((error) => {
+      console.error("Catalogue Script Error:", error);
+      const container = document.getElementById(CONTAINER_ID);
+      if (container) {
+        container.innerHTML = `<div class="alert alert-danger">Error loading data: ${error.message}</div>`;
+      }
+    });
+})(); // END OF ISOLATED SCRIPT
