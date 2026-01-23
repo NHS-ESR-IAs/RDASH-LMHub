@@ -50,6 +50,7 @@
               <li class="nav-item"><a class="nav-link" onclick="showPage('Course_Catalogue')">Course Catalogue</a></li>
               <li class="nav-item"><a class="nav-link" onclick="showPage('Learner_VV')">Learners Video Vault</a></li>
               <li class="nav-item"><a class="nav-link" onclick="showPage('Training_Rooms')">Training Rooms</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('Volunteer')">Volunteers</a></li>
               <li class="nav-item"><a class="nav-link" onclick="showPage('FAQs')">FAQs</a></li>
             </ul>
           </div>
@@ -316,8 +317,7 @@
                   class="card tile-card text-white bg-primary text-decoration-none" aria-label="Educator">
                   <div class="card-body d-flex align-items-center justify-content-center">
                     <h3 class="h5 mb-0">Educator<br><span style="font-size:.6em;">Click here to set up a training
-                        session. Line Managers can also find help here.
-                      </span></h3>
+                        session. Line Managers can also find help here.</span></h3>
                   </div>
                 </a>
               </div>
@@ -326,11 +326,18 @@
                 <a href="#" onclick="showPage('Learner')"
                   class="card tile-card text-white bg-success text-decoration-none" aria-label="Learner">
                   <div class="card-body d-flex align-items-center justify-content-center">
-                    <h3 class="h5 mb-0">Learner<br>
-                      <span style="font-size:.6em;">Click here to see how the hub works, join courses (in person or
-                        online), or log your own study time.</span>
-                    </h3>
+                    <h3 class="h5 mb-0">Learner<br><span style="font-size:.6em;">Click here to see how the hub works,
+                        join courses (in person or online), or log your own study time.</span></h3>
+                  </div>
+                </a>
+              </div>
 
+              <div class="col-12 col-sm-6 col-md-4">
+                <a href="#" onclick="showPage('Volunteer')" class="card tile-card text-white text-decoration-none"
+                  style="background-color: #6f42c1;" aria-label="Volunteers">
+                  <div class="card-body d-flex align-items-center justify-content-center">
+                    <h3 class="h5 mb-0 text-center">Volunteers<br><span style="font-size:.6em;">Click here for training,
+                        mandatory updates, and resources specifically for our RDaSH volunteer community.</span></h3>
                   </div>
                 </a>
               </div>
@@ -340,10 +347,7 @@
                   class="card tile-card text-white bg-info text-decoration-none" aria-label="Learners Catalogue">
                   <div class="card-body d-flex align-items-center justify-content-center">
                     <h3 class="h5 mb-0">Learner's Catalogue<br><span style="font-size:.6em;">Click here to see all the
-                        learning sessions and what’s on this month.
-
-                      </span></h3>
-
+                        learning sessions and what’s on this month.</span></h3>
                   </div>
                 </a>
               </div>
@@ -353,9 +357,8 @@
                   class="card tile-card text-white bg-warning bg-warning-dark text-decoration-none"
                   aria-label="Learners Video Vault">
                   <div class="card-body d-flex align-items-center justify-content-center">
-                    <h3 class="h5 mb-0">Learners Video Vault<br><span style="font-size:.6em;">Click here to
-                        watch recorded sessions.</span>
-                    </h3>
+                    <h3 class="h5 mb-0">Learners Video Vault<br><span style="font-size:.6em;">Click here to watch
+                        recorded sessions.</span></h3>
                   </div>
                 </a>
               </div>
@@ -365,8 +368,7 @@
                   class="card tile-card text-white bg-danger text-decoration-none" aria-label="Training Rooms">
                   <div class="card-body d-flex align-items-center justify-content-center">
                     <h3 class="h5 mb-0">Training Rooms<br><span style="font-size:.6em;">Click here to see a list of
-                        rooms at Trust and community venues near you.</span>
-                    </h3>
+                        rooms at Trust and community venues near you.</span></h3>
                   </div>
                 </a>
               </div>
@@ -376,8 +378,7 @@
                   class="card tile-card text-white bg-secondary text-decoration-none" aria-label="FAQs">
                   <div class="card-body d-flex align-items-center justify-content-center">
                     <h3 class="h5 mb-0">FAQ’s<br><span style="font-size:.6em;">Click here to share ideas or request a
-                        training session.
-                      </span></h3>
+                        training session.</span></h3>
                   </div>
                 </a>
               </div>
@@ -878,6 +879,50 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div id="Volunteer" class="page" <div class="container">
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Volunteers</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row mb-4 align-items-center">
+      <div class="col-4 col-sm-6 col-md-4">
+        <div class="card tile-card text-white text-decoration-none" style="background-color: #6f42c1;"
+          aria-label="Volunteers">
+          <div class="card-body d-flex align-items-center justify-content-center text-center">
+            <h3 class="h5 mb-0">Volunteers</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 col-sm-6 col-md-8">
+        <p class="mb-0">Welcome to the Volunteer Training portal. Here you can find essential induction modules,
+          mandatory updates, and resources to support you in your role at RDaSH.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="p-5 bg-light border rounded text-center">
+          <h4>Volunteer Resources & Training</h4>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col">
+        <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
+      </div>
+    </div>
+  </div>
   </div>
 
   <!-- Modal for class details -->
