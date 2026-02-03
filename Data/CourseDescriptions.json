@@ -2,101 +2,141 @@
   {
     "Course": "Asbestos Awareness",
     "Description": "This course provides essential knowledge on the risks associated with asbestos, how to identify it, and the procedures to follow if you encounter materials suspected of containing asbestos.",
-    "TargetAudience": "Maintenance and Facilities Staff"
+    "TargetAudience": "Maintenance and Facilities Staff",
+    "Trainer": "Health & Safety Department",
+    "CourseLink": "https://learning-portal.com/asbestos-awareness"
   },
   {
     "Course": "Business Writing Skills",
     "Description": "Enhance your professional communication. This workshop covers structuring reports, writing clear emails, and ensuring your written correspondence projects a professional image.",
-    "TargetAudience": "All Staff"
+    "TargetAudience": "All Staff",
+    "Trainer": "Communications Team",
+    "CourseLink": "https://learning-portal.com/business-writing"
   },
   {
     "Course": "Conflict Resolution",
     "Description": "Learn practical techniques to de-escalate tension and resolve workplace conflicts constructively. Topics include active listening, negotiation, and maintaining professional relationships.",
-    "TargetAudience": "Managers and Team Leaders"
+    "TargetAudience": "Managers and Team Leaders",
+    "Trainer": "HR Specialists",
+    "CourseLink": "https://learning-portal.com/conflict-resolution"
   },
   {
     "Course": "Customer Service Excellence",
     "Description": "Delivering exceptional service is key to our success. This session focuses on understanding customer needs, handling difficult queries, and going the extra mile.",
-    "TargetAudience": "Front-line Staff"
+    "TargetAudience": "Front-line Staff",
+    "Trainer": "Customer Success Lead",
+    "CourseLink": "https://learning-portal.com/customer-service"
   },
   {
     "Course": "Display Screen Equipment",
     "Description": "Essential health and safety training for anyone who uses a computer. Learn how to set up your workstation correctly to avoid strain and injury.",
-    "TargetAudience": "All Office Staff"
+    "TargetAudience": "All Office Staff",
+    "Trainer": "Occupational Health",
+    "CourseLink": "https://learning-portal.com/dse-training"
   },
   {
     "Course": "Equality & Diversity",
     "Description": "Promoting an inclusive workplace is everyone's responsibility. This course explores the Equality Act, unconscious bias, and how to foster a respectful environment.",
-    "TargetAudience": "All Staff"
+    "TargetAudience": "All Staff",
+    "Trainer": "D&I Committee",
+    "CourseLink": "https://learning-portal.com/equality-diversity"
   },
   {
     "Course": "Fire Safety Awareness",
     "Description": "A mandatory briefing on fire prevention, evacuation procedures, and the correct use of fire extinguishers. Ensure you know what to do in an emergency.",
-    "TargetAudience": "Mandatory for All Staff"
+    "TargetAudience": "Mandatory for All Staff",
+    "Trainer": "Fire Marshal",
+    "CourseLink": "https://learning-portal.com/fire-safety"
   },
   {
     "Course": "Health & Safety Induction",
     "Description": "An introduction to general health and safety policies, accident reporting, and risk assessment basics for new starters.",
-    "TargetAudience": "New Starters"
+    "TargetAudience": "New Starters",
+    "Trainer": "H&S Officer",
+    "CourseLink": "https://learning-portal.com/hs-induction"
   },
   {
     "Course": "Leadership Essentials",
     "Description": "A development program for current and aspiring leaders. Covers motivation, delegation, performance management, and building high-performing teams.",
-    "TargetAudience": "Management"
+    "TargetAudience": "Management",
+    "Trainer": "Senior Leadership Team",
+    "CourseLink": "https://learning-portal.com/leadership-essentials"
   },
   {
     "Course": "Manual Handling",
     "Description": "Practical training on lifting and moving objects safely to prevent back injury and musculoskeletal disorders.",
-    "TargetAudience": "All Staff"
+    "TargetAudience": "All Staff",
+    "Trainer": "Physical Safety Trainer",
+    "CourseLink": "https://learning-portal.com/manual-handling"
   },
   {
     "Course": "Project Management Basics",
     "Description": "An introduction to the lifecycle of a project, including planning, execution, monitoring, and closing. Learn standard terminology and simple tools for success.",
-    "TargetAudience": "Project Leads"
+    "TargetAudience": "Project Leads",
+    "Trainer": "PMO Lead",
+    "CourseLink": "https://learning-portal.com/pm-basics"
   },
   {
     "Course": "Time Management",
     "Description": "Struggling with deadlines? This course offers strategies to prioritize tasks, manage interruptions, and improve your personal productivity.",
-    "TargetAudience": "All Staff"
+    "TargetAudience": "All Staff",
+    "Trainer": "L&D Coordinator",
+    "CourseLink": "https://learning-portal.com/time-management"
   },
   {
     "Course": "An introduction to SCM",
     "Description": "Learn the fundamentals of Supply Chain Management, including logistics, procurement, and inventory flow to optimize organizational efficiency.",
-    "TargetAudience": "Logistics and Procurement Staff"
+    "TargetAudience": "Logistics and Procurement Staff",
+    "Trainer": "Supply Chain Director",
+    "CourseLink": "https://learning-portal.com/intro-scm"
   },
   {
     "Course": "Armed Forces Healthcare Training",
     "Description": "Specialized healthcare protocols and considerations for treating active personnel and veterans, including mental health awareness and specific physical rehabilitation needs.",
-    "TargetAudience": "Clinical Staff and Healthcare Support Workers"
+    "TargetAudience": "Clinical Staff and Healthcare Support Workers",
+    "Trainer": "Clinical Education Lead",
+    "CourseLink": "https://learning-portal.com/armed-forces-healthcare"
   },
   {
     "Course": "Aspire: Nalozone Training Session",
     "Description": "Critical training on the administration of Naloxone and identifying overdose symptoms. This session provides the skills to potentially save lives in emergency situations.",
-    "TargetAudience": "Front-line Support and Emergency Response Teams"
+    "TargetAudience": "Front-line Support and Emergency Response Teams",
+    "Trainer": "Aspire Training Group",
+    "CourseLink": "https://learning-portal.com/naloxone-training"
   },
   {
     "Course": "Carers Awareness Training",
     "Description": "A guide to supporting carers in the community, understanding their rights, the challenges they face, and how to effectively signpost them to available resources.",
-    "TargetAudience": "Social Workers and Community Support Staff"
+    "TargetAudience": "Social Workers and Community Support Staff",
+    "Trainer": "Community Liaison Officer",
+    "CourseLink": "https://learning-portal.com/carers-awareness"
   },
   {
     "Course": "Change Management & Organisation Transformation",
     "Description": "Strategies for leading teams through structural change and cultural transformation. Learn how to manage resistance and communicate effectively during periods of transition.",
-    "TargetAudience": "Senior Leadership and Management"
+    "TargetAudience": "Senior Leadership and Management",
+    "Trainer": "External Consultant",
+    "CourseLink": "https://learning-portal.com/change-management"
   },
   {
     "Course": "Citizens Advice: Benefits Calculator and Budgeting Tool",
     "Description": "A practical guide to using official calculator tools to assist clients with financial planning, benefits checks, and sustainable budgeting.",
-    "TargetAudience": "Advisors and Support Workers"
+    "TargetAudience": "Advisors and Support Workers",
+    "Trainer": "Citizens Advice Representative",
+    "CourseLink": "https://learning-portal.com/benefits-calculator"
   },
   {
     "Course": "Continuous Improvement and Lean Methodology",
     "Description": "Focuses on reducing waste and improving efficiency using Lean Six Sigma principles. Learn how to identify bottlenecks and streamline processes.",
-    "TargetAudience": "Operational Managers and Process Leads"
+    "TargetAudience": "Operational Managers and Process Leads",
+    "Trainer": "Operational Excellence Team",
+    "CourseLink": "https://learning-portal.com/lean-methodology"
   },
   {
     "Course": "Culture, Collaboration & Leadership",
     "Description": "Building high-performance teams through psychological safety and collaborative leadership. This course explores how to foster an environment of trust and open communication.",
-    "TargetAudience": "Team Leaders and Supervisors"
+    "TargetAudience": "Team Leaders and Supervisors",
+    "Trainer": "Organizational Development",
+    "CourseLink": "https://learning-portal.com/culture-leadership"
   }
 ]
