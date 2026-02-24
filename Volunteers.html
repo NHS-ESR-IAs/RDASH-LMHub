@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>RDaSH Volunteer Learning Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 (only once) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <!-- ======================================================
+=                     NAVIGATION SECTION                  =
+========================================================= -->
+  <header class="nhs-header">
+    <div class="container">
+      <div class="row">
+        <h1>Volunteer Learning Hub</h1>
+        <!--<div class="banner-wrapper">
+          <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+          <div class="banner-text-overlay">
+            
+          </div>-->
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-label="Toggle navigation menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navMenu">
+            <div class="logo-container">
+              <img src="Assets/LMHub_Logo.png" class="logo esr" />
+              <img src="Assets/LMHub_Logo.png" class="logo nhs" />
+            </div>
+
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('FAQs')">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Combined Toolbar and Search -->
+      <div class="container mt-3">
+        <div class="row align-items-center g-2">
+          <!-- Search Bar (left, stretches as needed) -->
+          <div class="col">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search bar" onkeyup="searchPages()">
+          </div>
+          <!-- Control Panel (right, auto-width) -->
+          <div class="col-auto">
+            <div class="d-flex flex-wrap align-items-center gap-2 control-toolbar p-2 rounded">
+              <!-- Theme Selector -->
+              <label for="themeSelector" class="visually-hidden">Choose Theme</label>
+              <select id="themeSelector" class="form-select form-select-sm w-auto">
+                <option value="blue">💙 NHS Blue</option>
+                <option value="green">💚 NHS Green</option>
+                <option value="grey">🩶 NHS Grey</option>
+                <option value="pink">💗 NHS Pink</option>
+                <option value="purple">💜 NHS Purple</option>
+                <option value="red">❤️ NHS Red</option>
+                <option value="yellow">💛 NHS Yellow</option>
+                <option value="calm">🌫 Calm Grey</option>
+                <option value="contrast">⚠️ High Contrast</option>
+              </select>
+              <!-- Text Scaling -->
+              <div class="btn-group btn-group-sm" role="group" aria-label="Text Size">
+                <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">A–</button>
+                <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">A</button>
+                <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">A+</button>
+                <button onclick="setTextSize('scale-xlarge')" class="btn btn-outline-secondary">A++</button>
+              </div>
+              <!-- Dark Mode 
+                <button id="toggleDark" class="btn btn-sm btn-outline-primary">
+                  🌙 Dark Mode
+                </button>-->
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
+  <!--<div class="banner-wrapper">
+    <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+    <div class="banner-text-overlay">
+      <h2>Learning and Development Hub</h2>
+    </div>-->
+  </div>
+  <!-- ======================================================
+=                     HOME PAGE SECTION                   =
+========================================================= -->
+  <div id="home" class="page active">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page">Volunteer Learning Hub</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!--Alternate placng for banner-wrapper -->
+      <div class="row">
+        <div class="col">
+          <h3 class="mb-0">Welcome to the Volunteer Learning Hub. Here you can find essential induction modules,
+            mandatory updates, and resources to support you in your role at RDaSH.</h3>
+          <div class="container mt-4 mb-5">
+
+            <div id="hubCarousel" class="carousel slide rounded shadow overflow-hidden" data-bs-ride="carousel">
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#hubCarousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#hubCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#hubCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <img src="Assets/istockphoto-906716520-1024x1024.jpg" class="d-block w-100"
+                    alt="Medical team collaborating in a hospital corridor">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Welcome to the Volunteer Learning Hub</h3>
+                    <p>Empowering our healthcare professionals with essential skills and knowledge.</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img src="Assets/Arthur-mannequin-in-use-768x589.jpg" class="d-block w-100"
+                    alt="Clinical training simulation with mannequin">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Practical, Hands-on Training</h3>
+                    <p>Access courses on the latest clinical procedures, safety protocols, and equipment use.</p>
+                  </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img src="Assets/istockphoto-1477434795-1024x1024.jpg" class="d-block w-100"
+                    alt="Nurse using digital tablet for learning">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3>Flexible e-Learning Modules</h3>
+                    <p>Develop your career path with courses accessible anytime, anywhere.</p>
+                  </div>
+                </div>
+
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#hubCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#hubCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+
+
+
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-12">
+          <div class="container my-5">
+            <div class="row align-items-center rounded-3 border shadow-lg bg-white overflow-hidden">
+              <div class="col-lg-7 p-3 p-lg-5">
+                <h1 class="display-4 fw-bold lh-1" style="color: #005eb8;">Volunteer Learning Hub</h1>
+                <p class="lead mt-3 text-muted">
+                  Welcome to your dedicated training space. To ensure the safety and wellbeing of our patients and the
+                  RDaSH community, all volunteers are required to complete these 9 core standards.
+                </p>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mt-4">
+                  <div class="p-3 bg-light border-start border-4 border-primary rounded">
+                    <small class="text-uppercase fw-bold text-primary d-block">Training Requirement</small>
+                    <span class="h5 mb-0">9 Mandatory Modules</span>
+                  </div>
+                </div>
+
+                <p class="small text-secondary">
+                  <i class="bi bi-info-circle me-1"></i>
+                  Click the tiles below to access <strong>ESR</strong> and complete your specific updates.
+                </p>
+              </div>
+
+              <div class="col-lg-5 p-0 text-center">
+                <img src="Assets/Volunteer Hub.png" class="img-fluid w-100" alt="Volunteer Training"
+                  style="object-fit: cover; max-height: 500px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="container py-4">
+            <div class="row g-4">
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=cxcJSd6dAt4-U2CDf34-MJDTK..XOPTr-BmKq1CspGhYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank" class="card tile-card text-white bg-primary text-decoration-none h-100">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 1: Role & Responsibilities<br>
+                      <span style="font-size:.8em; font-weight: normal;">Rights, raising concerns, and the importance of
+                        reporting errors (Once Only).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=sJ7mVTallUojvva0uEClcLBrvD0G680ZZxjpibHljVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank" class="card tile-card text-white bg-success text-decoration-none h-100">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 2: Communication<br>
+                      <span style="font-size:.8em; font-weight: normal;">Data security, record keeping, and conflict
+                        management (Yearly).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=ZtwDf-shUshPFwoSxa9duvPXd0FV_pIIGcYYvTsYstCG5FaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank" class="card tile-card text-white bg-danger text-decoration-none h-100">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 3: Respect for Everyone<br>
+                      <span style="font-size:.8em; font-weight: normal;">Equality, human rights, and challenging
+                        prejudice (3 Yearly).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=79waRzED3Kq46qPpXhXfEbvCrCdzn-KA5EYG8arYY9mMYshO0p-yLu7zvTu7.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank" class="card tile-card text-white bg-info text-decoration-none h-100">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 4: Safeguarding<br>
+                      <span style="font-size:.8em; font-weight: normal;">Safeguarding adults/children and the PREVENT
+                        strategy (3 Yearly).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=L6-zq9XvPg89D30B8zJo.mSjHJ-BtR-M0u8v1A9mwaUVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank"
+                  class="card tile-card text-white bg-warning bg-warning-dark text-decoration-none h-100">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 5: MH, Dementia & LD<br>
+                      <span style="font-size:.8em; font-weight: normal;">Improving interactions with individuals facing
+                        these challenges (Once Only).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=NIPkbHq-t4pA90vU91mPF65O-hv.PT2Y01oLp7M-7p-UVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank" class="card tile-card text-white bg-secondary text-decoration-none h-100">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 6: Health & Safety<br>
+                      <span style="font-size:.8em; font-weight: normal;">Hazard identification, risk assessment, and
+                        fire safety (2 Yearly).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CmEqUVfm4ReBvB1p9pXUE1LBIs-ZeGRoF7p2U4UPvN8U7l98uV5r1A9mwaUVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank" class="card tile-card text-white text-decoration-none h-100"
+                  style="background-color: #fd7e14;">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 7: Fluids & Nutrition<br>
+                      <span style="font-size:.8em; font-weight: normal;">Food safety, hygiene, and recognizing poor
+                        hydration (Once Only).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=k7bhsI-hwnwWruKoz6JT7wgCrPd_h63mH96lAjvL9WK7PBbYvFTssGafpEwakYVb7VYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank" class="card tile-card text-white text-decoration-none h-100"
+                  style="background-color: #6f42c1;">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 8: Basic Life Support<br>
+                      <span style="font-size:.8em; font-weight: normal;">Essential theory and training for Resuscitation
+                        (Once Only).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <a href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4WclPwhPaoB1I4UoB6m8hX2mqaOa0AkB6hXv3at7VYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+                  target="_blank" class="card tile-card text-white text-decoration-none h-100"
+                  style="background-color: #20c997;">
+                  <div class="card-body d-flex align-items-center justify-content-center text-center p-4">
+                    <h3 class="h4 mb-0">Standard 9: Moving & Assisting<br>
+                      <span style="font-size:.8em; font-weight: normal;">Safe posture, injury risk factors, and back
+                        care (2 Yearly).</span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <!-- Optional CSS: add to your stylesheet -->
+      <style>
+        .tile-card {
+          height: 140px;
+          /* consistent tile height */
+          border: 0;
+          transition: transform .15s ease, box-shadow .15s ease;
+        }
+
+        .tile-card:hover,
+        .tile-card:focus {
+          transform: translateY(-6px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+          text-decoration: none;
+        }
+
+        /* Ensure text contrast for the warning tile */
+        .tile-card.bg-warning bg-warning-dark .h5 {
+          color: #212529;
+        }
+
+        /* Make headings wrap nicely on small screens */
+        .tile-card .h5 {
+          text-align: center;
+          line-height: 1.1;
+        }
+      </style>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+
+
+
+  <!-- ======================================================
+  = FAQs SECTION =
+  ========================================================= -->
+  <div id="FAQs" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+              <li class="breadcrumb-item active" aria-current="page">FAQs</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+
+
+        <div class="p-5 mb-4 bg-light rounded-3 border shadow-sm">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="display-5 fw-bold text-dark">Feedback & FAQs</h1>
+              <p class="fs-5 text-muted">
+                Have a question about your training or an idea to make the Learning Hub better? This is the place to
+                share your thoughts and find quick answers.
+              </p>
+              <hr class="my-4">
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <div class="d-flex align-items-start">
+                <div class="feature-icon bg-secondary bg-gradient text-white rounded-3 p-3 me-3">
+                  <i class="bi bi-chat-left-dots-fill"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold">Your Voice Matters</h4>
+                  <p class="text-secondary">Use this space to request new training sessions, suggest improvements, or
+                    share your learning experience with us.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="d-flex align-items-start">
+                <div class="feature-icon bg-primary bg-gradient text-white rounded-3 p-3 me-3">
+                  <i class="bi bi-question-circle-fill"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold">Quick Support</h4>
+                  <p class="text-secondary">Check our frequently asked questions below for instant help with ESR access,
+                    course bookings, and mandatory updates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-container">
+
+        <div class="card mb-3 border-start border-primary border-4 shadow-sm">
+          <div class="card-header bg-white fw-bold text-primary">Technical & Account Support</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <p class="fw-bold mb-1">I’m having technical problems. Who do I contact?</p>
+              <p class="mb-0 text-muted">Contact the IT helpdesk using their online portal.</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fw-bold mb-1">I forgot my ESR login, or ESR will not load. What do I do?</p>
+              <p class="mb-0 text-muted">Contact the IT helpdesk using their portal.</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fw-bold mb-1">Do I need to be logged in to ESR to join a course?</p>
+              <p class="mb-0 text-muted">Yes. When you try to book a course, the system will ask you to log in.</p>
+            </div>
+            <hr>
+            <div>
+              <p class="fw-bold mb-1">Can I use the learning hub on my mobile?</p>
+              <p class="mb-0 text-muted">Yes. You can use it if you have the link.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3 border-start border-success border-4 shadow-sm">
+          <div class="card-header bg-white fw-bold text-success">Finding & Managing Your Training</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <p class="fw-bold mb-1">Where do I find my mandatory training (MAST)?</p>
+              <p class="mb-0 text-muted">Search for MAST in the Course Prospectus (Learner Catalogue panel).</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fw-bold mb-1">How do I find courses and join them?</p>
+              <p class="mb-0 text-muted">Go to the Learner panel for help and the user guide.</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fw-bold mb-1">Where can I see the courses I’m booked on, past courses, and my certificates?</p>
+              <p class="mb-0 text-muted">You can see all of these in ESR, just like before.</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fw-bold mb-1">How do I book myself onto face-to-face (non-MAST) training?</p>
+              <p class="mb-0 text-muted">Go to the Learner panel for help and the user guide.</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fw-bold mb-1">Can I watch a training session after it has finished?</p>
+              <p class="mb-0 text-muted">If it was recorded, it will be in the Video Vault panel once uploaded.</p>
+            </div>
+            <hr>
+            <div>
+              <p class="fw-bold mb-1">Has my ESR changed because of the new learning hub?</p>
+              <p class="mb-0 text-muted">No. Nothing has changed. The hub just helps you find the right ESR pages more
+                quickly.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3 border-start border-warning border-4 shadow-sm">
+          <div class="card-header bg-white fw-bold text-dark">Educators, Managers & Special Roles</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <p class="fw-bold mb-1">I am a manager. How do I book a course for someone in my team?</p>
+              <p class="mb-0 text-muted">Go to the Educator panel for help and the user guide.</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fw-bold mb-1">I want to run a training session. What do I do?</p>
+              <p class="mb-0 text-muted">Go to the Educator panel for help and the user guide.</p>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <p class="fw-bold mb-1">How do I book a training room?</p>
+              <p class="mb-0 text-muted">Go to the Training Rooms panel for more information.</p>
+            </div>
+            <hr>
+            <div>
+              <p class="fw-bold mb-1">Do I need to use the volunteer panel?</p>
+              <p class="mb-0 text-muted">No. Only volunteers need to use this panel.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm border-0">
+          <div class="card-header bg-light border-bottom-0 pt-4 px-4">
+            <p class="fw-bold mb-0 small text-uppercase text-secondary">Feedback & Requests</p>
+            <h5 class="fw-bold">How do I give feedback or ask for a new course?</h5>
+            <p class="text-muted mb-3">Please use the tabs below to submit your feedback or course requests directly to
+              the team.</p>
+
+            <ul class="nav nav-pills nav-fill bg-white p-1 rounded border" id="formTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-bold" id="feedback-tab" data-bs-toggle="tab"
+                  data-bs-target="#feedback-panel" type="button" role="tab" aria-controls="feedback-panel"
+                  aria-selected="true">
+                  Give Feedback
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="request-tab" data-bs-toggle="tab" data-bs-target="#request-panel"
+                  type="button" role="tab" aria-controls="request-panel" aria-selected="false">
+                  Request a New Course
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-body p-0">
+            <div class="tab-content" id="formTabsContent">
+
+              <div class="tab-pane fade show active" id="feedback-panel" role="tabpanel" aria-labelledby="feedback-tab">
+                <div class="ratio ratio-16x9" style="min-height: 600px;">
+                  <iframe
+                    src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__eBfvaBUMU4yT1lSOENOUUtPUkFIRE01MVpSRUtLSy4u&embed=true"
+                    title="General Feedback Form" allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="request-panel" role="tabpanel" aria-labelledby="request-tab">
+                <div class="ratio ratio-16x9" style="min-height: 600px;">
+                  <iframe
+                    src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ggRtz7GGiE-MDDtN5MtALHKFXW_GBp5PsWoi2wVnADNUMEE4UFlQNzFRWU80OTUwUk43N0RBVloyQS4u&embed=true"
+                    title="New Course Request Form" allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card-footer bg-white border-top p-4">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+              <div>
+                <p class="mb-0 fw-bold">Question not listed here?</p>
+                <p class="text-muted mb-0 small">For other inquiries, please reach out to Lewis Turgoose.</p>
+              </div>
+              <div class="mt-2 mt-md-0">
+                <a href="mailto:lewis.turgoose@nhs.net" class="btn btn-outline-primary fw-bold">
+                  Email lewis.turgoose@nhs.net
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <img src="https://assets.codepen.io/8889025/RDaSH_LMRH4.png" class="footer_image" />
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Modal for class details -->
+  <div class="modal fade" id="classModal" tabindex="-1" aria-labelledby="classModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="classModalLabel">Class Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <dl class="row" id="modalDetails"></dl>
+        </div>
+        <div class="modal-footer">
+          <a id="modalLink" href="#" target="_blank" class="btn btn-primary">Go to Offering</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- JS libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script src="script/script.js" defer></script>
+  <script>
+
+
+  </script>
+</body>
+
+</html>

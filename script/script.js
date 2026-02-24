@@ -67,6 +67,29 @@ function showPage(pageId) {
   setTimeout(refreshCalendar, 100);
 }
 
+function searchPages() {
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const pages = document.querySelectorAll(".page");
+  const homePage = document.getElementById("home");
+
+  if (query === "") {
+    showPage("home");
+    pages.forEach((page) => {
+      if (page.id !== "home") page.classList.remove("active");
+    });
+  } else {
+    homePage.classList.remove("active");
+    pages.forEach((page) => {
+      if (["home", "Course_Catalogue", "Training_Rooms"].includes(page.id)) {
+        page.classList.remove("active");
+        return;
+      }
+      const match = page.innerText.toLowerCase().includes(query);
+      page.classList.toggle("active", match);
+    });
+  }
+}
+
 // --- DATA LOADING ---
 
 async function loadEvents() {
