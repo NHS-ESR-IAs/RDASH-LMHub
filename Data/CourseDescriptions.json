@@ -104,54 +104,279 @@
     "Trainer": "e-Learning via ESR",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=sJ7mVTallUojvva0uEClcLBrvD0G680ZZxjpibHljVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
   },
+  {
+    "Course": "376 Volunteer Learning: Standard 3 - Respect for everyone - 3 yearly",
+    "Description": "This module explains the meaning and importance of equality, diversity, human rights, and person-centered support. It covers understanding different backgrounds to avoid assumptions and outlines actions individuals can take to challenge prejudice and discrimination.",
+    "TargetAudience": "Volunteers",
+    "Trainer": "e-Learning via ESR",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=ZtwDf-shUshPFwoSxa9duvPXd0FV_pIIGcYYvTsYstCG5FaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+  },
+  {
+    "Course": "376 Volunteer Learning: Standard 4 Safeguarding – 3 yearly",
+    "Description": "A comprehensive guide to safeguarding adults and children. It covers the definition of 'adult at risk,' types of abuse, and identifying risk factors. It details the volunteer's role in reporting concerns, understanding child sexual exploitation (CSE), the PREVENT strategy for radicalization, and organizational procedures for managing safeguarding incidents.",
+    "TargetAudience": "Volunteers",
+    "Trainer": "e-Learning via ESR",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=79waRzED3Kq46qPpXhXfEbvCrCdzn-KA5EYG8arYY9mMYshO0p-yLu7zvTu7.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+  },
+  {
+    "Course": "376 Volunteer Learning: Standard 5 Mental Health, Dementia, Learning Disability - once only",
+    "Description": "Explores the importance of sharing information regarding mental health and the consequences of failing to do so. It covers the prevalence of mental health issues, the impact of dementia, and different types of learning disabilities. It also identifies support sources and principles for improving interactions with individuals facing these challenges.",
+    "TargetAudience": "Volunteers",
+    "Trainer": "e-Learning via ESR",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=L6-zq9XvPg89D30B8zJo.mSjHJ-BtR-M0u8v1A9mwaUVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+  },
+  {
+    "Course": "376 Volunteer Learning: Standard 6 ; Health and Safety - 2 yearly",
+    "Description": "Covers health and safety legislation, policies, and procedures. Volunteers will learn to identify hazards, risks, and assessment methods. It includes specific training on fire safety, including characteristics of fire, evacuation procedures, use of equipment, and fire prevention practices.",
+    "TargetAudience": "Volunteers",
+    "Trainer": "e-Learning via ESR",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=NIPkbHq-t4pA90vU91mPF65O-hv.PT2Y01oLp7M-7p-UVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+  },
+  {
+    "Course": "376 Volunteer Learning: Standard 7 ; Fluids and nutrition - once only",
+    "Description": "Explains the volunteer's role in promoting and providing fluid and nutrition. It covers food safety and hygiene, the importance of good nutrition for health and well-being, and how to recognize signs and symptoms of poor nutrition and hydration.",
+    "TargetAudience": "Volunteers",
+    "Trainer": "e-Learning via ESR",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CmEqUVfm4ReBvB1p9pXUE1LBIs-ZeGRoF7p2U4UPvN8U7l98uV5r1A9mwaUVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+  },
+  {
+    "Course": "376 Volunteer Learning: Standard 8 Basic Life Support (BLS) - once only",
+    "Description": "This course covers the essential theory and training for Resuscitation (Basic Life Support) specifically tailored for Volunteers.",
+    "TargetAudience": "Volunteers",
+    "Trainer": "e-Learning via ESR",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=k7bhsI-hwnwWruKoz6JT7wgCrPd_h63mH96lAjvL9WK7PBbYvFTssGafpEwakYVb7VYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+  },
+  {
+    "Course": "376 Volunteer Learning: Standard 9 ; Moving and assisting - 2 yearly",
+    "Description": "Focuses on the responsibilities for promoting safe moving and assisting practices. It covers identifying injury risk factors, demonstrating correct posture, the importance of good back care, and maintaining effective communication and teamwork during manual handling tasks.",
+    "TargetAudience": "Volunteers",
+    "Trainer": "e-Learning via ESR",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4WclPwhPaoB1I4UoB6m8hX2mqaOa0AkB6hXv3at7VYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+  },
+  {
+    "Course": "From stressed to supported",
+    "Description": "In today's fast-paced and demanding environments, stress can quickly become overwhelming—especially when support feels limited or out of reach. This session focuses on practical ways to move from stress and pressure toward greater support, resilience, and connection.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_OTY3M2ZiZDMtNmE0OS00MWMyLThhNTQtZjE2MGRjNmU2NjQ4%40thread.v2/0?context=%7b%22Tid%22%3a%22c7ab83be-5642-4738-b09f-8a995ce6be08%22%2c%22Oid%22%3a%228ce7a0a2-a74c-495b-bb8c-8b5b14eff6b6%22%7d"
+  },
+  {
+    "Course": "Mens health awareness",
+    "Description": "This session aims to raise awareness and looks at some of the main health conditions which may affect men in their lifetime. There is a focus on both physical and mental health with some practical tools to help you stay focused on your health and wellbeing.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTliNmYyMGMtNTFiOS00Mjc2LWE5ZjUtZTc2MGRmY2Q2NGZi%40thread.v2/0?context=%7b%22Tid%22%3a%22c7ab83be-5642-4738-b09f-8a995ce6be08%22%2c%22Oid%22%3a%228ce7a0a2-a74c-495b-bb8c-8b5b14eff6b6%22%7d"
+  },
+  {
+    "Course": "Cardiovascular health",
+    "Description": "This session focuses on blood pressure and cholesterol and helps you to 'know your numbers'. We demonstrate pratical tips to support your cardiovascular health and promote a healthy lifestyle to manage or improve your health and wellbeing.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzZmZTU2ODgtNGFmMS00MjMzLThiMTktMGU0MGM0OTEyNzMw%40thread.v2/0?context=%7b%22Tid%22%3a%22c7ab83be-5642-4738-b09f-8a995ce6be08%22%2c%22Oid%22%3a%228ce7a0a2-a74c-495b-bb8c-8b5b14eff6b6%22%7d"
+  },
+  {
+    "Course": "I ache managing pains",
+    "Description": "This practical sessions looks at the contributing factors to aches and pains that women may experience during the Menopause. We also look at how to manage these symptoms through self-care with a focus on eating and hydrating well, movement and stress management.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTRhNGUzZmMtY2Y2Yy00NjdkLWI0MzktYjIwYWMxZjNmMjFk%40thread.v2/0?context=%7b%22Tid%22%3a%22c7ab83be-5642-4738-b09f-8a995ce6be08%22%2c%22Oid%22%3a%228ce7a0a2-a74c-495b-bb8c-8b5b14eff6b6%22%7d"
+  },
+  {
+    "Course": "How to prioritise self care",
+    "Description": "This session focuses on the importance of YOU and your Health and Wellbeing. We demonstrate how to make self-care habitual by using practical tips to support your overall health and wellbeing. The session covers the 4 key areas of wellbeing with tips on how to: Eat and Hydrate Well, Sleep Well, Think Well and Feel/Move Well. ",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzBjM2I5YTAtZTk1ZC00Yjk3LTk4NWYtY2FlNzY3ZDZiYWIx%40thread.v2/0?context=%7b%22Tid%22%3a%22c7ab83be-5642-4738-b09f-8a995ce6be08%22%2c%22Oid%22%3a%228ce7a0a2-a74c-495b-bb8c-8b5b14eff6b6%22%7d"
+  },
+  {
+    "Course": "Healthy Hydration",
+    "Description": "This Toolbox Talk teaches you about the importance of Hydration and the link to your Health, Safety and Wellbeing at work. You will leave armed with information about how much to drink, how to do self-checks to ensure you are adequately hydrated and tips on encouraging you to stay focused on hydration. ",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjEzYjIxODktZTI0Ny00MWE2LTg3YzItNzczNTUxOTc5Yjdj%40thread.v2/0?context=%7b%22Tid%22%3a%22c7ab83be-5642-4738-b09f-8a995ce6be08%22%2c%22Oid%22%3a%228ce7a0a2-a74c-495b-bb8c-8b5b14eff6b6%22%7d"
+  },
+  {
+    "Course": "How to facilitate safe conversations",
+    "Description": "In this session you will learn practical tools to create spaces where people feel safe, respected, and heard. We will look at how to foster psychological safety, encourage open dialogue, and navigate challenging or sensitive topics with confidence. Ideal for facilitators, leaders, educators, and anyone guiding group conversations who wants to support inclusive, respectful, and meaningful dialogue.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_Yjg3ZjhjMzYtOTY5OS00YTBhLWJjM2QtNDI3ZmMwMDM0Nzlj%40thread.v2/0?context=%7b%22Tid%22%3a%22c7ab83be-5642-4738-b09f-8a995ce6be08%22%2c%22Oid%22%3a%228ce7a0a2-a74c-495b-bb8c-8b5b14eff6b6%22%7d"
+  },
+  {
+    "Course": "Rest and restore",
+    "Description": "During this interactive session staff will learn practical tips on how to promote healthy sleep habits and bring on a state of relaxation easily to aid restorative sleep.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDBkNGJmOTMtODE5Yy00ZjRhLTgwM2ItZGZlZTgxNzFiZmRj%40thread.v2/0?context=%7b%22Tid%22%3a%22c7ab83be-5642-4738-b09f-8a995ce6be08%22%2c%22Oid%22%3a%228ce7a0a2-a74c-495b-bb8c-8b5b14eff6b6%22%7d"
+  },
+  {
+    "Course": "Active Bystander",
+    "Description": "This session explores the 'Active Bystander' concept, providing practical tools to safely challenge inappropriate behaviors and foster a more inclusive and supportive environment.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZTBkMmI1YTQtZGJhZS00Y2Y3LTg2YTktMjc1N2I5YTc2NjRi%40thread.v2/0?context=%7b%22Tid%22%3a%2237c354b2-85b0-47f5-b222-07b48d774ee3%22%2c%22Oid%22%3a%22f77d9003-b790-4dd2-be48-5367ef692241%22%7d"
+  },
+  {
+    "Course": "Reasonable Adjustments",
+    "Description": "An informative session focused on understanding reasonable adjustments in the workplace, ensuring equity for staff with disabilities or long-term health conditions.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGVjMWRjNTUtMDI4Ni00NGEzLWEwODYtNjEyMDg5ZGUxZTVm%40thread.v2/0?context=%7b%22Tid%22%3a%2237c354b2-85b0-47f5-b222-07b48d774ee3%22%2c%22Oid%22%3a%2271e4ab17-65ea-43be-b76f-922762fbbd4d%22%7d"
+  },
+  {
+    "Course": "Rainbow Badge Awareness",
+    "Description": "This awareness session covers the importance of the Rainbow Badge scheme, LGBTQ+ inclusivity, and how to be an effective ally within the organization.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_OWFkMDM2ZGYtNDMzMi00MjgxLWJiYzctOTY0ZmU4Y2JhOGFj%40thread.v2/0?context=%7b%22Tid%22%3a%2237c354b2-85b0-47f5-b222-07b48d774ee3%22%2c%22Oid%22%3a%2271e4ab17-65ea-43be-b76f-922762fbbd4d%22%7d"
+  },
+  {
+    "Course": "Cultural Humility",
+    "Description": "A deep dive into cultural humility, moving beyond competence to a lifelong commitment to self-evaluation and critique to better support a diverse workforce and community.",
+    "TargetAudience": "Everyone",
+    "Trainer": "Webinar",
+    "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzQzODMxNDQtYjIxZS00NmU1LWFjNGMtZWNiZjQyZjBhNzdj%40thread.v2/0?context=%7b%22Tid%22%3a%2237c354b2-85b0-47f5-b222-07b48d774ee3%22%2c%22Oid%22%3a%22f77d9003-b790-4dd2-be48-5367ef692241%22%7d"
+  },
+  {
+    "Course": "Placement Learning - Title Occupational Therapist",
+    "Description": "Watching this video will help you understand how placement learning works and how you can support placement colleagues better",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "https://youtu.be/SYtD8jP7-UQ"
+  },
+  {
+    "Course": "Data Saves Lives",
+    "Description": "Why is the data we create for healthcare in particular so important? Watching the series of short video's will explain why and will enhance your understanding of the importance of data.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "https://intranet.rdash.nhs.uk/news/data-is-interesting-isnt-it/"
+  },
+  {
+    "Course": "Autism",
+    "Description": "Rachel Walton",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "awaiting link"
+  },
+  {
+    "Course": "Set Up Online Meetings: Watch & Learn: MS Teams meetings",
+    "Description": "This short video explains how to find book and use Microsoft Teams meeting rooms",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "https://youtu.be/fiXckJMNuDo"
+  },
+  {
+    "Course": "Set Up Online Meetings: Watch & Learn: Clickshare",
+    "Description": "This short video explains how to use clickshare video conference equipment",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "https://www.youtube.com/watch?v=7o0ERGbFWlg"
+  },
+  {
+    "Course": "SystmOne Resources",
+    "Description": "Support, guidance and video's for SystmOne",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/health-informatics/clinical-systems/guidance-and-videos/videos/"
+  },
+  {
+    "Course": "Radar Training",
+    "Description": "Support, guidance and video's for Radar",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/health-informatics/radar/radar-training/"
+  },
+  {
+    "Course": "Our 28 Promises",
+    "Description": "Take a look at what your colleagues and our patients are saying about our promises. Every promise is different, and it is important to get many points of view from across the trust.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "https://intranet.rdash.nhs.uk/news/our-28-promises/"
+  },
+  {
+    "Course": "Chief Executive's Friday VLOGS",
+    "Description": "Catch up on weekly Friday VLOGS from our Chief Executive, Toby Lewis.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Video",
+    "CourseLink": "https://www.youtube.com/watch?v=playlist?list=PL2_RtUzQeufOdbMvJPsDbx0yV601br1US"
+  },
+  [
     {
-      "Course": "376 Volunteer Learning: Standard 3 - Respect for everyone - 3 yearly",
-      "Description": "This module explains the meaning and importance of equality, diversity, human rights, and person-centered support. It covers understanding different backgrounds to avoid assumptions and outlines actions individuals can take to challenge prejudice and discrimination.",
-      "TargetAudience": "Volunteers",
-      "Trainer": "e-Learning via ESR",
-      "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=ZtwDf-shUshPFwoSxa9duvPXd0FV_pIIGcYYvTsYstCG5FaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+      "Course": "IT and Computing Courses for Administrators",
+      "Description": "Boost your digital skills with free online IT and computing courses. Learn at your own pace and grow your confidence.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://alison.com/courses/it"
     },
     {
-      "Course": "376 Volunteer Learning: Standard 4 Safeguarding – 3 yearly",
-      "Description": "A comprehensive guide to safeguarding adults and children. It covers the definition of 'adult at risk,' types of abuse, and identifying risk factors. It details the volunteer's role in reporting concerns, understanding child sexual exploitation (CSE), the PREVENT strategy for radicalization, and organizational procedures for managing safeguarding incidents.",
-      "TargetAudience": "Volunteers",
-      "Trainer": "e-Learning via ESR",
-      "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=79waRzED3Kq46qPpXhXfEbvCrCdzn-KA5EYG8arYY9mMYshO0p-yLu7zvTu7.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+      "Course": "Read all about it - Newsletters",
+      "Description": "Catch up on trust newsletters including Trust Matters, Learning Matters, and Health and Wellbeing.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://intranet.rdash.nhs.uk/?s=trust+matters&submit=Search"
     },
     {
-      "Course": "376 Volunteer Learning: Standard 5 Mental Health, Dementia, Learning Disability - once only",
-      "Description": "Explores the importance of sharing information regarding mental health and the consequences of failing to do so. It covers the prevalence of mental health issues, the impact of dementia, and different types of learning disabilities. It also identifies support sources and principles for improving interactions with individuals facing these challenges.",
-      "TargetAudience": "Volunteers",
-      "Trainer": "e-Learning via ESR",
-      "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=L6-zq9XvPg89D30B8zJo.mSjHJ-BtR-M0u8v1A9mwaUVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+      "Course": "Health and Wellbeing Hub",
+      "Description": "Access support services, organisational development tools, and health/wellbeing resources for staff.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://intranet.rdash.nhs.uk/support-services/organisation-development/health-wellbeing/"
     },
     {
-      "Course": "376 Volunteer Learning: Standard 6 ; Health and Safety - 2 yearly",
-      "Description": "Covers health and safety legislation, policies, and procedures. Volunteers will learn to identify hazards, risks, and assessment methods. It includes specific training on fire safety, including characteristics of fire, evacuation procedures, use of equipment, and fire prevention practices.",
-      "TargetAudience": "Volunteers",
-      "Trainer": "e-Learning via ESR",
-      "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=NIPkbHq-t4pA90vU91mPF65O-hv.PT2Y01oLp7M-7p-UVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+      "Course": "Trust Policies (RADAR)",
+      "Description": "Access trust policies via RADAR. Click the link to open a downloadable Word version.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://rdash.radarhealthcare.net/documents/27/ngIndex#!/0"
     },
     {
-      "Course": "376 Volunteer Learning: Standard 7 ; Fluids and nutrition - once only",
-      "Description": "Explains the volunteer's role in promoting and providing fluid and nutrition. It covers food safety and hygiene, the importance of good nutrition for health and well-being, and how to recognize signs and symptoms of poor nutrition and hydration.",
-      "TargetAudience": "Volunteers",
-      "Trainer": "e-Learning via ESR",
-      "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CmEqUVfm4ReBvB1p9pXUE1LBIs-ZeGRoF7p2U4UPvN8U7l98uV5r1A9mwaUVYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+      "Course": "Microsoft Office Guides for Administrators",
+      "Description": "Find trending topics and AI tips. Use the search bar to explore helpful Microsoft Office cheat sheets and downloadable guides.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://support.microsoft.com/en-gb/office/office-cheat-sheets-61abfe7b-1c43-483c-b82b-3806d80e027e"
     },
     {
-      "Course": "376 Volunteer Learning: Standard 8 Basic Life Support (BLS) - once only",
-      "Description": "This course covers the essential theory and training for Resuscitation (Basic Life Support) specifically tailored for Volunteers.",
-      "TargetAudience": "Volunteers",
-      "Trainer": "e-Learning via ESR",
-      "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=k7bhsI-hwnwWruKoz6JT7wgCrPd_h63mH96lAjvL9WK7PBbYvFTssGafpEwakYVb7VYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+      "Course": "Free Viva Learning on Microsoft Teams",
+      "Description": "Access a wide range of learning through NHSmail and Teams. Build a personalised learning plan that fits your role and interests.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://support.nhs.net/knowledge-base/viva-learning-overview/"
     },
     {
-      "Course": "376 Volunteer Learning: Standard 9 ; Moving and assisting - 2 yearly",
-      "Description": "Focuses on the responsibilities for promoting safe moving and assisting practices. It covers identifying injury risk factors, demonstrating correct posture, the importance of good back care, and maintaining effective communication and teamwork during manual handling tasks.",
-      "TargetAudience": "Volunteers",
-      "Trainer": "e-Learning via ESR",
-      "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4WclPwhPaoB1I4UoB6m8hX2mqaOa0AkB6hXv3at7VYJ0JzYYTwfYn5cQSFaAWWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+      "Course": "Chief Executive's Friday VLOGS",
+      "Description": "Catch up on weekly Friday VLOGS from our Chief Executive, Toby Lewis.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Video",
+      "CourseLink": "https://www.youtube.com/embed/videoseries?si=zbjwIehENo9mm8LO&amp;list=PL2_RtUzQeufOdbMvJPsDbx0yV601br1US"
+    },
+    {
+      "Course": "Staff Portal Learnings",
+      "Description": "Plan ahead and explore current and upcoming learning opportunities across the trust via the staff portal.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://staffportal.rdash.nhs.uk/login.php"
+    },
+    {
+      "Course": "Support Services Overview",
+      "Description": "Get to know the support services available to assist you in your role across the trust intranet.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://intranet.rdash.nhs.uk/support-services/"
+    },
+    {
+      "Course": "Support for Line Managers",
+      "Description": "Access the Line Manager Resource Hub for tools, guidance and support. (ESR login required.)",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "https://codepen.io/ESR_IAs/live/WbbVrQQ/75d9f0929e37634c5a249a14e774bd63"
+    },
+    {
+      "Course": "Self-directed Learning",
+      "Description": "Take the lead in your own learning. Focus on online modules, research, recorded webinars, or personal projects to enhance your practice.",
+      "TargetAudience": "LHD offer for all colleagues",
+      "Trainer": "Online",
+      "CourseLink": "awaiting link"
     }
   ]
 ]

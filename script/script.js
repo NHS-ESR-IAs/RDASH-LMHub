@@ -1,70 +1,388 @@
-// Top-level state
+/**
+ * APP STATE & GLOBAL DATA
+ */
 let allEvents = [];
+let globalRawClasses = [];
+let globalRawDescs = [];
+let globalRawRooms = []; // This will hold the flattened room list
 let calendar = null;
-let calendarInitialized = false;
-let listInitialized = false;
 
-// --- UTILITY: Date Formatting & Conversion ---
+const CONFIG = {
+  files: {
+    classes: "Data/ClassList.json",
+    descriptions: "Data/CourseDescriptions.json",
+    rooms: "Data/rooms.json",
+  },
+  excelEpoch: Date.UTC(1899, 11, 30),
+  msPerDay: 86400000,
+};
 
-function excelDateToJSDate(serial) {
-  const n = Number(serial);
-  if (!isFinite(n)) return new Date(NaN);
-  const excelEpoch = Date.UTC(1899, 11, 30);
-  return new Date(excelEpoch + Math.round(n * 86400000));
+/**
+ * UTILITIES
+ */
+const utils = {
+  excelToJS: (serial) => {
+    const n = Number(serial);
+    if (!isFinite(n)) return new Date(NaN);
+    return new Date(CONFIG.excelEpoch + Math.round(n * CONFIG.msPerDay));
+  },
+
+  formatDate: (d) => {
+    if (!(d instanceof Date) || isNaN(d.getTime())) return "TBD";
+    return new Intl.DateTimeFormat("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    }).format(d);
+  },
+
+  formatDisplay: (val) => {
+    if (val === null || val === undefined || val === "") return "N/A";
+    const n = Number(val);
+    if (!isNaN(n) && typeof val !== "boolean" && n > 30000 && n < 60000) {
+      return utils.formatDate(utils.excelToJS(n));
+    }
+    return String(val);
+  },
+
+  cleanTitle: (str) =>
+    String(str || "")
+      .replace(/^376\s*/, "")
+      .trim(),
+};
+
+/**
+ * INITIALIZATION
+ */
+async function initApp() {
+  try {
+    console.log("🚀 Initializing Training Hub...");
+
+    const [classRes, descRes, roomRes] = await Promise.all([
+      fetch(`${CONFIG.files.classes}?v=${Date.now()}`),
+      fetch(`${CONFIG.files.descriptions}?v=${Date.now()}`),
+      fetch(`${CONFIG.files.rooms}?v=${Date.now()}`).catch(() => null),
+    ]);
+
+    globalRawClasses = await classRes.json();
+    globalRawDescs = await descRes.json();
+    const rawNestedRooms = roomRes ? await roomRes.json() : [];
+
+    // --- FLATTEN ROOM DATA ---
+    // This transforms your nested JSON into a flat list for the table
+    globalRawRooms = [];
+    rawNestedRooms.forEach((venue) => {
+      if (venue.rooms && Array.isArray(venue.rooms)) {
+        venue.rooms.forEach((room) => {
+          globalRawRooms.push({
+            Site: venue.site || "N/A",
+            Venue: venue.venue || "N/A",
+            Contact: venue.contact || "N/A",
+            Address: venue.address || "N/A",
+            RoomName: room.n || "N/A",
+            Capacity: room.c || "N/A",
+            // Helper for the Email button
+            ContactEmail:
+              venue.contact && venue.contact.includes("@")
+                ? venue.contact.split("\n").find((s) => s.includes("@"))
+                : "#",
+          });
+        });
+      }
+    });
+
+    const descMap = new Map();
+    globalRawDescs.forEach((d) => {
+      const key = (d.Course || d.Title || "").trim().toLowerCase();
+      if (key) descMap.set(key, d);
+    });
+
+    allEvents = globalRawClasses
+      .map((item) => {
+        const start = utils.excelToJS(item["Start Date"]);
+        const end = utils.excelToJS(item["End Date"]);
+
+        if (item["Start Time"] && !isNaN(start.getTime())) {
+          const [h, m] = String(item["Start Time"]).split(":").map(Number);
+          start.setHours(h || 0, m || 0, 0, 0);
+        }
+        if (item["End Time"] && !isNaN(end.getTime())) {
+          const [h, m] = String(item["End Time"]).split(":").map(Number);
+          end.setHours(h || 0, m || 0, 0, 0);
+        }
+
+        const courseKey = String(item.Course || "")
+          .trim()
+          .toLowerCase();
+        const info = descMap.get(courseKey) || {};
+
+        return {
+          title: item.Course || item.Title || "Untitled Course",
+          start: start,
+          end: end,
+          extendedProps: {
+            ...item,
+            Description: info.Description || "No description available.",
+            TargetAudience: info.TargetAudience || "General Audience",
+            Trainer: info.Trainer || "TBD",
+            CourseLink: info.CourseLink || "#",
+          },
+        };
+      })
+      .filter((ev) => !isNaN(ev.start.getTime()));
+
+    // Initial Renders
+    renderUpcomingList("upcomingList");
+    renderCatalogue(globalRawClasses, globalRawDescs);
+    renderRoomDirectory(globalRawRooms);
+    renderVideoVault(globalRawDescs);
+    initCalendar();
+    setupAlphabetNav();
+    setupRoomSearch();
+
+    console.log("✅ Hub Initialization Complete.");
+  } catch (err) {
+    console.error("❌ App Failure:", err);
+  }
 }
 
-function formatDate(d) {
-  if (!(d instanceof Date) || isNaN(d.getTime())) return "";
-  return new Intl.DateTimeFormat("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  }).format(d);
-}
+/**
+ * UI: RENDERING FUNCTIONS
+ */
+function renderUpcomingList(containerId, eventsSource = allEvents) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
 
-/** Aggressive Smart Formatter: Fixes the "Number Date" issue for ALL fields */
-function formatValueForDisplay(value, key) {
-  if (value === null || value === undefined || value === "") return "";
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const fourWeeksLater = new Date();
+  fourWeeksLater.setDate(today.getDate() + 28);
 
-  const n = Number(value);
-  // Detection for Excel serial dates (roughly 30,000 to 60,000)
-  if (!isNaN(n) && typeof value !== "boolean" && n > 30000 && n < 60000) {
-    return formatDate(excelDateToJSDate(n));
+  const upcoming = eventsSource
+    .filter((ev) => ev.start >= today && ev.start <= fourWeeksLater)
+    .sort((a, b) => a.start - b.start);
+
+  if (upcoming.length === 0) {
+    container.innerHTML =
+      '<div class="p-4 text-center text-muted">No sessions in the next 4 weeks.</div>';
+    return;
   }
 
-  if (value instanceof Date) return formatDate(value);
-  return String(value);
+  const isCataloguePage = containerId === "upcomingListCatalogue";
+
+  container.innerHTML = upcoming
+    .map((ev) => {
+      const eventIndex = allEvents.indexOf(ev);
+      const sTime = ev.extendedProps["Start Time"] || "??:??";
+      const eTime = ev.extendedProps["End Time"] || "??:??";
+
+      if (isCataloguePage) {
+        return `
+  <div class="card border-0 shadow-sm flex-shrink-0" style="width: 340px; cursor: pointer; border-left: 5px solid #0dcaf0 !important;" onclick="showEventDetailsFromData(${eventIndex})">
+    <div class="card-body p-4">
+      <span class="badge bg-soft-primary text-primary mb-3 fs-5 px-3 py-2 rounded-pill">${utils.formatDate(ev.start)}</span>
+      
+      <div class="fw-bold text-dark fs-4 mb-3 text-truncate-2" style="height: 75px; line-height: 1.2;">${ev.title}</div>
+      
+      <div class="text-info fw-bold mb-2 fs-5"><i class="bi bi-clock me-2"></i>${sTime}-${eTime}</div>
+      
+      <div class="text-muted fs-6"><i class="bi bi-geo-alt me-2"></i>${ev.extendedProps["Primary Venue"] || "Virtual"}</div>
+    </div>
+  </div>`;
+      }
+      return `
+<button class="list-group-item list-group-item-action border-0 border-bottom py-3" onclick="showEventDetailsFromData(${eventIndex})">
+    <div class="fw-bold small text-truncate">${ev.title}</div>
+    <div class="d-flex justify-content-between mt-1">
+      <span class="badge bg-light text-primary border">${utils.formatDate(ev.start)}</span>
+      <small class="text-info fw-bold">${sTime}-${eTime}</small>
+    </div>
+</button>`;
+    })
+    .join("");
+
+  if (!isCataloguePage)
+    container.innerHTML = `<div class="list-group list-group-flush">${container.innerHTML}</div>`;
 }
 
-// --- CORE UI ---
+function renderCatalogue(classList, courseDescs) {
+  const container = document.getElementById("courseList");
+  if (!container) return;
+
+  if (courseDescs.length === 0) {
+    container.innerHTML = `<div class="col-12 text-center py-5"><i class="bi bi-search display-3 text-muted"></i><h4 class="mt-3">No matching courses.</h4></div>`;
+    return;
+  }
+
+  const groups = {};
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  courseDescs.forEach((d) => {
+    const name = (d.Course || d.Title || "").trim();
+    if (name) groups[name] = { info: d, sessions: [] };
+  });
+
+  classList.forEach((s) => {
+    const name = (s.Course || "").trim();
+    if (groups[name] && utils.excelToJS(s["Start Date"]) >= today)
+      groups[name].sessions.push(s);
+  });
+
+  container.innerHTML = Object.values(groups)
+    .sort((a, b) =>
+      utils
+        .cleanTitle(a.info.Course)
+        .localeCompare(utils.cleanTitle(b.info.Course)),
+    )
+    .map((group, idx) => {
+      const id = `courseCollapse_${idx}`;
+      const sessionCount = group.sessions.length;
+
+      // Check if a valid link exists in the description JSON
+      const hasLink =
+        group.info.CourseLink &&
+        group.info.CourseLink !== "#" &&
+        group.info.CourseLink !== "awaiting link";
+
+      return `
+        <div class="card mb-3 border-0 shadow-sm prospectus-card">
+            <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#${id}">
+                <div><span class="fw-bold d-block">${group.info.Course}</span><small class="text-muted">${group.info.Trainer || "Self-Directed"}</small></div>
+                <span class="badge ${sessionCount > 0 ? "bg-info" : "bg-light text-muted"} rounded-pill">${sessionCount} Dates</span>
+            </button>
+            <div class="collapse" id="${id}">
+                <div class="card-body bg-light border-top">
+                    <p class="small text-dark mb-3" style="white-space: pre-line;">${group.info.Description}</p>
+                    ${
+                      sessionCount > 0
+                        ? `
+                        <div class="table-responsive">
+                            <table class="table table-sm table-borderless bg-white rounded shadow-sm mb-0 align-middle">
+                                <thead class="small border-bottom"><tr><th>Date</th><th>Time</th><th>Venue</th><th class="text-end">ESR</th></tr></thead>
+                                <tbody class="small">
+                                    ${group.sessions
+                                      .map(
+                                        (s) => `
+                                        <tr>
+                                            <td class="fw-bold">${utils.formatDate(utils.excelToJS(s["Start Date"]))}</td>
+                                            <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
+                                            <td>${s["Primary Venue"] || "Virtual"}</td>
+                                            <td class="text-end"><a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-info text-white py-0 px-3">Book</a></td>
+                                        </tr>`,
+                                      )
+                                      .join("")}
+                                </tbody>
+                            </table>
+                        </div>`
+                        : `
+                        <div class="d-flex justify-content-between align-items-center bg-white p-3 rounded shadow-sm">
+                            <span class="small text-muted">No live dates currently scheduled.</span>
+                            ${
+                              hasLink
+                                ? `<a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-outline-info px-4">View Content / Video</a>`
+                                : `<span class="small fst-italic text-muted">Contact L&D for dates</span>`
+                            }
+                        </div>`
+                    }
+                </div>
+            </div>
+        </div>`;
+    })
+    .join("");
+}
+
+function renderRoomDirectory(rooms) {
+  const tbody = document.getElementById("mrTableBody");
+  if (!tbody) return;
+
+  tbody.innerHTML = rooms
+    .map(
+      (room) => `
+    <tr>
+      <td class="px-4">
+        <span class="venue-site-label d-block fw-bold">${room.Site}</span>
+        <span class="venue-sub-label small text-muted">${room.Venue}</span>
+      </td>
+      <td>
+        <div class="small text-muted" style="white-space: pre-line; font-size: 0.75rem;">${room.Contact}</div>
+      </td>
+      <td class="small text-muted">${room.Address}</td>
+      <td>
+        <div class="fw-bold text-dark">${room.RoomName}</div>
+      </td>
+      <td class="text-center">
+        <span class="capacity-pill badge rounded-pill bg-light text-danger border">${room.Capacity}</span>
+      </td>
+    </tr>`,
+    )
+    .join("");
+}
+
+/**
+ * LOGIC: FILTERING & NAVIGATION
+ */
+function filterCalendar() {
+  const q = document.getElementById("calendarSearch").value.toLowerCase();
+  const filtered = allEvents.filter(
+    (ev) =>
+      ev.title.toLowerCase().includes(q) ||
+      (ev.extendedProps["Primary Venue"] || "").toLowerCase().includes(q),
+  );
+  if (calendar) {
+    calendar.removeAllEvents();
+    calendar.addEventSource(filtered);
+  }
+  renderUpcomingList("upcomingListCatalogue", filtered);
+}
+
+function filterProspectus(query) {
+  const term = query.toLowerCase();
+  const filtered = globalRawDescs.filter((d) => {
+    const clean = utils.cleanTitle(d.Course || d.Title).toLowerCase();
+    const raw = (d.Course || d.Title || "").toLowerCase();
+    return query.length === 1
+      ? clean.startsWith(term)
+      : raw.includes(term) ||
+          (d.Description || "").toLowerCase().includes(term);
+  });
+  renderCatalogue(globalRawClasses, filtered);
+}
+
+function setupRoomSearch() {
+  const input = document.getElementById("mrSearchInput");
+  if (input) {
+    input.addEventListener("input", (e) => {
+      filterRooms(); // Direct call to our robust filter
+    });
+  }
+}
+
+function setupAlphabetNav() {
+  const nav = document.querySelector(".alphabet-nav");
+  if (!nav) return;
+  nav.innerHTML =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      .split("")
+      .map(
+        (l) =>
+          `<button class="btn btn-sm btn-outline-light border-0" onclick="filterProspectus('${l}')">${l}</button>`,
+      )
+      .join("") +
+    `<button class="btn btn-sm btn-info ms-2 rounded-pill" onclick="filterProspectus('')">ALL</button>`;
+}
 
 function showPage(pageId) {
   document
     .querySelectorAll(".page")
-    .forEach((page) => page.classList.remove("active"));
-  const pageEl = document.getElementById(pageId);
-  if (!pageEl) return;
-  pageEl.classList.add("active");
-
-  if (pageId !== "Course_Catalogue") return;
-
-  if (!window.calendar) {
-    requestAnimationFrame(() => initCalendar());
-    return;
+    .forEach((p) => p.classList.toggle("active", p.id === pageId));
+  window.scrollTo(0, 0);
+  if (pageId === "Course_Catalogue" && calendar) {
+    setTimeout(() => {
+      calendar.updateSize();
+      renderUpcomingList("upcomingListCatalogue");
+    }, 150);
   }
-
-  const refreshCalendar = () => {
-    try {
-      if (typeof window.calendar.updateSize === "function")
-        window.calendar.updateSize();
-      window.dispatchEvent(new Event("resize"));
-    } catch (err) {
-      console.error("showPage: calendar refresh failed", err);
-    }
-  };
-
-  requestAnimationFrame(refreshCalendar);
-  setTimeout(refreshCalendar, 100);
 }
 
 function searchPages() {
@@ -90,304 +408,246 @@ function searchPages() {
   }
 }
 
-// --- DATA LOADING ---
-
-async function loadEvents() {
-  if (allEvents.length) return allEvents;
-
-  try {
-    const [classRes, descRes] = await Promise.all([
-      fetch("Data/ClassList.json", { cache: "no-store" }),
-      fetch("Data/CourseDescriptions.json", { cache: "no-store" }),
-    ]);
-
-    const classData = await classRes.json();
-    const descData = await descRes.json();
-
-    const courseInfoMap = {};
-    descData.forEach((d) => {
-      if (d.Course) courseInfoMap[d.Course.trim()] = d;
-    });
-
-    allEvents = classData.map((item) => {
-      const start = excelDateToJSDate(item["Start Date"]);
-      const end = excelDateToJSDate(item["End Date"]);
-
-      // Apply Times to start/end objects to fix 1-hour duration bug
-      if (!isNaN(start.getTime()) && item["Start Time"]) {
-        const [h = 0, m = 0] = String(item["Start Time"])
-          .split(":")
-          .map(Number);
-        start.setHours(h, m, 0, 0);
-      }
-      if (!isNaN(end.getTime()) && item["End Time"]) {
-        const [h = 0, m = 0] = String(item["End Time"]).split(":").map(Number);
-        end.setHours(h, m, 0, 0);
-      }
-
-      // Cross-reference Description Data
-      const info = courseInfoMap[(item.Course || "").trim()] || {};
-      item["CourseLink"] = info.CourseLink || null;
-      item["Description"] = info.Description || "No description available.";
-      item["TargetAudience"] = info.TargetAudience || "General Audience";
-      item["Trainer"] = info.Trainer || "TBD";
-
-      return {
-        title: item.Course || item.Title || "(Untitled)",
-        start,
-        end,
-        extendedProps: item,
-      };
-    });
-
-    return allEvents.filter((ev) => !isNaN(ev.start.getTime()));
-  } catch (err) {
-    console.error("loadEvents error:", err);
-    return [];
-  }
+/**
+ * CALENDAR & MODALS
+ */
+function initCalendar() {
+  const el = document.getElementById("calendar");
+  if (!el || calendar) return;
+  calendar = new FullCalendar.Calendar(el, {
+    initialView: "dayGridMonth",
+    headerToolbar: {
+      left: "prev,next today",
+      center: "title",
+      right: "dayGridMonth,timeGridWeek,listYear",
+    },
+    events: (info, success) => success(allEvents),
+    eventClick: (info) => {
+      info.jsEvent.preventDefault();
+      showEventDetailsFromData(null, info.event.extendedProps);
+    },
+  });
+  calendar.render();
 }
 
-function getVisibleById(id) {
-  const els = document.querySelectorAll(`#${id}`);
-  for (const el of els) {
-    if (getComputedStyle(el).display !== "none") return el;
-  }
-  return els[0] || null;
-}
+function showEventDetailsFromData(idx, directData) {
+  const data = directData || allEvents[idx]?.extendedProps;
+  if (!data) return;
 
-// --- MODAL DISPLAY ---
+  const modal = bootstrap.Modal.getOrCreateInstance(
+    document.getElementById("classModal"),
+  );
+  const url = (data.CourseLink || data["Offering link"] || "").trim();
 
-function showEventDetailsFromData(data = {}) {
-  const detailsEl = getVisibleById("modalDetails");
-  if (!detailsEl) return;
-  detailsEl.innerHTML = "";
-
-  // Fields to hide from the lower technical list
-  const excludedFields = [
-    "Course",
-    "Enrolment Start Date",
-    "Enrolment End Date",
-    "Primary Trainer",
-    "Minimum Attendees",
-    "Customers",
-    "All Delegates Count",
-    "Event Status",
-    "Category",
-    "Sub-Category",
-    "Enable Learner Access",
-    "Last Updated By",
-    "Last Updated Date",
-    "Offering link",
-    "CourseLink",
-    "Description",
-    "TargetAudience",
-    "Trainer",
-  ];
-
-  // 1. HEADER BLOCK (Course, Description, Target Audience, Trainer)
-  const headerFields = [
-    { label: "Course", value: data.Course || data.title },
-    { label: "Description", value: data.Description },
-    { label: "Target Audience", value: data.TargetAudience },
-    { label: "Trainer", value: data.Trainer },
-  ];
-
-  headerFields.forEach((field) => {
-    const dt = document.createElement("dt");
-    dt.className = "col-sm-4 text-primary";
-    dt.textContent = field.label;
-    const dd = document.createElement("dd");
-    dd.className = "col-sm-8 fw-bold";
-    dd.textContent = field.value || "Not specified";
-    detailsEl.appendChild(dt);
-    detailsEl.appendChild(dd);
-  });
-
-  const hr = document.createElement("div");
-  hr.className = "col-12 my-2 border-bottom";
-  detailsEl.appendChild(hr);
-
-  // 2. TECHNICAL INFO BLOCK (Filtered)
-  Object.entries(data).forEach(([key, value]) => {
-    if (!value || excludedFields.includes(key)) return;
-
-    const dt = document.createElement("dt");
-    dt.className = "col-sm-4 text-truncate";
-    dt.textContent = key;
-    const dd = document.createElement("dd");
-    dd.className = "col-sm-8";
-    dd.textContent = formatValueForDisplay(value, key);
-    detailsEl.appendChild(dt);
-    detailsEl.appendChild(dd);
-  });
-
-  // 3. BOOKING BUTTON
-  const linkEl = getVisibleById("modalLink");
+  // Update the Booking Link
+  const linkEl = document.getElementById("modalLink");
   if (linkEl) {
-    const link = data["CourseLink"];
-    if (link && link !== "#") {
-      linkEl.href = link;
-      linkEl.style.display = "inline-block";
-    } else {
-      linkEl.style.display = "none";
+    linkEl.href = url;
+    linkEl.style.display = url && url !== "#" ? "inline-block" : "none";
+  }
+
+  // Build the "Spiffy" Internal Layout
+  document.getElementById("modalDetails").innerHTML = `
+    <div class="mb-4">
+        <h3 class="fw-bold text-primary mb-2">${data.Course || data.title}</h3>
+        <p class="text-dark lead mb-4" style="white-space: pre-line; font-size: 1rem;">${data.Description}</p>
+    </div>
+
+    <div class="row g-3 mb-4">
+        <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 h-100 border-start border-primary border-4">
+                <small class="text-uppercase fw-bold text-muted d-block mb-1" style="font-size: 0.7rem;">Instructor</small>
+                <div class="fw-bold"><i class="bi bi-person-badge me-2"></i>${data.Trainer || "TBD"}</div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="p-3 bg-light rounded-3 h-100 border-start border-success border-4">
+                <small class="text-uppercase fw-bold text-muted d-block mb-1" style="font-size: 0.7rem;">Target Audience</small>
+                <div class="fw-bold"><i class="bi bi-people me-2"></i>${data.TargetAudience || "All Staff"}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 bg-light p-3">
+        <div class="row small text-muted">
+            <div class="col-6 mb-2">
+                <strong><i class="bi bi-geo-alt me-1"></i> Venue:</strong> ${data["Primary Venue"] || "Virtual / Online"}
+            </div>
+            <div class="col-6 mb-2">
+                <strong><i class="bi bi-clock me-1"></i> Time:</strong> ${data["Start Time"] || "??:??"} - ${data["End Time"] || "??:??"}
+            </div>
+            <div class="col-12">
+                <i class="bi bi-info-circle me-1"></i> 
+                <span class="fst-italic">Please ensure you have manager approval before booking on ESR.</span>
+            </div>
+        </div>
+    </div>
+  `;
+
+  modal.show();
+}
+
+function scrollUpcoming(dist) {
+  document
+    .getElementById("upcomingListCatalogue")
+    ?.scrollBy({ left: dist, behavior: "smooth" });
+}
+
+/**
+ * Room Directory Search Logic
+ */
+function filterRooms() {
+  const query = document.getElementById("mrSearchInput").value.toLowerCase();
+  const tbody = document.getElementById("mrTableBody");
+  const table = document.getElementById("mrTable");
+  const noResults = document.getElementById("mrNoResults");
+
+  if (!globalRawRooms || globalRawRooms.length === 0) return;
+
+  const filtered = globalRawRooms.filter((room) => {
+    return (
+      (room.Site || "").toLowerCase().includes(query) ||
+      (room.Venue || "").toLowerCase().includes(query) ||
+      (room.RoomName || "").toLowerCase().includes(query) ||
+      (room.Capacity || "").toString().includes(query) ||
+      (room.Address || "").toLowerCase().includes(query)
+    );
+  });
+
+  renderRoomDirectory(filtered);
+
+  if (filtered.length === 0) {
+    noResults.classList.remove("d-none");
+    table.classList.add("d-none");
+  } else {
+    noResults.classList.add("d-none");
+    table.classList.remove("d-none");
+  }
+}
+
+/**
+ * VIDEO VAULT LOGIC
+ */
+function renderVideoVault(courseDescs) {
+  const tbody = document.getElementById("vvTableBody");
+  if (!tbody) return;
+
+  // 1. Filter only for items where Trainer is "Video"
+  const videoData = courseDescs.filter(
+    (d) =>
+      d.Trainer === "Video" && d.CourseLink && d.CourseLink !== "awaiting link",
+  );
+
+  // 2. Handle the Featured Video (First item in the list)
+  if (videoData.length > 0) {
+    const featured = videoData[0];
+    document.getElementById("vvFeaturedTitle").innerText = featured.Course;
+    document.getElementById("vvFeaturedDesc").innerText = featured.Description;
+    document.getElementById("vvFeaturedBtn").href = featured.CourseLink;
+
+    // Convert YouTube URL to Embed format
+    const player = document.getElementById("vvFeaturedPlayer");
+    let videoUrl = featured.CourseLink;
+    if (videoUrl.includes("youtube.com/watch?v=")) {
+      const id = videoUrl.split("v=")[1].split("&")[0];
+      player.src = `https://www.youtube.com/embed/${id}`;
+    } else if (videoUrl.includes("youtu.be/")) {
+      const id = videoUrl.split("/").pop();
+      player.src = `https://www.youtube.com/embed/${id}`;
     }
   }
 
-  const modalEl = getVisibleById("classModal");
-  if (modalEl && window.bootstrap) {
-    bootstrap.Modal.getOrCreateInstance(modalEl).show();
-  }
+  // 3. Populate the Table
+  tbody.innerHTML = videoData
+    .map((v) => {
+      // Generate color-coded badges based on the "Topic"
+      let badgeClass = "bg-primary-subtle text-primary";
+      const topic = (v.Topic || "General").toLowerCase();
+
+      if (topic.includes("digital")) badgeClass = "bg-info-subtle text-info";
+      if (topic.includes("informed"))
+        badgeClass = "bg-success-subtle text-success";
+      if (topic.includes("career"))
+        badgeClass = "bg-warning-subtle text-warning";
+
+      return `
+      <tr>
+        <td class="ps-4 fw-bold text-dark">${v.Course}</td>
+        <td><span class="badge ${badgeClass} rounded-pill">${v.Topic || "Training"}</span></td>
+        <td class="text-end pe-4">
+          <a href="${v.CourseLink}" target="_blank" class="btn btn-sm btn-warning rounded-pill px-3 fw-bold shadow-sm">
+            <i class="bi bi-play-circle me-1"></i> Watch
+          </a>
+        </td>
+      </tr>`;
+    })
+    .join("");
 }
 
-// --- CALENDAR & LIST ---
+/**
+ * Search functionality for Video Vault
+ */
+function filterVideoVault() {
+  const query = document.getElementById("vvSearchInput").value.toLowerCase();
+  const rows = document.querySelectorAll("#vvTableBody tr");
+  const noResults = document.getElementById("vvNoResults");
+  let foundCount = 0;
 
-function initCalendar() {
-  if (calendarInitialized) return;
-  calendarInitialized = true;
+  rows.forEach((row) => {
+    const text = row.innerText.toLowerCase();
+    const isMatch = text.includes(query);
+    row.style.display = isMatch ? "" : "none";
+    if (isMatch) foundCount++;
+  });
 
-  loadEvents().then(() => {
-    const calendarEl = document.getElementById("calendar");
-    if (!calendarEl) return;
+  noResults.classList.toggle("d-none", foundCount > 0);
+}
 
-    calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: "timeGridWeek",
-      headerToolbar: {
-        left: "prev,next today",
-        center: "title",
-        right: "timeGridDay,timeGridWeek,dayGridMonth,listYear",
-      },
-      events: allEvents,
-      eventClick: (info) => {
-        info.jsEvent.preventDefault();
-        showEventDetailsFromData(info.event.extendedProps);
-      },
+// --- Theme Selector Logic ---
+const themeSelector = document.getElementById("themeSelector");
+
+if (themeSelector) {
+  themeSelector.addEventListener("change", (e) => {
+    const selectedTheme = e.target.value;
+
+    // 1. Remove any existing theme classes (theme-blue, theme-green, etc.)
+    document.body.classList.forEach((className) => {
+      if (className.startsWith("theme-")) {
+        document.body.classList.remove(className);
+      }
     });
-    calendar.render();
+
+    // 2. Add the new selected theme class
+    document.body.classList.add(`theme-${selectedTheme}`);
+
+    // Optional: Save to localStorage so it persists on refresh
+    localStorage.setItem("user-theme", selectedTheme);
   });
 }
 
-function renderUpcomingList() {
-  const container = document.getElementById("upcomingList");
-  if (!container) return;
+// --- Text Scaling Logic ---
+function setTextSize(scaleClass) {
+  // 1. Remove all existing scale classes
+  const scales = ["scale-small", "scale-medium", "scale-large", "scale-xlarge"];
+  document.body.classList.remove(...scales);
 
-  const now = new Date();
-  const upcoming = allEvents
-    .filter((ev) => ev.start >= now)
-    .sort((a, b) => a.start - b.start)
-    .slice(0, 15);
+  // 2. Add the selected scale class
+  document.body.classList.add(scaleClass);
 
-  const list = document.createElement("div");
-  list.className = "list-group";
-
-  upcoming.forEach((ev) => {
-    const btn = document.createElement("button");
-    btn.className =
-      "list-group-item list-group-item-action d-flex justify-content-between align-items-center";
-    btn.innerHTML = `<div><strong>${ev.title}</strong><br><small>${ev.extendedProps.Category || ""}</small></div>
-                          <span class="badge bg-primary rounded-pill">${formatDate(ev.start)}</span>`;
-    btn.onclick = () => showEventDetailsFromData(ev.extendedProps);
-    list.appendChild(btn);
-  });
-
-  container.innerHTML = "";
-  container.appendChild(list);
+  // Optional: Save to localStorage
+  localStorage.setItem("user-font-scale", scaleClass);
 }
 
-// --- PROSPECTUS / CATALOGUE ---
+// --- Initialization on Page Load ---
+window.addEventListener("DOMContentLoaded", () => {
+  // Restore Theme
+  const savedTheme = localStorage.getItem("user-theme") || "blue";
+  if (themeSelector) themeSelector.value = savedTheme;
+  document.body.classList.add(`theme-${savedTheme}`);
 
-(function () {
-  const CONTAINER_ID = "courseList";
+  // Restore Font Scale
+  const savedScale = localStorage.getItem("user-font-scale") || "scale-medium";
+  setTextSize(savedScale);
+});
 
-  function _local_renderCatalogue(classList, courseDescriptions) {
-    const container = document.getElementById(CONTAINER_ID);
-    if (!container) return;
-
-    const combinedData = {};
-    courseDescriptions.forEach((desc) => {
-      combinedData[desc.Course.trim()] = { details: desc, sessions: [] };
-    });
-
-    classList.forEach((session) => {
-      const name = (session.Course || "Unknown").trim();
-      if (!combinedData[name])
-        combinedData[name] = {
-          details: { Course: name, Description: "N/A" },
-          sessions: [],
-        };
-      combinedData[name].sessions.push(session);
-    });
-
-    let html = "";
-    Object.keys(combinedData)
-      .sort()
-      .forEach((name, idx) => {
-        const data = combinedData[name];
-        const uid = `cat_course_${idx}`;
-        const courseLink = data.details["CourseLink"] || "#";
-
-        html += `
-                <div class="course-item mb-2">
-                    <button class="btn btn-primary w-100 text-start d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#${uid}">
-                        <span class="fw-bold">${name}</span>
-                        <span class="badge bg-light text-primary">${data.sessions.length} Sessions</span>
-                    </button>
-                    <div class="collapse" id="${uid}">
-                        <div class="card card-body border-top-0">
-                            <div class="mb-3">
-                                <p><strong>Description:</strong> ${data.details.Description || "No description available."}</p>
-                                <p><strong>Target Audience:</strong> ${data.details.TargetAudience || "General Audience"}</p>
-                                <p><strong>Trainer:</strong> ${data.details.Trainer || "TBD"}</p>
-                            </div>
-                            ${
-                              data.sessions.length > 0
-                                ? `
-                                <div class="table-responsive">
-                                    <table class="table table-sm table-hover border">
-                                        <thead class="table-light">
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Start Time</th>
-                                                <th>End Time</th>
-                                                <th>Venue</th>
-                                                <th class="text-center">Places Remaining</th>
-                                                <th class="text-center">Booking</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            ${data.sessions
-                                              .map(
-                                                (s) => `
-                                                <tr>
-                                                    <td>${formatDate(excelDateToJSDate(s["Start Date"]))}</td>
-                                                    <td>${s["Start Time"] || "--:--"}</td>
-                                                    <td>${s["End Time"] || "--:--"}</td>
-                                                    <td>${s["Primary Venue"] || "Virtual"}</td>
-                                                    <td class="text-center">${s["Places Remaining"] ?? "N/A"}</td>
-                                                    <td class="text-center"><a href="${courseLink}" class="btn btn-sm btn-primary" target="_blank">Book</a></td>
-                                                </tr>`,
-                                              )
-                                              .join("")}
-                                        </tbody>
-                                    </table>
-                                </div>`
-                                : '<div class="alert alert-warning mt-2">No dates currently scheduled.</div>'
-                            }
-                        </div>
-                    </div>
-                </div>`;
-      });
-    container.innerHTML = html;
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    Promise.all([
-      fetch("Data/ClassList.json").then((r) => r.json()),
-      fetch("Data/CourseDescriptions.json").then((r) => r.json()),
-    ]).then(([classes, descs]) => {
-      _local_renderCatalogue(classes, descs);
-      loadEvents().then(() => renderUpcomingList());
-    });
-  });
-})();
-
-document.addEventListener("DOMContentLoaded", initCalendar);
+document.addEventListener("DOMContentLoaded", initApp);
