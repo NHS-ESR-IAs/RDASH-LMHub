@@ -805,20 +805,34 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 1. The "Inverted" look for UNSELECTED (Inactive) options */
 #trainingTab .nav-link {
-  color: #6c757d;
+  color: #198754 !important;
+  /* Green text */
+  background-color: #e8f5e9 !important;
+  /* Very light green background */
   font-weight: bold;
-  transition: var(--transition-smooth);
+  border: 1px solid #198754 !important;
+  /* Subtle green border */
+  margin: 0 5px;
+  /* Adds a little gap between the pills */
+  transition: all 0.3s ease;
 }
 
-#trainingTab #staff-tab.active {
-  background-color: #198754 !important;
-  color: white !important;
-}
-
+/* 2. The SELECTED (Active) option */
+#trainingTab #staff-tab.active,
 #trainingTab #manager-tab.active {
-  background-color: #0d6efd !important;
-  color: white !important;
+  background-color: #198754 !important;
+  /* Solid Green */
+  color: #ffffff !important;
+  /* White text */
+  border: 1px solid #198754 !important;
+}
+
+/* 3. Hover effect for unselected options */
+#trainingTab .nav-link:hover:not(.active) {
+  background-color: #c8e6c9 !important;
+  /* Slightly darker light green on hover */
 }
 
 .guide-step img {
@@ -927,4 +941,26 @@ header,
   .logo-container {
     width: auto !important;
   }
+}
+
+/* Venue Tab Red Styling */
+#venueTabs .nav-link {
+  color: #d5281b !important;
+  /* NHS Red */
+  background-color: #fff1f1 !important;
+  /* Very light red */
+  font-weight: bold;
+  border: 1px solid #d5281b !important;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+#venueTabs .nav-link.active {
+  background-color: #d5281b !important;
+  color: #ffffff !important;
+  border: 1px solid #d5281b !important;
+}
+
+#venueTabs .nav-link:hover:not(.active) {
+  background-color: #ffb0a8 !important;
 }

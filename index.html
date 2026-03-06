@@ -121,12 +121,20 @@
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#hubCarousel" data-bs-slide-to="0" class="active"></button>
               <button type="button" data-bs-target="#hubCarousel" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#hubCarousel" data-bs-slide-to="2"></button>
-              <button type="button" data-bs-target="#hubCarousel" data-bs-slide-to="3"></button>
+
             </div>
 
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="6000">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img src="Assets/Slide1.png" class="d-block w-100" alt="Welcome">
+                <div class="carousel-caption d-none d-md-flex text-start align-items-center">
+                  <div class="caption-box glass-effect">
+                    <h2 class="fw-bold">Welcome to the Hub</h2>
+                    <p>Empowering healthcare professionals with essential skills.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="6000">
                 <img src="Assets/Slide4.png" class="d-block w-100" alt="Learning Matters">
                 <div class="carousel-caption d-none d-md-flex text-start align-items-center">
                   <div class="caption-box glass-effect">
@@ -139,15 +147,7 @@
                   </div>
                 </div>
               </div>
-              <div class="carousel-item" data-bs-interval="5000">
-                <img src="Assets/Slide1.png" class="d-block w-100" alt="Welcome">
-                <div class="carousel-caption d-none d-md-flex text-start align-items-center">
-                  <div class="caption-box glass-effect">
-                    <h2 class="fw-bold">Welcome to the Hub</h2>
-                    <p>Empowering healthcare professionals with essential skills.</p>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -163,7 +163,7 @@
                 class="card tile-card border-0 bg-primary text-white shadow-sm">
                 <div class="card-body text-center p-3">
                   <i class="bi bi-person-badge fs-1 mb-2"></i>
-                  <h5 class="fw-bold">Educator</h5>
+                  <h5>Educator</h5>
                   <p class="small mb-0 opacity-75">Manager support & session setup.</p>
                 </div>
               </a>
@@ -172,18 +172,17 @@
               <a href="#" onclick="showPage('Learner')" class="card tile-card border-0 bg-success text-white shadow-sm">
                 <div class="card-body text-center p-3">
                   <i class="bi bi-mortarboard fs-1 mb-2"></i>
-                  <h5 class="fw-bold">Learner</h5>
+                  <h5>Learner</h5>
                   <p class="small mb-0 opacity-75">How it works & course logging.</p>
                 </div>
               </a>
             </div>
             <div class="col-md-4">
-              <a href="#" onclick="showPage('Training_Rooms')"
-                class="card tile-card border-0 bg-danger text-white shadow-sm">
+              <a href="#" onclick="showPage('FAQs')" class="card tile-card border-0 bg-secondary text-white shadow-sm">
                 <div class="card-body text-center p-3">
-                  <i class="bi bi-geo-alt fs-1 mb-2"></i>
-                  <h5 class="fw-bold">Rooms</h5>
-                  <p class="small mb-0 opacity-75">Find Trust & community venues.</p>
+                  <i class="bi bi-question-circle fs-1 mb-2"></i>
+                  <h5>Help</h5>
+                  <p class="small mb-0 opacity-75">FAQs & training requests.</p>
                 </div>
               </a>
             </div>
@@ -192,27 +191,48 @@
                 class="card tile-card border-0 bg-info text-white shadow-sm">
                 <div class="card-body text-center p-3">
                   <i class="bi bi-book fs-1 mb-2"></i>
-                  <h5 class="fw-bold">Catalogue</h5>
+                  <h5>Catalogue</h5>
                   <p class="small mb-0 opacity-75">Browse all live sessions.</p>
                 </div>
               </a>
             </div>
             <div class="col-md-4">
-              <a href="#" onclick="showPage('Learner_VV')"
-                class="card tile-card border-0 bg-warning text-dark shadow-sm">
+              <a href="#" onclick="showPage('Learner_VV')" class="card tile-card border-0 text-white shadow-sm"
+                style="background-color: #c68a12;">
                 <div class="card-body text-center p-3">
                   <i class="bi bi-play-circle fs-1 mb-2"></i>
-                  <h5 class="fw-bold">Video Vault</h5>
+                  <h5>Video Vault</h5>
                   <p class="small mb-0 opacity-75">Watch recorded sessions.</p>
                 </div>
               </a>
             </div>
             <div class="col-md-4">
-              <a href="#" onclick="showPage('FAQs')" class="card tile-card border-0 bg-secondary text-white shadow-sm">
+              <a href="#" onclick="showPage('Training_Rooms')"
+                class="card tile-card border-0 bg-danger text-white shadow-sm">
                 <div class="card-body text-center p-3">
-                  <i class="bi bi-question-circle fs-1 mb-2"></i>
-                  <h5 class="fw-bold">Help</h5>
-                  <p class="small mb-0 opacity-75">FAQs & training requests.</p>
+                  <i class="bi bi-geo-alt fs-1 mb-2"></i>
+                  <h5>Rooms</h5>
+                  <p class="small mb-0 opacity-75">Find Trust & community venues.</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="Volunteers.html" class="card tile-card border-0 text-white shadow-sm"
+                style="background-color: #6f42c1;">
+                <div class="card-body text-center p-3">
+                  <i class="bi bi-people fs-1 mb-2"></i>
+                  <h5>Volunteers</h5>
+                  <p class="small mb-0 opacity-75">Training and resources for our volunteer community.</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="#" onclick="showPage('MAST_Training')" class="card tile-card border-0 text-white shadow-sm"
+                style="background-color: #d35400;">
+                <div class="card-body text-center p-3">
+                  <i class="bi bi-shield-check fs-1 mb-2"></i>
+                  <h5>MAST</h5>
+                  <p class="small mb-0 opacity-75">Mandatory and Statutory Training requirements.</p>
                 </div>
               </a>
             </div>
@@ -221,14 +241,32 @@
           <hr class="my-5">
 
           <div class="p-4 bg-light rounded-4 shadow-sm">
-            <h3 class="fw-bold text-primary mb-3"><i class="bi bi-clock-history me-2"></i>Learning Half Days</h3>
+            <h3 class="fw-bold mb-3"><i class="bi bi-clock-history me-2"></i>What are Learning Half Days?</h3>
             <p class="lead">RDaSH wants to help all staff learn and grow so every month the Trust gives everyone a
               protected half day just for learning.</p>
-            <p>This is your time to collaborate, innovate, and grow. Whether it's mandatory training or exploring a new
-              clinical skill, this space is yours.</p>
-            <button class="btn btn-outline-primary rounded-pill mt-2" data-bs-toggle="modal"
-              data-bs-target="#learningHalfDaysModal">
-              <i class="bi bi-calendar-check me-2"></i>View 2026/27 Schedule
+            <p>Learning isn’t just online courses; you can build your skills in lots of ways.</p>
+            <p>Learning half days give you time to learn, think, and get better at your job.</p>
+            <h4 class="fw-bold mb-3">How can you use your learning half day?</h4>
+
+            <p>Learning isn't just online courses; you can build your skills in lots of ways. Learning Half Days give
+              you time to learn, think, and get better at your job.</p>
+
+            <p>You can use it to:</p>
+
+            <ul>
+              <li>Work together with your team</li>
+              <li>Learn new ways to help patients, colleagues, and families, including your own</li>
+              <li>Work on getting better and learning more for yourself</li>
+              <li>Try something new or share what you know</li>
+              <li>Do your important mandatory and statutory training</li>
+            </ul>
+
+            <p>In this Learning Hub, you'll find lots of useful resources, classes, and chances to meet others who also
+              want to learn. Everything is designed to help you share ideas and do well. Jump in, explore, and let's
+              learn together!
+            <h4 class="fw-bold mb-3">When are Learning Half Days?</h4>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#learningHalfDaysModal">
+              <i class="bi bi-calendar-check me-2"></i>Click here for the upcoming Learning Half Days for 2026-2027
             </button>
           </div>
         </div>
@@ -318,23 +356,26 @@
         </div>
         <div class="col-lg-4">
           <div class="sticky-top" style="top: 20px; z-index: 10;">
-            <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+            <div class="card shadow-sm rounded-4 overflow-hidden mb-4 border border-3 border-primary">
               <div class="card-header bg-white py-3 border-0">
-                <h5 class="fw-bold mb-0 text-primary"><i class="bi bi-calendar-event me-2"></i>Upcoming</h5>
+                <h5 class="fw-bold mb-0 text-primary">
+                  <i class="bi bi-megaphone-fill me-2"></i>Upcoming Learning Half Day Courses
+                </h5>
               </div>
               <div class="card-body p-0">
                 <div id="upcomingList" class="p-2"></div>
               </div>
               <div class="card-footer bg-light text-center border-0 py-3">
-                <a href="#" onclick="showPage('Course_Catalogue')" class="text-decoration-none fw-bold">View Full
-                  Calendar →</a>
+                <a href="#" onclick="showPage('Course_Catalogue')" class="text-decoration-none fw-bold">
+                  View Full Calendar →
+                </a>
               </div>
             </div>
 
-            <div class="card border-0 bg-primary text-white shadow-sm rounded-4 p-4 text-center">
-              <i class="bi bi-info-circle fs-2 mb-2"></i>
-              <h6>Need Help?</h6>
-              <p class="small opacity-75">Can't find a course? Contact the L&D team through the FAQ section.</p>
+            <div class="card border-0 bg-white text-dark shadow-sm rounded-4 p-4 text-center">
+              <i class="bi bi-info-circle fs-2 mb-2 text-primary"></i>
+              <h6 class="fw-bold">Need Help?</h6>
+              <p class="small text-muted">Can't find a course? Check out our FAQ section.</p>
             </div>
           </div>
         </div>
@@ -365,33 +406,40 @@
 
       <div class="row align-items-center mb-5">
         <div class="col-md-8">
-          <h1 class="display-5 fw-bold text-dark">Course <span class="text-primary">Calendar</span>
-            <span class="badge badge-pill bg-primary fs-6 ms-2 align-middle">Live Schedule</span>
+          <h1 class="display-5 fw-bold text-dark">Course Calendar
           </h1>
           <p class="lead text-muted">Browse upcoming face-to-face and virtual sessions. Use the filter to find specific
             topics or Trust venues.</p>
+          <h5 class="fw-bold">Course Prospectus</h5>
+          <p class="small text-muted mb-3">View the full A–Z directory with course descriptions and audiences.</p>
+          <button onclick="showPage('Course_Catalogue1')" class="btn btn-info rounded-pill px-4 shadow-sm fw-bold"
+            style="color: white;">
+            <i class="bi bi-book me-2"></i>Open Prospectus
+          </button>
         </div>
-        <div class="col-md-4 text-end">
-          <div class="p-4 border-start border-primary border-4 bg-light rounded-4 shadow-sm">
-            <h5 class="fw-bold">Looking for Details?</h5>
-            <p class="small text-muted mb-3">View the full A–Z directory with course descriptions and audiences.</p>
-            <button onclick="showPage('Course_Catalogue1')" class="btn btn-primary rounded-pill px-4 shadow-sm fw-bold">
-              <i class="bi bi-book me-2"></i>Open Prospectus
-            </button>
+        <div class="col-md-4 text-end d-none d-md-block">
+          <div class="p-3 bg-info bg-opacity-10 rounded-4 border-start border-info border-4">
+            <i class="bi bi-book display-4 text-info"></i>
           </div>
         </div>
       </div>
+
+
+
+
+
 
       <div class="row mb-4">
         <div class="col-md-6">
           <div class="input-group shadow-sm rounded-pill overflow-hidden border">
-            <span class="input-group-text bg-white border-0"><i class="bi bi-search text-primary"></i></span>
-            <input type="text" id="calendarSearch" class="form-control border-0"
-              placeholder="Filter the live schedule..." onkeyup="filterCalendar()">
+            <span class="input-group-text bg-white border-0"><i class="bi bi-search text-info"></i></span>
+            <input type="text" id="calendarSearch" class="form-control border-0" placeholder="Filter the schedule..."
+              onkeyup="filterCalendar()">
           </div>
         </div>
       </div>
 
+      <!--
       <div class="row mb-4">
         <div class="col-12">
           <div class="d-flex justify-content-between align-items-center mb-3">
@@ -408,7 +456,7 @@
           </div>
         </div>
       </div>
-
+    -->
       <div class="row">
         <div class="col-12">
           <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
@@ -442,43 +490,60 @@
       </div>
 
       <div class="row align-items-center mb-5">
-        <div class="col-md-7">
-          <h1 class="display-5 fw-bold text-dark">Course <span class="text-info">Prospectus</span></h1>
+        <div class="col-md-8">
+          <h1 class="display-5 fw-bold text-dark">Course Prospectus</h1>
           <p class="lead text-muted">A comprehensive A–Z directory of all learning opportunities. Find the right course
             for your professional development.</p>
+          <h5 class="fw-bold text-dark">
+            <i class="bi bi-calendar3 text-info me-2"></i>Course Calendar
+          </h5>
+          <p class="small text-muted mb-3">
+            Looking for training on a specific date? Go to the <strong>Course Calendar</strong> to find training
+            listed by dates, times, and available venues.
+          </p>
+          <button onclick="showPage('Course_Catalogue')"
+            class="btn btn-info text-white rounded-pill px-4 shadow-sm fw-bold">
+            <i class="bi bi-arrow-right-circle me-2"></i>Go to Course Calendar
+          </button>
         </div>
-        <div class="col-md-5 text-end">
-          <div class="p-4 border-start border-info border-4 bg-light rounded-4 shadow-sm">
-            <h5 class="fw-bold"><i class="bi bi-calendar-check text-info me-2"></i>Quick Switch</h5>
-            <p class="small text-muted mb-3">Ready to book? Switch to the calendar view to see dates and times.</p>
-            <button onclick="showPage('Course_Catalogue')"
-              class="btn btn-info text-white rounded-pill px-4 shadow-sm fw-bold">
-              <i class="bi bi-calendar3 me-2"></i>View Live Dates
-            </button>
+        <div class="col-md-4 text-end d-none d-md-block">
+          <div class="p-3 bg-info bg-opacity-10 rounded-4 border-start border-info border-4">
+            <i class="bi bi-book display-4 text-info"></i>
           </div>
         </div>
       </div>
 
+
+
+
       <div class="row mb-4">
         <div class="col-12">
           <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-            <div class="card-body bg-dark text-white p-3">
-              <div class="row align-items-center g-3">
-                <div class="col-md-auto">
-                  <span class="small text-uppercase fw-bold opacity-75">Quick Jump:</span>
-                </div>
-                <div class="col-md">
+            <div class="card-body text-white p-3" style="background-color: #5ba2b8;">
+              <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+
+                <div class="d-flex flex-wrap align-items-center gap-1">
+                  <span class="small text-uppercase fw-bold opacity-75 me-2">Quick Jump:</span>
                   <div class="alphabet-nav d-flex flex-wrap gap-1">
-                    <button class="btn btn-sm btn-outline-light border-0">A</button>
-                    <button class="btn btn-sm btn-outline-light border-0">B</button>
-                    <button class="btn btn-sm btn-outline-light border-0">C</button>
-                    <button class="btn btn-sm btn-outline-light border-0">D</button>
-                    <button class="btn btn-sm btn-outline-light border-0">E</button>
-                    <span class="px-2 opacity-50">|</span>
-                    <input type="text" class="form-control form-control-sm rounded-pill px-3 d-inline-block w-auto"
-                      placeholder="Search prospectus..." onkeyup="filterProspectus(this.value)">
+                    ${"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(l =>
+                    `<button class="btn btn-sm text-white fw-bold border-0 p-1"
+                      onclick="filterByLetter('${l}')">${l}</button>`
+                    ).join("")}
+                    <button class="btn btn-sm btn-info rounded-pill fw-bold text-dark px-3 ms-2"
+                      onclick="filterByLetter('ALL')">ALL</button>
                   </div>
                 </div>
+
+                <div class="search-container" style="min-width: 280px;">
+                  <div class="input-group input-group-sm shadow-sm rounded-pill overflow-hidden">
+                    <span class="input-group-text bg-white border-0 pe-0">
+                      <i class="bi bi-search text-muted"></i>
+                    </span>
+                    <input type="text" id="prospectusSearch" class="form-control border-0 py-2 ps-2"
+                      placeholder="Search courses..." onkeyup="filterProspectus()">
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -494,6 +559,11 @@
 
     </div>
   </div>
+
+  <!-- ======================================================
+  = Educator SECTION =
+  ========================================================= -->
+
 
 
   <div id="Educator" class="page">
@@ -513,17 +583,19 @@
 
       <div class="row align-items-center mb-5">
         <div class="col-md-8">
-          <h1 class="display-5 fw-bold text-dark">Educator <span class="text-primary">Toolkit</span></h1>
-          <p class="lead text-muted">Resources and support for Trainers, Educators, and Line Managers to facilitate
-            world-class learning at RDaSH.</p>
+          <h1 class="display-5 fw-bold text-dark">Educator Toolkit</h1>
+          <p class="lead text-muted">
+            Resources and support for Trainers, Educators, and Line Managers to facilitate
+            learning half days at RDaSH.
+          </p>
         </div>
         <div class="col-md-4 text-end d-none d-md-block">
           <div class="p-3 bg-primary bg-opacity-10 rounded-4 border-start border-primary border-4">
-            <i class="bi bi-person-workspace display-4 text-primary"></i>
+            <i class="bi bi-person-badge display-4 text-primary"></i>
           </div>
         </div>
       </div>
-
+      <!--
       <div class="row g-4">
         <div class="col-lg-6">
           <h4 class="fw-bold mb-3">Core Actions</h4>
@@ -544,14 +616,14 @@
 
           <div class="card border-0 shadow-sm rounded-4 mb-3 educator-action-card">
             <div class="card-body d-flex align-items-start p-4">
-              <div class="icon-box bg-danger text-white me-3">
+              <div class="icon-box bg-primary text-white me-3">
                 <i class="bi bi-door-open fs-3"></i>
               </div>
               <div>
                 <h5 class="fw-bold mb-1">Book a Venue</h5>
                 <p class="small text-muted mb-3">Find and book the perfect space for your clinical or classroom-based
                   training.</p>
-                <button onclick="showPage('Training_Rooms')" class="btn btn-danger btn-sm rounded-pill px-4">View
+                <button onclick="showPage('Training_Rooms')" class="btn btn-primary btn-sm rounded-pill px-4">View
                   Rooms</button>
               </div>
             </div>
@@ -595,8 +667,16 @@
           </div>
         </div>
       </div>
-
-
+    -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="p-3 bg-light rounded-3 text-center">
+            <p class="small mb-0 fst-italic text-muted">
+              "Educators aren't just those with a title; they are anyone sharing knowledge to improve patient care."
+            </p>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -619,11 +699,22 @@
         </div>
       </div>
 
+
+
       <div class="row align-items-center mb-5 text-center text-md-start">
         <div class="col-md-8">
-          <h1 class="display-5 fw-bold text-dark">Self Service <span class="text-success">Training Portal</span></h1>
-          <p class="lead text-muted">Your Gateway to Training: Self-enroll for your own development or manage your
-            team's training from one central dashboard.</p>
+          <h1 class="display-5 fw-bold text-dark">Self Service Training Portal</h1>
+
+          <p class="lead text-muted">
+            Your Gateway to Training: Self-enroll for your own development or manage your
+            team's training from one central dashboard. <strong>Please note: this guide is for non-MAST
+              courses.</strong>
+          </p>
+        </div>
+        <div class="col-md-4 text-end d-none d-md-block">
+          <div class="p-3 bg-success bg-opacity-10 rounded-4 border-start border-success border-4">
+            <i class="bi bi-mortarboard display-4 text-success"></i>
+          </div>
         </div>
       </div>
 
@@ -631,6 +722,7 @@
         <div class="col-12">
           <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
             <div class="card-header bg-white border-0 p-0">
+
               <ul class="nav nav-pills nav-fill bg-light p-2" id="trainingTab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button class="nav-link active py-3 fw-bold rounded-pill" id="staff-tab" data-bs-toggle="tab"
@@ -710,8 +802,8 @@
                     </div>
                   </div>
 
-                  <div class="bg-light p-4 rounded-4 border-start border-danger border-5 shadow-sm">
-                    <h4 class="text-danger fw-bold"><i class="bi bi-x-circle-fill me-2"></i>How to Cancel</h4>
+                  <div class="bg-light p-4 rounded-4 border-start border-success border-5 shadow-sm">
+                    <h4 class="text-success fw-bold"><i class="bi bi-x-circle-fill me-2"></i>How to Cancel</h4>
                     <p class="ms-md-4 text-muted mt-2">Click the <strong>Class Name</strong> on your learning page. Use
                       the drop-down to select <strong>Unenrol</strong>, click <strong>Go</strong>, select your reason,
                       and click <strong>Finish</strong>.</p>
@@ -724,11 +816,11 @@
                 </div>
 
                 <div class="tab-pane fade" id="manager" role="tabpanel">
-                  <h2 class="h3 mb-5 text-primary fw-bold border-bottom pb-3">Manager & Admin Enrolment Guide</h2>
+                  <h2 class="h3 mb-5 text-success fw-bold border-bottom pb-3">Manager & Admin Enrolment Guide</h2>
 
                   <div class="guide-step mb-5">
                     <div class="d-flex align-items-center mb-3">
-                      <span class="badge rounded-circle bg-primary p-3 me-3 text-white">01</span>
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">01</span>
                       <h4 class="fw-bold mb-0">Access Team Learning</h4>
                     </div>
                     <p class="text-muted ms-md-5">Click the <strong>Manager</strong> tab, select <strong>My Team Career
@@ -741,7 +833,7 @@
 
                   <div class="guide-step mb-5">
                     <div class="d-flex align-items-center mb-3">
-                      <span class="badge rounded-circle bg-primary p-3 me-3 text-white">02</span>
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">02</span>
                       <h4 class="fw-bold mb-0">Identify Staff Member</h4>
                     </div>
                     <p class="text-muted ms-md-5">Search for the staff member by name or select them from the list.
@@ -754,7 +846,7 @@
 
                   <div class="guide-step mb-5">
                     <div class="d-flex align-items-center mb-3">
-                      <span class="badge rounded-circle bg-primary p-3 me-3 text-white">03</span>
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">03</span>
                       <h4 class="fw-bold mb-0">Search & Enrol</h4>
                     </div>
                     <p class="text-muted ms-md-5">Type the course keyword into the <strong>Search Course</strong> bar.
@@ -771,7 +863,7 @@
 
                   <div class="guide-step mb-5">
                     <div class="d-flex align-items-center mb-3">
-                      <span class="badge rounded-circle bg-primary p-3 me-3 text-white">04</span>
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">04</span>
                       <h4 class="fw-bold mb-0">Confirmation</h4>
                     </div>
                     <p class="text-muted ms-md-5">Add any special instructions and click <strong>Submit</strong>. The
@@ -786,8 +878,8 @@
                     </div>
                   </div>
 
-                  <div class="bg-light p-4 rounded-4 border-start border-warning border-5 shadow-sm">
-                    <h4 class="text-dark fw-bold"><i class="bi bi-x-circle-fill me-2 text-warning"></i>How to Cancel
+                  <div class="bg-light p-4 rounded-4 border-start border-success border-5 shadow-sm">
+                    <h4 class="text-dark fw-bold"><i class="bi bi-x-circle-fill me-2 text-success"></i>How to Cancel
                     </h4>
                     <p class="ms-md-4 text-muted mt-2">Click the <strong>Class Name</strong>, select
                       <strong>Unenrol</strong> from the drop-down, and click <strong>Go</strong>. Choose a reason and
@@ -820,12 +912,9 @@
         <div class="col">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-light p-3 rounded-pill shadow-sm">
-              <li class="breadcrumb-item">
-                <a href="#" onclick="showPage('home');" class="text-decoration-none">
-                  <i class="bi bi-house-door"></i> Hub
-                </a>
-              </li>
-              <li class="breadcrumb-item active fw-bold text-dark" aria-current="page">Video Vault</li>
+              <li class="breadcrumb-item"><a href="#" onclick="showPage('home');" class="text-decoration-none"><i
+                    class="bi bi-house-door"></i> Hub</a></li>
+              <li class="breadcrumb-item active fw-bold" style="color: #c68a12;" aria-current="page">Video Vault</li>
             </ol>
           </nav>
         </div>
@@ -833,72 +922,56 @@
 
       <div class="row align-items-center mb-5">
         <div class="col-md-8">
-          <h1 class="display-5 fw-bold text-dark">Video <span class="text-warning">Vault</span></h1>
-          <p class="lead text-muted">Watch recorded training sessions, clinical tutorials, and hub guides at your own
+          <h1 class="display-5 fw-bold text-dark">Video Vault</h1>
+          <p class="lead text-muted">A comprehensive A–Z directory of recorded training. Watch and learn at your own
             pace.</p>
+          <h5 class="fw-bold text-dark">
+            <i class="bi bi-camera-video-fill me-2" style="color: #c68a12;"></i>On-Demand Learning
+          </h5>
+          <p class="small text-muted mb-3">
+            Recorded sessions allow you to catch up on training you may have missed during the live Learning Half
+            Days.
+          </p>
         </div>
-        <div class="col-md-4 text-end d-none d-md-block">
-          <div class="p-3 bg-warning bg-opacity-10 rounded-4 border-start border-warning border-4 text-center">
-            <i class="bi bi-play-btn-fill display-4 text-warning"></i>
+        <div class="col-md-4 text-end">
+          <div class="p-4 border-start border-4 bg-light rounded-4 shadow-sm text-end"
+            style="border-color: #c68a12 !important;">
+            <i class="bi bi-play-circle display-4" style="color: #c68a12 !important;"></i>
           </div>
         </div>
       </div>
 
-      <div class="row mb-5" id="vvFeaturedSection">
-        <div class="col-12">
-          <div class="card border-0 shadow-lg rounded-4 overflow-hidden bg-dark text-white">
-            <div class="row g-0">
-              <div class="col-lg-7 position-relative bg-black">
-                <div class="ratio ratio-16x9">
-                  <iframe id="vvFeaturedPlayer" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                    title="Featured Video"></iframe>
-                </div>
-              </div>
-              <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center">
-                <h2 id="vvFeaturedTitle" class="fw-bold mb-3 text-warning">Loading latest video...</h2>
-                <p id="vvFeaturedDesc" class="opacity-75 mb-4">Please wait while we fetch the latest training content.
-                </p>
-                <div class="d-flex flex-wrap gap-3">
-                  <a id="vvFeaturedBtn" href="#" target="_blank"
-                    class="btn btn-warning rounded-pill px-4 fw-bold shadow-sm">
-                    <i class="bi bi-box-arrow-up-right me-2"></i>Open Video
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
 
       <div class="row mb-4">
-        <div class="col-12 d-flex justify-content-between align-items-end mb-4">
-          <h4 class="fw-bold mb-0">Full Video Directory</h4>
-          <div class="input-group w-auto shadow-sm rounded-pill overflow-hidden border">
-            <span class="input-group-text bg-white border-0"><i class="bi bi-search text-warning"></i></span>
-            <input type="text" id="vvSearchInput" oninput="filterVideoVault()" class="form-control border-0"
-              placeholder="Search for a subject...">
-          </div>
-        </div>
-
         <div class="col-12">
           <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-            <div class="table-responsive">
-              <table class="table table-hover align-middle mb-0">
-                <thead class="bg-light">
-                  <tr>
-                    <th class="ps-4 py-3">Course Title</th>
-                    <th class="py-3">Topic</th>
-                    <th class="py-3 text-end pe-4">Access</th>
-                  </tr>
-                </thead>
-                <tbody id="vvTableBody">
-                </tbody>
-              </table>
-              <div id="vvNoResults" class="p-5 text-center d-none">
-                <i class="bi bi-camera-video-off display-4 text-muted"></i>
-                <p class="mt-2 text-muted">No videos found matching your search.</p>
+            <div class="card-body text-white p-3" style="background-color: #c68a12;">
+              <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+                <div class="d-flex flex-wrap align-items-center gap-1">
+                  <span class="small text-uppercase fw-bold opacity-75 me-2">Quick Jump:</span>
+                  <div id="vvAlphabetNav" class="alphabet-nav d-flex flex-wrap gap-1">
+                  </div>
+                </div>
+                <div class="search-container" style="min-width: 280px;">
+                  <div class="input-group input-group-sm shadow-sm rounded-pill overflow-hidden">
+                    <span class="input-group-text bg-white border-0 pe-0">
+                      <i class="bi bi-search text-muted"></i>
+                    </span>
+                    <input type="text" id="vvSearchInputNew" class="form-control border-0 py-2 ps-2"
+                      placeholder="Search video titles..." onkeyup="filterVideoVaultNew()">
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div id="vvCourseList" class="row g-4">
           </div>
         </div>
       </div>
@@ -926,34 +999,49 @@
 
       <div class="row align-items-center mb-5">
         <div class="col-md-8">
-          <h1 class="display-5 fw-bold text-dark">Training <span class="text-danger">Venues</span></h1>
+          <h1 class="display-5 fw-bold text-dark">Training Venues</h1>
           <p class="lead text-muted">Browse and book clinical spaces, classrooms, and community meeting rooms across our
             Trust sites.</p>
         </div>
         <div class="col-md-4 text-end d-none d-md-block">
           <div class="p-3 bg-danger bg-opacity-10 rounded-4 border-start border-danger border-4 text-center">
-            <i class="bi bi-building-fill-add display-4 text-danger"></i>
+            <i class="bi bi-geo-alt fs-1 mb-2 text-danger"></i>
           </div>
         </div>
       </div>
 
-      <div class="row mb-4">
-        <div class="col-12">
-          <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
-            <div class="row align-items-center g-3">
-              <div class="col-md-6">
-                <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-search me-2"></i>Find a Room</h5>
-              </div>
-              <div class="col-md-6">
-                <div class="input-group">
-                  <span class="input-group-text bg-light border-0"><i class="bi bi-funnel"></i></span>
-                  <input type="text" id="mrSearchInput" class="form-control border-0 bg-light"
-                    placeholder="Filter by site, room, or capacity..." onkeyup="filterRooms()">
-                </div>
+      <div class="container py-4">
+        <div class="row mb-5">
+          <div class="col-12">
+            <ul class="nav nav-pills nav-fill bg-light p-2 rounded-pill shadow-sm" id="venueTabs">
+              <li class="nav-item">
+                <button class="nav-link active py-3 fw-bold rounded-pill venue-filter-btn"
+                  onclick="filterByVenueType('trust', this)">
+                  <i class="bi bi-building me-2"></i>Trust Training Rooms
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link py-3 fw-bold rounded-pill venue-filter-btn"
+                  onclick="filterByVenueType('community', this)">
+                  <i class="bi bi-people me-2"></i>Community Venues
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="card border-0 shadow-sm rounded-4 p-3 bg-white">
+              <div class="input-group">
+                <span class="input-group-text bg-light border-0"><i class="bi bi-search text-danger"></i></span>
+                <input type="text" id="mrSearchInput" class="form-control border-0 bg-light"
+                  placeholder="Search rooms in this category..." onkeyup="filterRooms()">
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
       <div class="row">
@@ -963,11 +1051,11 @@
               <table class="table table-hover align-middle mb-0" id="mrTable">
                 <thead class="bg-danger text-white">
                   <tr>
-                    <th class="py-3 px-4" style="width: 15%;">Site & Venue</th>
-                    <th class="py-3" style="width: 15%;">Contact</th>
-                    <th class="py-3" style="width: 20%;">Address</th>
-                    <th class="py-3" style="width: 35%;">Room Name & Features</th>
-                    <th class="py-3 text-center" style="width: 15%;">Capacity</th>
+                    <th class="bg-danger py-3 px-4" style="width: 15%;">Site & Venue</th>
+                    <th class="bg-danger py-3" style="width: 15%;">Contact</th>
+                    <th class="bg-danger py-3" style="width: 20%;">Address</th>
+                    <th class="bg-danger py-3" style="width: 35%;">Room Name & Features</th>
+                    <th class="bg-danger py-3 text-center" style="width: 15%;">Capacity</th>
                   </tr>
                 </thead>
                 <tbody id="mrTableBody" class="bg-white">
@@ -1019,11 +1107,11 @@
 
       <div class="row align-items-center mb-5">
         <div class="col-md-8 text-center text-md-start">
-          <h1 class="display-5 fw-bold text-dark">How can we <span class="text-secondary">help?</span></h1>
+          <h1 class="display-5 fw-bold text-dark">How can we help?</span></h1>
           <p class="lead text-muted">Find answers to common questions about ESR, training, and room bookings.</p>
         </div>
         <div class="col-md-4 text-end d-none d-md-block">
-          <div class="p-3 bg-secondary bg-opacity-10 rounded-4 border-start border-secondary border-4 text-center">
+          <div class="p-3 bg-secondary bg-opacity-10 rounded-4 border-start border-secondary border-4 text-end">
             <i class="bi bi-question-circle-fill display-4 text-secondary"></i>
           </div>
         </div>

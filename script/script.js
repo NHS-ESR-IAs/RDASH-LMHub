@@ -45,9 +45,10 @@ const utils = {
     return String(val);
   },
 
+  // Enhanced to remove both 376 and LHD prefixes (case-insensitive)
   cleanTitle: (str) =>
     String(str || "")
-      .replace(/^376\s*/, "")
+      .replace(/^(376|LHD - )\s*/gi, "")
       .trim(),
 };
 
@@ -69,7 +70,6 @@ async function initApp() {
     const rawNestedRooms = roomRes ? await roomRes.json() : [];
 
     // --- FLATTEN ROOM DATA ---
-    // This transforms your nested JSON into a flat list for the table
     globalRawRooms = [];
     rawNestedRooms.forEach((venue) => {
       if (venue.rooms && Array.isArray(venue.rooms)) {
@@ -77,11 +77,11 @@ async function initApp() {
           globalRawRooms.push({
             Site: venue.site || "N/A",
             Venue: venue.venue || "N/A",
+            Type: (venue.type || "internal").toLowerCase(), // <--- Capture the new field here
             Contact: venue.contact || "N/A",
             Address: venue.address || "N/A",
             RoomName: room.n || "N/A",
             Capacity: room.c || "N/A",
-            // Helper for the Email button
             ContactEmail:
               venue.contact && venue.contact.includes("@")
                 ? venue.contact.split("\n").find((s) => s.includes("@"))
@@ -117,7 +117,10 @@ async function initApp() {
         const info = descMap.get(courseKey) || {};
 
         return {
-          title: item.Course || item.Title || "Untitled Course",
+          // Cleaned title for Calendar and Lists
+          title: utils.cleanTitle(
+            item.Course || item.Title || "Untitled Course",
+          ),
           start: start,
           end: end,
           extendedProps: {
@@ -155,16 +158,18 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const fourWeeksLater = new Date();
-  fourWeeksLater.setDate(today.getDate() + 28);
+
+  // Extended to 60 days (approx 2 months) to cover April requirements
+  const twoMonthsLater = new Date();
+  twoMonthsLater.setDate(today.getDate() + 60);
 
   const upcoming = eventsSource
-    .filter((ev) => ev.start >= today && ev.start <= fourWeeksLater)
+    .filter((ev) => ev.start >= today && ev.start <= twoMonthsLater)
     .sort((a, b) => a.start - b.start);
 
   if (upcoming.length === 0) {
     container.innerHTML =
-      '<div class="p-4 text-center text-muted">No sessions in the next 4 weeks.</div>';
+      '<div class="p-4 text-center text-muted">No sessions in the next 2 months.</div>';
     return;
   }
 
@@ -175,6 +180,7 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
       const eventIndex = allEvents.indexOf(ev);
       const sTime = ev.extendedProps["Start Time"] || "??:??";
       const eTime = ev.extendedProps["End Time"] || "??:??";
+      const cleanTitle = utils.cleanTitle(ev.title);
 
       if (isCataloguePage) {
         return `
@@ -182,7 +188,7 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
     <div class="card-body p-4">
       <span class="badge bg-soft-primary text-primary mb-3 fs-5 px-3 py-2 rounded-pill">${utils.formatDate(ev.start)}</span>
       
-      <div class="fw-bold text-dark fs-4 mb-3 text-truncate-2" style="height: 75px; line-height: 1.2;">${ev.title}</div>
+      <div class="fw-bold text-dark fs-4 mb-3 text-truncate-2" style="height: 75px; line-height: 1.2;">${cleanTitle}</div>
       
       <div class="text-info fw-bold mb-2 fs-5"><i class="bi bi-clock me-2"></i>${sTime}-${eTime}</div>
       
@@ -192,7 +198,7 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
       }
       return `
 <button class="list-group-item list-group-item-action border-0 border-bottom py-3" onclick="showEventDetailsFromData(${eventIndex})">
-    <div class="fw-bold small text-truncate">${ev.title}</div>
+    <div class="fw-bold small text-truncate">${cleanTitle}</div>
     <div class="d-flex justify-content-between mt-1">
       <span class="badge bg-light text-primary border">${utils.formatDate(ev.start)}</span>
       <small class="text-info fw-bold">${sTime}-${eTime}</small>
@@ -238,56 +244,68 @@ function renderCatalogue(classList, courseDescs) {
     .map((group, idx) => {
       const id = `courseCollapse_${idx}`;
       const sessionCount = group.sessions.length;
+      const cleanCourseName = utils.cleanTitle(group.info.Course);
 
-      // Check if a valid link exists in the description JSON
       const hasLink =
         group.info.CourseLink &&
         group.info.CourseLink !== "#" &&
         group.info.CourseLink !== "awaiting link";
 
-      return `
-        <div class="card mb-3 border-0 shadow-sm prospectus-card">
-            <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#${id}">
-                <div><span class="fw-bold d-block">${group.info.Course}</span><small class="text-muted">${group.info.Trainer || "Self-Directed"}</small></div>
-                <span class="badge ${sessionCount > 0 ? "bg-info" : "bg-light text-muted"} rounded-pill">${sessionCount} Dates</span>
-            </button>
-            <div class="collapse" id="${id}">
-                <div class="card-body bg-light border-top">
-                    <p class="small text-dark mb-3" style="white-space: pre-line;">${group.info.Description}</p>
+      return `<div class="card mb-3 border border-info-subtle bg-info-subtle shadow-sm prospectus-card">
+    <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center bg-info-subtle text-info-emphasis border-0" data-bs-toggle="collapse" data-bs-target="#${id}">
+        <div>
+            <span class="fw-bold d-block">${cleanCourseName}</span>
+            <small class="text-info-emphasis opacity-75">${group.info.Trainer || "Self-Directed"}</small>
+        </div>
+        <span class="badge ${sessionCount > 0 ? "bg-info text-light" : "bg-info text-light"} rounded-pill">${sessionCount} Dates</span>
+    </button>
+    
+    <div class="collapse" id="${id}">
+        <div class="card-body bg-white border-top border-info-subtle">
+            <p class="small text-dark mb-3" style="white-space: pre-line;">${group.info.Description}</p>
+            ${
+              sessionCount > 0
+                ? `
+                <div class="table-responsive">
+                    <table class="table table-sm table-hover bg-white rounded mb-0 align-middle">
+                        <thead class="small bg-info-subtle text-info-emphasis">
+                            <tr>
+                                <th class="ps-2">Date</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                <th class="text-end pe-2">ESR</th>
+                            </tr>
+                        </thead>
+                        <tbody class="small">
+                            ${group.sessions
+                              .map(
+                                (s) => `
+                                <tr>
+                                    <td class="fw-bold ps-2">${utils.formatDate(utils.excelToJS(s["Start Date"]))}</td>
+                                    <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
+                                    <td>${s["Primary Venue"] || "Virtual"}</td>
+                                    <td class="text-end pe-2">
+                                        <a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-info text-white py-0 px-3 fw-bold">Book</a>
+                                    </td>
+                                </tr>`,
+                              )
+                              .join("")}
+                        </tbody>
+                    </table>
+                </div>`
+                : `
+                <div class="d-flex justify-content-between align-items-center bg-info-subtle p-3 rounded border border-info-subtle">
+                    <span class="small text-info-emphasis">No live dates currently scheduled.</span>
                     ${
-                      sessionCount > 0
-                        ? `
-                        <div class="table-responsive">
-                            <table class="table table-sm table-borderless bg-white rounded shadow-sm mb-0 align-middle">
-                                <thead class="small border-bottom"><tr><th>Date</th><th>Time</th><th>Venue</th><th class="text-end">ESR</th></tr></thead>
-                                <tbody class="small">
-                                    ${group.sessions
-                                      .map(
-                                        (s) => `
-                                        <tr>
-                                            <td class="fw-bold">${utils.formatDate(utils.excelToJS(s["Start Date"]))}</td>
-                                            <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
-                                            <td>${s["Primary Venue"] || "Virtual"}</td>
-                                            <td class="text-end"><a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-info text-white py-0 px-3">Book</a></td>
-                                        </tr>`,
-                                      )
-                                      .join("")}
-                                </tbody>
-                            </table>
-                        </div>`
-                        : `
-                        <div class="d-flex justify-content-between align-items-center bg-white p-3 rounded shadow-sm">
-                            <span class="small text-muted">No live dates currently scheduled.</span>
-                            ${
-                              hasLink
-                                ? `<a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-outline-info px-4">View Content / Video</a>`
-                                : `<span class="small fst-italic text-muted">Contact L&D for dates</span>`
-                            }
-                        </div>`
+                      hasLink
+                        ? `<a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-info text-white px-4">View Content / Video</a>`
+                        : `<span class="small fst-italic text-info-emphasis">Contact L&D for dates</span>`
                     }
-                </div>
-            </div>
-        </div>`;
+                </div>`
+            }
+        </div>
+    </div>
+</div>`;
     })
     .join("");
 }
@@ -353,7 +371,7 @@ function setupRoomSearch() {
   const input = document.getElementById("mrSearchInput");
   if (input) {
     input.addEventListener("input", (e) => {
-      filterRooms(); // Direct call to our robust filter
+      filterRooms();
     });
   }
 }
@@ -439,17 +457,18 @@ function showEventDetailsFromData(idx, directData) {
   );
   const url = (data.CourseLink || data["Offering link"] || "").trim();
 
-  // Update the Booking Link
   const linkEl = document.getElementById("modalLink");
   if (linkEl) {
     linkEl.href = url;
     linkEl.style.display = url && url !== "#" ? "inline-block" : "none";
   }
 
-  // Build the "Spiffy" Internal Layout
+  // Use clean title in Modal
+  const cleanTitle = utils.cleanTitle(data.Course || data.title);
+
   document.getElementById("modalDetails").innerHTML = `
     <div class="mb-4">
-        <h3 class="fw-bold text-primary mb-2">${data.Course || data.title}</h3>
+        <h3 class="fw-bold text-primary mb-2">${cleanTitle}</h3>
         <p class="text-dark lead mb-4" style="white-space: pre-line; font-size: 1rem;">${data.Description}</p>
     </div>
 
@@ -493,8 +512,25 @@ function scrollUpcoming(dist) {
     ?.scrollBy({ left: dist, behavior: "smooth" });
 }
 
+let currentVenueCategory = "trust";
+
 /**
- * Room Directory Search Logic
+ * Handle Tab Switching for Venues
+ */
+function filterByVenueType(type, btn) {
+  document
+    .querySelectorAll(".venue-filter-btn")
+    .forEach((b) => b.classList.remove("active"));
+  btn.classList.add("active");
+
+  currentVenueCategory = type === "trust" ? "internal" : "external";
+
+  document.getElementById("mrSearchInput").value = "";
+  filterRooms();
+}
+
+/**
+ * Room Directory Search Logic (Updated for Tabs)
  */
 function filterRooms() {
   const query = document.getElementById("mrSearchInput").value.toLowerCase();
@@ -505,13 +541,15 @@ function filterRooms() {
   if (!globalRawRooms || globalRawRooms.length === 0) return;
 
   const filtered = globalRawRooms.filter((room) => {
-    return (
+    // Exact match on the new Type field
+    const categoryMatch = room.Type === currentVenueCategory;
+
+    const searchMatch =
       (room.Site || "").toLowerCase().includes(query) ||
       (room.Venue || "").toLowerCase().includes(query) ||
-      (room.RoomName || "").toLowerCase().includes(query) ||
-      (room.Capacity || "").toString().includes(query) ||
-      (room.Address || "").toLowerCase().includes(query)
-    );
+      (room.RoomName || "").toLowerCase().includes(query);
+
+    return categoryMatch && searchMatch;
   });
 
   renderRoomDirectory(filtered);
@@ -532,20 +570,20 @@ function renderVideoVault(courseDescs) {
   const tbody = document.getElementById("vvTableBody");
   if (!tbody) return;
 
-  // 1. Filter only for items where Trainer is "Video"
   const videoData = courseDescs.filter(
     (d) =>
       d.Trainer === "Video" && d.CourseLink && d.CourseLink !== "awaiting link",
   );
 
-  // 2. Handle the Featured Video (First item in the list)
   if (videoData.length > 0) {
     const featured = videoData[0];
-    document.getElementById("vvFeaturedTitle").innerText = featured.Course;
+    // Clean featured title
+    document.getElementById("vvFeaturedTitle").innerText = utils.cleanTitle(
+      featured.Course,
+    );
     document.getElementById("vvFeaturedDesc").innerText = featured.Description;
     document.getElementById("vvFeaturedBtn").href = featured.CourseLink;
 
-    // Convert YouTube URL to Embed format
     const player = document.getElementById("vvFeaturedPlayer");
     let videoUrl = featured.CourseLink;
     if (videoUrl.includes("youtube.com/watch?v=")) {
@@ -557,10 +595,8 @@ function renderVideoVault(courseDescs) {
     }
   }
 
-  // 3. Populate the Table
   tbody.innerHTML = videoData
     .map((v) => {
-      // Generate color-coded badges based on the "Topic"
       let badgeClass = "bg-primary-subtle text-primary";
       const topic = (v.Topic || "General").toLowerCase();
 
@@ -572,7 +608,7 @@ function renderVideoVault(courseDescs) {
 
       return `
       <tr>
-        <td class="ps-4 fw-bold text-dark">${v.Course}</td>
+        <td class="ps-4 fw-bold text-dark">${utils.cleanTitle(v.Course)}</td>
         <td><span class="badge ${badgeClass} rounded-pill">${v.Topic || "Training"}</span></td>
         <td class="text-end pe-4">
           <a href="${v.CourseLink}" target="_blank" class="btn btn-sm btn-warning rounded-pill px-3 fw-bold shadow-sm">
@@ -610,44 +646,129 @@ if (themeSelector) {
   themeSelector.addEventListener("change", (e) => {
     const selectedTheme = e.target.value;
 
-    // 1. Remove any existing theme classes (theme-blue, theme-green, etc.)
     document.body.classList.forEach((className) => {
       if (className.startsWith("theme-")) {
         document.body.classList.remove(className);
       }
     });
 
-    // 2. Add the new selected theme class
     document.body.classList.add(`theme-${selectedTheme}`);
-
-    // Optional: Save to localStorage so it persists on refresh
     localStorage.setItem("user-theme", selectedTheme);
   });
 }
 
 // --- Text Scaling Logic ---
 function setTextSize(scaleClass) {
-  // 1. Remove all existing scale classes
   const scales = ["scale-small", "scale-medium", "scale-large", "scale-xlarge"];
   document.body.classList.remove(...scales);
-
-  // 2. Add the selected scale class
   document.body.classList.add(scaleClass);
-
-  // Optional: Save to localStorage
   localStorage.setItem("user-font-scale", scaleClass);
 }
 
 // --- Initialization on Page Load ---
 window.addEventListener("DOMContentLoaded", () => {
-  // Restore Theme
   const savedTheme = localStorage.getItem("user-theme") || "blue";
   if (themeSelector) themeSelector.value = savedTheme;
   document.body.classList.add(`theme-${savedTheme}`);
 
-  // Restore Font Scale
   const savedScale = localStorage.getItem("user-font-scale") || "scale-medium";
   setTextSize(savedScale);
 });
+
+/**
+ * VIDEO VAULT: RENDERING (PROSPECTUS STYLE)
+ */
+function renderVideoVault(courseDescs) {
+  const container = document.getElementById("vvCourseList");
+  const alphaContainer = document.getElementById("vvAlphabetNav");
+  if (!container) return;
+
+  // 1. Filter only for Videos (Trainer is "Video")
+  const videoData = courseDescs.filter(
+    (d) =>
+      d.Trainer === "Video" && d.CourseLink && d.CourseLink !== "awaiting link",
+  );
+
+  if (videoData.length === 0) {
+    container.innerHTML = `<div class="col-12 text-center py-5"><h4 class="text-muted">No videos found.</h4></div>`;
+    return;
+  }
+
+  // 2. Setup Mustard Alphabet Nav
+  if (alphaContainer) {
+    alphaContainer.innerHTML =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        .split("")
+        .map(
+          (l) =>
+            `<button class="btn btn-sm text-white fw-bold border-0 p-1" onclick="filterVVByLetter('${l}')">${l}</button>`,
+        )
+        .join("") +
+      `<button class="btn btn-sm btn-light ms-2 rounded-pill" 
+             style="color: #c68a12; white-space: nowrap; display: inline-block;" 
+             onclick="filterVVByLetter('ALL')">ALL</button>`;
+  }
+
+  // 3. Render Mustard Collapsible Cards
+  container.innerHTML = videoData
+    .sort((a, b) =>
+      utils.cleanTitle(a.Course).localeCompare(utils.cleanTitle(b.Course)),
+    )
+    .map((v, idx) => {
+      const id = `vvCollapse_${idx}`;
+      const cleanName = utils.cleanTitle(v.Course || v.Title);
+
+      return `
+      <div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #c68a12 !important; background-color: #fef9ef;">
+        <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center border-0" 
+                style="background-color: #fef9ef;" data-bs-toggle="collapse" data-bs-target="#${id}">
+            <div>
+                <span class="fw-bold d-block text-dark">${cleanName}</span>
+                <small class="text-muted">Category: ${v.Topic || "Tutorial"}</small>
+            </div>
+            <i class="bi bi-play-circle-fill fs-4" style="color: #c68a12;"></i>
+        </button>
+        
+        <div class="collapse" id="${id}">
+            <div class="card-body bg-white border-top">
+                <p class="small text-dark mb-3" style="white-space: pre-line;">${v.Description}</p>
+                <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #fef9ef; border: 1px solid #faeecd;">
+                    <span class="small fw-bold" style="color: #c68a12;">Duration: ${v.Duration || "Varies"}</span>
+                    <a href="${v.CourseLink}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #c68a12;">
+                        <i class="bi bi-play-fill me-1"></i> Watch Video
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>`;
+    })
+    .join("");
+}
+
+// Global filter functions for Video Vault
+function filterVVByLetter(letter) {
+  const query = letter === "ALL" ? "" : letter;
+  const filtered = globalRawDescs.filter((d) => {
+    const isVideo = d.Trainer === "Video";
+    const cleanName = utils.cleanTitle(d.Course || d.Title).toLowerCase();
+    if (!isVideo) return false;
+    return query === "" ? true : cleanName.startsWith(query.toLowerCase());
+  });
+  renderVideoVault(filtered);
+}
+
+function filterVideoVaultNew() {
+  const query = document.getElementById("vvSearchInputNew").value.toLowerCase();
+  const filtered = globalRawDescs.filter((d) => {
+    const isVideo = d.Trainer === "Video";
+    const titleMatch = utils
+      .cleanTitle(d.Course || d.Title)
+      .toLowerCase()
+      .includes(query);
+    const descMatch = (d.Description || "").toLowerCase().includes(query);
+    return isVideo && (titleMatch || descMatch);
+  });
+  renderVideoVault(filtered);
+}
 
 document.addEventListener("DOMContentLoaded", initApp);
