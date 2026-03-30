@@ -1,13 +1,5 @@
 [
   {
-    "Course": "Self Directed Study Declaration",
-    "Description": "Take the lead in your own learning. Use your half days to explore topics that matter to you. Focus on activities that support your personal development, build new skills, and enhance your confidence in your role.\r\n\r\nSelf‑directed learning might include:\r\nChoosing online modules relevant to your role\r\nReading articles, research, or guidance\r\nWatching recorded webinars\r\nUsing half‑day learning time for a personal project\r\nReflecting on how new learning can improve practice",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Trust-wide Self Declaration",
-    "Venue": "Workplace",
-    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
-  },
-  {
     "Course": "From stressed to supported",
     "Description": "In today's fast-paced and demanding environments, stress can quickly become overwhelming—especially when support feels limited or out of reach. This session focuses on practical ways to move from stress and pressure toward greater support, resilience, and connection.",
     "TargetAudience": "LHD offer for all colleagues",
@@ -104,107 +96,11 @@
     "CourseLink": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzQzODMxNDQtYjIxZS00NmU1LWFjNGMtZWNiZjQyZjBhNzdj%40thread.v2/0?context=%7b%22Tid%22%3a%2237c354b2-85b0-47f5-b222-07b48d774ee3%22%2c%22Oid%22%3a%22f77d9003-b790-4dd2-be48-5367ef692241%22%7d"
   },
   {
-    "Course": "Placement Learning - Occupational Therapist",
-    "Description": "Watching this video will help you understand how placement learning works and how you can support placement colleagues better",
+    "Course": "QI Posters: Competition time!\r\nActivity: Create Your Team’s QI Poster for This Year’s Trust Contest\r\nClosing date 01.09.2026",
+    "Description": "As part of this year’s Trust‑wide Quality Improvement (QI) contest, each team is asked to create a QI poster showcasing an audit, research project, or improvement initiative that has taken place, or is currently underway, since 1 January 2025.\r\nDuring your learning half days, you are invited to spend dedicated time working together to start building your poster. The top prize is worth £5,000.\r\n\r\nMeet as a group in Teams\r\nChoose the QI project, idea or improvement you want to showcase\r\nGather key information and data\r\nAgree your main messages about the impact you’ve made\r\nStart creating your draft poster ready for submission\r\n\r\nWhy this activity is important\r\nThis is a chance to:\r\nhighlight great work happening in your team\r\ncelebrate improvements made for colleagues, patients or services\r\nshare learning across the Trust\r\ncontribute to a Trust‑wide event\r\n\r\nWhat you need\r\nYour Learning Half Day time\r\n\r\nFor further information check out February's Trust Matters or the link provided here\r\nSee QI poster template using the link here",
     "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Video",
-    "CourseLink": "https://youtu.be/SYtD8jP7-UQ"
-  },
-  {
-    "Course": "Data Saves Lives",
-    "Description": "Why is the data we create for healthcare in particular so important? Watching the series of short video's will explain why and will enhance your understanding of the importance of data.",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Video",
-    "CourseLink": "https://intranet.rdash.nhs.uk/news/data-is-interesting-isnt-it/"
-  },
-  {
-    "Course": "Autism",
-    "Description": "This short video explores autism and explains….",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Video",
-    "CourseLink": "awaiting link"
-  },
-  {
-    "Course": "Set Up Online Meetings: Watch & Learn: MS Teams meetings",
-    "Description": "This short video explains how to find book and use Microsoft Teams meeting rooms",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Video",
-    "CourseLink": "https://youtu.be/fiXckJMNuDo"
-  },
-  {
-    "Course": "Set Up Online Meetings: Watch & Learn: Clickshare",
-    "Description": "This short video explains how to use clickshare video conference equipment",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Video",
-    "CourseLink": "https://www.youtube.com/watch?v=7o0ERGbFWlg"
-  },
-  {
-    "Course": "SystmOne Resources",
-    "Description": "Support, guidance and video's for SystmOne",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Video",
-    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/health-informatics/clinical-systems/guidance-and-videos/videos/"
-  },
-  {
-    "Course": "Radar Training",
-    "Description": "Support, guidance and video's for Radar",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Video",
-    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/health-informatics/radar/radar-training/"
-  },
-  {
-    "Course": "Read all about it - newsletters",
-    "Description": "Catch up on trust newsletters: \r\nTrust matters\r\nLearning matters\r\nHealth and Wellbeing",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Online",
-    "CourseLink": "https://intranet.rdash.nhs.uk/?s=trust+matters&submit=Search\r\n\r\nhttps://intranet.rdash.nhs.uk/support-services/organisation-development/health-wellbeing/"
-  },
-  {
-    "Course": "Microsoft office downloadable guides for Administrators",
-    "Description": "Find trending topics and AI tips. Use the search bar to explore helpful Microsoft Office guides",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "External training",
-    "Venue": "Online",
-    "CourseLink": "https://support.microsoft.com/en-gb/office/office-cheat-sheets-61abfe7b-1c43-483c-b82b-3806d80e027e"
-  },
-  {
-    "Course": "Free Viva learning on microsoft teams",
-    "Description": "Access a wide range of learning through NHSmail and Teams. Build a personalised learning plan that fits your role and interests.\r\n\r\n",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "External training",
-    "Venue": "Online",
-    "CourseLink": "https://support.nhs.net/knowledge-base/viva-learning-overview/"
-  },
-  {
-    "Course": "Staff Portal learnings for non learning half days",
-    "Description": "Plan ahead and explore current and upcoming learning opportunities across the trust.",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Online",
-    "CourseLink": "https://staffportal.rdash.nhs.uk/login.php"
-  },
-  {
-    "Course": "Support Services ",
-    "Description": "Get to know the support services available to assist you in your role.",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Online",
-    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/"
-  },
-  {
-    "Course": "Support for Line Managers ",
-    "Description": "Access the Line Manager Resource Hub for tools, guidance and support. (ESR login required.)",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Support Services",
-    "Venue": "Online",
-    "CourseLink": "https://codepen.io/ESR_IAs/live/WbbVrQQ/75d9f0929e37634c5a249a14e774bd63"
+    "Trainer": "Corporate",
+    "Venue": "Workplace",
+    "CourseLink": "https://intranet.rdash.nhs.uk/news/the-quality-improvement-qi-poster-contest-is-back/\r\n\r\nhttps://intranet.rdash.nhs.uk/communications/corporate-resources-and-templates/#posters"
   }
 ]

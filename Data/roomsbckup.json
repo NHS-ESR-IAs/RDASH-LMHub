@@ -2,7 +2,6 @@
   {
     "site": "Tickhill Road",
     "venue": "Onyx Centre (Access Team)",
-    "type": "External",
     "contact": "03000 212223\nAmanda Gooding\namanda.gooding@nhs.net",
     "address": "Weston Road, DN4 8QN",
     "rooms": [
@@ -18,15 +17,17 @@
   {
     "site": "Tickhill Road",
     "venue": "Opal Centre (Central Locality)",
-    "contact": "Mel Element, 03000 212960\nJeanette Green, 03000 212608\nYvonne Sherratt, 03000 212603\nrdash.opalcentre.conservatory@nhs.net",
-    "type": "Internal",
+    "contact": "03000 212555\nDianne Rigby, Sharon Denby\nrdash.dcgcmht-central@nhs.net",
     "address": "Weston Road, DN4 8QN",
-    "rooms": [{ "n": "Conservatory", "c": "12" }]
+    "rooms": [
+      { "n": "Meeting Room (Ground Floor)", "c": "8" },
+      { "n": "Meeting Room (1st Floor)", "c": "6" },
+      { "n": "Conservatory", "c": "30" }
+    ]
   },
   {
     "site": "Tickhill Road",
     "venue": "Opal Centre (SPA Area)",
-    "type": "Internal",
     "contact": "03000 212960 / 07810 482160\nMel Element\nRdash.spa-conference-room@nhs.net",
     "address": "Weston Road, DN4 8QN",
     "rooms": [{ "n": "SPA Meeting Room", "c": "10" }]
@@ -34,31 +35,13 @@
   {
     "site": "Tickhill Road",
     "venue": "Opal Centre (First Floor SLT)",
-    "type": "Internal",
-    "contact": "03000 212608\nJeanette Green, PA\nRdash.opalcentre-seminarroom@nhs.net",
+    "contact": "03000 212608\nJeanette Green\nRdash.opalcentre-seminarroom@nhs.net",
     "address": "Weston Road, DN4 8QN",
     "rooms": [{ "n": "Seminar Room", "c": "10" }]
   },
   {
     "site": "Tickhill Road",
-    "venue": "Learning & Development Centre",
-    "type": "Internal",
-    "contact": "Reception 0300 0212241\nL&D Admin Team (Daniel Callan, Adam Bond, Julie Heggie, Denise Baker & Carol Taylor)\n(rdash.learninganddevtraining@nhs.net)",
-    "address": "Almond Tree Court\nWoodfield Park\nTickhill Road\nDN4 8QN",
-    "rooms": [
-      { "n": "Room 1", "c": "30 Theatre/20 Cabaret" },
-      { "n": "Room 3", "c": "70 Theatre/50 Cabaret" },
-      { "n": "Room 4", "c": "12" },
-      { "n": "Room 5", "c": "12" },
-      { "n": "Room 6", "c": "20 Theatre/No Cabaret" },
-      { "n": "Room 7", "c": "20 Theatre/No Cabaret" },
-      { "n": "Room 8", "c": "" }
-    ]
-  },
-  {
-    "site": "Tickhill Road",
     "venue": "Evergreen",
-    "type": "External",
     "contact": "03000 211555\nRdash.rehabservices@nhs.net",
     "address": "Weston Road, DN4 8QN",
     "rooms": [
@@ -74,15 +57,21 @@
   {
     "site": "Tickhill Road",
     "venue": "Forest Gate",
-    "type": "Internal",
-    "contact": "03000 212031 – option 1\nCentral Admin (Sharon Denby, Clair Humphries, Sophie Kramer-Peck)\nrdash.dcg-amh@nhs.net\n\n03000 211842 – option 1\nSouth Admin (Reception: Laura Brown, Susan Hinchcliffe)\nrdash.dcg-amh@nhs.net",
+    "contact": "03000 212031 / 03000 211842\nCentral Admin & South Admin Teams",
     "address": "Balby, DN4 8QN",
-    "rooms": [{ "n": "Group Therapy Room", "c": "18" }]
+    "rooms": [
+      { "n": "Consultation Rms 1, 3, 4", "c": "3 each" },
+      { "n": "Consultation Rm 2", "c": "4" },
+      { "n": "Exam Room 1", "c": "5" },
+      { "n": "Exam Room 2", "c": "3" },
+      { "n": "Treatment Rms 1, 2, 3", "c": "3 each" },
+      { "n": "Meeting Room 2", "c": "6" },
+      { "n": "Group Therapy Room", "c": "18" }
+    ]
   },
   {
     "site": "Woodfield Park",
     "venue": "Learning & Development Centre",
-    "type": "External",
     "contact": "01302 796241 (Ext 6241)\nLiam Hackett\nrdash.learninganddevtraining@nhs.net",
     "address": "Almond Tree Court, DN4 8QN",
     "rooms": [
@@ -97,71 +86,74 @@
   },
   {
     "site": "Tickhill Road",
-    "venue": "Honeysuckle Lodge\nChildren’s Care Group",
-    "type": "Internal",
-    "contact": "Katie Cross/Laura York/Jennie Pearce\nrdash.childrens-triumvirate-pas@nhs.net",
+    "venue": "Honeysuckle Lodge",
+    "contact": "01302 566934 (Ext 1934)\n01302 796600 (Ext 6600)",
     "address": "Weston Road, DN4 8QN",
     "rooms": [
-      { "n": "Meeting Room 1", "c": "6" },
-      { "n": "Meeting Room 2", "c": "6" },
-      { "n": "Conference Room", "c": "20" }
+      { "n": "Meeting Room", "c": "6" },
+      { "n": "Meeting Room", "c": "6" },
+      { "n": "Conference", "c": "20" }
     ]
   },
   {
     "site": "Tickhill Road",
-    "venue": "Skelbrooke Brodsworth and\nCusworth ",
-    "type": "Internal",
-    "contact": "003000 211063 - Sharon Hallam\n03000 211346 - Philip Lawson\n\nSharon.hallam1@nhs.net\nPhilip.lawson1@nhs.net",
+    "venue": "Skelbrooke / Brodsworth",
+    "contact": "03000 211179\nAdmin",
     "address": "Weston Road, DN4 8QN",
-    "rooms": [{ "n": "Meeting Room 1", "c": "8" }]
+    "rooms": [
+      { "n": "Meeting Room", "c": "8" },
+      { "n": "Info", "c": "Ward meetings priority" }
+    ]
   },
   {
     "site": "Tickhill Road",
     "venue": "Chestnut View",
-    "type": "Internal",
     "contact": "01302 796578 (Ext 6578)",
     "address": "Weston Road, DN4 8QN",
     "rooms": [
-      { "n": "Meeting Room 1 (Downstairs)", "c": "8" },
-      { "n": "Meeting Room 2 (Upstairs)", "c": "6" }
+      { "n": "Meeting Room (Downstairs)", "c": "8" },
+      { "n": "Meeting Room (Upstairs)", "c": "6" }
     ]
   },
   {
-    "site": "Tickhill Road",
+    "site": "Woodfield Park",
     "venue": "Community Hall",
-    "type": "Internal",
-    "contact": "12000 internally or 03000212000\nAlison Bennett (Receptionist)\nalison.bennett28@nhs.net ",
-    "address": "c/o St Caths House, Woodfield Park, DN4 8QP",
-    "rooms": [{ "n": "Hall only\n*No charge for RDaSH ", "c": "60" }]
+    "contact": "12000 internally or 03000 212000\nLisa Hudson / Kerry Jordan",
+    "address": "c/o St Caths House, DN4 8QP",
+    "rooms": [{ "n": "Main Hall", "c": "100 Max (80 chairs)" }]
   },
   {
-    "site": "Tickhill Road",
+    "site": "Woodfield Park",
     "venue": "St Catherine’s House",
-    "type": "Internal",
-    "contact": "12000 internally or 03000212000\nAlison Bennett (Receptionist)\nalison.bennett28@nhs.net",
-    "address": "St Caths House, Woodfield Park, DN4 8QP",
+    "contact": "12000 internally or 03000 212000\n01302 798000 / 07903 193711",
+    "address": "St Caths House, DN4 8QP",
     "rooms": [
-      { "n": "The Dining Room\n10% discount for RDaSH", "c": "18-36" },
-      { "n": "The Drawing Room\n10% discount for RDaSH", "c": "24-70" },
-      { "n": "The Library\n10% discount for RDaSH", "c": "24-50" },
-      { "n": "The Snug\n10% discount for RDaSH", "c": "4" }
+      { "n": "The Dining Room", "c": "18-36" },
+      { "n": "The Drawing Room", "c": "24-70" },
+      { "n": "The Library", "c": "24-50" },
+      { "n": "The Servants Hall", "c": "12" }
     ]
   },
   {
     "site": "Tickhill Road",
     "venue": "St John’s Information Centre",
-    "type": "Internal",
-    "contact": "03000 214000 - x14000\nAnna Bryan\nanna.bryan2@nhs.net ",
+    "contact": "01302 796600 (Ext 6600)\nAnna Bryan",
     "address": "Weston Road, DN4 8QN",
-    "rooms": [{ "n": "Seminar Room 1", "c": "12-15" }]
+    "rooms": [
+      { "n": "Meeting Room 2", "c": "8" },
+      { "n": "Seminar Room 1", "c": "15-20" },
+      { "n": "Seminar Room 2", "c": "12" }
+    ]
   },
   {
-    "site": "Askern\nDoncaster",
-    "venue": "Jade Centre\n(North Locality)",
-    "type": "Internal",
-    "contact": "Email only\nNorth Admin Team\nrdash.dcgcmht-north@nhs.net\nFor issues: 03000 212 002, option 1.",
+    "site": "Bentley (North)",
+    "venue": "Jade Centre",
+    "contact": "03000 212002\nrdash.dcgcmht-north@nhs.net",
     "address": "Askern Road, Bentley, DN5 0JR",
     "rooms": [
+      { "n": "Rms 1,4,5,6,7,8,9,10", "c": "2 each" },
+      { "n": "Treatment Room", "c": "2" },
+      { "n": "Room 3", "c": "4" },
       { "n": "Conference Room", "c": "16" },
       { "n": "Meeting Room 1", "c": "10" },
       { "n": "Meeting Room 2", "c": "10" }
@@ -170,12 +162,11 @@
   {
     "site": "Tickhill Road",
     "venue": "Woodfield House",
-    "type": "Internal",
-    "contact": "02000 211432 (reception)\n rdash.woodfieldhouse-boardroom1@nhs.net\nrdashwoodfieldhouse-boardroom2@nhs.net\nrdash.wh-meetingroom1@nhs.net\nrdash.woodfieldhouse-meetingroom2@nhs.net",
-    "address": "Woodfield House\nTickhill Road Site\nDoncaster\nDN4 8QN",
+    "contact": "01302 796016\nwh-reception@nhs.net",
+    "address": "Tickhill Road Site, DN4 8QN",
     "rooms": [
-      { "n": "Board Room 1", "c": "16" },
-      { "n": "Board Room 2", "c": "12" },
+      { "n": "Board Room 1", "c": "18" },
+      { "n": "Board Room 2", "c": "14" },
       { "n": "Meeting Room 1", "c": "6" },
       { "n": "Meeting Room 2", "c": "10" }
     ]
@@ -183,7 +174,6 @@
   {
     "site": "Hatfield (East)",
     "venue": "Heathfield / Orchard",
-    "type": "External",
     "contact": "Through the TAP system",
     "address": "Ash Hill Road",
     "rooms": [{ "n": "Check TAP System", "c": "-" }]
@@ -191,7 +181,6 @@
   {
     "site": "Askern",
     "venue": "Alexander House",
-    "type": "External",
     "contact": "Askern Town Council\nTel: (01302) 707252",
     "address": "High Street, Askern, DN6 0AB",
     "rooms": [{ "n": "Main Hall", "c": "100" }]
@@ -199,7 +188,6 @@
   {
     "site": "Armthorpe",
     "venue": "Armthorpe Community Library",
-    "type": "External",
     "contact": "Tel: (01302) 833538 / 830543\nbookings@armthorpeparishcouncil.co.uk",
     "address": "Church Street, Armthorpe, DN3 3AL",
     "rooms": [{ "n": "Community Room", "c": "25" }]
@@ -207,7 +195,6 @@
   {
     "site": "Askern",
     "venue": "Askern Community Library",
-    "type": "External",
     "contact": "Tel: (01302) 700324",
     "address": "Station Road, Askern, DN6 0JA",
     "rooms": [{ "n": "Community Space", "c": "50" }]
@@ -215,7 +202,6 @@
   {
     "site": "Bentley",
     "venue": "Bentley Baptist Church",
-    "type": "External",
     "contact": "Mr C Russell\nTel: 01302 701322\ncolinr.jestikka@sky.com",
     "address": "Ridgeway Hall, Askern Road, Bentley, DN5 0EW",
     "rooms": [{ "n": "Hall & Rooms", "c": "Enquire" }]
@@ -223,7 +209,6 @@
   {
     "site": "Bentley",
     "venue": "Bentley Community Library",
-    "type": "External",
     "contact": "Tel: (01302) 873456",
     "address": "Chapel Street, Bentley, DN5 0DE",
     "rooms": [{ "n": "Meeting Space", "c": "25" }]
@@ -231,7 +216,6 @@
   {
     "site": "Doncaster Central",
     "venue": "Central Library Meeting Rooms",
-    "type": "External",
     "contact": "Tel: (01302) 734303",
     "address": "Waterdale, Doncaster, DN1 3JE",
     "rooms": [{ "n": "Meeting Room", "c": "10" }]
@@ -239,7 +223,6 @@
   {
     "site": "Edenthorpe",
     "venue": "Church Balk Centre",
-    "type": "External",
     "contact": "Mrs A Flanagan\nTel: 07428 005708\nedenthorpeparishclerk@gmail.com",
     "address": "Off Marian Road, Edenthorpe, DN3 2PT",
     "rooms": [{ "n": "Main Hall", "c": "30" }]
@@ -247,7 +230,6 @@
   {
     "site": "Conisbrough",
     "venue": "Conisbrough Community Library",
-    "type": "External",
     "contact": "Tel: (01302) 869509",
     "address": "Old Road, Conisbrough, DN12 3ND",
     "rooms": [{ "n": "Community Room", "c": "50" }]
@@ -255,7 +237,6 @@
   {
     "site": "Cusworth",
     "venue": "Cusworth Hall",
-    "type": "External",
     "contact": "Mrs K Merton\nTel: (01302) 782342\nkarenmerton@doncaster.gov.uk",
     "address": "Cusworth Lane, Doncaster, DN5 7TU",
     "rooms": [{ "n": "Function Room", "c": "20" }]
@@ -263,7 +244,6 @@
   {
     "site": "Mexborough",
     "venue": "Dolcliffe Hall",
-    "type": "External",
     "contact": "Colin Black\nTel: 07933 217809",
     "address": "West View, Mexborough, S64 9BE",
     "rooms": [{ "n": "Main Hall", "c": "100" }]
@@ -271,7 +251,6 @@
   {
     "site": "Doncaster Central",
     "venue": "Doncaster Racecourse",
-    "type": "External",
     "contact": "Julia Towle\nTel: 01302 304213\njtowle@doncasterracecourse.co.uk",
     "address": "Leger Way, DN2 6BB",
     "rooms": [
@@ -282,7 +261,6 @@
   {
     "site": "Doncaster Central",
     "venue": "Earl of Doncaster Hotel",
-    "type": "External",
     "contact": "Tel: (01302) 361371",
     "address": "Bennetthorpe, Doncaster, DN2 6AD",
     "rooms": [{ "n": "Ballroom / Function Suites", "c": "180-300" }]
@@ -290,7 +268,6 @@
   {
     "site": "Edlington",
     "venue": "Edlington Library",
-    "type": "External",
     "contact": "Tel: (01302) 736471",
     "address": "Martinwells Centre, Thompson Ave, DN12 1JD",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -298,7 +275,6 @@
   {
     "site": "Doncaster Central",
     "venue": "Friends Meeting House",
-    "type": "External",
     "contact": "L Buttrick\nTel: (01302) 343002",
     "address": "Oxford Place, St James Street, DN1 3RH",
     "rooms": [{ "n": "Meeting Room", "c": "60" }]
@@ -306,7 +282,6 @@
   {
     "site": "Doncaster Central",
     "venue": "Grand St Leger Hotel",
-    "type": "External",
     "contact": "Mark Lawton\nTel: (01302) 364111\nsales@grandstleger.com",
     "address": "Bennetthorpe, Doncaster, DN2 6AX",
     "rooms": [{ "n": "Function Rooms", "c": "Various" }]
@@ -314,7 +289,6 @@
   {
     "site": "Hatfield",
     "venue": "Hatfield Woodhouse Primary",
-    "type": "External",
     "contact": "Mrs C Orridge\nTel: (01302) 840448",
     "address": "Main Street, Hatfield Woodhouse, DN7 6NH",
     "rooms": [{ "n": "School Hall", "c": "100" }]
@@ -322,7 +296,6 @@
   {
     "site": "Cantley",
     "venue": "Hawthorn Primary School",
-    "type": "External",
     "contact": "Tel: (01302) 535906",
     "address": "Elmham Road, Cantley, DN4 6LQ",
     "rooms": [{ "n": "School Hall", "c": "100" }]
@@ -330,7 +303,6 @@
   {
     "site": "Intake",
     "venue": "Intake Community Library",
-    "type": "External",
     "contact": "Tel: (01302) 367225",
     "address": "Montrose Avenue, Intake, DN2 6PL",
     "rooms": [{ "n": "Library Hall", "c": "80" }]
@@ -338,7 +310,6 @@
   {
     "site": "Conisbrough",
     "venue": "Ivanhoe Centre",
-    "type": "External",
     "contact": "Tel: (01709) 252480",
     "address": "Gardens Lane, Conisbrough, DN12 3JX",
     "rooms": [{ "n": "Main Centre", "c": "200" }]
@@ -346,7 +317,6 @@
   {
     "site": "Bentley",
     "venue": "Jubilee Hall (RC Church)",
-    "type": "External",
     "contact": "Mrs J Green\nTel: (01302) 783831\nofficeolph@mail.com",
     "address": "58 High Street, Bentley, DN5 0AT",
     "rooms": [{ "n": "Jubilee Hall", "c": "60-80" }]
@@ -354,7 +324,6 @@
   {
     "site": "Conisbrough",
     "venue": "Lord Conyers Hotel",
-    "type": "External",
     "contact": "Tel: (01709) 863254",
     "address": "Old Road, Conisbrough, DN12 3LZ",
     "rooms": [{ "n": "Function Room", "c": "160-200" }]
@@ -362,7 +331,6 @@
   {
     "site": "Rossington",
     "venue": "Rossington Memorial Hall",
-    "type": "External",
     "contact": "Zoe Attridge-Chambers\nTel: (01302) 868606",
     "address": "McConnell Crescent, Rossington, DN11 0PL",
     "rooms": [{ "n": "Memorial Hall", "c": "100" }]
@@ -370,7 +338,6 @@
   {
     "site": "Moorends",
     "venue": "Moorends Community Library",
-    "type": "External",
     "contact": "Tel: (01405) 812758",
     "address": "Surestart Building, Marshland Road, DN8 4SB",
     "rooms": [{ "n": "Community Room", "c": "6" }]
@@ -378,7 +345,6 @@
   {
     "site": "Wheatley",
     "venue": "Parklands Sports & Social Club",
-    "type": "External",
     "contact": "Eric Hibling\nTel: (01302) 349881\noffice@parklandsclub.co.uk",
     "address": "Wheatley Hall Road, DN2 4LT",
     "rooms": [{ "n": "Social Club Hall", "c": "250-300" }]
@@ -386,7 +352,6 @@
   {
     "site": "Bawtry",
     "venue": "Phoenix Theatre",
-    "type": "External",
     "contact": "L Atkinson\nTel: (01302) 710364\nlizzieatk@tiscali.co.uk",
     "address": "Station Road, Bawtry",
     "rooms": [{ "n": "Theatre/Hall", "c": "Enquire" }]
@@ -394,7 +359,6 @@
   {
     "site": "Rossington",
     "venue": "Rosary Hall",
-    "type": "External",
     "contact": "Mrs J Jowett\nTel: (01302) 868846",
     "address": "Skipworth Gardens, Rossington, DN11 0TU",
     "rooms": [{ "n": "Main Hall", "c": "100" }]
@@ -402,7 +366,6 @@
   {
     "site": "Scawsby",
     "venue": "Saltersgate Junior School",
-    "type": "External",
     "contact": "Mrs G Richardson\nTel: (01302) 782100",
     "address": "Barnsley Road, Scawsby, DN5 8NQ",
     "rooms": [{ "n": "School Hall", "c": "250" }]
@@ -410,7 +373,6 @@
   {
     "site": "Sprotbrough",
     "venue": "Sprotbrough Community Library",
-    "type": "External",
     "contact": "Tel: (01302) 782436",
     "address": "Sprotbrough Road, DN5 8BA",
     "rooms": [{ "n": "Library Meeting Space", "c": "Various" }]
@@ -418,7 +380,6 @@
   {
     "site": "Bessacarr",
     "venue": "St Francis Church Hall",
-    "type": "External",
     "contact": "Tel: (01302) 538487",
     "address": "Nostell Place, Bessacarr, DN4 7JA",
     "rooms": [{ "n": "Church Hall", "c": "80-100" }]
@@ -426,8 +387,6 @@
   {
     "site": "Adwick",
     "venue": "St Laurence’s Community Centre",
-    "type": "External",
-
     "contact": "Tel: 07469 853365",
     "address": "Church Lane, Adwick-Le-Street, DN6 7AQ",
     "rooms": [{ "n": "Community Centre", "c": "60" }]
@@ -435,7 +394,6 @@
   {
     "site": "Rossington",
     "venue": "St Mary’s Church Hall",
-    "type": "External",
     "contact": "Mrs Erskine\nTel: (01302) 850890",
     "address": "Rossington, DN5 7RH",
     "rooms": [{ "n": "Church Hall", "c": "80-120" }]
@@ -443,7 +401,6 @@
   {
     "site": "Stainforth",
     "venue": "St Mary's Community Centre",
-    "type": "External",
     "contact": "C Pickles\nTel: (01302) 845112",
     "address": "Field Road, Stainforth, DN7 5AQ",
     "rooms": [{ "n": "Community Centre", "c": "Various" }]
@@ -451,7 +408,6 @@
   {
     "site": "Cantley",
     "venue": "St Paul’s Church Hall",
-    "type": "External",
     "contact": "Mrs M Stephenson\nTel: (01302) 532131",
     "address": "21 Goodison Boulevard, Cantley, DN4 6BT",
     "rooms": [{ "n": "Church Hall", "c": "60" }]
@@ -459,7 +415,6 @@
   {
     "site": "Sykehouse",
     "venue": "Sykehouse Village Hall",
-    "type": "External",
     "contact": "Mrs H Wilson\nTel: (01302) 843869",
     "address": "Broad Lane, Sykehouse",
     "rooms": [{ "n": "Village Hall", "c": "24-200" }]
@@ -467,7 +422,6 @@
   {
     "site": "Thorne",
     "venue": "Thorne Library",
-    "type": "External",
     "contact": "Tel: (01405) 746969",
     "address": "The Vermuyden Centre, Fieldside, Thorne, DN8 4BQ",
     "rooms": [{ "n": "Library Meeting Room", "c": "50" }]
@@ -475,7 +429,6 @@
   {
     "site": "Hatfield",
     "venue": "Victoria Hall",
-    "type": "External",
     "contact": "Mrs A Bedford\nTel: (01302) 350329",
     "address": "48 High Street, Hatfield, DN7 6RY",
     "rooms": [{ "n": "Main Hall", "c": "100" }]
@@ -483,7 +436,6 @@
   {
     "site": "Wheatley",
     "venue": "Wheatley Community Library",
-    "type": "External",
     "contact": "See Library Website",
     "address": "Parkway, Wheatley, DN2 4JS",
     "rooms": [{ "n": "Small Meeting Room", "c": "8" }]
@@ -491,7 +443,6 @@
   {
     "site": "Wheatley",
     "venue": "Wheatley Park Baptist Church",
-    "type": "External",
     "contact": "Tel: (01302) 322701",
     "address": "Winchester Avenue, Wheatley, DN6 0ES",
     "rooms": [{ "n": "Church Rooms", "c": "Enquire" }]
@@ -499,7 +450,6 @@
   {
     "site": "Woodlands",
     "venue": "Woodlands Community Library",
-    "type": "External",
     "contact": "Tel: (01302) 724393",
     "address": "Windmill Balk Lane, Woodlands, DN6 7SB",
     "rooms": [{ "n": "Library Hall", "c": "50" }]
@@ -507,7 +457,6 @@
   {
     "site": "Doncaster Lakeside",
     "venue": "The Dome",
-    "type": "External",
     "contact": "07580 301331\nevents@dclt.co.uk",
     "address": "Bawtry Road, Doncaster, DN4 7PD",
     "rooms": [{ "n": "Upstairs Function Room", "c": "150" }]
@@ -515,7 +464,6 @@
   {
     "site": "Doncaster (Armthorpe Rd)",
     "venue": "Castle Park",
-    "type": "External",
     "contact": "01302 831388\nevents@castle-park.co.uk",
     "address": "Armthorpe Road, Doncaster, DN2 5QB",
     "rooms": [
@@ -526,7 +474,6 @@
   {
     "site": "Rossington",
     "venue": "Mount Pleasant (Best Western)",
-    "type": "External",
     "contact": "01302 868696\nreception@mountpleasant.co.uk",
     "address": "Great North Road, Rossington, DN11 0HW",
     "rooms": [{ "n": "Hotel Function Rooms", "c": "Enquire" }]
@@ -534,8 +481,6 @@
   {
     "site": "Warmsworth",
     "venue": "Holiday Inn Doncaster",
-    "type": "External",
-
     "contact": "events@hidoncaster.com",
     "address": "High Road, Warmsworth, DN4 9UX",
     "rooms": [
@@ -547,7 +492,6 @@
   {
     "site": "Doncaster Central",
     "venue": "YMCA Doncaster",
-    "type": "External",
     "contact": "Emma: 07305 050326\nroomhire@ymcadoncaster.org.uk",
     "address": "31 Wood Street, Doncaster, DN1 3LH",
     "rooms": [
@@ -561,8 +505,6 @@
   {
     "site": "Cantley",
     "venue": "Cantley Community Centre",
-    "type": "External",
-
     "contact": "Rob Saunders: 01302 533 214\nmanager@cantleycommunitycentre.org.uk",
     "address": "Goodison Boulevard, Cantley, DN4 6DF",
     "rooms": [
@@ -575,8 +517,6 @@
   {
     "site": "Edenthorpe",
     "venue": "Edenthorpe Community Centre",
-    "type": "External",
-
     "contact": "edenthorpecommunitycentre@gmail.com",
     "address": "29 Cedric Road, Edenthorpe, DN3 2HZ",
     "rooms": [
@@ -587,7 +527,6 @@
   {
     "site": "Doncaster Central",
     "venue": "C View",
-    "type": "External",
     "contact": "hello@c-view.uk",
     "address": "Church View, Doncaster, DN1 1AF",
     "rooms": [{ "n": "Events Room", "c": "100" }]
@@ -595,7 +534,6 @@
   {
     "site": "Warmsworth",
     "venue": "Warmsworth Community Hub",
-    "type": "External",
     "contact": "Rob Brothwell: 07548 558868\nRob.warmsworthpc@gmail.com",
     "address": "Stapleton Road, Warmsworth, DN4 9LL",
     "rooms": [
@@ -606,8 +544,6 @@
   {
     "site": "Bawtry",
     "venue": "The New Hall",
-    "type": "External",
-
     "contact": "bawtrytowncouncil.co.uk",
     "address": "Station Road / Peakes Croft, Bawtry",
     "rooms": [
@@ -618,7 +554,6 @@
   {
     "site": "Doncaster Central",
     "venue": "Doncaster Quakers",
-    "type": "External",
     "contact": "doncasterquakers@gmail.com",
     "address": "Oxford Place (off St James St), DN1 3RH",
     "rooms": [
@@ -629,8 +564,6 @@
   {
     "site": "Doncaster Central",
     "venue": "Doncaster College (The Hub)",
-    "type": "External",
-
     "contact": "0800 358 7575\ndcinfocentre@don.ac.uk",
     "address": "Chappell Drive, Doncaster, DN1 2RF",
     "rooms": [{ "n": "The Hub Venues", "c": "Enquire" }]
@@ -638,7 +571,6 @@
   {
     "site": "Sprotbrough",
     "venue": "St Mary’s Church Hall and Stable",
-    "type": "External",
     "contact": "bookings.sprotbrough@gmail.com",
     "address": "Main Street, Sprotbrough, DN5 7RH",
     "rooms": [
@@ -649,7 +581,6 @@
   {
     "site": "Bessacarr",
     "venue": "Doncaster Golf Club",
-    "type": "External",
     "contact": "01302 865632\noffice@doncastergolfclub.co.uk",
     "address": "278 Bawtry Road, Bessacarr, DN4 7NX",
     "rooms": [{ "n": "Main Function Room", "c": "120" }]
@@ -657,7 +588,6 @@
   {
     "site": "Doncaster Central",
     "venue": "Danum Library (Central)",
-    "type": "External",
     "contact": "See Library Website",
     "address": "Waterdale, Doncaster",
     "rooms": [{ "n": "Paddington Room", "c": "20-30" }]
@@ -665,8 +595,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Church Square House",
-    "type": "External",
-
     "contact": "North Lincs Council",
     "address": "30-40 High Street, Scunthorpe, DN15 6NL",
     "rooms": [{ "n": "Council Building Rooms", "c": "Enquire" }]
@@ -674,7 +602,6 @@
   {
     "site": "Scunthorpe (Ashby)",
     "venue": "Ashby Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "Ashby Community Hub, High Street, DN16 2RY",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -682,8 +609,6 @@
   {
     "site": "Barton upon Humber",
     "venue": "Barton Library",
-    "type": "External",
-
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "Baysgarth Community Hub, Baysgarth Park, DN18 5DT",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -691,7 +616,6 @@
   {
     "site": "Scunthorpe (Bottesford)",
     "venue": "Bottesford Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "Cambridge House, Cambridge Avenue, DN16 3LG",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -699,7 +623,6 @@
   {
     "site": "Brigg",
     "venue": "Brigg Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "The Angel, Market Place, Brigg, DN20 8LD",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -707,7 +630,6 @@
   {
     "site": "Broughton",
     "venue": "Broughton Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "The Ivan Glover Library, 59 High Street, DN20 0JX",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -715,7 +637,6 @@
   {
     "site": "Crowle",
     "venue": "Crowle Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "The Market Hall, Market Place, Crowle, DN17 4LA",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -723,7 +644,6 @@
   {
     "site": "Epworth",
     "venue": "Epworth Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "Chapel Street, Epworth, DN9 1HQ",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -731,7 +651,6 @@
   {
     "site": "Goxhill",
     "venue": "Goxhill Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "The Parish Room, Howe Lane, Goxhill, DN19 7HS",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -739,7 +658,6 @@
   {
     "site": "Haxey",
     "venue": "Haxey Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "The Memorial Hall, Haxey, DN9 2HH",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -747,7 +665,6 @@
   {
     "site": "Kirton in Lindsey",
     "venue": "Kirton in Lindsey Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "20 King Edward Street, DN21 4NQ",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -755,7 +672,6 @@
   {
     "site": "Messingham",
     "venue": "Messingham Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "1 Wendover Road, Messingham, DN17 3SN",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -763,7 +679,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Riddings Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "Riddings Community Hub, Enderby Rd, DN17 2JL",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -771,8 +686,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Scunthorpe Central",
-    "type": "External",
-
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "Carlton Street, Scunthorpe, DN15 6TX",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -780,7 +693,6 @@
   {
     "site": "Winterton",
     "venue": "Winterton Library",
-    "type": "External",
     "contact": "01724 296832\nlibrary.enquiries@northlincs.gov.uk",
     "address": "54 West Street, Winterton, DN15 9QF",
     "rooms": [{ "n": "Library Space", "c": "Enquire" }]
@@ -788,7 +700,6 @@
   {
     "site": "Grimsby",
     "venue": "Diana, Princess of Wales Hospital",
-    "type": "External",
     "contact": "Switchboard: 01472 874111",
     "address": "Scartho Road, Grimsby, DN33 2BA",
     "rooms": [{ "n": "Hospital Meeting Rooms", "c": "Enquire" }]
@@ -796,7 +707,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Scunthorpe General Hospital",
-    "type": "External",
     "contact": "Switchboard: 01724 282282",
     "address": "Cliff Gardens, Scunthorpe, DN15 7BH",
     "rooms": [{ "n": "Hospital Meeting Rooms", "c": "Enquire" }]
@@ -804,7 +714,6 @@
   {
     "site": "Goole",
     "venue": "Goole and District Hospital",
-    "type": "External",
     "contact": "Switchboard: 01405 720720",
     "address": "Woodland Avenue, Goole, DN14 6RX",
     "rooms": [{ "n": "Hospital Meeting Rooms", "c": "Enquire" }]
@@ -812,7 +721,6 @@
   {
     "site": "Brigg",
     "venue": "Ancholme Leisure Centre",
-    "type": "External",
     "contact": "01724 291900",
     "address": "Scawby Rd, Scawby Brook, Brigg, DN20 9JH",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -820,7 +728,6 @@
   {
     "site": "Crowle",
     "venue": "Axholme North Leisure Centre",
-    "type": "External",
     "contact": "01724 291900",
     "address": "Wharf Rd, Crowle, DN17 4HU",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -828,7 +735,6 @@
   {
     "site": "Barton upon Humber",
     "venue": "Baysgarth Community Hub",
-    "type": "External",
     "contact": "01724 291900",
     "address": "Brigg Rd, Barton-upon-Humber, DN18 5DT",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -836,7 +742,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Riddings Community Hub",
-    "type": "External",
     "contact": "01724 291900",
     "address": "Enderby Rd, Scunthorpe, DN17 2JL",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -844,7 +749,6 @@
   {
     "site": "Epworth",
     "venue": "Epworth Leisure Centre",
-    "type": "External",
     "contact": "01724 291900",
     "address": "Burnham Rd, Epworth, Doncaster, DN9 1BZ",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -852,7 +756,6 @@
   {
     "site": "Scunthorpe",
     "venue": "The Pods",
-    "type": "External",
     "contact": "01724 291900",
     "address": "Ashby Rd, Scunthorpe, DN16 1AA",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -860,7 +763,6 @@
   {
     "site": "Barton upon Humber",
     "venue": "Baysgarth Leisure Centre",
-    "type": "External",
     "contact": "Enquire",
     "address": "Barton-upon-Humber, DN18 5DT",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -868,7 +770,6 @@
   {
     "site": "Gainsborough",
     "venue": "West Lindsey Leisure Centre",
-    "type": "External",
     "contact": "01427 615169",
     "address": "The Avenue, Gainsborough, DN21 1EP",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -876,7 +777,6 @@
   {
     "site": "Grimsby",
     "venue": "Grimsby Leisure Centre (Lincs Inspire)",
-    "type": "External",
     "contact": "01472 323500",
     "address": "Cromwell Rd, Grimsby, DN31 2BH",
     "rooms": [{ "n": "Leisure Centre Facilities", "c": "Various" }]
@@ -884,7 +784,6 @@
   {
     "site": "Barrow upon Humber",
     "venue": "Barrow Sports and Fitness Centre",
-    "type": "External",
     "contact": "01469 530686",
     "address": "Manor Farm, Thorngarth Ln, DN19 7AW",
     "rooms": [{ "n": "Sports Centre", "c": "Various" }]
@@ -892,7 +791,6 @@
   {
     "site": "Scunthorpe",
     "venue": "The Gym Group Scunthorpe Lakeside",
-    "type": "External",
     "contact": "0300 303 4800",
     "address": "Lakeside Retail Park, Scunthorpe, DN16 3UA",
     "rooms": [{ "n": "Gym Facilities", "c": "Various" }]
@@ -900,7 +798,6 @@
   {
     "site": "Scunthorpe",
     "venue": "North Lindsey College",
-    "type": "External",
     "contact": "01724 281 111\ninfo@northlindsey.ac.uk",
     "address": "Kingsway, Scunthorpe, DN17 1AJ",
     "rooms": [{ "n": "College Facilities", "c": "Enquire" }]
@@ -908,7 +805,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Redbourn Sports Club",
-    "type": "External",
     "contact": "01724 861685\nredbournsportsandsocial@gmail.com",
     "address": "Cemetery Road, Scunthorpe, DN16 1NU",
     "rooms": [{ "n": "Main Hall", "c": "110 (£60/day)" }]
@@ -916,7 +812,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Heslam Park Club",
-    "type": "External",
     "contact": "01724 843013\noffice@heslampark.com",
     "address": "Ashby Road, Scunthorpe, DN16 2AG",
     "rooms": [
@@ -927,7 +822,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Wortley House Hotel",
-    "type": "External",
     "contact": "Enquire",
     "address": "Rowland Road, Scunthorpe, DN16 1SU",
     "rooms": [{ "n": "Conference Room", "c": "Delegate Rate £30pp" }]
@@ -935,7 +829,6 @@
   {
     "site": "Brigg",
     "venue": "Forest Pines Spa and Golf Resort",
-    "type": "External",
     "contact": "01652 650 770",
     "address": "Ermine Street, Brigg, DN20 0AG",
     "rooms": [{ "n": "Conference Rooms", "c": "28 - 172" }]
@@ -943,7 +836,6 @@
   {
     "site": "Messingham",
     "venue": "Messingham Village Hall",
-    "type": "External",
     "contact": "messinghamvillagehall2@gmail.com",
     "address": "Orchard Close, Messingham, DN17 3TS",
     "rooms": [
@@ -954,7 +846,6 @@
   {
     "site": "Burringham",
     "venue": "Burringham Village Hall",
-    "type": "External",
     "contact": "Enquire",
     "address": "Stone Lane, Burringham, DN17 3NB",
     "rooms": [{ "n": "Village Hall", "c": "Enquire" }]
@@ -962,7 +853,6 @@
   {
     "site": "Scunthorpe (Bottesford)",
     "venue": "Bottesford Hall",
-    "type": "External",
     "contact": "01724 859057\nclerk@bottesford.org",
     "address": "Bramley Crescent, Scunthorpe",
     "rooms": [{ "n": "Hall", "c": "Enquire" }]
@@ -970,7 +860,6 @@
   {
     "site": "Crowle",
     "venue": "Crowle Community Hall",
-    "type": "External",
     "contact": "Enquire",
     "address": "Woodland Avenue, Crowle, DN17 4LL",
     "rooms": [{ "n": "Community Hall", "c": "Enquire" }]
@@ -978,7 +867,6 @@
   {
     "site": "Gunness",
     "venue": "Gunness Village Hall",
-    "type": "External",
     "contact": "gunnessparishcouncil12@gmail.com",
     "address": "Old Village Street, Gunness, DN15 8TH",
     "rooms": [{ "n": "Village Hall", "c": "Enquire (£17ph)" }]
@@ -986,7 +874,6 @@
   {
     "site": "Scunthorpe",
     "venue": "New Life Church",
-    "type": "External",
     "contact": "Angie: 01724 280340\nheythere@newlifechurch.uk",
     "address": "Brumby Wood Lane, Scunthorpe, DN17 1AB",
     "rooms": [
@@ -997,7 +884,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Brumby Community Centre",
-    "type": "External",
     "contact": "Enquire",
     "address": "East Common Lane, Scunthorpe, DN16 1HL",
     "rooms": [
@@ -1008,7 +894,6 @@
   {
     "site": "Scunthorpe",
     "venue": "St Hugh’s Church (Old Brumby)",
-    "type": "External",
     "contact": "01724 280585\nSthughschurch1@btconnect.com",
     "address": "Brumby Corner / Ashby Road",
     "rooms": [
@@ -1019,7 +904,6 @@
   {
     "site": "Scunthorpe",
     "venue": "Central Community Centre",
-    "type": "External",
     "contact": "01724 862639\ncentralcommunitycentre@hotmail.co.uk",
     "address": "Lindum Street, Scunthorpe, DN15 6QU",
     "rooms": [{ "n": "Community Centre", "c": "Enquire" }]
@@ -1027,7 +911,6 @@
   {
     "site": "Scunthorpe (Ashby)",
     "venue": "Sunshine Hall",
-    "type": "External",
     "contact": "07784 923360\nsunshinehallashby@yahoo.com",
     "address": "Ashby High Street, Scunthorpe, DN16 2JU",
     "rooms": [{ "n": "Hall", "c": "Enquire" }]
@@ -1035,7 +918,6 @@
   {
     "site": "Scunthorpe",
     "venue": "North Lincolnshire Museum",
-    "type": "External",
     "contact": "01724 297055",
     "address": "Oswald Road, Scunthorpe, DN15 7BD",
     "rooms": [{ "n": "Community Gallery", "c": "40 (£27.50ph)" }]
@@ -1043,7 +925,6 @@
   {
     "site": "Scunthorpe",
     "venue": "St Lawrences (Frodingham Church Hall)",
-    "type": "External",
     "contact": "01724 506031\nstlfrodingham@gmail.com",
     "address": "Church Lane, Scunthorpe, DN15 7AB",
     "rooms": [{ "n": "Church Hall", "c": "Enquire" }]
@@ -1051,7 +932,6 @@
   {
     "site": "Aston",
     "venue": "Aston Joint Service Centre",
-    "type": "External",
     "contact": "Worksop Road, Aston, S26 4WD",
     "address": "Worksop Road, Aston, S26 4WD",
     "rooms": [{ "n": "Community Rooms", "c": "14-30 (£7ph)" }]
@@ -1059,7 +939,6 @@
   {
     "site": "Rotherham (Broom Valley)",
     "venue": "Broom Valley Club Room",
-    "type": "External",
     "contact": "Enquire through council website",
     "address": "Guest Place, Rotherham, S60 2SE",
     "rooms": [{ "n": "Main Hall", "c": "80" }]
@@ -1067,7 +946,6 @@
   {
     "site": "Eastwood Village",
     "venue": "Eastwood Village Community Centre",
-    "type": "External",
     "contact": "Verina Weaver\nverina@eastwoodcommunitycentre.co.uk",
     "address": "Erskine Road, Eastwood Village, S65 1RF",
     "rooms": [{ "n": "Community Centre", "c": "80 (£18.45ph)" }]
@@ -1075,7 +953,6 @@
   {
     "site": "Wath",
     "venue": "Fir Close Community Centre",
-    "type": "External",
     "contact": "Fir Close, Wath, S63 7NU",
     "address": "Fir Close, Wath, S63 7NU",
     "rooms": [{ "n": "Community Centre", "c": "80" }]
@@ -1083,7 +960,6 @@
   {
     "site": "Kilnhurst",
     "venue": "Kilnhurst People's Centre",
-    "type": "External",
     "contact": "Enquire through council website",
     "address": "Glasshouse Lane, Kilnhurst, S62 5TQ",
     "rooms": [{ "n": "Community Centre", "c": "80 (From £13ph)" }]
@@ -1091,7 +967,6 @@
   {
     "site": "West Melton",
     "venue": "Oaklea Retreat",
-    "type": "External",
     "contact": "Enquire through council website",
     "address": "Oaklea Avenue, West Melton, S63 6NB",
     "rooms": [{ "n": "Community Centre", "c": "80 (From £18.45ph)" }]
@@ -1099,7 +974,6 @@
   {
     "site": "Rawmarsh",
     "venue": "Rawmarsh People's Centre",
-    "type": "External",
     "contact": "Dale Road, Rawmarsh, S62 5AL",
     "address": "Dale Road, Rawmarsh, S62 5AL",
     "rooms": [{ "n": "Community Centre", "c": "100 Max" }]
@@ -1107,7 +981,6 @@
   {
     "site": "Rotherham (Springwell)",
     "venue": "Springwell Gardens Community Centre",
-    "type": "External",
     "contact": "Enquire through council website",
     "address": "Eastwood View, Springwell Gardens, S65 1NG",
     "rooms": [{ "n": "Community Centre", "c": "180 Max (From £18.45ph)" }]
@@ -1115,7 +988,6 @@
   {
     "site": "Kimberworth Park",
     "venue": "St John's Green Community Centre",
-    "type": "External",
     "contact": "Kimberworth Park, S61 3JL",
     "address": "Kimberworth Park, S61 3JL",
     "rooms": [{ "n": "Main Hall (L-shaped)", "c": "80" }]
@@ -1123,7 +995,6 @@
   {
     "site": "Swinton",
     "venue": "Swinton Civic Hall",
-    "type": "External",
     "contact": "Station Street, Swinton, S64 8PZ",
     "address": "Station Street, Swinton, S64 8PZ",
     "rooms": [{ "n": "Civic Hall", "c": "Various (£7-£18.45ph)" }]
@@ -1131,7 +1002,6 @@
   {
     "site": "Rotherham Central",
     "venue": "Rotherham Hospital",
-    "type": "External",
     "contact": "01709 820000",
     "address": "Moorgate Road, Rotherham, S60 2UD",
     "rooms": [{ "n": "Hospital Meeting Rooms", "c": "Enquire" }]
@@ -1139,7 +1009,6 @@
   {
     "site": "Rotherham Central",
     "venue": "Rotherham Community Health Centre",
-    "type": "External",
     "contact": "Greasbrough Road, Rotherham, S60 1RY",
     "address": "Greasbrough Road, Rotherham, S60 1RY",
     "rooms": [{ "n": "Health Centre Rooms", "c": "Enquire" }]
@@ -1147,7 +1016,6 @@
   {
     "site": "Rotherham Central",
     "venue": "Park Rehabilitation Centre",
-    "type": "External",
     "contact": "Badsley Moor Lane, Rotherham, S65 2QL",
     "address": "Badsley Moor Lane, Rotherham, S65 2QL",
     "rooms": [{ "n": "Rehab Centre Rooms", "c": "Enquire" }]
@@ -1155,7 +1023,6 @@
   {
     "site": "Rotherham (Kimberworth)",
     "venue": "Kimberworth Place",
-    "type": "External",
     "contact": "Kimberworth Road, Rotherham, S61 1HE",
     "address": "Kimberworth Road, Rotherham, S61 1HE",
     "rooms": [{ "n": "Meeting Rooms", "c": "Enquire" }]
@@ -1163,7 +1030,6 @@
   {
     "site": "Rotherham (East Dene)",
     "venue": "BreathingSpace",
-    "type": "External",
     "contact": "East Dene, Rotherham, S65 2QL",
     "address": "East Dene, Rotherham, S65 2QL",
     "rooms": [{ "n": "Meeting Rooms", "c": "Enquire" }]
@@ -1171,7 +1037,6 @@
   {
     "site": "Aston",
     "venue": "Aston-cum-Aughton Leisure Centre",
-    "type": "External",
     "contact": "0114 294 2580",
     "address": "Aughton Rd, Swallownest, Sheffield, S26 4SF",
     "rooms": [{ "n": "Leisure Centre", "c": "Enquire" }]
@@ -1179,7 +1044,6 @@
   {
     "site": "Maltby",
     "venue": "Maltby Leisure Centre",
-    "type": "External",
     "contact": "01709 797100",
     "address": "High St, Maltby, Rotherham, S66 8JE",
     "rooms": [{ "n": "Leisure Centre", "c": "Enquire" }]
@@ -1187,7 +1051,6 @@
   {
     "site": "Rotherham Central",
     "venue": "Rotherham Leisure Complex",
-    "type": "External",
     "contact": "01709 722555",
     "address": "Effingham St, Rotherham, S65 1BL",
     "rooms": [{ "n": "Leisure Centre", "c": "Enquire" }]
@@ -1195,7 +1058,6 @@
   {
     "site": "Wath",
     "venue": "Wath upon Dearne Leisure Centre",
-    "type": "External",
     "contact": "01709 870120",
     "address": "Festival Rd, Wath upon Dearne, S63 7HL",
     "rooms": [{ "n": "Leisure Centre", "c": "Enquire" }]
@@ -1203,7 +1065,6 @@
   {
     "site": "Hellaby",
     "venue": "Hellaby Hall Hotel",
-    "type": "External",
     "contact": "01709 702701 / 830630\nsales@hellabyhalhotel.co.uk",
     "address": "Hellaby, Rotherham, S66 8SN",
     "rooms": [{ "n": "Hotel Meeting Rooms", "c": "Enquire" }]
@@ -1211,7 +1072,6 @@
   {
     "site": "Rotherham Central",
     "venue": "Holiday Inn Rotherham",
-    "type": "External",
     "contact": "01709 830630",
     "address": "West Bawtry Road, Rotherham, S60 2XL",
     "rooms": [
@@ -1222,7 +1082,6 @@
   {
     "site": "Rotherham Central",
     "venue": "Voluntary Action Rotherham (VAR)",
-    "type": "External",
     "contact": "Paul Chowdhury / Lucy Winter\nadmin@varotherham.org.uk",
     "address": "The Spectrum, Coke Hill, Rotherham, S60 2HX",
     "rooms": [
@@ -1233,8 +1092,6 @@
   {
     "site": "Thurcroft",
     "venue": "Consort Hotel",
-    "type": "External",
-
     "contact": "01709 530022\ninfo@consorthotel.co.uk",
     "address": "9 Brampton Road, Thurcroft, S66 9JA",
     "rooms": [{ "n": "Consort Suite", "c": "£480 per day" }]
@@ -1242,8 +1099,6 @@
   {
     "site": "Parkgate",
     "venue": "Fitzwilliam Hotel",
-    "type": "External",
-
     "contact": "01709 522 744",
     "address": "Taylors Lane, Parkgate, S62 6EE",
     "rooms": [{ "n": "Ceremony Room", "c": "200 (£300 per day)" }]
@@ -1251,7 +1106,6 @@
   {
     "site": "Rotherham",
     "venue": "Rockingham Professional Development Centre",
-    "type": "External",
     "contact": "01709 334005\nsarah.otter@rotherham.gov.uk",
     "address": "Roughwood Road, Rotherham, S61 4HY",
     "rooms": [
@@ -1263,7 +1117,6 @@
   {
     "site": "Catcliffe",
     "venue": "Catcliffe Memorial Hall",
-    "type": "External",
     "contact": "Josie Huddleston: 01709 837550\nClerk@catcliffepc.com",
     "address": "Old School Lane, Catcliffe, S60 5SP",
     "rooms": [
@@ -1274,7 +1127,6 @@
   {
     "site": "Rawmarsh",
     "venue": "High Street Centre",
-    "type": "External",
     "contact": "admin@hscrawmarsh.org",
     "address": "High Street, Rawmarsh, S62 6LN",
     "rooms": [
@@ -1287,7 +1139,6 @@
   {
     "site": "Rotherham Central",
     "venue": "Riverside House",
-    "type": "External",
     "contact": "Michael Draffan: 07765 957292",
     "address": "Main Street, Rotherham, S60 1AE",
     "rooms": [{ "n": "Council Rooms", "c": "Various" }]
@@ -1295,7 +1146,6 @@
   {
     "site": "Rotherham Central",
     "venue": "The Unity Centre",
-    "type": "External",
     "contact": "info@theunitycentre.org.uk",
     "address": "St Leonards Road, Rotherham, S65 1PD",
     "rooms": [{ "n": "Community Resource", "c": "Enquire" }]
@@ -1303,7 +1153,6 @@
   {
     "site": "Thorpe Hesley",
     "venue": "Trinity Centre",
-    "type": "External",
     "contact": "0114 245 9665\ninfo@trinitycentre.org.uk",
     "address": "Sough Hall Avenue, Thorpe Hesley, S61 2QJ",
     "rooms": [{ "n": "Community Centre", "c": "Enquire" }]
@@ -1311,7 +1160,6 @@
   {
     "site": "Brinsworth",
     "venue": "The Centre",
-    "type": "External",
     "contact": "Jade: 01709 916 890\nenquiries@thecentrebrinsworth.co.uk",
     "address": "Brinsworth Lane, Brinsworth, S60 5BU",
     "rooms": [{ "n": "Main Hall", "c": "150 (100 Cabaret)" }]
@@ -1319,7 +1167,6 @@
   {
     "site": "Doncaster",
     "venue": "Danum Gallery, Library and Museum",
-    "type": "External",
     "contact": "01302 737555\nDGLAMenquiries@doncaster.gov.uk",
     "address": "Waterdale, Doncaster, DN1 34BZ",
     "rooms": [
@@ -1330,7 +1177,6 @@
   {
     "site": "Wickersley",
     "venue": "Wickersley Community Centre and Library",
-    "type": "External",
     "contact": "clerk@wickerselypc.org.uk",
     "address": "286 Bawtry Road, Wickersley, S66 1JJ",
     "rooms": [{ "n": "Community Centre", "c": "From £15ph" }]
@@ -1338,7 +1184,6 @@
   {
     "site": "Rawmarsh",
     "venue": "Roundwood Sports and Social Club",
-    "type": "External",
     "contact": "01709 826061",
     "address": "Green Lane, Rawmarsh, S62 6LA",
     "rooms": [{ "n": "Social Club", "c": "Enquire" }]
@@ -1346,7 +1191,6 @@
   {
     "site": "Rotherham",
     "venue": "Carlton Park Hotel",
-    "type": "External",
     "contact": "01709 252232",
     "address": "102-104 Moorgate Road, Rotherham, S60 2BG",
     "rooms": [{ "n": "Hotel Function Rooms", "c": "Enquire" }]
@@ -1354,7 +1198,6 @@
   {
     "site": "Thrybergh",
     "venue": "Thrybergh Hall (Rotherham Golf Club)",
-    "type": "External",
     "contact": "01709 850 466\nevents@rotherhamgolfclub.com",
     "address": "Doncaster Road, Thrybergh, S65 4NU",
     "rooms": [{ "n": "Events Hall", "c": "Enquire" }]
@@ -1362,7 +1205,6 @@
   {
     "site": "Isle of Axholme",
     "venue": "Axholme Leisure Centre",
-    "type": "External",
     "contact": "Kerrie Mitchell\nkerrie.mitchell@northlincs.gov",
     "address": "Wharf Road, Crowle, DN17 4HU",
     "rooms": [{ "n": "Studio hire", "c": "Unsuitable - no private rooms" }]
@@ -1370,7 +1212,6 @@
   {
     "site": "Scunthorpe South",
     "venue": "Ashby Community Centre",
-    "type": "External",
     "contact": "Hazel\n01724 848808",
     "address": "Everest Road, DN16 3DZ",
     "rooms": [
@@ -1382,7 +1223,6 @@
   {
     "site": "Normanby Hall",
     "venue": "Country Park and Mansion",
-    "type": "External",
     "contact": "normanby.hall@northlincs.gov.uk",
     "address": "Normanby Road, DN15 9HU",
     "rooms": [{ "n": "Meeting rooms & Education rooms", "c": "-" }]
@@ -1390,7 +1230,6 @@
   {
     "site": "Brigg",
     "venue": "The Angel (Brigg Community Hub)",
-    "type": "External",
     "contact": "Kerrie Mitchell\nkerrie.mitchell@northlincs.gov",
     "address": "Market Place, DN20 8LD",
     "rooms": [
@@ -1402,7 +1241,6 @@
   {
     "site": "Scunthorpe South",
     "venue": "Ashby Hub (NLC)",
-    "type": "External",
     "contact": "Kerrie Mitchell\nkerrie.mitchell@northlincs.gov",
     "address": "Ashby High Street, DN16 2RY",
     "rooms": [
@@ -1415,7 +1253,6 @@
   {
     "site": "Rawmarsh",
     "venue": "High Street Centre",
-    "type": "External",
     "contact": "Reception\nadmin@hscrawmarsh.org / 01709 719478",
     "address": "High Street, Rawmarsh, Rotherham S62 6LN",
     "rooms": [
@@ -1429,7 +1266,6 @@
   {
     "site": "Maltby",
     "venue": "Full Life Church",
-    "type": "External",
     "contact": "Reception\nwes@full-life.org.uk / 01709 818213",
     "address": "High Street, Maltby, Rotherham, S66 8LF",
     "rooms": [
@@ -1441,7 +1277,6 @@
   {
     "site": "Brinsworth",
     "venue": "The Centre (Brinsworth Parish Council)",
-    "type": "External",
     "contact": "Reception\nenquiries@thecentrebrinsworth.co.uk / 01709 916 890",
     "address": "The Pavilion, Field View, Brinsworth, S60 5DG",
     "rooms": [
@@ -1452,7 +1287,6 @@
   {
     "site": "Doncaster Central",
     "venue": "The Rutland Centre",
-    "type": "External",
     "contact": "Rebecca Phillips\nrebecca.phillips1@nhs.net",
     "address": "Rutland House, Rutland Street, Doncaster, DN1 2BF",
     "rooms": [
@@ -1462,7 +1296,6 @@
   {
     "site": "Doncaster Central",
     "venue": "The Flying Scotsman",
-    "type": "External",
     "contact": "Dawn Turner\nD.Turner@communityhealthpartnerships.co.uk",
     "address": "Doncaster",
     "rooms": [{ "n": "Room 311 (1st Floor)", "c": "Free of charge" }]
@@ -1470,7 +1303,6 @@
   {
     "site": "Doncaster North",
     "venue": "Askern Family Hub / Alexander House",
-    "type": "External",
     "contact": "Tara Jones\nTara.Jones@doncaster.gov.uk",
     "address": "Spa Pool Road, DN6 0HZ",
     "rooms": [
@@ -1481,7 +1313,6 @@
   {
     "site": "Doncaster North",
     "venue": "White Wings Centre",
-    "type": "External",
     "contact": "Dawn Turner\nD.Turner@communityhealthpartnerships.co.uk",
     "address": "Spa Pool Road, DN6 0HZ",
     "rooms": [{ "n": "See Checklist Form", "c": "-" }]
@@ -1489,7 +1320,6 @@
   {
     "site": "Doncaster (St Leger)",
     "venue": "St Leger Homes - Central Area",
-    "type": "External",
     "contact": "Alison Alcock\nAlison.alcock@stlegerhomes.co.uk",
     "address": "Doncaster Central",
     "rooms": [{ "n": "Meeting Space", "c": "Max 40" }]
@@ -1497,7 +1327,6 @@
   {
     "site": "Doncaster (St Leger)",
     "venue": "St Leger Homes - East Area",
-    "type": "External",
     "contact": "Megan Oakley\nMegan.Oakley@stlegerhomes.co.uk",
     "address": "Doncaster East",
     "rooms": [{ "n": "Meeting Space", "c": "Max 40" }]
@@ -1505,7 +1334,6 @@
   {
     "site": "Doncaster (St Leger)",
     "venue": "St Leger Homes - North Area",
-    "type": "External",
     "contact": "Carol Higgins\nCarol.Higgins@stlegerhomes.co.uk",
     "address": "Doncaster North",
     "rooms": [{ "n": "Meeting Space", "c": "Max 40" }]
@@ -1513,7 +1341,6 @@
   {
     "site": "Doncaster (St Leger)",
     "venue": "St Leger Homes - South Area",
-    "type": "External",
     "contact": "Heather Saunders\nHeather.Saunders@stlegerhomes.co.uk",
     "address": "Doncaster South",
     "rooms": [{ "n": "Meeting Space", "c": "Max 40" }]
@@ -1521,69 +1348,8 @@
   {
     "site": "Doncaster (St Leger)",
     "venue": "St Leger Homes - West Area",
-    "type": "External",
     "contact": "Heather Saunders\nHeather.Saunders@stlegerhomes.co.uk",
     "address": "Doncaster West",
     "rooms": [{ "n": "Meeting Space", "c": "Max 40" }]
-  },
-  {
-    "site": "Scunthorpe",
-    "venue": "Great Oaks",
-    "type": "Internal",
-    "contact": "Reception Team\nrdash.great.oaks-reception@nhs.net\n0300 021 6000",
-    "address": "Great Oaks\nAshby High Street, Scunthorpe, North Lincolnshire, DN16 2JX",
-    "rooms": [
-      { "n": "Meeting Room", "c": "14" },
-      { "n": "Meeting Room 2", "c": "12" },
-      { "n": "Seminar Room", "c": "8" }
-    ]
-  },
-  {
-    "site": "Scunthorpe",
-    "venue": "Elizabeth Quarter",
-    "type": "Internal",
-    "contact": "Reception Team\nRdash.community-admin-reception@nhs.net\n0300 021 6300",
-    "address": "Elizabeth Quarter\nHigh Street, Scunthorpe, North Lincolnshire, DN15 6BF",
-    "rooms": [
-      { "n": "Large Meeting Room", "c": "16" },
-      { "n": "Small Meeting Room", "c": "6-8" },
-      { "n": "Group Room", "c": "10" }
-    ]
-  },
-  {
-    "site": "Rotherham General Hospital",
-    "venue": "The Woodlands",
-    "type": "Internal",
-    "contact": "03000 2 15603\nrdash.woodlandsreception@nhs.net",
-    "address": "Moorgate Road\nRotherham\nS60 2UD",
-    "rooms": [{ "n": "Conference Room", "c": "30 seated/40 conference" }]
-  },
-  {
-    "site": "Swallownest\nRotherham",
-    "venue": "Swallownest Court",
-    "type": "Internal",
-    "contact": "0300 021 5500\nRdash.receptionswallownestcourt@nhs.net",
-    "address": "Aughton Road\nSwallownest Rotherham\nS26 4TH",
-    "rooms": [
-      { "n": "Conference Room", "c": "40 with tables\n60 lecture style" },
-      { "n": "Tutorial Room", "c": "12 with tables\n20 lecture style" },
-      { "n": "Chaffinch Room", "c": "8" }
-    ]
-  },
-  {
-    "site": "Kimberworth\nRotherham",
-    "venue": "Ferham Clinic",
-    "type": "Internal",
-    "contact": "",
-    "address": "Ferham Clinic Kimberworth Road\nRotherham\nS61 1AJ ",
-    "rooms": [{ "n": "Small Group Room", "c": "8" }]
-  },
-  {
-    "site": "Breathing Space\nRotherham",
-    "venue": "Badsley Moor",
-    "type": "Internal",
-    "contact": "",
-    "address": "220 Badsley Moor Lane\nRotherham\nS65 2QL",
-    "rooms": [{ "n": "Large Meeting Room", "c": "15" }]
   }
 ]

@@ -1,0 +1,58 @@
+[
+  {
+    "Course": "Placement Learning - Occupational Therapist",
+    "Description": "Watching this video will help you understand how placement learning works and how you can support placement colleagues better",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Video",
+    "CourseLink": "https://youtu.be/SYtD8jP7-UQ"
+  },
+  {
+    "Course": "Data Saves Lives",
+    "Description": "Why is the data we create for healthcare in particular so important? \r\nWatching the series of short video's will explain why and will enhance your understanding of the importance of data. ",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Video",
+    "CourseLink": "https://intranet.rdash.nhs.uk/news/data-is-interesting-isnt-it/"
+  },
+  {
+    "Course": "Autism ",
+    "Description": "Rachel Walton",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Video",
+    "CourseLink": "awaiting link"
+  },
+  {
+    "Course": "Set Up Online Meetings: Watch & Learn: MS Teams meetings",
+    "Description": "This short video explains how to find book and use Microsoft Teams meeting rooms",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Video",
+    "CourseLink": "https://intranet.rdash.nhs.uk/news/data-is-interesting-isnt-it/"
+  },
+  {
+    "Course": "Set Up Online Meetings: Watch & Learn: Clickshare",
+    "Description": "This short video explains how to use clickshare video conference equipment",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Video",
+    "CourseLink": "https://www.youtube.com/watch?v=7o0ERGbFWIg"
+  },
+  {
+    "Course": "SystmOne Resources",
+    "Description": "Support, guidance and video's for SystmOne",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Video",
+    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/health-informatics/clinical-systems/guidance-and-videos/videos/"
+  },
+  {
+    "Course": "Radar Training",
+    "Description": "Support, guidance and video's for Radar",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Video",
+    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/health-informatics/radar/radar-training/"
+  }
+]

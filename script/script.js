@@ -4,6 +4,8 @@
 let allEvents = [];
 let globalRawClasses = [];
 let globalRawDescs = [];
+let globalVideoVault = [];
+let globalQualityImprovement = [];
 let globalRawRooms = []; // This will hold the flattened room list
 let calendar = null;
 
@@ -11,7 +13,9 @@ const CONFIG = {
   files: {
     classes: "Data/ClassList.json",
     descriptions: "Data/CourseDescriptions.json",
+    videoVault: "Data/VideoVault.json",
     rooms: "Data/rooms.json",
+    qi: "Data/QualityImprovement.json",
   },
   excelEpoch: Date.UTC(1899, 11, 30),
   msPerDay: 86400000,
@@ -59,15 +63,25 @@ async function initApp() {
   try {
     console.log("🚀 Initializing Training Hub...");
 
-    const [classRes, descRes, roomRes] = await Promise.all([
-      fetch(`${CONFIG.files.classes}?v=${Date.now()}`),
-      fetch(`${CONFIG.files.descriptions}?v=${Date.now()}`),
-      fetch(`${CONFIG.files.rooms}?v=${Date.now()}`).catch(() => null),
+    // Fetch all files. .catch ensures one failure doesn't stop the whole script.
+    const [classRes, descRes, videoRes, roomRes, qiRes] = await Promise.all([
+      fetch(`${CONFIG.files.classes}?v=${Date.now()}`).catch((e) => e),
+      fetch(`${CONFIG.files.descriptions}?v=${Date.now()}`).catch((e) => e),
+      fetch(`${CONFIG.files.videoVault}?v=${Date.now()}`).catch((e) => e),
+      fetch(`${CONFIG.files.rooms}?v=${Date.now()}`).catch((e) => e),
+      fetch(`${CONFIG.files.qi}?v=${Date.now()}`).catch((e) => e),
     ]);
 
-    globalRawClasses = await classRes.json();
-    globalRawDescs = await descRes.json();
-    const rawNestedRooms = roomRes ? await roomRes.json() : [];
+    // Safely assign data or empty array if fetch failed
+    globalRawClasses = classRes.ok ? await classRes.json() : [];
+    globalRawDescs = descRes.ok ? await descRes.json() : [];
+    globalVideoVault = videoRes.ok ? await videoRes.json() : [];
+    globalQualityImprovement = qiRes.ok ? await qiRes.json() : [];
+    const rawNestedRooms = roomRes.ok ? await roomRes.json() : [];
+
+    if (globalVideoVault.length === 0) {
+      console.warn("⚠️ VideoVault.json could not be loaded or is empty.");
+    }
 
     // --- FLATTEN ROOM DATA ---
     globalRawRooms = [];
@@ -137,11 +151,12 @@ async function initApp() {
     // Initial Renders
     renderUpcomingList("upcomingList");
     renderCatalogue(globalRawClasses, globalRawDescs);
-    renderRoomDirectory(globalRawRooms);
-    renderVideoVault(globalRawDescs);
+    renderVideoVault(globalVideoVault);
+    renderQI(globalQualityImprovement);
     initCalendar();
     setupAlphabetNav();
     setupRoomSearch();
+    filterRooms();
 
     console.log("✅ Hub Initialization Complete.");
   } catch (err) {
@@ -354,16 +369,30 @@ function filterCalendar() {
   renderUpcomingList("upcomingListCatalogue", filtered);
 }
 
+/**
+ * PROSPECTUS SEARCH & ALPHABET LOGIC
+ */
 function filterProspectus(query) {
+  // If the query is empty (the "ALL" button), show everything
+  if (!query || query === "") {
+    renderCatalogue(globalRawClasses, globalRawDescs);
+    return;
+  }
+
   const term = query.toLowerCase();
+
   const filtered = globalRawDescs.filter((d) => {
-    const clean = utils.cleanTitle(d.Course || d.Title).toLowerCase();
-    const raw = (d.Course || d.Title || "").toLowerCase();
+    const title = utils.cleanTitle(d.Course || d.Title || "").toLowerCase();
+    const desc = (d.Description || "").toLowerCase();
+
+    // If query is 1 character, it's an Alphabet jump (check StartsWith)
+    // Otherwise, it's a search term (check Includes)
     return query.length === 1
-      ? clean.startsWith(term)
-      : raw.includes(term) ||
-          (d.Description || "").toLowerCase().includes(term);
+      ? title.startsWith(term)
+      : title.includes(term) || desc.includes(term);
   });
+
+  // Re-render the list using ONLY the filtered descriptions
   renderCatalogue(globalRawClasses, filtered);
 }
 
@@ -512,7 +541,7 @@ function scrollUpcoming(dist) {
     ?.scrollBy({ left: dist, behavior: "smooth" });
 }
 
-let currentVenueCategory = "trust";
+let currentVenueCategory = "internal";
 
 /**
  * Handle Tab Switching for Venues
@@ -678,23 +707,22 @@ window.addEventListener("DOMContentLoaded", () => {
 /**
  * VIDEO VAULT: RENDERING (PROSPECTUS STYLE)
  */
-function renderVideoVault(courseDescs) {
+function renderVideoVault(videoData) {
   const container = document.getElementById("vvCourseList");
   const alphaContainer = document.getElementById("vvAlphabetNav");
   if (!container) return;
 
-  // 1. Filter only for Videos (Trainer is "Video")
-  const videoData = courseDescs.filter(
-    (d) =>
-      d.Trainer === "Video" && d.CourseLink && d.CourseLink !== "awaiting link",
+  // Since it's a dedicated file, we only filter out empty links
+  const validVideos = videoData.filter(
+    (d) => d.CourseLink && d.CourseLink !== "awaiting link",
   );
 
-  if (videoData.length === 0) {
+  if (validVideos.length === 0) {
     container.innerHTML = `<div class="col-12 text-center py-5"><h4 class="text-muted">No videos found.</h4></div>`;
     return;
   }
 
-  // 2. Setup Mustard Alphabet Nav
+  // Setup Alphabet Nav
   if (alphaContainer) {
     alphaContainer.innerHTML =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -704,34 +732,28 @@ function renderVideoVault(courseDescs) {
             `<button class="btn btn-sm text-white fw-bold border-0 p-1" onclick="filterVVByLetter('${l}')">${l}</button>`,
         )
         .join("") +
-      `<button class="btn btn-sm btn-light ms-2 rounded-pill" 
-             style="color: #c68a12; white-space: nowrap; display: inline-block;" 
-             onclick="filterVVByLetter('ALL')">ALL</button>`;
+      `<button class="btn btn-sm btn-light ms-2 rounded-pill" style="color: #c68a12;" onclick="filterVVByLetter('ALL')">ALL</button>`;
   }
 
-  // 3. Render Mustard Collapsible Cards
-  container.innerHTML = videoData
+  container.innerHTML = validVideos
     .sort((a, b) =>
       utils.cleanTitle(a.Course).localeCompare(utils.cleanTitle(b.Course)),
     )
     .map((v, idx) => {
       const id = `vvCollapse_${idx}`;
-      const cleanName = utils.cleanTitle(v.Course || v.Title);
-
       return `
       <div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #c68a12 !important; background-color: #fef9ef;">
         <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center border-0" 
                 style="background-color: #fef9ef;" data-bs-toggle="collapse" data-bs-target="#${id}">
             <div>
-                <span class="fw-bold d-block text-dark">${cleanName}</span>
+                <span class="fw-bold d-block text-dark">${utils.cleanTitle(v.Course)}</span>
                 <small class="text-muted">Category: ${v.Topic || "Tutorial"}</small>
             </div>
             <i class="bi bi-play-circle-fill fs-4" style="color: #c68a12;"></i>
         </button>
-        
         <div class="collapse" id="${id}">
             <div class="card-body bg-white border-top">
-                <p class="small text-dark mb-3" style="white-space: pre-line;">${v.Description}</p>
+                <p class="small text-dark mb-3">${v.Description || "No description available."}</p>
                 <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #fef9ef; border: 1px solid #faeecd;">
                     <span class="small fw-bold" style="color: #c68a12;">Duration: ${v.Duration || "Varies"}</span>
                     <a href="${v.CourseLink}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #c68a12;">
@@ -747,28 +769,104 @@ function renderVideoVault(courseDescs) {
 
 // Global filter functions for Video Vault
 function filterVVByLetter(letter) {
-  const query = letter === "ALL" ? "" : letter;
-  const filtered = globalRawDescs.filter((d) => {
-    const isVideo = d.Trainer === "Video";
-    const cleanName = utils.cleanTitle(d.Course || d.Title).toLowerCase();
-    if (!isVideo) return false;
-    return query === "" ? true : cleanName.startsWith(query.toLowerCase());
+  const query = letter === "ALL" ? "" : letter.toLowerCase();
+  const filtered = globalVideoVault.filter((d) => {
+    const title = utils.cleanTitle(d.Course || d.Title).toLowerCase();
+    return query === "" ? true : title.startsWith(query);
   });
   renderVideoVault(filtered);
 }
 
 function filterVideoVaultNew() {
   const query = document.getElementById("vvSearchInputNew").value.toLowerCase();
-  const filtered = globalRawDescs.filter((d) => {
-    const isVideo = d.Trainer === "Video";
-    const titleMatch = utils
-      .cleanTitle(d.Course || d.Title)
-      .toLowerCase()
-      .includes(query);
-    const descMatch = (d.Description || "").toLowerCase().includes(query);
-    return isVideo && (titleMatch || descMatch);
+  const filtered = globalVideoVault.filter((d) => {
+    const title = utils.cleanTitle(d.Course || d.Title).toLowerCase();
+    const desc = (d.Description || "").toLowerCase();
+    return title.includes(query) || desc.includes(query);
   });
   renderVideoVault(filtered);
+}
+
+/**
+ * QUALITY IMPROVEMENT: RENDERING
+ */
+function renderQI(qiData) {
+  const container = document.getElementById("qiContentList");
+  const alphaContainer = document.getElementById("qiAlphabetNav");
+  if (!container) return;
+
+  if (qiData.length === 0) {
+    container.innerHTML = `<div class="col-12 text-center py-5"><h4 class="text-muted">No QI resources found.</h4></div>`;
+    return;
+  }
+
+  // Setup Alphabet Nav (Purple Theme)
+  if (alphaContainer) {
+    alphaContainer.innerHTML =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        .split("")
+        .map(
+          (l) =>
+            `<button class="btn btn-sm text-white fw-bold border-0 p-1" onclick="filterQIByLetter('${l}')">${l}</button>`,
+        )
+        .join("") +
+      `<button class="btn btn-sm btn-light ms-2 rounded-pill" style="color: #6f42c1;" onclick="filterQIByLetter('ALL')">ALL</button>`;
+  }
+
+  container.innerHTML = qiData
+    .sort((a, b) =>
+      utils
+        .cleanTitle(a.Course || a.Title)
+        .localeCompare(utils.cleanTitle(b.Course || b.Title)),
+    )
+    .map((item, idx) => {
+      const id = `qiCollapse_${idx}`;
+      const cleanName = utils.cleanTitle(item.Course || item.Title);
+
+      return `
+      <div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #6f42c1 !important; background-color: #f9f6ff;">
+        <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center border-0" 
+                style="background-color: #f9f6ff;" data-bs-toggle="collapse" data-bs-target="#${id}">
+            <div>
+                <span class="fw-bold d-block text-dark">${cleanName}</span>
+                <small class="text-muted">Methodology: ${item.Methodology || "QI Tool"}</small>
+            </div>
+            <i class="bi bi-chevron-down fs-5" style="color: #6f42c1;"></i>
+        </button>
+        <div class="collapse" id="${id}">
+            <div class="card-body bg-white border-top">
+                <p class="small text-dark mb-3" style="white-space: pre-line;">${item.Description || "No description available."}</p>
+                <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #f9f6ff; border: 1px solid #e9dcfc;">
+                    <span class="small fw-bold" style="color: #6f42c1;">Type: ${item.Topic || "Resource"}</span>
+                    <a href="${item.CourseLink || "#"}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #6f42c1;">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Access Resource
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>`;
+    })
+    .join("");
+}
+
+// Search and Filter for QI
+function filterQI() {
+  const query = document.getElementById("qiSearchInput").value.toLowerCase();
+  const filtered = globalQualityImprovement.filter((d) => {
+    const title = utils.cleanTitle(d.Course || d.Title).toLowerCase();
+    const desc = (d.Description || "").toLowerCase();
+    return title.includes(query) || desc.includes(query);
+  });
+  renderQI(filtered);
+}
+
+function filterQIByLetter(letter) {
+  const query = letter === "ALL" ? "" : letter.toLowerCase();
+  const filtered = globalQualityImprovement.filter((d) => {
+    const title = utils.cleanTitle(d.Course || d.Title).toLowerCase();
+    return query === "" ? true : title.startsWith(query);
+  });
+  renderQI(filtered);
 }
 
 document.addEventListener("DOMContentLoaded", initApp);
