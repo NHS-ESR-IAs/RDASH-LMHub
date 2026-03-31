@@ -1,22 +1,6 @@
 [
   {
     "site": "Tickhill Road",
-    "venue": "Onyx Centre (Access Team)",
-    "type": "External",
-    "contact": "03000 212223\nAmanda Gooding\namanda.gooding@nhs.net",
-    "address": "Weston Road, DN4 8QN",
-    "rooms": [
-      { "n": "Meeting Rm 1", "c": "8" },
-      { "n": "Meeting Rm 2", "c": "10" },
-      { "n": "Meeting Rm 3", "c": "3" },
-      { "n": "Office 1 (1-2-1)", "c": "N/A" },
-      { "n": "Consultation Rm 1", "c": "2" },
-      { "n": "Consultation Rm 2", "c": "2" },
-      { "n": "Group Rm", "c": "20" }
-    ]
-  },
-  {
-    "site": "Tickhill Road",
     "venue": "Opal Centre (Central Locality)",
     "contact": "Mel Element, 03000 212960\nJeanette Green, 03000 212608\nYvonne Sherratt, 03000 212603\nrdash.opalcentre.conservatory@nhs.net",
     "type": "Internal",
@@ -57,43 +41,11 @@
   },
   {
     "site": "Tickhill Road",
-    "venue": "Evergreen",
-    "type": "External",
-    "contact": "03000 211555\nRdash.rehabservices@nhs.net",
-    "address": "Weston Road, DN4 8QN",
-    "rooms": [
-      { "n": "Room 1", "c": "Desk, Couch & PC" },
-      { "n": "Room 2", "c": "Desk & PC" },
-      { "n": "Room 3 (Ad hoc)", "c": "Clinical/Bloods" },
-      { "n": "Room 4", "c": "4" },
-      { "n": "Room 5", "c": "Large Desk & Couch" },
-      { "n": "Room 6", "c": "Desk & PC" },
-      { "n": "Room 7", "c": "Desk (No window)" }
-    ]
-  },
-  {
-    "site": "Tickhill Road",
     "venue": "Forest Gate",
     "type": "Internal",
     "contact": "03000 212031 – option 1\nCentral Admin (Sharon Denby, Clair Humphries, Sophie Kramer-Peck)\nrdash.dcg-amh@nhs.net\n\n03000 211842 – option 1\nSouth Admin (Reception: Laura Brown, Susan Hinchcliffe)\nrdash.dcg-amh@nhs.net",
     "address": "Balby, DN4 8QN",
     "rooms": [{ "n": "Group Therapy Room", "c": "18" }]
-  },
-  {
-    "site": "Woodfield Park",
-    "venue": "Learning & Development Centre",
-    "type": "External",
-    "contact": "01302 796241 (Ext 6241)\nLiam Hackett\nrdash.learninganddevtraining@nhs.net",
-    "address": "Almond Tree Court, DN4 8QN",
-    "rooms": [
-      { "n": "Room 1", "c": "30 Theatre / 20 Cabaret" },
-      { "n": "Room 3", "c": "70 Theatre / 50 Cabaret" },
-      { "n": "Room 4", "c": "12" },
-      { "n": "Room 5", "c": "12" },
-      { "n": "Room 6", "c": "20 Theatre" },
-      { "n": "Room 7", "c": "16 Theatre" },
-      { "n": "Room 8 (Boardroom)", "c": "10 (16 max)" }
-    ]
   },
   {
     "site": "Tickhill Road",

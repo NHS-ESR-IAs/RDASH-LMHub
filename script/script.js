@@ -277,7 +277,10 @@ function renderCatalogue(classList, courseDescs) {
     
     <div class="collapse" id="${id}">
         <div class="card-body bg-white border-top border-info-subtle">
-            <p class="small text-dark mb-3" style="white-space: pre-line;">${group.info.Description}</p>
+    <div class="mb-3">
+        <span class="badge bg-light text-dark border small"><i class="bi bi-people me-1"></i> Audience: ${group.info.TargetAudience || "General"}</span>
+    </div>
+    <p class="small text-dark mb-3" style="white-space: pre-line;">${group.info.Description}</p>
             ${
               sessionCount > 0
                 ? `
@@ -742,27 +745,30 @@ function renderVideoVault(videoData) {
     .map((v, idx) => {
       const id = `vvCollapse_${idx}`;
       return `
-      <div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #c68a12 !important; background-color: #fef9ef;">
-        <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center border-0" 
-                style="background-color: #fef9ef;" data-bs-toggle="collapse" data-bs-target="#${id}">
-            <div>
-                <span class="fw-bold d-block text-dark">${utils.cleanTitle(v.Course)}</span>
-                <small class="text-muted">Category: ${v.Topic || "Tutorial"}</small>
-            </div>
-            <i class="bi bi-play-circle-fill fs-4" style="color: #c68a12;"></i>
-        </button>
-        <div class="collapse" id="${id}">
-            <div class="card-body bg-white border-top">
-                <p class="small text-dark mb-3">${v.Description || "No description available."}</p>
-                <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #fef9ef; border: 1px solid #faeecd;">
-                    <span class="small fw-bold" style="color: #c68a12;">Duration: ${v.Duration || "Varies"}</span>
-                    <a href="${v.CourseLink}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #c68a12;">
-                        <i class="bi bi-play-fill me-1"></i> Watch Video
-                    </a>
-                </div>
-            </div>
-        </div>
-      </div>`;
+<div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #c68a12 !important; background-color: #fef9ef;">
+  <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center border-0" 
+          style="background-color: #fef9ef;" data-bs-toggle="collapse" data-bs-target="#${id}">
+      <div>
+          <span class="fw-bold d-block text-dark">${utils.cleanTitle(v.Course)}</span>
+          <small class="text-muted">Category: ${v.Topic || "Tutorial"}</small>
+      </div>
+      <i class="bi bi-play-circle-fill fs-4" style="color: #c68a12;"></i>
+  </button>
+  <div class="collapse" id="${id}">
+      <div class="card-body bg-white border-top">
+          <div class="mb-2">
+              <small class="fw-bold text-muted"><i class="bi bi-people me-1"></i> Target Audience: ${v.TargetAudience || "All Staff"}</small>
+          </div>
+          <p class="small text-dark mb-3">${v.Description || "No description available."}</p>
+          <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #fef9ef; border: 1px solid #faeecd;">
+              <span class="small fw-bold" style="color: #c68a12;">Duration: ${v.Duration || "Varies"}</span>
+              <a href="${v.CourseLink}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #c68a12;">
+                  <i class="bi bi-play-fill me-1"></i> Watch Video
+              </a>
+          </div>
+      </div>
+  </div>
+</div>`;
     })
     .join("");
 }
@@ -824,27 +830,30 @@ function renderQI(qiData) {
       const cleanName = utils.cleanTitle(item.Course || item.Title);
 
       return `
-      <div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #6f42c1 !important; background-color: #f9f6ff;">
-        <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center border-0" 
-                style="background-color: #f9f6ff;" data-bs-toggle="collapse" data-bs-target="#${id}">
-            <div>
-                <span class="fw-bold d-block text-dark">${cleanName}</span>
-                <small class="text-muted">Methodology: ${item.Methodology || "QI Tool"}</small>
-            </div>
-            <i class="bi bi-chevron-down fs-5" style="color: #6f42c1;"></i>
-        </button>
-        <div class="collapse" id="${id}">
-            <div class="card-body bg-white border-top">
-                <p class="small text-dark mb-3" style="white-space: pre-line;">${item.Description || "No description available."}</p>
-                <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #f9f6ff; border: 1px solid #e9dcfc;">
-                    <span class="small fw-bold" style="color: #6f42c1;">Type: ${item.Topic || "Resource"}</span>
-                    <a href="${item.CourseLink || "#"}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #6f42c1;">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> Access Resource
-                    </a>
-                </div>
-            </div>
-        </div>
-      </div>`;
+<div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #6f42c1 !important; background-color: #f9f6ff;">
+  <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center border-0" 
+          style="background-color: #f9f6ff;" data-bs-toggle="collapse" data-bs-target="#${id}">
+      <div>
+          <span class="fw-bold d-block text-dark">${cleanName}</span>
+          <small class="text-muted">Methodology: ${item.Methodology || "QI Tool"}</small>
+      </div>
+      <i class="bi bi-chevron-down fs-5" style="color: #6f42c1;"></i>
+  </button>
+  <div class="collapse" id="${id}">
+      <div class="card-body bg-white border-top">
+          <div class="mb-2">
+              <small class="fw-bold" style="color: #6f42c1;"><i class="bi bi-people me-1"></i> Intended for: ${item.TargetAudience || "General"}</small>
+          </div>
+          <p class="small text-dark mb-3" style="white-space: pre-line;">${item.Description || "No description available."}</p>
+          <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #f9f6ff; border: 1px solid #e9dcfc;">
+              <span class="small fw-bold" style="color: #6f42c1;">Type: ${item.Topic || "Resource"}</span>
+              <a href="${item.CourseLink || "#"}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #6f42c1;">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> Access Resource
+              </a>
+          </div>
+      </div>
+  </div>
+</div>`;
     })
     .join("");
 }

@@ -206,5 +206,29 @@
     "Trainer": "Support Services",
     "Venue": "Online",
     "CourseLink": "https://codepen.io/ESR_IAs/live/WbbVrQQ/75d9f0929e37634c5a249a14e774bd63"
+  },
+  {
+    "Course": "Introduction to CEDs and Resources Available",
+    "Description": "",
+    "TargetAudience": "All Children’s",
+    "Trainer": "Stephen McGibbon",
+    "Venue": "Classroom",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=VlXFuYFfHlz8Xitc7GAwXX6hmIhlvc.nPT0lq7I9gNzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c "
+  },
+  {
+    "Course": "Risk Register Training",
+    "Description": "",
+    "TargetAudience": "All Children’s / Trustwide ",
+    "Trainer": "Oluwasegun Odumoye",
+    "Venue": "Classroom",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=Iu-h-kHrcpi3gKLlo3YODN-SKevk8sl-nv92p4wAbrDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c "
+  },
+  {
+    "Course": "Perinatal Wellbeing and Mental Health Training",
+    "Description": "",
+    "TargetAudience": "All Children’s",
+    "Trainer": "Ali Howard",
+    "Venue": "Classroom",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FHkywSUER9d0klXdYn7ptFFVy3zwqsWE97KioT1xAtzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c "
   }
 ]
