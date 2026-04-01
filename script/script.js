@@ -85,6 +85,11 @@ async function initApp() {
 
     // --- FLATTEN ROOM DATA ---
     globalRawRooms = [];
+    const siteOrder = {
+      scunthorpe: 1,
+      rotherham: 2,
+      doncaster: 3,
+    };
     rawNestedRooms.forEach((venue) => {
       if (venue.rooms && Array.isArray(venue.rooms)) {
         venue.rooms.forEach((room) => {
@@ -103,6 +108,31 @@ async function initApp() {
           });
         });
       }
+    });
+    globalRawRooms.sort((a, b) => {
+      const siteA = a.Site.toLowerCase();
+      const siteB = b.Site.toLowerCase();
+
+      const getRank = (name) => {
+        if (name.includes("scunthorpe")) return 1;
+        if (name.includes("rotherham")) return 2;
+        // This catches both "Doncaster" and "Tickhill Road"
+        if (name.includes("doncaster") || name.includes("tickhill road"))
+          return 3;
+        return 999; // Everything else goes to the bottom
+      };
+
+      const rankA = getRank(siteA);
+      const rankB = getRank(siteB);
+
+      // If ranks are different, sort by Scunthorpe -> Rotherham -> Doncaster
+      if (rankA !== rankB) {
+        return rankA - rankB;
+      }
+
+      // If they are in the same group (e.g., both are Rank 3),
+      // sort them alphabetically by Site name so Tickhill and Doncaster stay together
+      return siteA.localeCompare(siteB);
     });
 
     const descMap = new Map();
