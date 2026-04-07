@@ -343,7 +343,7 @@ function renderCatalogue(classList, courseDescs) {
                 </div>`
                 : `
                 <div class="d-flex justify-content-between align-items-center bg-info-subtle p-3 rounded border border-info-subtle">
-                    <span class="small text-info-emphasis">No live dates currently scheduled.</span>
+                    <span class="small text-info-emphasis">Book</span>
                     ${
                       hasLink
                         ? `<a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-info text-white px-4">View Content / Video</a>`
