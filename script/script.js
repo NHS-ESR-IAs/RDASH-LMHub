@@ -223,9 +223,11 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
   container.innerHTML = upcoming
     .map((ev) => {
       const eventIndex = allEvents.indexOf(ev);
-      const sTime = ev.extendedProps["Start Time"] || "??:??";
-      const eTime = ev.extendedProps["End Time"] || "??:??";
+      const sTime = ev.extendedProps["Start Time"] || "--:--";
+      const eTime = ev.extendedProps["End Time"] || "--:--";
       const cleanTitle = utils.cleanTitle(ev.title);
+      const hasTime =
+        ev.extendedProps["Start Time"] || ev.extendedProps["End Time"];
 
       if (isCataloguePage) {
         return `
@@ -234,8 +236,7 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
       <span class="badge bg-soft-primary text-primary mb-3 fs-5 px-3 py-2 rounded-pill">${utils.formatDate(ev.start)}</span>
       
       <div class="fw-bold text-dark fs-4 mb-3 text-truncate-2" style="height: 75px; line-height: 1.2;">${cleanTitle}</div>
-      
-      <div class="text-info fw-bold mb-2 fs-5"><i class="bi bi-clock me-2"></i>${sTime}-${eTime}</div>
+      ${hasTime ? `<div class="text-info fw-bold mb-2 fs-5"><i class="bi bi-clock me-2"></i>${sTime}-${eTime}</div>` : ""}
       
       <div class="text-muted fs-6"><i class="bi bi-geo-alt me-2"></i>${ev.extendedProps["Primary Venue"] || "Virtual"}</div>
     </div>
@@ -246,7 +247,7 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
     <div class="fw-bold small text-truncate">${cleanTitle}</div>
     <div class="d-flex justify-content-between mt-1">
       <span class="badge bg-light text-primary border">${utils.formatDate(ev.start)}</span>
-      <small class="text-info fw-bold">${sTime}-${eTime}</small>
+      ${hasTime ? `<small class="text-info fw-bold">${sTime}-${eTime}</small>` : ""}
     </div>
 </button>`;
     })
@@ -550,12 +551,16 @@ function showEventDetailsFromData(idx, directData) {
     </div>
 
     <div class="card border-0 bg-light p-3">
-        <div class="row small text-muted">
+        <div class="row small text-muted"> 
+            ${
+              data["Start Time"] || data["End Time"]
+                ? `<div class="col-6 mb-2">
+                <strong><i class="bi bi-clock me-1"></i> Time:</strong> ${data["Start Time"] || "--:--"} - ${data["End Time"] || "--:--"}
+            </div>`
+                : ""
+            }
             <div class="col-6 mb-2">
                 <strong><i class="bi bi-geo-alt me-1"></i> Venue:</strong> ${data["Primary Venue"] || "Virtual / Online"}
-            </div>
-            <div class="col-6 mb-2">
-                <strong><i class="bi bi-clock me-1"></i> Time:</strong> ${data["Start Time"] || "??:??"} - ${data["End Time"] || "??:??"}
             </div>
             <div class="col-12">
                 <i class="bi bi-info-circle me-1"></i> 

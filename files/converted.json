@@ -1,0 +1,58 @@
+[
+  {
+    "Course": "Data Saves Lives - Why Does Data Matter To Me?",
+    "Description": "Offered as part of the Trust’s bi-monthly Data Quality programme, this interactive session explores how accurate data underpins patient safety, care quality, performance, and funding. Using real Trust examples and practical exercises, staff will learn the principles of a high-quality patient record, identify common data entry errors in SystmOne, and understand how small mistakes can have significant clinical, operational, and financial impacts.  The session reinforces that data quality is everyone’s responsibility, regardless of clinical or non‑clinical role.  ",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Information Quality Manager / Senior Information Quality Officer",
+    "Venue": "Online",
+    "CourseLink": "https://teams.microsoft.com/meet/32351592654970?p=QdQSXtnW7T7l6hgjFm "
+  },
+  {
+    "Course": "Radar Analytic Dashboard Oversight",
+    "Description": "This session provides an overview of the new analytic dashboards on Radar ",
+    "TargetAudience": "Managers and colleagues who have oversight of incidents and audits",
+    "Trainer": "Radar & Patient Safety Teams",
+    "Venue": "Online",
+    "CourseLink": "https://teams.microsoft.com/meet/33016367564777?p=2hvwwl8HKqlqwyCvJe "
+  },
+  {
+    "Course": "Planning for Retirement",
+    "Description": "Keeping your retirement plans on track can be a\r\nchallenging task. The retirement course encourages\r\na positive and realistic approach to help you make\r\ninformed choices about your retirement plans.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Health & Wellbeing",
+    "Venue": "Online",
+    "CourseLink": "see column H"
+  },
+  {
+    "Course": "Neurodivergence and Eating Disorders: ARFID",
+    "Description": "SYEDA are pleased to launch the first in a series of e-learning modules focused on Neurodivergence and Eating Disorders, which focuses on Avoidant/Restrictive Food Intake Disorder (ARFID). This module is split into 2 parts:\r\n \r\n•\tUnderstanding ARFID\r\n•\tTreatment and practically supporting someone with ARFID.\r\n \r\nTo access this module, you will first need to sign up to SYEDA's learning platform (Log in to the site | LMS) and then enrol in the module. ",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "NHS Digital Learning Solutions",
+    "Venue": "Online",
+    "CourseLink": "https://learn.syeda.org.uk."
+  },
+  {
+    "Course": "Health & Wellbeing Podcast",
+    "Description": "I’m Kate, a mindfulness and meditation teacher working within the Moving Forward service at Tickhill Road Hospital, and each month I host a relaxed and welcoming health and wellbeing podcast for RDASH staff. In each episode, I’m joined by a different member of staff and together we have an informal, down-to-earth chat about wellbeing in all its forms. The conversations are designed to be relatable and engaging, with a blend of gentle advice, practical tips, inspiration, motivation, and a touch of humour. It’s a space to pause, reflect, and connect—supporting staff to look after their wellbeing in a way that feels realistic, accessible, and human.",
+    "TargetAudience": "Network leads and Team leads",
+    "Trainer": "Kate Wright",
+    "Venue": "Video",
+    "CourseLink": "https://youtube.com/playlist?list=PL2_RtUzQeufPrXsnbIu8ld6lpwInjp1Td&si=rbVp_aaPbZ6TgWEZ"
+  },
+  {
+    "Course": null,
+    "Description": null,
+    "TargetAudience": null,
+    "Trainer": null,
+    "Venue": null,
+    "CourseLink": null
+  },
+  {
+    "Course": null,
+    "Description": null,
+    "TargetAudience": null,
+    "Trainer": null,
+    "Venue": null,
+    "CourseLink": null
+  }
+]

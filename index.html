@@ -543,18 +543,53 @@
           <p class="lead text-muted">A comprehensive A–Z directory of all learning opportunities. Find the right course
             for your professional development.</p>
 
-          <h5 class="fw-bold text-dark">
-            <i class="bi bi-calendar3 text-info me-2"></i>Course Calendar
-          </h5>
-          <p class="small text-muted mb-3">
-            Looking for training on a specific date? Go to the <strong>Course Calendar</strong> to find training listed
-            by dates, times, and available venues.
-          </p>
+          <div class="row g-4 mb-5">
+            <div class="col-md-4">
+              <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+                <h5 class="fw-bold text-dark">
+                  <i class="bi bi-calendar3 text-info me-2"></i>Course Calendar
+                </h5>
+                <p class="small text-muted mb-3">
+                  Looking for training on a specific date? Go to the <strong>Course Calendar</strong> to find training
+                  listed
+                  by dates, times, and available venues.
+                </p>
+                <button onclick="showPage('Course_Catalogue')"
+                  class="btn btn-info text-white rounded-pill px-4 shadow-sm fw-bold mt-auto">
+                  <i class="bi bi-arrow-right-circle me-2"></i>Go to Course Calendar
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+                <h5 class="fw-bold text-dark">
+                  <i class="bi bi-play-circle me-2" style="color: #c68a12;"></i>Video Vault
+                </h5>
+                <p class="small text-muted mb-3">
+                  Recorded sessions allow you to catch up on training you may have missed.
+                </p>
+                <button onclick="showPage('Learner_VV')"
+                  class="btn btn-warning text-white rounded-pill px-4 shadow-sm fw-bold mt-auto">
+                  <i class="bi bi-play-fill me-2"></i>Go to Video Vault
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+                <h5 class="fw-bold text-dark">
+                  <i class="bi bi-diagram-3 me-2" style="color: #6f42c1;"></i>Quality Improvement
+                </h5>
+                <p class="small text-muted mb-3">
+                  Quality improvement sessions build your skills and confidence so you can make a real difference.
+                </p>
+                <button onclick="showPage('QI_Page')" class="btn text-white rounded-pill px-4 shadow-sm fw-bold mt-auto"
+                  style="background-color: #6f42c1;">
+                  <i class="bi bi-arrow-up-right-circle-fill me-2"></i>Go to QI Resources
+                </button>
+              </div>
+            </div>
+          </div>
 
-          <button onclick="showPage('Course_Catalogue')"
-            class="btn btn-info text-white rounded-pill px-4 shadow-sm fw-bold">
-            <i class="bi bi-arrow-right-circle me-2"></i>Go to Course Calendar
-          </button>
         </div>
 
         <div class="col-md-2 text-end d-none d-md-block mt-2">
@@ -1640,7 +1675,8 @@
                 <div class="tab-pane fade show active" id="course-feedback-panel" role="tabpanel"
                   aria-labelledby="course-feedback-tab">
                   <div class="ratio ratio-16x9" style="min-height: 650px;">
-                    <iframe src="pdfjs/web/viewer.html?file=../../Assets/Course%20Feedback.pdf#disablehistory=true"
+                    <iframe
+                      src="https://forms.office.com/Pages/ResponsePage.aspx?id=slTDN7CF9UeyIge0jXdO4wCgmkbDmphKiCw7whYtnEdUNzg0MEZSVFExTEpRSE9XUzhIU0ZDWTZEVS4u&embed=true"
                       frameborder="0" width="100%" height="100%">
                     </iframe>
                   </div>
@@ -1648,7 +1684,8 @@
 
                 <div class="tab-pane fade" id="hub-feedback-panel" role="tabpanel" aria-labelledby="hub-feedback-tab">
                   <div class="ratio ratio-16x9" style="min-height: 650px;">
-                    <iframe src="pdfjs/web/viewer.html?file=../../Assets/Hub%20Feedback.pdf#disablehistory=true"
+                    <iframe
+                      src="https://forms.office.com/Pages/ResponsePage.aspx?id=slTDN7CF9UeyIge0jXdO4wCgmkbDmphKiCw7whYtnEdUQThRNUhJVEpKREsxTDBXRlFITDdONEJWNS4u&embed=true"
                       frameborder="0" width="100%" height="100%">
                     </iframe>
                   </div>
