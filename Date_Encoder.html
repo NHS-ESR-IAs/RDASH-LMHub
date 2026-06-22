@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date to Excel Serial Converter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #64748b;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .result-box {
+            background-color: #f1f5f9;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+        .result-label {
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .result-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0f172a;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Date to Excel Serial</h2>
+
+        <label for="dateInput">Select a Date:</label>
+        <input type="date" id="dateInput" oninput="convertToExcelSerial()">
+
+        <div class="result-box">
+            <div class="result-label">Excel Serial Number</div>
+            <div id="result" class="result-value">-</div>
+        </div>
+    </div>
+
+    <script>
+        // Automatically set the picker to today's date on load
+        window.onload = function () {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('dateInput').value = today;
+            convertToExcelSerial();
+        };
+
+        function convertToExcelSerial() {
+            const dateInputValue = document.getElementById('dateInput').value;
+            if (!dateInputValue) {
+                document.getElementById('result').innerText = "-";
+                return;
+            }
+
+            // Parse user selected date (handles timezone correctly by forcing UTC/local midpoint)
+            const selectedDate = new Date(dateInputValue + "T00:00:00");
+
+            // Excel base date (Jan 1, 1900)
+            const excelEpoch = new Date("1900-01-01T00:00:00");
+
+            // Calculate difference in milliseconds
+            const diffInMs = selectedDate.getTime() - excelEpoch.getTime();
+
+            // Convert milliseconds to days
+            const msInDay = 24 * 60 * 60 * 1000;
+            let serialNumber = Math.floor(diffInMs / msInDay);
+
+            /* Excel Leap Year Bug Adjustment:
+               Excel incorrectly thinks 1900 was a leap year. 
+               For any date after Feb 28, 1900, we must add 2 days to match Excel's math.
+            */
+            serialNumber += 2;
+
+            // Display result
+            document.getElementById('result').innerText = serialNumber;
+        }
+    </script>
+
+</body>
+
+</html>
