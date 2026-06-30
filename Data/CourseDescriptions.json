@@ -271,14 +271,7 @@
     "Venue": "Video",
     "CourseLink": "https://youtube.com/playlist?list=PL2_RtUzQeufPrXsnbIu8ld6lpwInjp1Td&si=rbVp_aaPbZ6TgWEZ"
   },
-  {
-    "Course": "From Stressed to Supported",
-    "Description": "In today’s fast-paced and demanding environments, stress can quickly become overwhelming—especially when support feels limited or out of reach. This session focuses on practical ways to move from stress and pressure toward greater support, resilience, and connection.",
-    "TargetAudience": "LHD offer for all colleagues",
-    "Trainer": "Health and Wellbeing Team deivered by HALSA Wellbeing",
-    "Venue": "Video",
-    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=UpPQetAWukdJkX5afbkXqPpte5zMF6ndiy7KS7cDDABYJ0JzYYTwfYn5cQSFaAVWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
-  },
+
   {
     "Course": "An Introduction to ARFID",
     "Description": "An introductory session to Avoidant Restrictive Food Intake Disorder ",
@@ -301,7 +294,7 @@
     "TargetAudience": "Invite Only - Special Interest Group",
     "Trainer": "Penny Dodsworth",
     "Venue": "Honeysuckle Conference Room",
-    "CourseLink": "This course already exists just add the classes"
+    "CourseLink": ""
   },
   {
     "Course": "Gypsy Roma and Traveller Education Session",
@@ -309,7 +302,7 @@
     "TargetAudience": "All RDaSH Staff",
     "Trainer": "Doncaster Adults Care Group ",
     "Venue": "Opal Centre Conference Room",
-    "CourseLink": "- https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=QTSLSWKCZ9Q931L.aTxwI4qk0a.a4w9MbmZPcnqgW-rjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=QTSLSWKCZ9Q931L.aTxwI4qk0a.a4w9MbmZPcnqgW-rjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "Neurodevelopment Online Q&A",
