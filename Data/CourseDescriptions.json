@@ -410,25 +410,41 @@
   {
     "Course": "Poverty Proofing Training",
     "Description": "The Poverty Proofing training is for colleagues working in Rotherham CAMHS. This session relates directly to the Poverty Proofing audit which is currently taking place within the service. Colleagues are encouraged to attend to find out about the programme, Promise 6, how poverty impacts our patients and to share thoughts/experiences",
-    "TargetAudience": "No",
-    "Trainer": "Online",
-    "Venue": "LHD for colleagues in Rotherham CAMHS service:    • Getting Help  \r\n• Getting Advice \r\n• Mental Health Support Team  \r\n• Psychological Therapies \r\n• Children in Care \r\n• Intellectual Disabilities ",
+    "TargetAudience": "LHD for colleagues in Rotherham CAMHS service:    • Getting Help  \r\n• Getting Advice \r\n• Mental Health Support Team  \r\n• Psychological Therapies \r\n• Children in Care \r\n• Intellectual Disabilities ",
+    "Trainer": "",
+    "Venue": "Online",
     "CourseLink": " https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FG6zLo.VDpKQClQfU0beeS7DdUNDiQPUrGRaHmPrGjrjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "speak up listen up follow up",
     "Description": "Speak up- This module covers what speaking up is and why it matters. It will help you understand how you can speak up and what to expect. Listen up- This module focuses on listening to concerns and understanding the barriers to speaking up. Managers should complete both Speak Up and Listen Up to ensure they understand what speaking up is and how they should respond when someone speaks up to them. follow up- The final module – Follow Up – completes the package. Developed for senior leaders throughout healthcare – including executive and non-executive directors, lay members and governors – this module aims to promote a consistent and effective Freedom to Speak Up culture across the system which enables workers to speak up and be confident they will be listened to and action taken.\r\nSenior leaders are expected to complete all three modules, Speak Up, Listen Up and Follow Up to ensure they have a full understanding of the speaking up process.",
-    "TargetAudience": "this session is provided externally via NHSE",
-    "Trainer": "online ",
-    "Venue": "LHD offer for all colleagues",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "This session is provided externally via NHSE",
+    "Venue": "Online",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=YUMNVPv12gv2wVZ9-fkO1PJRRTh.bf4YM.4IY6Tb19Xjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "Getting to Know FTSU training",
     "Description": "Freedom to Speak Up (FTSU) training is designed to help all staff feel confident to raise concerns about patient safety, quality, culture, or inappropriate behaviour at work. The training explains what speaking up means, why it matters, and how the Freedom to Speak Up Guardian can support you to raise issues safely and confidentially. It also outlines the different ways you can speak up, what to expect after you do so, and how the organisation is committed to listening, learning, and acting on concerns, with no detriment to those who raise them. This training supports a safe, open, and supportive workplace where everyone’s voice is valued.",
-    "TargetAudience": "NA",
-    "Trainer": "online",
-    "Venue": "all staff",
+    "TargetAudience": "all staff",
+    "Trainer": "",
+    "Venue": "Online",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=0jQ.RyoDmqM9GSrju2LkzukRD4jSWlC8hY7k3FwoEeDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Take a Menopause",
+    "Description": "Come for a chat about menopause, led by the attendees - it doesn't matter what stage of menopause you're at, your gender, or if it's someone you support that's going through it",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Health & Wellbeing",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=8k9TGiKU3veNhLcirUvEy1AdRrjkrJbwpK1bGtQfahfjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Peer Support Workers",
+    "Description": "With our Macmillan info team and PFG to promote the work and value of Peer support workers",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Sam Edwards",
+    "Venue": "Classroom",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=aILksOuCp8wLtA197e39SS4jE8mrqwQeBsOxYP6zECnjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   }
 ]
