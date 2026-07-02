@@ -400,7 +400,7 @@
     "End Time": "16:00",
     "Category": null,
     "Places Remaining": null,
-    "Offering Link": "This course already exists just add the classes"
+    "Offering Link": ""
   },
   {
     "Course": "Gypsy Roma and Traveller Education Session",
@@ -411,6 +411,32 @@
     "End Date": 46148,
     "Start Time": "13:30",
     "End Time": "15:00",
+    "Category": null,
+    "Places Remaining": null,
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=QTSLSWKCZ9Q931L.aTxwI4qk0a.a4w9MbmZPcnqgW-rjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Gypsy Roma and Traveller Education Session",
+    "Offering Name": "Gypsy Roma and Traveller Education Session",
+    "Delivery Mode": "Opal Centre Conservatory",
+    "Title": "Gypsy Roma and Traveller Education Session",
+    "Start Date": 46232,
+    "End Date": 46232,
+    "Start Time": "",
+    "End Time": "",
+    "Category": null,
+    "Places Remaining": null,
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=QTSLSWKCZ9Q931L.aTxwI4qk0a.a4w9MbmZPcnqgW-rjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Gypsy Roma and Traveller Education Session",
+    "Offering Name": "Gypsy Roma and Traveller Education Session",
+    "Delivery Mode": "Opal Centre Conservatory",
+    "Title": "Gypsy Roma and Traveller Education Session",
+    "Start Date": 46252,
+    "End Date": 46252,
+    "Start Time": "",
+    "End Time": "",
     "Category": null,
     "Places Remaining": null,
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=QTSLSWKCZ9Q931L.aTxwI4qk0a.a4w9MbmZPcnqgW-rjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
