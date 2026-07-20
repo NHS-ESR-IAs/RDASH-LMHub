@@ -101,24 +101,24 @@
                 return;
             }
 
-            // Parse user selected date (handles timezone correctly by forcing UTC/local midpoint)
-            const selectedDate = new Date(dateInputValue + "T00:00:00");
+            // 1. Break down the string to avoid automatic local timezone parsing
+            const [year, month, day] = dateInputValue.split('-').map(Number);
 
-            // Excel base date (Jan 1, 1900)
-            const excelEpoch = new Date("1900-01-01T00:00:00");
+            // 2. Generate timestamps strictly in UTC to bypass Daylight Saving Time changes
+            const selectedDateUtc = Date.UTC(year, month - 1, day);
+            const excelEpochUtc = Date.UTC(1900, 0, 1);
 
-            // Calculate difference in milliseconds
-            const diffInMs = selectedDate.getTime() - excelEpoch.getTime();
-
-            // Convert milliseconds to days
+            // 3. Calculate exact day difference
             const msInDay = 24 * 60 * 60 * 1000;
-            let serialNumber = Math.floor(diffInMs / msInDay);
+            const diffInDays = Math.round((selectedDateUtc - excelEpochUtc) / msInDay);
 
-            /* Excel Leap Year Bug Adjustment:
-               Excel incorrectly thinks 1900 was a leap year. 
-               For any date after Feb 28, 1900, we must add 2 days to match Excel's math.
+            /* 
+               Excel Leap Year Bug & Indexing Adjustment:
+               - Excel's calendar starts at 1 (Jan 1, 1900 is day 1, not day 0).
+               - Excel mistakenly treats 1900 as a leap year (adding a fake Feb 29).
+               For all modern dates, we add 2 to reconcile both issues.
             */
-            serialNumber += 2;
+            const serialNumber = diffInDays + 2;
 
             // Display result
             document.getElementById('result').innerText = serialNumber;
