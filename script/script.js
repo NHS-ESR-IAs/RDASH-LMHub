@@ -257,6 +257,49 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
     container.innerHTML = `<div class="list-group list-group-flush">${container.innerHTML}</div>`;
 }
 
+function generateActionButtons(item, primaryColorClass = "btn-info") {
+    let buttons = '';
+    
+    // Primary link (CourseLink)
+    if (item.CourseLink && item.CourseLink !== "#" && item.CourseLink !== "awaiting link" && item.CourseLink !== "") {
+        let btnText = "View Here";
+        let lowerLink = item.CourseLink.toLowerCase();
+        
+        if (lowerLink.includes("my.esr.nhs.uk")) {
+            btnText = "ESR Enrolment";
+        } else if (lowerLink.includes("youtu") || lowerLink.includes("vimeo")) {
+            btnText = "Watch Video";
+        } else if (lowerLink.includes("intranet.rdash")) {
+            btnText = "Intranet Link";
+        } else if (lowerLink.includes("staffportal")) {
+            btnText = "Staff Portal";
+        }
+        
+        buttons += `<a href="${item.CourseLink}" target="_blank" class="btn btn-sm ${primaryColorClass} text-white px-3 me-2 mb-1 fw-bold">${btnText}</a>`;
+    }
+    
+    // External link
+    if (item.ExternalLink) {
+        buttons += `<a href="${item.ExternalLink}" target="_blank" class="btn btn-sm btn-outline-secondary px-3 me-2 mb-1 fw-bold"><i class="bi bi-box-arrow-up-right me-1"></i>Platform Link</a>`;
+    }
+    
+    // Self-Directed ESR link
+    if (item.ESRLink) {
+        buttons += `<a href="${item.ESRLink}" target="_blank" class="btn btn-sm btn-primary text-white px-3 me-2 mb-1 fw-bold"><i class="bi bi-person-workspace me-1"></i>Self-Directed ESR</a>`;
+    }
+    
+    // User Guide link
+    if (item.UserGuideLink) {
+        if (item.UserGuideLink.startsWith("#")) {
+            buttons += `<button onclick="showPage('${item.UserGuideLink.substring(1)}')" class="btn btn-sm btn-success text-white px-3 me-2 mb-1 fw-bold"><i class="bi bi-journal-text me-1"></i>User Guide</button>`;
+        } else {
+            buttons += `<a href="${item.UserGuideLink}" target="_blank" class="btn btn-sm btn-success text-white px-3 me-2 mb-1 fw-bold"><i class="bi bi-journal-text me-1"></i>User Guide</a>`;
+        }
+    }
+    
+    return buttons;
+}
+
 function renderCatalogue(classList, courseDescs) {
   const container = document.getElementById("courseList");
   if (!container) return;
@@ -341,15 +384,23 @@ function renderCatalogue(classList, courseDescs) {
                               .join("")}
                         </tbody>
                     </table>
-                </div>`
+                </div>
+                ${(group.info.ExternalLink || group.info.ESRLink || group.info.UserGuideLink) ? 
+                  `<div class="mt-3 p-2 bg-light rounded border">
+                    ${generateActionButtons({...group.info, CourseLink: ""}, "btn-info")}
+                   </div>` : ""
+                }
+                `
                 : `
-                <div class="d-flex justify-content-between align-items-center bg-info-subtle p-3 rounded border border-info-subtle">
-                    <span class="small text-info-emphasis">No live dates currently scheduled.</span>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center bg-info-subtle p-3 rounded border border-info-subtle">
+                    <span class="small text-info-emphasis mb-2 mb-md-0">No live dates currently scheduled.</span>
+                    <div class="d-flex flex-wrap">
                     ${
-                      hasLink
-                        ? `<a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-info text-white px-4">View latest dates and book</a>`
+                      (hasLink || group.info.ExternalLink || group.info.ESRLink || group.info.UserGuideLink)
+                        ? generateActionButtons(group.info, "btn-info")
                         : `<span class="small fst-italic text-info-emphasis">Contact L&D for dates</span>`
                     }
+                    </div>
                 </div>`
             }
         </div>
@@ -795,11 +846,11 @@ function renderVideoVault(videoData) {
               <small class="fw-bold text-muted"><i class="bi bi-people me-1"></i> Target Audience: ${v.TargetAudience || "All Staff"}</small>
           </div>
           <p class="small text-dark mb-3">${v.Description || "No description available."}</p>
-          <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #fef9ef; border: 1px solid #faeecd;">
-              <span class="small fw-bold" style="color: #c68a12;">Duration: ${v.Duration || "Varies"}</span>
-              <a href="${v.CourseLink}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #c68a12;">
-                  <i class="bi bi-play-fill me-1"></i> Watch Video
-              </a>
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center p-3 rounded" style="background-color: #fef9ef; border: 1px solid #faeecd;">
+              <span class="small fw-bold mb-2 mb-md-0" style="color: #c68a12;">Duration: ${v.Duration || "Varies"}</span>
+              <div class="d-flex flex-wrap">
+                  ${generateActionButtons(v, "btn-warning")}
+              </div>
           </div>
       </div>
   </div>
@@ -880,11 +931,11 @@ function renderQI(qiData) {
               <small class="fw-bold" style="color: #6f42c1;"><i class="bi bi-people me-1"></i> Intended for: ${item.TargetAudience || "General"}</small>
           </div>
           <p class="small text-dark mb-3" style="white-space: pre-line;">${item.Description || "No description available."}</p>
-          <div class="d-flex justify-content-between align-items-center p-3 rounded" style="background-color: #f9f6ff; border: 1px solid #e9dcfc;">
-              <span class="small fw-bold" style="color: #6f42c1;">Type: ${item.Topic || "Resource"}</span>
-              <a href="${item.CourseLink || "#"}" target="_blank" class="btn btn-sm text-white px-4 fw-bold" style="background-color: #6f42c1;">
-                  <i class="bi bi-box-arrow-up-right me-1"></i> Access Resource
-              </a>
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center p-3 rounded" style="background-color: #f9f6ff; border: 1px solid #e9dcfc;">
+              <span class="small fw-bold mb-2 mb-md-0" style="color: #6f42c1;">Type: ${item.Topic || "Resource"}</span>
+              <div class="d-flex flex-wrap">
+                  ${generateActionButtons(item, "btn-primary")}
+              </div>
           </div>
       </div>
   </div>

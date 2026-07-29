@@ -109,7 +109,8 @@
     "TargetAudience": "LHD offer for all colleagues",
     "Trainer": "Support Services",
     "Venue": "Video",
-    "CourseLink": "https://youtu.be/SYtD8jP7-UQ"
+    "CourseLink": "https://youtu.be/SYtD8jP7-UQ",
+    "ESRLink": "https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=YMq8aT0CygOrHKtljBMHRk.NwQe4xKvm0w8sist65hhYJ0JzYYTwfYn5cQSFaAVWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
   },
   {
     "Course": "Data Saves Lives",
@@ -157,7 +158,8 @@
     "TargetAudience": "LHD offer for all colleagues",
     "Trainer": "Support Services",
     "Venue": "Video",
-    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/health-informatics/radar/radar-training/"
+    "CourseLink": "https://intranet.rdash.nhs.uk/support-services/health-informatics/radar/radar-training/",
+    "ESRLink": "https://my.esr.nhs.uk/OA_HTML/OA.jsp?page=/oracle/apps/ota/learner/certification/webui/LearnerCertDetailsPG&pOfferingId=%7B%21%21null&pCertificationId=%7B%21%21PRCMRH8mg71.NqUvDzzKOw&pEventId=%7B%21%21null&pExtLnkMode=Y&pActVerId=%7B%21%21null&_ti=2033084803&retainAM=Y&addBreadCrumb=Y&bcrumb=Y&oapc=32&oas=Jtlr8EOQBwn-RdEmW1PPIQ.."
   },
   {
     "Course": "Read all about it - newsletters",
@@ -176,7 +178,7 @@
     "CourseLink": "https://support.microsoft.com/en-gb/office/office-cheat-sheets-61abfe7b-1c43-483c-b82b-3806d80e027e"
   },
   {
-    "Course": "Free Viva learning on microsoft teams",
+    "Course": "Viva learning on microsoft teams",
     "Description": "Access a wide range of learning through NHSmail and Teams. Build a personalised learning plan that fits your role and interests.\r\n\r\n",
     "TargetAudience": "LHD offer for all colleagues",
     "Trainer": "External training",
@@ -463,5 +465,32 @@
     "Trainer": "Chris Watson",
     "Venue": "Honeysuckle Lodge Conference Room",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=az09N7cERkKXZGhzsp5DJYIMAZJD4sAqdFf8wsxnmP7jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c "
+  },
+  {
+    "Course": "Effective Tax Planning for Higher Earners",
+    "Description": "LHD – Effective Tax Planning for Higher Earners",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=lTgf7uv.bAFw1hka90w-p-vRXkGyZKjeL8r.cdd8KkLjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Pensions",
+    "Description": "LHD – Pensions",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=ghHBbycuYhGkSuvmjvrqpIaipSPZVjvMtT61pnmo-53jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Open University: Free Courses",
+    "Description": "Are you looking for a new topic to explore, or wanting to dig deeper into something you've already discovered? Whether it's a 60-second animated video or a 24-hour course you are after, you will find it on OpenLearn for free. Many of these courses give a free certificate or badge on completion and require very little in terms of registration.\nSimply create an account, type in the search engine and refine to free courses to unlock a learning.\nThe links take you to 1. ESR to record your learning 2. ESR userguide to support you to record your learning 3. the Open University platform to access the courses",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "The Open University",
+    "Venue": "Online",
+    "CourseLink": "https://www.open.edu/openlearn/",
+    "ExternalLink": "",
+    "ESRLink": "https://my.esr.nhs.uk/OA_HTML/OA.jsp?OAFunc=OTA_EXT_LEARNING_SS&pFromLink=LR&addBreadCrumb=Y&_ti=2062750877&oapc=2&oas=OboleNwUoNshUPRfx_lUMw..",
+    "UserGuideLink": "#Learner_Guide"
   }
 ]

@@ -49,6 +49,8 @@
               <!--<li class="nav-item"><a class="nav-link" onclick="showPage('Informal_Learning')">Informal Learning</a></li>-->
               <li class="nav-item"><a class="nav-link" onclick="showPage('QI_Page')">Quality Improvement</a></li>
               <li class="nav-item"><a class="nav-link" onclick="showPage('MAST_Training')">MAST</a></li>
+              <!--<li class="nav-item"><a class="nav-link" onclick="showPage('External_Learning')">Additional Learning</a>
+              </li>-->
               <li class="nav-item"><a class="nav-link" onclick="showPage('Training_Rooms')">Rooms</a></li>
               <li class="nav-item"><a class="nav-link" onclick="showPage('FAQs')">FAQs</a></li>
               <li class="nav-item"><a class="nav-link" href="Volunteers.html">Volunteers</a></li>
@@ -299,6 +301,16 @@
                 </div>
               </a>
             </div>
+            <!--<div class="col-md-4">
+              <a href="#" onclick="showPage('External_Learning')" class="card tile-card border-0 text-white shadow-sm"
+                style="background-color: #2b5797;">
+                <div class="card-body text-center p-3">
+                  <i class="bi bi-globe fs-1 mb-2"></i>
+                  <h5>Additional Learning</h5>
+                  <p class="small mb-0 opacity-75">Access Open University & external platforms.</p>
+                </div>
+              </a>
+            </div>-->
             <div class="col-md-4">
               <a href="#" onclick="showPage('Learner_VV')" class="card tile-card border-0 text-white shadow-sm"
                 style="background-color: #c68a12;">
@@ -856,6 +868,12 @@
                     <i class="bi bi-person-gear me-2"></i>Manager & Admin: Enrolling on Behalf of Staff
                   </button>
                 </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link py-3 fw-bold rounded-pill text-success" id="external-learning-tab"
+                    data-bs-toggle="tab" data-bs-target="#external-learning" type="button" role="tab">
+                    <i class="bi bi-journal-check me-2"></i>Record External Learning
+                  </button>
+                </li>
               </ul>
             </div>
 
@@ -1026,6 +1044,81 @@
                   </div>
                 </div>
 
+                <div class="tab-pane fade" id="external-learning" role="tabpanel">
+                  <h2 class="h3 mb-5 text-success fw-bold border-bottom pb-3">How to record external learning class for
+                    learning half days</h2>
+
+                  <div class="guide-step mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">01</span>
+                      <h4 class="fw-bold mb-0">Navigate to External Classes</h4>
+                    </div>
+                    <p class="text-muted ms-md-5">Click on <strong>My Learning</strong> in the sidebar, then click on
+                      <strong>manage my external classes</strong> at the bottom of the page.</p>
+                    <div class="ms-md-5 mt-3">
+                      <img src="Assets/ext_g1.png" class="img-fluid border rounded-4 shadow-sm"
+                        style="max-width: 500px;" alt="Navigate to external classes">
+                    </div>
+                  </div>
+
+                  <div class="guide-step mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">02</span>
+                      <h4 class="fw-bold mb-0">Add a New Record</h4>
+                    </div>
+                    <p class="text-muted ms-md-5">Click on the <strong>Add</strong> button to begin entering a new
+                      external class.</p>
+                    <div class="ms-md-5 mt-3">
+                      <img src="Assets/ext_g2.png" class="img-fluid border rounded-4 shadow-sm"
+                        style="max-width: 500px;" alt="Click Add">
+                    </div>
+                  </div>
+
+                  <div class="guide-step mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">03</span>
+                      <h4 class="fw-bold mb-0">Enter Course Details</h4>
+                    </div>
+                    <ul class="text-muted ms-md-5">
+                      <li>Always prefix the title with <strong>LHD –</strong> and free type the name of the course.</li>
+                      <li>Select the date of the Learning Half Day on which you completed the course.</li>
+                      <li>Free type the name of the supplier of the course.</li>
+                      <li>Click <strong>Continue</strong>.</li>
+                    </ul>
+                    <div class="ms-md-5 mt-3">
+                      <img src="Assets/ext_g3.png" class="img-fluid border rounded-4 shadow-sm"
+                        style="max-width: 500px;" alt="Enter details">
+                    </div>
+                  </div>
+
+                  <div class="guide-step mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">04</span>
+                      <h4 class="fw-bold mb-0">Review and Submit</h4>
+                    </div>
+                    <ul class="text-muted ms-md-5">
+                      <li>The next page will confirm the details you have entered.</li>
+                      <li>It will show who it will go to for approval to be added to ESR.</li>
+                      <li>You will have the opportunity to add any comments for the approver.</li>
+                      <li>Click on <strong>Submit</strong> to proceed (or Back to make changes).</li>
+                    </ul>
+                    <div class="ms-md-5 mt-3">
+                      <img src="Assets/ext_g4.png" class="img-fluid border rounded-4 shadow-sm"
+                        style="max-width: 500px;" alt="Submit course">
+                    </div>
+                  </div>
+
+                  <div class="guide-step mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                      <span class="badge rounded-circle bg-success p-3 me-3 text-white">05</span>
+                      <h4 class="fw-bold mb-0">Confirmation</h4>
+                    </div>
+                    <p class="text-muted ms-md-5">You will receive a confirmation of submission. Click on
+                      <strong>Home</strong> to return to ESR.</p>
+
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -1076,6 +1169,49 @@
           </div>
         </div>
       </div>
+
+      <div class="row g-4 mt-1 mb-5">
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+            <h5 class="fw-bold text-dark">
+              <i class="bi bi-journal-bookmark me-2 text-primary"></i>Course Prospectus
+            </h5>
+            <p class="small text-muted mb-3">
+              Browse our full list of available courses and discover learning opportunities for your development.
+            </p>
+            <button onclick="showPage('Course_Catalogue1')" class="btn btn-primary text-white rounded-pill px-4 shadow-sm fw-bold mt-auto">
+              <i class="bi bi-book me-2"></i>Go to Prospectus
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+            <h5 class="fw-bold text-dark">
+              <i class="bi bi-calendar-event me-2 text-info"></i>Course Calendar
+            </h5>
+            <p class="small text-muted mb-3">
+              Looking for training on a specific date? Find training listed by dates, times, and available venues.
+            </p>
+            <button onclick="showPage('Course_Catalogue')" class="btn btn-info text-white rounded-pill px-4 shadow-sm fw-bold mt-auto">
+              <i class="bi bi-arrow-right-circle me-2"></i>Go to Course Calendar
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+            <h5 class="fw-bold text-dark">
+              <i class="bi bi-diagram-3 me-2" style="color: #6f42c1;"></i>Quality Improvement
+            </h5>
+            <p class="small text-muted mb-3">
+              Quality improvement sessions build your skills and confidence so you can make a real difference.
+            </p>
+            <button onclick="showPage('QI_Page')" class="btn text-white rounded-pill px-4 shadow-sm fw-bold mt-auto" style="background-color: #6f42c1;">
+              <i class="bi bi-arrow-up-right-circle-fill me-2"></i>Go to QI Resources
+            </button>
+          </div>
+        </div>
+      </div>
+
 
 
 
@@ -1172,6 +1308,48 @@
           <div class="p-3 bg-light rounded-4 border-start border-4 shadow-sm d-inline-block"
             style="border-color: #6f42c1 !important;">
             <i class="bi bi-diagram-3 display-6" style="color: #6f42c1 !important;"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1 mb-5">
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+            <h5 class="fw-bold text-dark">
+              <i class="bi bi-journal-bookmark me-2 text-primary"></i>Course Prospectus
+            </h5>
+            <p class="small text-muted mb-3">
+              Browse our full list of available courses and discover learning opportunities for your development.
+            </p>
+            <button onclick="showPage('Course_Catalogue1')" class="btn btn-primary text-white rounded-pill px-4 shadow-sm fw-bold mt-auto">
+              <i class="bi bi-book me-2"></i>Go to Prospectus
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+            <h5 class="fw-bold text-dark">
+              <i class="bi bi-calendar-event me-2 text-info"></i>Course Calendar
+            </h5>
+            <p class="small text-muted mb-3">
+              Looking for training on a specific date? Find training listed by dates, times, and available venues.
+            </p>
+            <button onclick="showPage('Course_Catalogue')" class="btn btn-info text-white rounded-pill px-4 shadow-sm fw-bold mt-auto">
+              <i class="bi bi-arrow-right-circle me-2"></i>Go to Course Calendar
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 border-0 shadow-sm rounded-4">
+            <h5 class="fw-bold text-dark">
+              <i class="bi bi-play-circle me-2" style="color: #c68a12;"></i>Video Vault
+            </h5>
+            <p class="small text-muted mb-3">
+              Recorded sessions allow you to catch up on training you may have missed.
+            </p>
+            <button onclick="showPage('Learner_VV')" class="btn btn-warning text-white rounded-pill px-4 shadow-sm fw-bold mt-auto">
+              <i class="bi bi-play-fill me-2"></i>Go to Video Vault
+            </button>
           </div>
         </div>
       </div>
@@ -1931,7 +2109,110 @@
     </div>
   </div>
 
+  <!-- ======================================================
+  = Additional Learning & External Platforms SECTION =
+  ========================================================= -->
+  <div id="External_Learning" class="page">
+    <div class="container py-4">
 
+      <!-- Breadcrumb -->
+      <div class="row mb-4">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-light p-3 rounded-pill shadow-sm">
+              <li class="breadcrumb-item"><a href="#" onclick="showPage('home');" class="text-decoration-none"><i
+                    class="bi bi-house-door"></i> Hub</a></li>
+              <li class="breadcrumb-item active fw-bold text-primary" aria-current="page">Additional Learning &
+                External Platforms</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Section Header -->
+      <div class="row align-items-start mb-5">
+        <div class="col-md-10">
+          <h1 class="display-5 fw-bold text-dark">Additional Learning Platforms</h1>
+          <p class="lead text-muted">Access external training platforms. Complete your courses directly on the
+            platform, then log your 'additional learning' record on ESR.</p>
+        </div>
+        <div class="col-md-2 text-end d-none d-md-block mt-2">
+          <div class="p-3 bg-primary bg-opacity-10 rounded-4 border-start border-primary border-4 d-inline-block">
+            <i class="bi bi-globe display-6 text-primary"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platform Containers Row -->
+      <div class="row g-4">
+
+        <!-- Open University Container -->
+        <div class="col-md-6">
+          <div
+            class="card h-100 border-0 shadow-sm rounded-4 p-4 d-flex flex-column border-top border-primary border-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary bg-opacity-10 p-3 rounded-3 me-3">
+                <i class="bi bi-mortarboard-fill text-primary fs-3"></i>
+              </div>
+              <div>
+                <h4 class="fw-bold text-dark mb-0">Open University</h4>
+                <span class="small text-muted">External Learning Platform</span>
+              </div>
+            </div>
+            <p class="text-muted mb-4">
+              Staff sign up and complete courses using the Open University registration process. Once finished, record
+              your completion as 'additional learning' on ESR.
+            </p>
+            <div class="mt-auto d-grid gap-2">
+              <a href="Assets/OU_User_Guide.pdf" target="_blank"
+                class="btn btn-outline-primary rounded-pill btn-sm fw-bold">
+                <i class="bi bi-file-earmark-text me-2"></i>User Guide
+              </a>
+              <a href="https://my.esr.nhs.uk" target="_blank"
+                class="btn btn-outline-success rounded-pill btn-sm fw-bold">
+                <i class="bi bi-box-arrow-up-right me-2"></i>ESR (Record Learning)
+              </a>
+              <a href="https://www.open.edu" target="_blank" class="btn btn-primary rounded-pill btn-sm fw-bold">
+                <i class="bi bi-globe me-2"></i>Open University Platform
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Placeholder Container (Ready for the next external platform) -->
+        <div class="col-md-6">
+          <div
+            class="card h-100 border-0 shadow-sm rounded-4 p-4 d-flex flex-column border-top border-secondary border-4 bg-light">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-secondary bg-opacity-10 p-3 rounded-3 me-3">
+                <i class="bi bi-plus-circle text-secondary fs-3"></i>
+              </div>
+              <div>
+                <h4 class="fw-bold text-dark mb-0">Future Platform</h4>
+                <span class="small text-muted">Coming Soon</span>
+              </div>
+            </div>
+            <p class="text-muted mb-4">
+              Placeholder container for any future external learning providers added to the hub. Easily duplicated
+              with its own 3-button configuration.
+            </p>
+            <div class="mt-auto d-grid gap-2">
+              <button class="btn btn-outline-secondary rounded-pill btn-sm fw-bold" disabled>
+                <i class="bi bi-file-earmark-text me-2"></i>User Guide
+              </button>
+              <button class="btn btn-outline-secondary rounded-pill btn-sm fw-bold" disabled>
+                <i class="bi bi-box-arrow-up-right me-2"></i>ESR (Record Learning)
+              </button>
+              <button class="btn btn-secondary rounded-pill btn-sm fw-bold" disabled>
+                <i class="bi bi-globe me-2"></i>Platform Link
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <footer class="mt-auto py-5 border-top bg-light">
     <div class="container text-center">
 
@@ -1961,6 +2242,7 @@
       </div>
 
     </div>
+
   </footer>
 
   <!-- JS libraries -->
