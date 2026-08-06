@@ -285,7 +285,7 @@ function generateActionButtons(item, primaryColorClass = "btn-info") {
     
     // Self-Directed ESR link
     if (item.ESRLink) {
-        buttons += `<a href="${item.ESRLink}" target="_blank" class="btn btn-sm btn-primary text-white px-3 me-2 mb-1 fw-bold"><i class="bi bi-person-workspace me-1"></i>Self-Directed ESR</a>`;
+        buttons += `<a href="${item.ESRLink}" target="_blank" class="btn btn-sm btn-primary text-white px-3 me-2 mb-1 fw-bold"><i class="bi bi-person-workspace me-1"></i>Record External Learning</a>`;
     }
     
     // User Guide link
@@ -915,6 +915,15 @@ function renderQI(qiData) {
       const id = `qiCollapse_${idx}`;
       const cleanName = utils.cleanTitle(item.Course || item.Title);
 
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const sessions = globalRawClasses.filter(s => {
+          const sName = utils.cleanTitle(s.Course || "").toLowerCase();
+          const iName = cleanName.toLowerCase();
+          return sName === iName && utils.excelToJS(s["Start Date"]) >= today;
+      });
+      const sessionCount = sessions.length;
+
       return `
 <div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #6f42c1 !important; background-color: #f9f6ff;">
   <button class="btn w-100 text-start p-3 d-flex justify-content-between align-items-center border-0" 
@@ -923,7 +932,7 @@ function renderQI(qiData) {
           <span class="fw-bold d-block text-dark">${cleanName}</span>
           <small class="text-muted">Methodology: ${item.Methodology || "QI Tool"}</small>
       </div>
-      <i class="bi bi-chevron-down fs-5" style="color: #6f42c1;"></i>
+      ${sessionCount > 0 ? `<span class="badge rounded-pill text-white" style="background-color: #6f42c1;">${sessionCount} Dates</span>` : `<i class="bi bi-chevron-down fs-5" style="color: #6f42c1;"></i>`}
   </button>
   <div class="collapse" id="${id}">
       <div class="card-body bg-white border-top">
@@ -931,12 +940,50 @@ function renderQI(qiData) {
               <small class="fw-bold" style="color: #6f42c1;"><i class="bi bi-people me-1"></i> Intended for: ${item.TargetAudience || "General"}</small>
           </div>
           <p class="small text-dark mb-3" style="white-space: pre-line;">${item.Description || "No description available."}</p>
-          <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center p-3 rounded" style="background-color: #f9f6ff; border: 1px solid #e9dcfc;">
-              <span class="small fw-bold mb-2 mb-md-0" style="color: #6f42c1;">Type: ${item.Topic || "Resource"}</span>
-              <div class="d-flex flex-wrap">
-                  ${generateActionButtons(item, "btn-primary")}
+          ${
+            sessionCount > 0
+              ? `
+              <div class="table-responsive">
+                  <table class="table table-sm table-hover bg-white rounded mb-0 align-middle">
+                      <thead class="small" style="background-color: #e9dcfc; color: #6f42c1;">
+                          <tr>
+                              <th class="ps-2">Date</th>
+                              <th>Time</th>
+                              <th>Venue</th>
+                              <th class="text-end pe-2">Book</th>
+                          </tr>
+                      </thead>
+                      <tbody class="small">
+                          ${sessions
+                            .map(
+                              (s) => `
+                              <tr>
+                                  <td class="fw-bold ps-2">${utils.formatDate(utils.excelToJS(s["Start Date"]))}</td>
+                                  <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
+                                  <td>${s["Primary Venue"] || "Virtual"}</td>
+                                  <td class="text-end pe-2">
+                                      <a href="${item.CourseLink}" target="_blank" class="btn btn-sm text-white py-0 px-3 fw-bold" style="background-color: #6f42c1; border-color: #6f42c1;">Book</a>
+                                  </td>
+                              </tr>`,
+                            )
+                            .join("")}
+                      </tbody>
+                  </table>
               </div>
-          </div>
+              ${(item.ExternalLink || item.ESRLink || item.UserGuideLink) ? 
+                `<div class="mt-3 p-2 rounded border" style="background-color: #f9f6ff; border-color: #e9dcfc;">
+                  ${generateActionButtons({...item, CourseLink: ""}, "btn-primary")}
+                 </div>` : ""
+              }
+              `
+              : `
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center p-3 rounded" style="background-color: #f9f6ff; border: 1px solid #e9dcfc;">
+                  <span class="small fw-bold mb-2 mb-md-0" style="color: #6f42c1;">Type: ${item.Topic || "Resource"}</span>
+                  <div class="d-flex flex-wrap">
+                      ${generateActionButtons(item, "btn-primary")}
+                  </div>
+              </div>`
+          }
       </div>
   </div>
 </div>`;
