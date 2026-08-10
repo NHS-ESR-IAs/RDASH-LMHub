@@ -289,6 +289,16 @@ function generateActionButtons(item, primaryColorClass = "btn-info") {
         buttons += `<a href="${item.CourseLink}" target="_blank" class="btn btn-sm ${primaryColorClass} text-white px-3 me-2 mb-1 fw-bold">${btnText}</a>`;
     }
     
+    // Video link
+    if (item.VideoLink) {
+        let videoBtnText = "Watch Video";
+        let lowerVid = item.VideoLink.toLowerCase();
+        if (lowerVid.includes("playlist") || lowerVid.includes("list=")) {
+            videoBtnText = "Watch Videos";
+        }
+        buttons += `<a href="${item.VideoLink}" target="_blank" class="btn btn-sm btn-warning text-dark px-3 me-2 mb-1 fw-bold"><i class="bi bi-play-circle-fill me-1"></i>${videoBtnText}</a>`;
+    }
+    
     // External link
     if (item.ExternalLink) {
         buttons += `<a href="${item.ExternalLink}" target="_blank" class="btn btn-sm btn-outline-secondary px-3 me-2 mb-1 fw-bold"><i class="bi bi-box-arrow-up-right me-1"></i>Platform Link</a>`;
@@ -396,7 +406,7 @@ function renderCatalogue(classList, courseDescs) {
                         </tbody>
                     </table>
                 </div>
-                ${(group.info.ExternalLink || group.info.ESRLink || group.info.UserGuideLink) ? 
+                ${(group.info.ExternalLink || group.info.ESRLink || group.info.UserGuideLink || group.info.VideoLink) ? 
                   `<div class="mt-3 p-2 bg-light rounded border">
                     ${generateActionButtons({...group.info, CourseLink: ""}, "btn-info")}
                    </div>` : ""
@@ -407,7 +417,7 @@ function renderCatalogue(classList, courseDescs) {
                     <span class="small text-info-emphasis mb-2 mb-md-0">No live dates currently scheduled.</span>
                     <div class="d-flex flex-wrap">
                     ${
-                      (hasLink || group.info.ExternalLink || group.info.ESRLink || group.info.UserGuideLink)
+                      (hasLink || group.info.ExternalLink || group.info.ESRLink || group.info.UserGuideLink || group.info.VideoLink)
                         ? generateActionButtons(group.info, "btn-info")
                         : `<span class="small fst-italic text-info-emphasis">Contact L&D for dates</span>`
                     }
@@ -981,7 +991,7 @@ function renderQI(qiData) {
                       </tbody>
                   </table>
               </div>
-              ${(item.ExternalLink || item.ESRLink || item.UserGuideLink) ? 
+              ${(item.ExternalLink || item.ESRLink || item.UserGuideLink || item.VideoLink) ? 
                 `<div class="mt-3 p-2 rounded border" style="background-color: #f9f6ff; border-color: #e9dcfc;">
                   ${generateActionButtons({...item, CourseLink: ""}, "btn-primary")}
                  </div>` : ""

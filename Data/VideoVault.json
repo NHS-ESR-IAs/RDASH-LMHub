@@ -80,5 +80,13 @@
     "Venue": "Videos",
     "CourseLink": "https://youtube.com/playlist?list=PL2_RtUzQeufON5mgI3J_8Y8aYLqWBVaC_&si=xoX43x8UHPGGiY6n",
     "ESRLink": "https://my.esr.nhs.uk/OA_HTML/OA.jsp?OAFunc=OTA_EXT_LEARNING_SS&pFromLink=LR&addBreadCrumb=Y&_ti=2062750877&oapc=2&oas=OboleNwUoNshUPRfx_lUMw.."
+  },
+  {
+    "Course": "Risk Register Training",
+    "Description": "This series of videos explains risk management, including what risk is, how it can be managed, and how to record it using best-practice techniques.",
+    "TargetAudience": "All Children’s / Trustwide",
+    "Trainer": "Oluwasegun Odumoye",
+    "Venue": "Video",
+    "CourseLink": "https://www.youtube.com/playlist?list=PL2_RtUzQeufPcmqJFYlTmL9FBmV7TeSOy"
   }
 ]
