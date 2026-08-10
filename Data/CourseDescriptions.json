@@ -273,7 +273,6 @@
     "Venue": "Video",
     "CourseLink": "https://youtube.com/playlist?list=PL2_RtUzQeufPrXsnbIu8ld6lpwInjp1Td&si=rbVp_aaPbZ6TgWEZ"
   },
-
   {
     "Course": "An Introduction to ARFID",
     "Description": "An introductory session to Avoidant Restrictive Food Intake Disorder ",
@@ -502,5 +501,45 @@
     "CourseLink": "https://youtube.com/playlist?list=PL2_RtUzQeufON5mgI3J_8Y8aYLqWBVaC_&si=xoX43x8UHPGGiY6n",
     "ExternalLink": "https://learn.nihr.ac.uk/enrol/index.php?id=1590",
     "ESRLink": "https://my.esr.nhs.uk/OA_HTML/OA.jsp?OAFunc=OTA_EXT_LEARNING_SS&pFromLink=LR&addBreadCrumb=Y&_ti=2062750877&oapc=2&oas=OboleNwUoNshUPRfx_lUMw.."
+  },
+  {
+    "Course": "The Role of Chaplaincy in Holistic Patient Care",
+    "Description": "This session explores the role of chaplaincy and pastoral care in supporting holistic patient care across health and social care services.",
+    "TargetAudience": "All RDaSH Staff",
+    "Trainer": "Chaplaincy / Pastoral Care Team",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=G3Mrjmz2NpUPzU5fRIIKOA4aEmJbty5k1mihKewANZOPjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Finding Strength in Faith During Illness",
+    "Description": "A supportive session addressing spiritual care, faith, and finding strength during illness for patients, families, and staff.",
+    "TargetAudience": "All RDaSH Staff",
+    "Trainer": "Chaplaincy / Pastoral Care Team",
+    "Venue": "Tickhill Road - Chapel",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=NI75n62whAckvulkLtKFoAYIMps4hZxyK5aXZLp2IHDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Spiritual Resilience and Coping with Grief",
+    "Description": "This session focuses on building spiritual resilience and understanding coping mechanisms when supporting individuals dealing with loss and grief.",
+    "TargetAudience": "All RDaSH Staff",
+    "Trainer": "Chaplaincy / Pastoral Care Team",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=QmVPfsUN.XrVpN1y4z03sqQBiZ79Btk8oqrF6qZwWqTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "End-of-Life Care and Spiritual Readiness",
+    "Description": "Exploring end-of-life care from a spiritual and pastoral care perspective, providing guidance and readiness for healthcare staff.",
+    "TargetAudience": "All RDaSH Staff",
+    "Trainer": "Chaplaincy / Pastoral Care Team",
+    "Venue": "Tickhill Road - Chapel",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=kmPW6GCBbGESJwKVzwI62SzGoQMIXNbaA2JzatHAjVTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Mental Health and Spiritual Care",
+    "Description": "Discussing the intersection of mental health and spiritual wellbeing, and how chaplaincy supports mental healthcare provision.",
+    "TargetAudience": "All RDaSH Staff",
+    "Trainer": "Chaplaincy / Pastoral Care Team",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=5JKR3d2SVAYBUgzWIP6m7VUYSICaMy6TUSJC7jTQgufjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   }
 ]
