@@ -276,7 +276,9 @@ function generateActionButtons(item, primaryColorClass = "btn-info") {
         let btnText = "View Here";
         let lowerLink = item.CourseLink.toLowerCase();
         
-        if (lowerLink.includes("my.esr.nhs.uk")) {
+        if (item.CourseButtonText) {
+            btnText = item.CourseButtonText;
+        } else if (lowerLink.includes("my.esr.nhs.uk")) {
             btnText = "ESR Enrolment";
         } else if (lowerLink.includes("youtu") || lowerLink.includes("vimeo")) {
             btnText = "Watch Video";
@@ -284,6 +286,8 @@ function generateActionButtons(item, primaryColorClass = "btn-info") {
             btnText = "Intranet Link";
         } else if (lowerLink.includes("staffportal")) {
             btnText = "Staff Portal";
+        } else if (lowerLink.includes("alison")) {
+            btnText = "Learning Platform";
         }
         
         buttons += `<a href="${item.CourseLink}" target="_blank" class="btn btn-sm ${primaryColorClass} text-white px-3 me-2 mb-1 fw-bold">${btnText}</a>`;
@@ -301,12 +305,14 @@ function generateActionButtons(item, primaryColorClass = "btn-info") {
     
     // External link
     if (item.ExternalLink) {
-        buttons += `<a href="${item.ExternalLink}" target="_blank" class="btn btn-sm btn-outline-secondary px-3 me-2 mb-1 fw-bold"><i class="bi bi-box-arrow-up-right me-1"></i>Platform Link</a>`;
+        let extText = item.ExternalButtonText || "Platform Link";
+        buttons += `<a href="${item.ExternalLink}" target="_blank" class="btn btn-sm btn-outline-secondary px-3 me-2 mb-1 fw-bold"><i class="bi bi-box-arrow-up-right me-1"></i>${extText}</a>`;
     }
     
     // Self-Directed ESR link
     if (item.ESRLink) {
-        buttons += `<a href="${item.ESRLink}" target="_blank" class="btn btn-sm btn-primary text-white px-3 me-2 mb-1 fw-bold"><i class="bi bi-person-workspace me-1"></i>Record External Learning</a>`;
+        let esrText = item.ESRButtonText || "Record External Learning";
+        buttons += `<a href="${item.ESRLink}" target="_blank" class="btn btn-sm btn-primary text-white px-3 me-2 mb-1 fw-bold"><i class="bi bi-person-workspace me-1"></i>${esrText}</a>`;
     }
     
     // User Guide link
@@ -590,7 +596,7 @@ function showEventDetailsFromData(idx, directData) {
   const modal = bootstrap.Modal.getOrCreateInstance(
     document.getElementById("classModal"),
   );
-  const url = (data.CourseLink || data["Offering link"] || "").trim();
+  const url = (data.CourseLink || data["Offering link"] || data["Offering Link"] || "").trim();
 
   const linkEl = document.getElementById("modalLink");
   if (linkEl) {

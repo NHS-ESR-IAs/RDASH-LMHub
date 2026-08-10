@@ -224,7 +224,8 @@
     "Trainer": "Oluwasegun Odumoye",
     "Venue": "Classroom",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=Iu-h-kHrcpi3gKLlo3YODN-SKevk8sl-nv92p4wAbrDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c ",
-    "VideoLink": "https://www.youtube.com/playlist?list=PL2_RtUzQeufPcmqJFYlTmL9FBmV7TeSOy"
+    "VideoLink": "https://www.youtube.com/playlist?list=PL2_RtUzQeufPcmqJFYlTmL9FBmV7TeSOy",
+    "ESRLink": "https://my.esr.nhs.uk/OA_HTML/OA.jsp?OAFunc=OTA_EXT_LEARNING_SS&pFromLink=LR&addBreadCrumb=Y&_ti=2062750877&oapc=2&oas=OboleNwUoNshUPRfx_lUMw.."
   },
   {
     "Course": "Perinatal Wellbeing and Mental Health Training",
@@ -356,11 +357,19 @@
   },
   {
     "Course": "St Johns Hospice Day Therapy Unit Taster Session",
-    "Description": "Provided by Doncaster Adults Care Group",
-    "TargetAudience": "All RDaSH Staff",
-    "Trainer": "Doncaster Adults Care Group",
-    "Venue": "St John's Hospice Day Therapy Unit",
-    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=.6IFfb7arja95zRir3Hzgq6ZXxDpifbrUQA0tCcOrB7jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+    "Description": "Staff are invited to attend a taster of our Day Therapy Unit sessions. The aim of this is to increase understanding of what we offer to our patients and what they will experience when attending.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Sally Wheater",
+    "Venue": "Day Therapy Unit, St John's Hospice",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4fthidBGQhz.tdR4ahBH1qlvpk.DMzeueUdq6.AxA5ivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "Palliative EoL Care Conference",
+    "Description": "Hear key messages from leading experts • Practical guidance on how to ensure that you can support patients at the end of life • You will have an opportunity to network with colleagues and reflect on lived experience.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Physical Health and Neurodiversity Care Group",
+    "Venue": "Legacy Centre, Armthorpe",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=M-RSf9PLee6JPfiKMDaK9owOe4wH55DbLX4FUS75TN.vOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   },
   {
     "Course": "Neurodevelopment: Psychometrics Training",
@@ -542,5 +551,16 @@
     "Trainer": "Chaplaincy / Pastoral Care Team",
     "Venue": "Online",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=5JKR3d2SVAYBUgzWIP6m7VUYSICaMy6TUSJC7jTQgufjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Alison.com: free online learning",
+    "Description": "Alison is the world’s largest free online empowerment platform for education and skills training, offering over 6,000 CPD accredited courses and a range of impactful career development tools. Build a personalised learning plan that fits your role and interests whilst receiving certificates. Click here and sign up to start your journey.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Alison",
+    "Venue": "Online",
+    "CourseLink": "https://alison.com/?utm_source=google&utm_medium=cpc&utm_campaign=PPC_Tier-1_First-Click_Alison-Courses&utm_adgroup=Course-1376_Instructional-Planning-for-Successful-Teaching-Revised&gclid=Cj0KCQjw7eXTBhDBARIsAKF-w46nstD8env87pPJ0Y-04X26UvOxNAMe4M9nOL5Tgwp_tE-G-DMH_H0aAgANEALw_wcB&gad_source=1&gad_campaignid=17670119989",
+    "CourseButtonText": "Learning Platform",
+    "ESRLink": "https://my.esr.nhs.uk/OA_HTML/OA.jsp?OAFunc=OTA_EXT_LEARNING_SS&pFromLink=LR&addBreadCrumb=Y&_ti=2062750877&oapc=2&oas=OboleNwUoNshUPRfx_lUMw..",
+    "ESRButtonText": "Self-Directed Study"
   }
 ]

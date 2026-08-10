@@ -157,6 +157,14 @@
     "rooms": [{ "n": "Community Room", "c": "25" }]
   },
   {
+    "site": "Armthorpe",
+    "venue": "Legacy Centre",
+    "type": "External",
+    "contact": "Armthorpe",
+    "address": "Legacy Centre, Armthorpe",
+    "rooms": [{ "n": "Conference Room", "c": "100" }]
+  },
+  {
     "site": "Askern",
     "venue": "Askern Community Library",
     "type": "External",

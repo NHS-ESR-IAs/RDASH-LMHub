@@ -522,15 +522,30 @@
   {
     "Course": "St Johns Hospice Day Therapy Unit Taster Session",
     "Offering Name": "St Johns Hospice Day Therapy Unit Taster Session",
-    "Delivery Mode": "St John's Hospice Day Therapy Unit",
+    "Delivery Mode": "Day Therapy Unit, St John's Hospice",
     "Title": "St Johns Hospice Day Therapy Unit Taster Session",
-    "Start Date": 46184,
-    "End Date": 46184,
-    "Start Time": "14:00",
+    "Start Date": 46401,
+    "End Date": 46401,
+    "Start Time": "10:00",
+    "End Time": "12:00",
+    "Category": null,
+    "Places Remaining": 20,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4fthidBGQhz.tdR4ahBH1qlvpk.DMzeueUdq6.AxA5ivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y",
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4fthidBGQhz.tdR4ahBH1qlvpk.DMzeueUdq6.AxA5ivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "Palliative EoL Care Conference",
+    "Offering Name": "Palliative EoL Care Conference",
+    "Delivery Mode": "Legacy Centre, Armthorpe",
+    "Title": "Palliative EoL Care Conference",
+    "Start Date": 46456,
+    "End Date": 46456,
+    "Start Time": "09:00",
     "End Time": "16:00",
     "Category": null,
-    "Places Remaining": null,
-    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=.6IFfb7arja95zRir3Hzgq6ZXxDpifbrUQA0tCcOrB7jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+    "Places Remaining": 100,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=M-RSf9PLee6JPfiKMDaK9owOe4wH55DbLX4FUS75TN.vOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y",
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=M-RSf9PLee6JPfiKMDaK9owOe4wH55DbLX4FUS75TN.vOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   },
   {
     "Course": "Neurodevelopment: Psychometrics Training",
