@@ -54,6 +54,17 @@ const utils = {
     String(str || "")
       .replace(/^(376|LHD - )\s*/gi, "")
       .trim(),
+
+  getVenue: (obj) => {
+    if (!obj) return "Virtual";
+    const props = obj.extendedProps || obj;
+    return (
+      props["Delivery Mode"] ||
+      props["Primary Venue"] ||
+      props["Venue"] ||
+      "Virtual"
+    );
+  },
 };
 
 /**
@@ -238,7 +249,7 @@ function renderUpcomingList(containerId, eventsSource = allEvents) {
       <div class="fw-bold text-dark fs-4 mb-3 text-truncate-2" style="height: 75px; line-height: 1.2;">${cleanTitle}</div>
       ${hasTime ? `<div class="text-info fw-bold mb-2 fs-5"><i class="bi bi-clock me-2"></i>${sTime}-${eTime}</div>` : ""}
       
-      <div class="text-muted fs-6"><i class="bi bi-geo-alt me-2"></i>${ev.extendedProps["Primary Venue"] || "Virtual"}</div>
+      <div class="text-muted fs-6"><i class="bi bi-geo-alt me-2"></i>${utils.getVenue(ev)}</div>
     </div>
   </div>`;
       }
@@ -375,7 +386,7 @@ function renderCatalogue(classList, courseDescs) {
                                 <tr>
                                     <td class="fw-bold ps-2">${utils.formatDate(utils.excelToJS(s["Start Date"]))}</td>
                                     <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
-                                    <td>${s["Primary Venue"] || "Virtual"}</td>
+                                    <td>${utils.getVenue(s)}</td>
                                     <td class="text-end pe-2">
                                         <a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-info text-white py-0 px-3 fw-bold">Book</a>
                                     </td>
@@ -445,7 +456,7 @@ function filterCalendar() {
   const filtered = allEvents.filter(
     (ev) =>
       ev.title.toLowerCase().includes(q) ||
-      (ev.extendedProps["Primary Venue"] || "").toLowerCase().includes(q),
+      utils.getVenue(ev).toLowerCase().includes(q),
   );
   if (calendar) {
     calendar.removeAllEvents();
@@ -611,7 +622,7 @@ function showEventDetailsFromData(idx, directData) {
                 : ""
             }
             <div class="col-6 mb-2">
-                <strong><i class="bi bi-geo-alt me-1"></i> Venue:</strong> ${data["Primary Venue"] || "Virtual / Online"}
+                <strong><i class="bi bi-geo-alt me-1"></i> Venue:</strong> ${utils.getVenue(data)}
             </div>
             <div class="col-12">
                 <i class="bi bi-info-circle me-1"></i> 
@@ -960,7 +971,7 @@ function renderQI(qiData) {
                               <tr>
                                   <td class="fw-bold ps-2">${utils.formatDate(utils.excelToJS(s["Start Date"]))}</td>
                                   <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
-                                  <td>${s["Primary Venue"] || "Virtual"}</td>
+                                  <td>${utils.getVenue(s)}</td>
                                   <td class="text-end pe-2">
                                       <a href="${item.CourseLink}" target="_blank" class="btn btn-sm text-white py-0 px-3 fw-bold" style="background-color: #6f42c1; border-color: #6f42c1;">Book</a>
                                   </td>
