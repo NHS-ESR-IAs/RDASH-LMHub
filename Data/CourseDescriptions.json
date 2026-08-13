@@ -562,5 +562,13 @@
     "CourseButtonText": "Learning Platform",
     "ESRLink": "https://my.esr.nhs.uk/OA_HTML/OA.jsp?OAFunc=OTA_EXT_LEARNING_SS&pFromLink=LR&addBreadCrumb=Y&_ti=2062750877&oapc=2&oas=OboleNwUoNshUPRfx_lUMw..",
     "ESRButtonText": "Self-Directed Study"
+  },
+  {
+    "Course": "Social Work @ RDaSH : Getting Started with Practice-Based Research: Options, Opportunities and Support",
+    "Description": "Social Work @ RDaSH session focusing on getting started with practice-based research, covering options, opportunities, and support available across the Trust.",
+    "TargetAudience": "Social Work & RDaSH Staff",
+    "Trainer": "Social Work Team",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FSfideXnFQV67P8X3j3ZUQlI8rpv5r1.vo8fLm4aK2yvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   }
 ]
