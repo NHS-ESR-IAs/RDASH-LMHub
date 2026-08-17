@@ -189,6 +189,15 @@ async function initApp() {
       })
       .filter((ev) => !isNaN(ev.start.getTime()));
 
+    // Deduplicate any overlapping events sharing the same cleaned title and timestamp
+    const seenEventKeys = new Set();
+    allEvents = allEvents.filter((ev) => {
+      const key = `${ev.title.toLowerCase()}|${ev.start.getTime()}`;
+      if (seenEventKeys.has(key)) return false;
+      seenEventKeys.add(key);
+      return true;
+    });
+
     // Initial Renders
     renderUpcomingList("upcomingList");
     renderCatalogue(globalRawClasses, globalRawDescs);
