@@ -489,13 +489,34 @@
 
 
 
-      <div class="row mb-4">
-        <div class="col-md-6">
-          <div class="input-group shadow-sm rounded-pill overflow-hidden border">
-            <span class="input-group-text bg-white border-0"><i class="bi bi-search text-info"></i></span>
-            <input type="text" id="calendarSearch" class="form-control border-0" placeholder="Filter the schedule..."
+      <div class="row g-3 mb-4 align-items-center">
+        <div class="col-lg-5 col-md-12">
+          <div class="input-group shadow-sm rounded-pill overflow-hidden border bg-white">
+            <span class="input-group-text bg-white border-0 ps-3"><i class="bi bi-search text-primary"></i></span>
+            <input type="text" id="calendarSearch" class="form-control border-0 py-2" placeholder="Search sessions, topics, trainers..."
               onkeyup="filterCalendar()">
+            <button class="btn btn-link text-muted border-0 pe-3 text-decoration-none" type="button" onclick="document.getElementById('calendarSearch').value=''; filterCalendar();" title="Clear search">
+              <i class="bi bi-x-circle"></i>
+            </button>
           </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <select id="calendarCategoryFilter" class="form-select shadow-sm rounded-pill border py-2" onchange="filterCalendar()">
+            <option value="">All Categories</option>
+            <option value="Personal Development">Personal Development</option>
+            <option value="Occupational Knowledge & Skills">Occupational Knowledge & Skills</option>
+            <option value="Health & Wellbeing">Health & Wellbeing</option>
+            <option value="Equality, Diversity & Inclusion">Equality, Diversity & Inclusion</option>
+            <option value="Chaplaincy / Pastoral Care">Chaplaincy / Pastoral Care</option>
+            <option value="Social Work">Social Work</option>
+          </select>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <select id="calendarModeFilter" class="form-select shadow-sm rounded-pill border py-2" onchange="filterCalendar()">
+            <option value="">All Delivery Modes</option>
+            <option value="online">Online / Virtual</option>
+            <option value="venue">In-Person / Venue</option>
+          </select>
         </div>
       </div>
 

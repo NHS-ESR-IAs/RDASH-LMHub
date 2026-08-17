@@ -964,3 +964,134 @@ header,
 #venueTabs .nav-link:hover:not(.active) {
   background-color: #ffb0a8 !important;
 }
+
+/* ============================================================
+   CALENDAR & FULLCALENDAR CUSTOM STYLES
+============================================================ */
+.fc {
+  font-family: inherit;
+}
+
+/* Toolbar button styling */
+.fc .fc-button-primary {
+  background-color: #0072ce;
+  border-color: #0072ce;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  box-shadow: 0 2px 4px rgba(0, 114, 206, 0.2);
+  transition: all 0.2s ease;
+}
+
+.fc .fc-button-primary:hover,
+.fc .fc-button-primary:focus {
+  background-color: #005eb8 !important;
+  border-color: #005eb8 !important;
+  box-shadow: 0 4px 8px rgba(0, 94, 184, 0.3);
+}
+
+.fc .fc-button-primary:disabled {
+  background-color: #8bbce5;
+  border-color: #8bbce5;
+}
+
+.fc .fc-button-primary.fc-button-active {
+  background-color: #003087 !important;
+  border-color: #003087 !important;
+  font-weight: 700;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+/* Agenda List View Styling */
+.fc-theme-standard .fc-list {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.fc .fc-list-day-cushion {
+  background-color: #edf5ff !important;
+  color: #005eb8 !important;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem !important;
+  font-size: 0.95rem;
+}
+
+.fc .fc-list-event {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.fc .fc-list-event:hover td {
+  background-color: #f1f7ff !important;
+}
+
+.fc .fc-list-event-time {
+  font-weight: 700;
+  color: #0d6efd;
+  font-size: 0.9rem;
+  padding: 0.85rem 1.25rem !important;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.fc .fc-list-event-title {
+  padding: 0.85rem 1.25rem !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #212529;
+}
+
+.fc .fc-list-event-dot {
+  border-color: #0072ce !important;
+  margin-right: 10px;
+}
+
+.fc .fc-list-empty {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #6c757d;
+  font-size: 1rem;
+  background-color: #f8fafc;
+}
+
+/* Month Grid "+more" Popover Styling */
+.fc .fc-daygrid-more-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0072ce;
+  background: #e7f1ff;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.fc-popover {
+  border: 0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18) !important;
+  overflow: hidden;
+  z-index: 1050;
+}
+
+.fc-popover-header {
+  background-color: #0072ce !important;
+  color: #ffffff !important;
+  padding: 0.6rem 1rem !important;
+  font-weight: 700;
+}
+
+.fc-popover-body {
+  padding: 0.75rem !important;
+  max-height: 320px;
+  overflow-y: auto;
+}

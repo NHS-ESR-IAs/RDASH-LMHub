@@ -476,13 +476,56 @@ function renderRoomDirectory(rooms) {
 /**
  * LOGIC: FILTERING & NAVIGATION
  */
+function getFilteredCalendarEvents() {
+  const q = (document.getElementById("calendarSearch")?.value || "").toLowerCase().trim();
+  const cat = (document.getElementById("calendarCategoryFilter")?.value || "").toLowerCase().trim();
+  const mode = (document.getElementById("calendarModeFilter")?.value || "").toLowerCase().trim();
+
+  return allEvents.filter((ev) => {
+    const props = ev.extendedProps || {};
+    const title = (ev.title || "").toLowerCase();
+    const course = (props.Course || "").toLowerCase();
+    const trainer = (props.Trainer || "").toLowerCase();
+    const category = (props.Category || "").toLowerCase();
+    const venue = utils.getVenue(ev).toLowerCase();
+
+    // Query text match
+    const matchesQuery =
+      !q ||
+      title.includes(q) ||
+      course.includes(q) ||
+      trainer.includes(q) ||
+      venue.includes(q) ||
+      category.includes(q);
+
+    // Category match
+    const matchesCat = !cat || category.includes(cat);
+
+    // Delivery mode match
+    let matchesMode = true;
+    if (mode === "online") {
+      matchesMode =
+        venue.includes("online") ||
+        venue.includes("virtual") ||
+        venue.includes("webinar") ||
+        venue.includes("teams") ||
+        venue.includes("video") ||
+        venue.includes("workplace");
+    } else if (mode === "venue") {
+      matchesMode =
+        !venue.includes("online") &&
+        !venue.includes("virtual") &&
+        !venue.includes("webinar") &&
+        !venue.includes("teams") &&
+        !venue.includes("video");
+    }
+
+    return matchesQuery && matchesCat && matchesMode;
+  });
+}
+
 function filterCalendar() {
-  const q = document.getElementById("calendarSearch").value.toLowerCase();
-  const filtered = allEvents.filter(
-    (ev) =>
-      ev.title.toLowerCase().includes(q) ||
-      utils.getVenue(ev).toLowerCase().includes(q),
-  );
+  const filtered = getFilteredCalendarEvents();
   if (calendar) {
     calendar.removeAllEvents();
     calendar.addEventSource(filtered);
@@ -583,13 +626,43 @@ function initCalendar() {
   const el = document.getElementById("calendar");
   if (!el || calendar) return;
   calendar = new FullCalendar.Calendar(el, {
-    initialView: "dayGridMonth",
+    initialView: "listMonth",
     headerToolbar: {
       left: "prev,next today",
       center: "title",
-      right: "dayGridMonth,timeGridWeek,listYear",
+      right: "listMonth,dayGridMonth,listYear",
     },
-    events: (info, success) => success(allEvents),
+    buttonText: {
+      today: "Today",
+      listMonth: "Agenda List",
+      dayGridMonth: "Month Grid",
+      listYear: "Full Year",
+    },
+    views: {
+      listMonth: {
+        buttonText: "Agenda List",
+      },
+      dayGridMonth: {
+        buttonText: "Month Grid",
+        dayMaxEvents: 3,
+        moreLinkClick: "popover",
+      },
+      listYear: {
+        buttonText: "Full Year",
+      },
+    },
+    dayMaxEvents: 3,
+    moreLinkClick: "popover",
+    navLinks: true,
+    eventTimeFormat: {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    },
+    noEventsContent: "No sessions found matching your selected filters.",
+    events: (info, success) => {
+      success(getFilteredCalendarEvents());
+    },
     eventClick: (info) => {
       info.jsEvent.preventDefault();
       showEventDetailsFromData(null, info.event.extendedProps);
