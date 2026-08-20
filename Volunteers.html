@@ -39,9 +39,9 @@
             <ul class="navbar-nav">
               <li class="nav-item"><a class="nav-link" onclick="showPage('home')">Home</a></li>
               <li class="nav-item"><a class="nav-link" onclick="showPage('FAQs')">FAQs</a></li>
-              <li class="nav-item"><a class="nav-link" href="index.html">RDaSH Learning Resource Hub</a></li>
+              <li class="nav-item"><a class="nav-link" onclick="showPage('feedback')">Feedback</a></li>
               <li class="nav-item"><a class="nav-link" onclick="showPage('Support')">Support</a></li>
-
+              <li class="nav-item"><a class="nav-link" href="index.html">RDaSH Learning Resource Hub</a></li>
             </ul>
           </div>
 
@@ -711,33 +711,31 @@
 
       <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb bg-white p-3 rounded-pill shadow-sm">
-          <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+          <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Volunteer Learning Hub</a></li>
           <li class="breadcrumb-item active fw-bold text-secondary" aria-current="page">FAQs</li>
         </ol>
       </nav>
 
       <div class="p-5 mb-5 bg-white rounded-4 shadow-sm border-top border-secondary border-5">
-        <h1 class="display-5 fw-bold text-dark">Feedback & <span class="text-secondary">FAQs</span></h1>
-        <p class="lead text-muted">Have a question about your training or an idea to make the Learning Hub better?
-          This
-          is the place to share your thoughts and find quick answers.</p>
+        <h1 class="display-5 fw-bold text-dark">Frequently Asked <span class="text-secondary">Questions</span></h1>
+        <p class="lead text-muted">Find quick answers to common questions about volunteer training, ESR access, and completing your learning standards.</p>
 
         <div class="row g-4 mt-2">
           <div class="col-md-6">
             <div class="d-flex align-items-center p-3 bg-light rounded-3">
-              <i class="bi bi-chat-left-dots-fill text-secondary fs-3 me-3"></i>
+              <i class="bi bi-cpu text-primary fs-3 me-3"></i>
               <div>
-                <h5 class="fw-bold mb-0">Your Voice Matters</h5>
-                <p class="small text-muted mb-0">Request new sessions or suggest improvements.</p>
+                <h5 class="fw-bold mb-0">Access & Systems</h5>
+                <p class="small text-muted mb-0">Help with ESR login, IT accounts, and device access.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="d-flex align-items-center p-3 bg-light rounded-3">
-              <i class="bi bi-question-circle-fill text-primary fs-3 me-3"></i>
+              <i class="bi bi-mortarboard-fill text-success fs-3 me-3"></i>
               <div>
-                <h5 class="fw-bold mb-0">Quick Support</h5>
-                <p class="small text-muted mb-0">Instant help with ESR, course bookings, and updates.</p>
+                <h5 class="fw-bold mb-0">Training Requirements</h5>
+                <p class="small text-muted mb-0">Information on modules, completion timeframes, and refreshers.</p>
               </div>
             </div>
           </div>
@@ -745,8 +743,8 @@
       </div>
 
       <div class="row g-4">
-        <div class="col-lg-7">
-          <div class="card mb-4 border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="col-lg-6">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
             <div class="card-header bg-primary text-white py-3 fw-bold">
               <i class="bi bi-cpu me-2"></i>Access & Support
             </div>
@@ -791,8 +789,10 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="card mb-4 border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="col-lg-6">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
             <div class="card-header bg-success text-white py-3 fw-bold">
               <i class="bi bi-mortarboard me-2"></i>About The Training
             </div>
@@ -848,53 +848,95 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="col-lg-5">
-          <div class="sticky-top" style="top: 80px; z-index: 100;">
-            <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
-              <div class="card-header bg-dark text-white p-4 border-0">
-                <h5 class="fw-bold mb-1">Feedback & Requests</h5>
-                <p class="small opacity-75 mb-0">Share your thoughts or request a specific session.</p>
+  <!-- ======================================================
+  = FEEDBACK & REQUESTS SECTION =
+  ========================================================= -->
+  <div id="feedback" class="page">
+    <div class="container py-4">
+
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb bg-white p-3 rounded-pill shadow-sm">
+          <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Volunteer Learning Hub</a></li>
+          <li class="breadcrumb-item active fw-bold" style="color: #006666;" aria-current="page">Feedback & Requests</li>
+        </ol>
+      </nav>
+
+      <div class="p-5 mb-5 bg-white rounded-4 shadow-sm border-top border-5" style="border-color: #006666 !important;">
+        <h1 class="display-5 fw-bold text-dark">Volunteer <span style="color: #006666;">Feedback & Requests</span></h1>
+        <p class="lead text-muted">Have an idea to make the Volunteer Learning Hub better, or want to request a specific session? We’d love to hear from you!</p>
+
+        <div class="row g-4 mt-2">
+          <div class="col-md-6">
+            <div class="d-flex align-items-center p-3 bg-light rounded-3">
+              <i class="bi bi-chat-heart-fill fs-3 me-3" style="color: #006666;"></i>
+              <div>
+                <h5 class="fw-bold mb-0">Your Voice Matters</h5>
+                <p class="small text-muted mb-0">Share your thoughts and help us improve the experience for all volunteers.</p>
               </div>
-              <div class="bg-light p-2">
-                <ul class="nav nav-pills nav-fill rounded-pill bg-white p-1" id="formTabs" role="tablist">
-                  <li class="nav-item">
-                    <button class="nav-link active rounded-pill fw-bold" id="feedback-tab" data-bs-toggle="tab"
-                      data-bs-target="#feedback-panel" type="button">Feedback</button>
-                  </li>
-                  <li class="nav-item">
-                    <button class="nav-link rounded-pill fw-bold" id="request-tab" data-bs-toggle="tab"
-                      data-bs-target="#request-panel" type="button">Request</button>
-                  </li>
-                </ul>
-              </div>
-              <div class="card-body p-0">
-                <div class="tab-content">
-                  <div class="tab-pane fade show active" id="feedback-panel">
-                    <div class="ratio ratio-4x3" style="min-height: 500px;">
-                      <iframe
-                        src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__eBfvaBUMU4yT1lSOENOUUtPUkFIRE01MVpSRUtLSy4u&embed=true"
-                        frameborder="0"></iframe>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="request-panel">
-                    <div class="ratio ratio-4x3" style="min-height: 500px;">
-                      <iframe
-                        src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ggRtz7GGiE-MDDtN5MtALHKFXW_GBp5PsWoi2wVnADNUMEE4UFlQNzFRWU80OTUwUk43N0RBVloyQS4u&embed=true"
-                        frameborder="0"></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer bg-white p-4 border-0 text-center">
-                <p class="small text-muted mb-2">For other inquiries, please reach out to:</p>
-                <a href="mailto:rdash.volunteers@nhs.net"
-                  class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold">RDaSH Volunteering Service</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex align-items-center p-3 bg-light rounded-3">
+              <i class="bi bi-envelope-paper-heart-fill fs-3 me-3 text-primary"></i>
+              <div>
+                <h5 class="fw-bold mb-0">Request a Session</h5>
+                <p class="small text-muted mb-0">Suggest topics or request specialized training for your volunteer role.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+            <div class="card-header bg-dark text-white p-4 border-0">
+              <h5 class="fw-bold mb-1">Feedback & Requests</h5>
+              <p class="small opacity-75 mb-0">Share your thoughts or request a specific session.</p>
+            </div>
+            <div class="bg-light p-2">
+              <ul class="nav nav-pills nav-fill rounded-pill bg-white p-1" id="formTabs" role="tablist">
+                <li class="nav-item">
+                  <button class="nav-link active rounded-pill fw-bold" id="feedback-tab" data-bs-toggle="tab"
+                    data-bs-target="#feedback-panel" type="button">Feedback</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link rounded-pill fw-bold" id="request-tab" data-bs-toggle="tab"
+                    data-bs-target="#request-panel" type="button">Request</button>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body p-0">
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="feedback-panel">
+                  <div class="ratio ratio-16x9" style="min-height: 600px;">
+                    <iframe
+                      src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__eBfvaBUMU4yT1lSOENOUUtPUkFIRE01MVpSRUtLSy4u&embed=true"
+                      frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="request-panel">
+                  <div class="ratio ratio-16x9" style="min-height: 600px;">
+                    <iframe
+                      src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ggRtz7GGiE-MDDtN5MtALHKFXW_GBp5PsWoi2wVnADNUMEE4UFlQNzFRWU80OTUwUk43N0RBVloyQS4u&embed=true"
+                      frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer bg-white p-4 border-0 text-center">
+              <p class="small text-muted mb-2">For other inquiries, please reach out to:</p>
+              <a href="mailto:rdash.volunteers@nhs.net"
+                class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold">RDaSH Volunteering Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -906,7 +948,7 @@
 
       <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb bg-white p-3 rounded-pill shadow-sm">
-          <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Learning Resource Hub</a></li>
+          <li class="breadcrumb-item"><a href="#" onclick="showPage('home');">Volunteer Learning Hub</a></li>
           <li class="breadcrumb-item active fw-bold text-info" aria-current="page">Support</li>
         </ol>
       </nav>
