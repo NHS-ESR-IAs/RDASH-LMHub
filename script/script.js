@@ -49,11 +49,20 @@ const utils = {
     return String(val);
   },
 
-  // Enhanced to remove both 376 and LHD prefixes (case-insensitive)
+  // Enhanced to remove prefixes like 376, LHD -, LHD Fire & Rescue -, Learning Half Day
   cleanTitle: (str) =>
     String(str || "")
-      .replace(/^(376|LHD - )\s*/gi, "")
+      .replace(/^(376\s*|LHD\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*-\s*|Learning Half Day\s+)+/gi, "")
       .trim(),
+
+  normalizeTitle: (str) =>
+    String(str || "")
+      .replace(/^(376\s*|LHD\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*-\s*|Learning Half Day\s+)+/gi, "")
+      .replace(/\s+training$/gi, "")
+      .replace(/self-care/gi, "self care")
+      .replace(/Balidity/gi, "Validity")
+      .trim()
+      .toLowerCase(),
 
   getVenue: (obj) => {
     if (!obj) return "Virtual";
@@ -150,6 +159,10 @@ async function initApp() {
     globalRawDescs.forEach((d) => {
       const key = (d.Course || d.Title || "").trim().toLowerCase();
       if (key) descMap.set(key, d);
+      const cleanKey = utils.cleanTitle(d.Course || d.Title || "").toLowerCase();
+      if (cleanKey && !descMap.has(cleanKey)) descMap.set(cleanKey, d);
+      const normKey = utils.normalizeTitle(d.Course || d.Title || "");
+      if (normKey && !descMap.has(normKey)) descMap.set(normKey, d);
     });
 
     allEvents = globalRawClasses
@@ -169,7 +182,9 @@ async function initApp() {
         const courseKey = String(item.Course || "")
           .trim()
           .toLowerCase();
-        const info = descMap.get(courseKey) || {};
+        const cleanKey = utils.cleanTitle(item.Course || "").toLowerCase();
+        const normKey = utils.normalizeTitle(item.Course || "");
+        const info = descMap.get(courseKey) || descMap.get(cleanKey) || descMap.get(normKey) || {};
 
         return {
           // Cleaned title for Calendar and Lists
@@ -183,7 +198,7 @@ async function initApp() {
             Description: info.Description || "No description available.",
             TargetAudience: info.TargetAudience || "General Audience",
             Trainer: info.Trainer || "TBD",
-            CourseLink: info.CourseLink || "#",
+            CourseLink: item["Offering link"] || item["Offering Link"] || info.CourseLink || "#",
           },
         };
       })
@@ -356,8 +371,19 @@ function renderCatalogue(classList, courseDescs) {
 
   classList.forEach((s) => {
     const name = (s.Course || "").trim();
-    if (groups[name] && utils.excelToJS(s["Start Date"]) >= today)
-      groups[name].sessions.push(s);
+    let targetGroup = groups[name];
+    if (!targetGroup) {
+      const normName = utils.normalizeTitle(name);
+      for (const k in groups) {
+        if (utils.normalizeTitle(k) === normName) {
+          targetGroup = groups[k];
+          break;
+        }
+      }
+    }
+    if (targetGroup && utils.excelToJS(s["Start Date"]) >= today) {
+      targetGroup.sessions.push(s);
+    }
   });
 
   container.innerHTML = Object.values(groups)
@@ -382,7 +408,7 @@ function renderCatalogue(classList, courseDescs) {
             <span class="fw-bold d-block">${cleanCourseName}</span>
             <small class="text-info-emphasis opacity-75">${group.info.Trainer || "Self-Directed"}</small>
         </div>
-        <span class="badge ${sessionCount > 0 ? "bg-info text-light" : "bg-info text-light"} rounded-pill">${sessionCount} Dates</span>
+        <span class="badge ${sessionCount > 0 ? "bg-primary text-white" : "bg-light text-muted border"} rounded-pill px-3 py-2 fw-bold shadow-sm" style="font-size: 0.85rem;"><i class="bi ${sessionCount > 0 ? (sessionCount === 1 ? "bi-calendar-check" : "bi-calendar-event") : "bi-calendar-x"} me-1"></i>${sessionCount === 1 ? "1 Available Date" : sessionCount > 1 ? sessionCount + " Dates" : "0 Dates"}</span>
     </button>
     
     <div class="collapse" id="${id}">
@@ -409,11 +435,11 @@ function renderCatalogue(classList, courseDescs) {
                               .map(
                                 (s) => `
                                 <tr>
-                                    <td class="fw-bold ps-2">${utils.formatDate(utils.excelToJS(s["Start Date"]))}</td>
+                                    <td class="fw-bold ps-2 text-primary" style="font-size: 0.95rem;"><span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1"><i class="bi bi-calendar3 me-1"></i>${utils.formatDate(utils.excelToJS(s["Start Date"]))}</span></td>
                                     <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
                                     <td>${utils.getVenue(s)}</td>
                                     <td class="text-end pe-2">
-                                        <a href="${group.info.CourseLink}" target="_blank" class="btn btn-sm btn-info text-white py-0 px-3 fw-bold">Book</a>
+                                        <a href="${s["Offering link"] || s["Offering Link"] || group.info.CourseLink || "#"}" target="_blank" class="btn btn-sm btn-info text-white py-0 px-3 fw-bold">Book</a>
                                     </td>
                                 </tr>`,
                               )
@@ -790,82 +816,6 @@ function filterRooms() {
   }
 }
 
-/**
- * VIDEO VAULT LOGIC
- */
-function renderVideoVault(courseDescs) {
-  const tbody = document.getElementById("vvTableBody");
-  if (!tbody) return;
-
-  const videoData = courseDescs.filter(
-    (d) =>
-      d.Trainer === "Video" && d.CourseLink && d.CourseLink !== "awaiting link",
-  );
-
-  if (videoData.length > 0) {
-    const featured = videoData[0];
-    // Clean featured title
-    document.getElementById("vvFeaturedTitle").innerText = utils.cleanTitle(
-      featured.Course,
-    );
-    document.getElementById("vvFeaturedDesc").innerText = featured.Description;
-    document.getElementById("vvFeaturedBtn").href = featured.CourseLink;
-
-    const player = document.getElementById("vvFeaturedPlayer");
-    let videoUrl = featured.CourseLink;
-    if (videoUrl.includes("youtube.com/watch?v=")) {
-      const id = videoUrl.split("v=")[1].split("&")[0];
-      player.src = `https://www.youtube.com/embed/${id}`;
-    } else if (videoUrl.includes("youtu.be/")) {
-      const id = videoUrl.split("/").pop();
-      player.src = `https://www.youtube.com/embed/${id}`;
-    }
-  }
-
-  tbody.innerHTML = videoData
-    .map((v) => {
-      let badgeClass = "bg-primary-subtle text-primary";
-      const topic = (v.Topic || "General").toLowerCase();
-
-      if (topic.includes("digital")) badgeClass = "bg-info-subtle text-info";
-      if (topic.includes("informed"))
-        badgeClass = "bg-success-subtle text-success";
-      if (topic.includes("career"))
-        badgeClass = "bg-warning-subtle text-warning";
-
-      return `
-      <tr>
-        <td class="ps-4 fw-bold text-dark">${utils.cleanTitle(v.Course)}</td>
-        <td><span class="badge ${badgeClass} rounded-pill">${v.Topic || "Training"}</span></td>
-        <td class="text-end pe-4">
-          <a href="${v.CourseLink}" target="_blank" class="btn btn-sm btn-warning rounded-pill px-3 fw-bold shadow-sm">
-            <i class="bi bi-play-circle me-1"></i> Watch
-          </a>
-        </td>
-      </tr>`;
-    })
-    .join("");
-}
-
-/**
- * Search functionality for Video Vault
- */
-function filterVideoVault() {
-  const query = document.getElementById("vvSearchInput").value.toLowerCase();
-  const rows = document.querySelectorAll("#vvTableBody tr");
-  const noResults = document.getElementById("vvNoResults");
-  let foundCount = 0;
-
-  rows.forEach((row) => {
-    const text = row.innerText.toLowerCase();
-    const isMatch = text.includes(query);
-    row.style.display = isMatch ? "" : "none";
-    if (isMatch) foundCount++;
-  });
-
-  noResults.classList.toggle("d-none", foundCount > 0);
-}
-
 // --- Theme Selector Logic ---
 const themeSelector = document.getElementById("themeSelector");
 
@@ -910,9 +860,9 @@ function renderVideoVault(videoData) {
   const alphaContainer = document.getElementById("vvAlphabetNav");
   if (!container) return;
 
-  // Since it's a dedicated file, we only filter out empty links
+  // Since it's a dedicated file, we filter out empty links
   const validVideos = videoData.filter(
-    (d) => d.CourseLink && d.CourseLink !== "awaiting link",
+    (d) => (d.CourseLink && d.CourseLink !== "awaiting link") || d.VideoLink || d.ExternalLink || d.ESRLink,
   );
 
   if (validVideos.length === 0) {
@@ -945,18 +895,18 @@ function renderVideoVault(videoData) {
           style="background-color: #fef9ef;" data-bs-toggle="collapse" data-bs-target="#${id}">
       <div>
           <span class="fw-bold d-block text-dark">${utils.cleanTitle(v.Course)}</span>
-          <small class="text-muted">Category: ${v.Topic || "Tutorial"}</small>
+          <small class="text-muted opacity-75">${v.Trainer || "Self-Directed"}</small>
       </div>
       <i class="bi bi-play-circle-fill fs-4" style="color: #c68a12;"></i>
   </button>
   <div class="collapse" id="${id}">
       <div class="card-body bg-white border-top">
-          <div class="mb-2">
-              <small class="fw-bold text-muted"><i class="bi bi-people me-1"></i> Target Audience: ${v.TargetAudience || "All Staff"}</small>
+          <div class="mb-3">
+              <span class="badge bg-light text-dark border small"><i class="bi bi-people me-1"></i> Audience: ${v.TargetAudience || "All Staff"}</span>
           </div>
-          <p class="small text-dark mb-3">${v.Description || "No description available."}</p>
+          <p class="small text-dark mb-3" style="white-space: pre-line;">${v.Description || "No description available."}</p>
           <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center p-3 rounded" style="background-color: #fef9ef; border: 1px solid #faeecd;">
-              <span class="small fw-bold mb-2 mb-md-0" style="color: #c68a12;">Duration: ${v.Duration || "Varies"}</span>
+              <span class="small fw-bold mb-2 mb-md-0" style="color: #c68a12;">Venue: ${v.Venue || "Video"}</span>
               <div class="d-flex flex-wrap">
                   ${generateActionButtons(v, "btn-warning")}
               </div>
@@ -1027,11 +977,16 @@ function renderQI(qiData) {
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       const sessions = globalRawClasses.filter(s => {
-          const sName = utils.cleanTitle(s.Course || "").toLowerCase();
-          const iName = cleanName.toLowerCase();
+          const sName = utils.normalizeTitle(s.Course || "");
+          const iName = utils.normalizeTitle(item.Course || item.Title || "");
           return sName === iName && utils.excelToJS(s["Start Date"]) >= today;
       });
       const sessionCount = sessions.length;
+
+      const hasLink =
+        item.CourseLink &&
+        item.CourseLink !== "#" &&
+        item.CourseLink !== "awaiting link";
 
       return `
 <div class="card mb-3 border shadow-sm prospectus-card" style="border-left: 5px solid #6f42c1 !important; background-color: #f9f6ff;">
@@ -1039,14 +994,14 @@ function renderQI(qiData) {
           style="background-color: #f9f6ff;" data-bs-toggle="collapse" data-bs-target="#${id}">
       <div>
           <span class="fw-bold d-block text-dark">${cleanName}</span>
-          <small class="text-muted">Methodology: ${item.Methodology || "QI Tool"}</small>
+          <small class="text-muted opacity-75">${item.Trainer || "Self-Directed"}</small>
       </div>
-      ${sessionCount > 0 ? `<span class="badge rounded-pill text-white" style="background-color: #6f42c1;">${sessionCount} Dates</span>` : `<i class="bi bi-chevron-down fs-5" style="color: #6f42c1;"></i>`}
+      ${sessionCount > 0 ? `<span class="badge rounded-pill text-white px-3 py-2 fw-bold shadow-sm" style="background-color: #6f42c1; font-size: 0.85rem;"><i class="bi ${sessionCount === 1 ? "bi-calendar-check" : "bi-calendar-event"} me-1"></i>${sessionCount === 1 ? "1 Available Date" : sessionCount + " Dates"}</span>` : `<i class="bi bi-chevron-down fs-5" style="color: #6f42c1;"></i>`}
   </button>
   <div class="collapse" id="${id}">
       <div class="card-body bg-white border-top">
-          <div class="mb-2">
-              <small class="fw-bold" style="color: #6f42c1;"><i class="bi bi-people me-1"></i> Intended for: ${item.TargetAudience || "General"}</small>
+          <div class="mb-3">
+              <span class="badge bg-light text-dark border small"><i class="bi bi-people me-1"></i> Audience: ${item.TargetAudience || "General"}</span>
           </div>
           <p class="small text-dark mb-3" style="white-space: pre-line;">${item.Description || "No description available."}</p>
           ${
@@ -1067,11 +1022,11 @@ function renderQI(qiData) {
                             .map(
                               (s) => `
                               <tr>
-                                  <td class="fw-bold ps-2">${utils.formatDate(utils.excelToJS(s["Start Date"]))}</td>
+                                  <td class="fw-bold ps-2" style="font-size: 0.95rem;"><span class="badge px-2 py-1" style="background-color: #f3ebff; color: #6f42c1; border: 1px solid #ebd9fc;"><i class="bi bi-calendar3 me-1"></i>${utils.formatDate(utils.excelToJS(s["Start Date"]))}</span></td>
                                   <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
                                   <td>${utils.getVenue(s)}</td>
                                   <td class="text-end pe-2">
-                                      <a href="${item.CourseLink}" target="_blank" class="btn btn-sm text-white py-0 px-3 fw-bold" style="background-color: #6f42c1; border-color: #6f42c1;">Book</a>
+                                      <a href="${s["Offering link"] || s["Offering Link"] || item.CourseLink || "#"}" target="_blank" class="btn btn-sm text-white py-0 px-3 fw-bold" style="background-color: #6f42c1; border-color: #6f42c1;">Book</a>
                                   </td>
                               </tr>`,
                             )
@@ -1087,9 +1042,13 @@ function renderQI(qiData) {
               `
               : `
               <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center p-3 rounded" style="background-color: #f9f6ff; border: 1px solid #e9dcfc;">
-                  <span class="small fw-bold mb-2 mb-md-0" style="color: #6f42c1;">Type: ${item.Topic || "Resource"}</span>
+                  <span class="small text-muted mb-2 mb-md-0">No live dates currently scheduled.</span>
                   <div class="d-flex flex-wrap">
-                      ${generateActionButtons(item, "btn-primary")}
+                  ${
+                    (hasLink || item.ExternalLink || item.ESRLink || item.UserGuideLink || item.VideoLink)
+                      ? generateActionButtons(item, "btn-primary")
+                      : `<span class="small fst-italic text-muted">Contact L&D for dates</span>`
+                  }
                   </div>
               </div>`
           }

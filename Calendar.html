@@ -53,6 +53,12 @@
             return new Date(excelEpoch.getTime() + serial * 86400000);
         }
 
+        function cleanTitle(str) {
+            return String(str || "")
+                .replace(/^(376\s*|LHD\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*-\s*|Learning Half Day\s+)+/gi, "")
+                .trim();
+        }
+
         let allEvents = [];
         let calendar;
 
@@ -76,7 +82,7 @@
                     }
 
                     return {
-                        title: item.Course,
+                        title: cleanTitle(item.Course || item.Title),
                         start: start,
                         end: end,
                         extendedProps: item
@@ -98,7 +104,7 @@
                         const detailsEl = document.getElementById('modalDetails');
                         detailsEl.innerHTML = "";
                         for (const [key, value] of Object.entries(data)) {
-                            if (value !== null && key !== "Offering link") {
+                            if (value !== null && key !== "Offering link" && key !== "Offering Link" && key !== "CourseLink") {
                                 const dt = document.createElement("dt");
                                 dt.className = "col-sm-4";
                                 dt.textContent = key;
@@ -111,8 +117,9 @@
                         }
 
                         const linkEl = document.getElementById('modalLink');
-                        if (data["Offering link"]) {
-                            linkEl.href = data["Offering link"];
+                        const linkUrl = data["Offering link"] || data["Offering Link"] || data["CourseLink"];
+                        if (linkUrl && linkUrl !== "#") {
+                            linkEl.href = linkUrl;
                             linkEl.style.display = "inline-block";
                         } else {
                             linkEl.style.display = "none";

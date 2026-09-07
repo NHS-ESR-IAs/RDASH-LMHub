@@ -35,7 +35,7 @@
     "Start Time": "13:00",
     "End Time": "13:30",
     "Category": "Health & Wellbeing",
-    "Places Remaining": 198,
+    "Places Remaining": 197,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=j1Y00HExWo8H9kr5Ip5J9nU3CL49f.5DnBXJPI50HcHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
@@ -48,7 +48,7 @@
     "Start Time": "10:30",
     "End Time": "11:00",
     "Category": "Health & Wellbeing",
-    "Places Remaining": 196,
+    "Places Remaining": 195,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=NgGPNZ9OMUdEbrCmbUZHIL0Rhy2UlxbO6rflO2NfX8Pjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c "
   },
   {
@@ -61,7 +61,7 @@
     "Start Time": "11:00",
     "End Time": "11:30",
     "Category": "Health & Wellbeing",
-    "Places Remaining": 0,
+    "Places Remaining": 194,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=pDwk9cuzdAxAlo5aGwfJKwrHGPd2x-5GfyBNIcCArbjjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c "
   },
   {
@@ -87,7 +87,7 @@
     "Start Time": "10:30",
     "End Time": "11:00",
     "Category": "Health & Wellbeing",
-    "Places Remaining": 195,
+    "Places Remaining": 194,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=al2nNCgecLO1KiHk4UUAfGTVcq6WhENr4q4n55WPIgDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c "
   },
   {
@@ -308,7 +308,7 @@
     "Start Time": "13:00",
     "End Time": "15:30",
     "Category": "Personal Development",
-    "Places Remaining": 10,
+    "Places Remaining": 5,
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=cZuzrvzdDAL75ZLDGh51c0L8LaFTgISbFkvspoCAdxzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
@@ -321,7 +321,7 @@
     "Start Time": "13:00",
     "End Time": "15:30",
     "Category": "Personal Development",
-    "Places Remaining": 10,
+    "Places Remaining": 9,
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=cZuzrvzdDAL75ZLDGh51c0L8LaFTgISbFkvspoCAdxzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
@@ -530,8 +530,7 @@
     "End Time": "12:00",
     "Category": "Occupational Knowledge & Skills",
     "Places Remaining": 20,
-    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4fthidBGQhz.tdR4ahBH1qlvpk.DMzeueUdq6.AxA5ivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y",
-    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4fthidBGQhz.tdR4ahBH1qlvpk.DMzeueUdq6.AxA5ivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4fthidBGQhz.tdR4ahBH1qlvpk.DMzeueUdq6.AxA5ivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   },
   {
     "Course": "Palliative EoL Care Conference",
@@ -544,8 +543,7 @@
     "End Time": "16:00",
     "Category": "Occupational Knowledge & Skills",
     "Places Remaining": 100,
-    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=M-RSf9PLee6JPfiKMDaK9owOe4wH55DbLX4FUS75TN.vOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y",
-    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=M-RSf9PLee6JPfiKMDaK9owOe4wH55DbLX4FUS75TN.vOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=M-RSf9PLee6JPfiKMDaK9owOe4wH55DbLX4FUS75TN.vOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   },
   {
     "Course": "Neurodevelopment: Psychometrics Training",
@@ -583,7 +581,7 @@
     "Start Time": "13:00",
     "End Time": "15:00",
     "Category": null,
-    "Places Remaining": null,
+    "Places Remaining": 197,
     "Offering Link": "\u2013 https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eYZX1droCwOpNukSujdjncjMfAPHu7Gr3AXCdzXu-mzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
@@ -596,7 +594,7 @@
     "Start Time": "09:00",
     "End Time": "11:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 197,
+    "Places Remaining": 195,
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=Nks1aelke1P.U6Q4bNmRkKfTQ09bEBw8qQVmzqDtGNHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c\r\n"
   },
   {
@@ -843,7 +841,7 @@
     "Start Time": "09:30",
     "End Time": "11:00",
     "Category": "Personal Development",
-    "Places Remaining": 9,
+    "Places Remaining": 7,
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=ghHBbycuYhGkSuvmjvrqpIaipSPZVjvMtT61pnmo-53jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
@@ -987,8 +985,7 @@
     "End Time": "14:30",
     "Category": null,
     "Places Remaining": null,
-    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=0gOeX8d550vgNvqxtfaVaG-lhGdsjbEdCv6vhjHU3QTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
-    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=0gOeX8d550vgNvqxtfaVaG-lhGdsjbEdCv6vhjHU3QTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=0gOeX8d550vgNvqxtfaVaG-lhGdsjbEdCv6vhjHU3QTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "LHD - Self Directed Study Declaration",
@@ -1000,7 +997,8 @@
     "Start Time": "09:00",
     "End Time": "13:00",
     "Category": "Personal Development",
-    "Places Remaining": 0
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "LHD - Learning Half Day Rainbow Badge Awareness",
@@ -1024,7 +1022,8 @@
     "Start Time": "13:00",
     "End Time": "17:00",
     "Category": "Personal Development",
-    "Places Remaining": 0
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "LHD - Neurodevelopment: ADOS and Cultural Validity",
@@ -1072,7 +1071,7 @@
     "Start Time": "09:30",
     "End Time": "12:00",
     "Category": "Personal Development",
-    "Places Remaining": 10
+    "Places Remaining": 9
   },
   {
     "Course": "LHD - Self Directed Study Declaration",
@@ -1084,7 +1083,8 @@
     "Start Time": "09:00",
     "End Time": "13:00",
     "Category": "Personal Development",
-    "Places Remaining": 0
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "LHD - Learning Half Day Active Bystander Training",
@@ -1096,7 +1096,7 @@
     "Start Time": "09:00",
     "End Time": "10:30",
     "Category": "Personal Development",
-    "Places Remaining": 10
+    "Places Remaining": 9
   },
   {
     "Course": "LHD - Take a Menopause",
@@ -1120,7 +1120,8 @@
     "Start Time": "09:00",
     "End Time": "13:00",
     "Category": "Personal Development",
-    "Places Remaining": 0
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "LHD - Learning Half Day - How to prioritise self-care",
@@ -1204,7 +1205,8 @@
     "Start Time": "13:00",
     "End Time": "17:00",
     "Category": "Personal Development",
-    "Places Remaining": 0
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "LHD - Learning Half Day Rainbow Badge Awareness",
@@ -1265,5 +1267,122 @@
     "End Time": "16:30",
     "Category": "Personal Development",
     "Places Remaining": 5
+  },
+  {
+    "Course": "LHD - Self Directed Study Declaration",
+    "Offering Name": "LHD - Self Directed Study Declaration",
+    "Delivery Mode": "Course",
+    "Title": "LHD - Self Directed Study Declaration: 14 January 2027",
+    "Start Date": 46401,
+    "End Date": 46401,
+    "Start Time": "09:00",
+    "End Time": "13:00",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "LHD - Self Directed Study Declaration",
+    "Offering Name": "LHD - Self Directed Study Declaration",
+    "Delivery Mode": "Course",
+    "Title": "LHD - Self Directed Study Declaration: 16 February 2027",
+    "Start Date": 46434,
+    "End Date": 46434,
+    "Start Time": "09:00",
+    "End Time": "13:00",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "LHD - Self Directed Study Declaration",
+    "Offering Name": "LHD - Self Directed Study Declaration",
+    "Delivery Mode": "Course",
+    "Title": "LHD - Self Directed Study Declaration: 31 March 2027",
+    "Start Date": 46477,
+    "End Date": 46477,
+    "Start Time": "13:00",
+    "End Time": "17:00",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=CdShY5Yf3IUSm54.4snMncIm6oA0139oCIX7fUmW3BDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Offering Name": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Delivery Mode": "Online",
+    "Title": "LHD Fire & Rescue - 15 Oct 2026 11:00-12:00pm via MS Teams",
+    "Start Date": 46310,
+    "End Date": 46310,
+    "Start Time": "11:00",
+    "End Time": "12:00",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3p2JCWaDfgMvmzC-KEw4SVKB7KUgs5lietwqMvbXvSevOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Offering Name": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Delivery Mode": "Online",
+    "Title": "LHD Fire & Rescue - 12 Nov 2026 11:00-12:00pm via MS Teams",
+    "Start Date": 46338,
+    "End Date": 46338,
+    "Start Time": "11:00",
+    "End Time": "12:00",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=yDA2SbgdB.J5jRAfzDIuRLy7mAnCIVhqY7K.dDnL4xCvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Offering Name": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Delivery Mode": "Online",
+    "Title": "LHD Fire & Rescue - 01 Dec 2026 13:30-14:30pm via MS Teams",
+    "Start Date": 46357,
+    "End Date": 46357,
+    "Start Time": "13:30",
+    "End Time": "14:30",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=T88uz5tf13QLUZzdZVmRd-kWYxI7gJ1ieBqrnXQXYBGvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Offering Name": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Delivery Mode": "Online",
+    "Title": "LHD Fire & Rescue - 14 Jan 2027 11:00-12:00pm via MS Teams",
+    "Start Date": 46401,
+    "End Date": 46401,
+    "Start Time": "11:00",
+    "End Time": "12:00",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=qcldCulbfcJcMKFTVtwdcTr4chQ9jGfWqrYipgNH5UivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Offering Name": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Delivery Mode": "Online",
+    "Title": "LHD Fire & Rescue - 16 Feb 2027 11:00-12:00pm via MS Teams",
+    "Start Date": 46434,
+    "End Date": 46434,
+    "Start Time": "11:00",
+    "End Time": "12:00",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=T4x.LrgR1ezZ52kHlsrwMIBXRB3YX1iyxMLyrHDUMuCvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Offering Name": "LHD Fire & Rescue - South Yorkshire Fire & Rescue Safer South Yorkshire Awareness Training",
+    "Delivery Mode": "Online",
+    "Title": "LHD Fire & Rescue - 31 Mar 2027 13:30-14:30 via MS Teams",
+    "Start Date": 46477,
+    "End Date": 46477,
+    "Start Time": "13:30",
+    "End Time": "14:30",
+    "Category": "Personal Development",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=dTEUm4KOMSDIaBcTIytsWqVAsSaULXAiYSrgkxPpEcyvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   }
 ]
