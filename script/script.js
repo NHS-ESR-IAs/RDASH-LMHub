@@ -52,12 +52,12 @@ const utils = {
   // Enhanced to remove prefixes like 376, LHD -, LHD Fire & Rescue -, Learning Half Day
   cleanTitle: (str) =>
     String(str || "")
-      .replace(/^(376\s*|LHD\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*-\s*|Learning Half Day\s+)+/gi, "")
+      .replace(/^(376\s*|LHD\s*[-–—]\s*|LHD\s+Fire\s*&\s*Rescue\s*[-–—]\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*[-–—]\s*|Learning Half Day\s+)+/gi, "")
       .trim(),
 
   normalizeTitle: (str) =>
     String(str || "")
-      .replace(/^(376\s*|LHD\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*-\s*|Learning Half Day\s+)+/gi, "")
+      .replace(/^(376\s*|LHD\s*[-–—]\s*|LHD\s+Fire\s*&\s*Rescue\s*[-–—]\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*[-–—]\s*|Learning Half Day\s+)+/gi, "")
       .replace(/\s+training$/gi, "")
       .replace(/self-care/gi, "self care")
       .replace(/Balidity/gi, "Validity")

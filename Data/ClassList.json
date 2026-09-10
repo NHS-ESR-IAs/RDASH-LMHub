@@ -598,19 +598,6 @@
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=Nks1aelke1P.U6Q4bNmRkKfTQ09bEBw8qQVmzqDtGNHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c\r\n"
   },
   {
-    "Course": "Neurodevelopment: ADHD Formulation",
-    "Offering Name": "Neurodevelopment: ADHD Formulation",
-    "Delivery Mode": "Online",
-    "Title": "Neurodevelopment: ADHD Formulation",
-    "Start Date": 46339,
-    "End Date": 46339,
-    "Start Time": "09:00",
-    "End Time": "11:00",
-    "Category": null,
-    "Places Remaining": null,
-    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=G55qMPpVQdnOD0YQTfFvMBqdIGBaHdSYGaTOQIniaNjjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
-  },
-  {
     "Course": "Poverty Proofing Training",
     "Offering Name": "Poverty Proofing Training",
     "Delivery Mode": "Online",
@@ -1038,6 +1025,19 @@
     "Places Remaining": 199
   },
   {
+    "Course": "LHD - Radar Mandated Policy Reading Overview",
+    "Offering Name": "LHD - Radar Mandated Policy Reading Overview",
+    "Delivery Mode": "Online",
+    "Title": "LHD - Radar Mandated Policy Reading Overview 30.09.26 1.00-2.00pm via MS Teams",
+    "Start Date": 46295,
+    "End Date": 46295,
+    "Start Time": "13:00",
+    "End Time": "14:00",
+    "Category": "Occupational Knowledge & Skills",
+    "Places Remaining": null,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=Ru-mbasjgbUcAb0GFKL94-AKh3xj71SVGQ.VWFKRFuyvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
     "Course": "LHD - Take a Menopause",
     "Offering Name": "LHD - Take a Menopause",
     "Delivery Mode": "Course",
@@ -1150,14 +1150,15 @@
   {
     "Course": "LHD - Neurodevelopment: ADHD Formulation",
     "Offering Name": "LHD - Neurodevelopment: ADHD Formulation",
-    "Delivery Mode": "Course",
+    "Delivery Mode": "Online",
     "Title": "LHD - Neurodevelopment: ADHD Formulation - November 26",
     "Start Date": 46338,
     "End Date": 46338,
     "Start Time": "09:00",
     "End Time": "11:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 197
+    "Places Remaining": 197,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=G55qMPpVQdnOD0YQTfFvMBqdIGBaHdSYGaTOQIniaNjjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "LHD - Take a Menopause",

@@ -55,7 +55,7 @@
 
         function cleanTitle(str) {
             return String(str || "")
-                .replace(/^(376\s*|LHD\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s*-\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*-\s*|Learning Half Day\s+)+/gi, "")
+                .replace(/^(376\s*|LHD\s*[-–—]\s*|LHD\s+Fire\s*&\s*Rescue\s*[-–—]\s*|LHD\s+Fire\s*&\s*Rescue\s+|LHD\s+|Learning Half Day\s*[-–—]\s*|Learning Half Day\s+)+/gi, "")
                 .trim();
         }
 
