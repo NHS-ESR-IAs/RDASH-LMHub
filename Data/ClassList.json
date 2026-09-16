@@ -582,7 +582,7 @@
     "End Time": "15:00",
     "Category": null,
     "Places Remaining": 197,
-    "Offering Link": "\u2013 https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eYZX1droCwOpNukSujdjncjMfAPHu7Gr3AXCdzXu-mzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+    "Offering Link": "– https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eYZX1droCwOpNukSujdjncjMfAPHu7Gr3AXCdzXu-mzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "Neurodevelopment: Intellectual Disabilities with Neurodiverse Patients",
@@ -1385,5 +1385,57 @@
     "Category": "Personal Development",
     "Places Remaining": 0,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=dTEUm4KOMSDIaBcTIytsWqVAsSaULXAiYSrgkxPpEcyvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "CAMHS Digital and Online Offer",
+    "Offering Name": "CAMHS Digital and Online Offer",
+    "Delivery Mode": "Online",
+    "Title": "CAMHS Digital and Online Offer",
+    "Start Date": 46295,
+    "End Date": 46295,
+    "Start Time": "15:00",
+    "End Time": "16:00",
+    "Category": "Occupational Knowledge & Skills",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=NFiONHX8pmqihWrtzpmircSgjQJ53BeRDdaj99n6N0WvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "Children's Care Group SEND Offer",
+    "Offering Name": "Children's Care Group SEND Offer",
+    "Delivery Mode": "Bullcroft Memorial Hall, Chestnut Ave, Carcroft, DN6 8AP",
+    "Title": "Children's Care Group SEND Offer",
+    "Start Date": 46295,
+    "End Date": 46295,
+    "Start Time": "13:00",
+    "End Time": "17:00",
+    "Category": "Occupational Knowledge & Skills",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=EenN1HqlMcfdUqn5Y1UiKb2eV9SGSULFMdOkkzP0hmGvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "Safe Sleep and CONI",
+    "Offering Name": "Safe Sleep and CONI",
+    "Delivery Mode": "Online",
+    "Title": "Safe Sleep and CONI",
+    "Start Date": 46310,
+    "End Date": 46310,
+    "Start Time": "10:00",
+    "End Time": "12:00",
+    "Category": "Occupational Knowledge & Skills",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=KLcc9nz6YWfDNctV-oJACnEK3lJ-5aD5uZaUNtMAuQavOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "Safe Sleep and CONI",
+    "Offering Name": "Safe Sleep and CONI",
+    "Delivery Mode": "Online",
+    "Title": "Safe Sleep and CONI",
+    "Start Date": 46338,
+    "End Date": 46338,
+    "Start Time": "10:00",
+    "End Time": "12:00",
+    "Category": "Occupational Knowledge & Skills",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eN38CK2zpiZmp6orEigsWkLvMWFY225m-DSgrBlmafivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   }
 ]
