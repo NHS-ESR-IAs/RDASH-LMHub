@@ -1028,11 +1028,11 @@
     "Course": "LHD - Radar Mandated Policy Reading Overview",
     "Offering Name": "LHD - Radar Mandated Policy Reading Overview",
     "Delivery Mode": "Online",
-    "Title": "LHD - Radar Mandated Policy Reading Overview 30.09.26 1.00-2.00pm via MS Teams",
-    "Start Date": 46295,
-    "End Date": 46295,
-    "Start Time": "13:00",
-    "End Time": "14:00",
+    "Title": "LHD - Radar Mandated Policy Reading Overview 15.10.26 11.00-12.00pm via MS Teams",
+    "Start Date": 46310,
+    "End Date": 46310,
+    "Start Time": "11:00",
+    "End Time": "12:00",
     "Category": "Occupational Knowledge & Skills",
     "Places Remaining": null,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=Ru-mbasjgbUcAb0GFKL94-AKh3xj71SVGQ.VWFKRFuyvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
@@ -1476,5 +1476,18 @@
     "Category": "Occupational Knowledge & Skills",
     "Places Remaining": 0,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=GKDxJx28Ppsa5zCJCAa692D63y1A6Gdf.9i2RuXU-OWvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "Autism and Risk",
+    "Offering Name": "Autism and Risk",
+    "Delivery Mode": "Online",
+    "Title": "Autism and Risk",
+    "Start Date": 46310,
+    "End Date": 46310,
+    "Start Time": "09:00",
+    "End Time": "13:00",
+    "Category": "Occupational Knowledge & Skills",
+    "Places Remaining": 0,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=LE1hBjRkZ5AJqboA36gI0t9zgicfjptPhIC0WEMWynyvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   }
 ]

@@ -122,12 +122,22 @@
     "ESRLink": "https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=YMq8aT0CygOrHKtljBMHRk.NwQe4xKvm0w8sist65hhYJ0JzYYTwfYn5cQSFaAVWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
   },
   {
-    "Course": "Autism",
-    "Description": "This short video explores autism and explains….",
+    "Course": "Autism, Our historic thinking and the neurodiversity paradigm",
+    "Description": "Recorded session exploring historic thinking and the neurodiversity paradigm in autism.",
     "TargetAudience": "LHD offer for all colleagues",
     "Trainer": "Support Services",
     "Venue": "Video",
-    "CourseLink": ""
+    "CourseLink": "https://youtu.be/yQG0vBwn2eM",
+    "ESRLink": "https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=YMq8aT0CygOrHKtljBMHRk.NwQe4xKvm0w8sist65hhYJ0JzYYTwfYn5cQSFaAVWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
+  },
+  {
+    "Course": "Autism and mental health including misdiagnosis and co-occuring mental health difficulties",
+    "Description": "Recorded session discussing autism and mental health, including misdiagnosis and co-occurring mental health difficulties.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Video",
+    "CourseLink": "https://youtu.be/JcUUvX7JL8A",
+    "ESRLink": "https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=YMq8aT0CygOrHKtljBMHRk.NwQe4xKvm0w8sist65hhYJ0JzYYTwfYn5cQSFaAVWck7VP.Fp0WWX1W2odyMoVN92Ku1Y3wVqwWyfQGtLMwY"
   },
   {
     "Course": "Set Up Online Meetings: Watch & Learn: MS Teams meetings",
@@ -639,5 +649,13 @@
     "Trainer": "HR Team",
     "Venue": "Honeysuckle Lodge Meeting Room 1",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=GKDxJx28Ppsa5zCJCAa692D63y1A6Gdf.9i2RuXU-OWvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
+  },
+  {
+    "Course": "Autism and Risk",
+    "Description": "Training session exploring autism and risk management.",
+    "TargetAudience": "LHD offer for all colleagues",
+    "Trainer": "Support Services",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=LE1hBjRkZ5AJqboA36gI0t9zgicfjptPhIC0WEMWynyvOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   }
 ]
