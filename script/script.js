@@ -204,10 +204,11 @@ async function initApp() {
       })
       .filter((ev) => !isNaN(ev.start.getTime()));
 
-    // Deduplicate any overlapping events sharing the same cleaned title and timestamp
+    // Deduplicate any overlapping events sharing the same cleaned title, timestamp and venue
     const seenEventKeys = new Set();
     allEvents = allEvents.filter((ev) => {
-      const key = `${ev.title.toLowerCase()}|${ev.start.getTime()}`;
+      const venue = utils.getVenue(ev).toLowerCase();
+      const key = `${ev.title.toLowerCase()}|${ev.start.getTime()}|${venue}`;
       if (seenEventKeys.has(key)) return false;
       seenEventKeys.add(key);
       return true;

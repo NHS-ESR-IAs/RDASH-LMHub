@@ -745,5 +745,23 @@
     "Trainer": "Support Services",
     "Venue": "Online",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=LlA6QajP2sXgqP2hkFVTdOoYcx-leqOFWnr5kJQ1my-jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Tier 2 Pressure Ulcer Awareness",
+    "Description": "An essential awareness training session on Tier 2 Pressure Ulcer prevention and management, focusing on risk identification, skin inspection, wound care protocols, pressure area care, and reporting procedures to improve patient safety and care quality.",
+    "TargetAudience": "Clinical & Care Staff",
+    "Trainer": "Tissue Viability Team",
+    "Venue": "Almond Tree Court",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
+  },
+  {
+    "Course": "Doncaster MH & LD Directorate Innovation & Research Community of Practice",
+    "Description": "Connecting ideas and people, through research to improve care delivery for our patients. No research experience required. Curious minds encouraged!",
+    "TargetAudience": "Doncaster Mental Health and Learning Disabilities Care Group",
+    "Trainer": "Jo Nicholls",
+    "Venue": "Windermere Lodge, Tickhill Road Site / MS Teams",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FQ7rTYcSCn38IkpXykxADh-0t-2P7omCPJf8Nn-jWGHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
+    "ExternalLink": "https://teams.microsoft.com/meet/3663255448578733?p=zOoY4EIe2a8HM8Hmbb",
+    "ExternalButtonText": "Join MS Teams"
   }
 ]
