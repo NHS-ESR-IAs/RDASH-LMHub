@@ -582,7 +582,7 @@
     "End Time": "15:00",
     "Category": null,
     "Places Remaining": 197,
-    "Offering Link": "– https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eYZX1droCwOpNukSujdjncjMfAPHu7Gr3AXCdzXu-mzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+    "Offering Link": "\u2013 https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eYZX1droCwOpNukSujdjncjMfAPHu7Gr3AXCdzXu-mzjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "Neurodevelopment: Intellectual Disabilities with Neurodiverse Patients",
@@ -1800,5 +1800,75 @@
     "Places Remaining": 20,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FQ7rTYcSCn38IkpXykxADh-0t-2P7omCPJf8Nn-jWGHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FQ7rTYcSCn38IkpXykxADh-0t-2P7omCPJf8Nn-jWGHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "LHD - Learning 4 Teams (L4T) - Dealing with Difficult People",
+    "Offering Name": "LHD - Learning 4 Teams (L4T) - Dealing with Difficult People",
+    "Delivery Mode": "Online",
+    "Title": "LHD - Learning 4 Teams (L4T) - Dealing with Difficult People 12/11/2026 11:00 - 12:00 Online",
+    "Start Date": 46338,
+    "End Date": 46338,
+    "Start Time": "11:00",
+    "End Time": "12:00",
+    "Category": "Personal Development",
+    "Places Remaining": null,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=aSuc1XvSXBaV8hC-0yQXllCLtvlQh7jBrHj347aqIjXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=aSuc1XvSXBaV8hC-0yQXllCLtvlQh7jBrHj347aqIjXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "LHD - Learning 4 Teams (L4T): Personal Effectiveness & Time Management",
+    "Offering Name": "LHD - Learning 4 Teams (L4T): Personal Effectiveness & Time Management",
+    "Delivery Mode": "Online",
+    "Title": "LHD - Learning 4 Teams (L4T): Personal Effectiveness & Time Management 16/02/2027 11:00 - 12:15 Online",
+    "Start Date": 46434,
+    "End Date": 46434,
+    "Start Time": "11:00",
+    "End Time": "12:15",
+    "Category": "Personal Development",
+    "Places Remaining": null,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=t44JCVP0r1-wWHOAAZgwFLQuwm9G1dlPdPQIECGcyOLjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=t44JCVP0r1-wWHOAAZgwFLQuwm9G1dlPdPQIECGcyOLjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "LHD - Learning 4 Teams (L4T): Managing Conflict",
+    "Offering Name": "LHD - Learning 4 Teams (L4T): Managing Conflict",
+    "Delivery Mode": "Online",
+    "Title": "LHD - Learning 4 Teams (L4T): Managing Conflict",
+    "Start Date": null,
+    "End Date": null,
+    "Start Time": "",
+    "End Time": "",
+    "Category": "Personal Development",
+    "Places Remaining": null,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=iXSWESLS9VOa.y9wOZHG64o4Gg0AkxFHm9SQh5pJMoHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=iXSWESLS9VOa.y9wOZHG64o4Gg0AkxFHm9SQh5pJMoHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "LHD - Learning 4 Teams (L4T): Emotional Intelligence",
+    "Offering Name": "LHD - Learning 4 Teams (L4T): Emotional Intelligence",
+    "Delivery Mode": "Online",
+    "Title": "LHD - Learning 4 Teams (L4T): Emotional Intelligence",
+    "Start Date": null,
+    "End Date": null,
+    "Start Time": "",
+    "End Time": "",
+    "Category": "Personal Development",
+    "Places Remaining": null,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=yKXNUNEaun6UmHHR5OepDBOVlFu9kylntfpLlgkHX.Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=yKXNUNEaun6UmHHR5OepDBOVlFu9kylntfpLlgkHX.Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "LHD - Learning 4 Teams (L4T): Positivity",
+    "Offering Name": "LHD - Learning 4 Teams (L4T): Positivity",
+    "Delivery Mode": "Online",
+    "Title": "LHD - Learning 4 Teams (L4T): Positivity",
+    "Start Date": null,
+    "End Date": null,
+    "Start Time": "",
+    "End Time": "",
+    "Category": "Personal Development",
+    "Places Remaining": null,
+    "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=mjSMvQHcwNB5NwFKqAj0qc7GvS3WLFnWiRUv9MbeD0Xjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
+    "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=mjSMvQHcwNB5NwFKqAj0qc7GvS3WLFnWiRUv9MbeD0Xjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   }
 ]
