@@ -49,6 +49,7 @@
 
     <script>
         function excelDateToJSDate(serial) {
+            if (!serial || isNaN(serial)) return null;
             const excelEpoch = new Date(Date.UTC(1899, 11, 30));
             return new Date(excelEpoch.getTime() + serial * 86400000);
         }
@@ -65,7 +66,7 @@
         fetch("Data/ClassList.json")
             .then(response => response.json())
             .then(classData => {
-                allEvents = classData.map(item => {
+                allEvents = classData.filter(item => item["Start Date"] != null).map(item => {
                     const startDate = excelDateToJSDate(item["Start Date"]);
                     const endDate = excelDateToJSDate(item["End Date"]);
 
@@ -110,7 +111,11 @@
                                 dt.textContent = key;
                                 const dd = document.createElement("dd");
                                 dd.className = "col-sm-8";
-                                dd.textContent = value;
+                                if (String(value).startsWith("http")) {
+                                    dd.innerHTML = `<a href="${value}" target="_blank">${value}</a>`;
+                                } else {
+                                    dd.textContent = value;
+                                }
                                 detailsEl.appendChild(dt);
                                 detailsEl.appendChild(dd);
                             }

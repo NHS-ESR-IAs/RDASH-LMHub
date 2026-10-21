@@ -441,6 +441,7 @@ function renderCatalogue(classList, courseDescs) {
                                     <td>${s["Start Time"] || "TBD"} - ${s["End Time"] || "TBD"}</td>
                                     <td>${utils.getVenue(s)}</td>
                                     <td class="text-end pe-2">
+                                        ${s["Meeting Link"] ? `<a href="${s["Meeting Link"]}" target="_blank" class="btn btn-sm btn-outline-primary py-0 px-2 fw-bold me-1" title="Join Video Call"><i class="bi bi-camera-video me-1"></i>Join</a>` : ""}
                                         <a href="${s["Offering link"] || s["Offering Link"] || group.info.CourseLink || "#"}" target="_blank" class="btn btn-sm btn-info text-white py-0 px-3 fw-bold">Book</a>
                                     </td>
                                 </tr>`,
@@ -750,6 +751,14 @@ function showEventDetailsFromData(idx, directData) {
             <div class="col-6 mb-2">
                 <strong><i class="bi bi-geo-alt me-1"></i> Venue:</strong> ${utils.getVenue(data)}
             </div>
+            ${
+              data["Meeting Link"]
+                ? `<div class="col-12 mb-2">
+                <strong><i class="bi bi-camera-video me-1"></i> Meeting Link:</strong> 
+                <a href="${data["Meeting Link"]}" target="_blank" class="btn btn-sm btn-outline-primary ms-1 py-0 px-2 fw-semibold"><i class="bi bi-box-arrow-up-right me-1"></i>Join Video Call</a>
+            </div>`
+                : ""
+            }
             <div class="col-12">
                 <i class="bi bi-info-circle me-1"></i> 
                 <span class="fst-italic">Please ensure you have manager approval before booking on ESR.</span>
