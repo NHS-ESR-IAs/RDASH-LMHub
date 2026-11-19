@@ -324,11 +324,10 @@
   },
   {
     "Course": "Gypsy Roma and Traveller Education Session",
-    "Description": "Provided by Doncaster Adults care group ",
+    "Description": "This session explores the intersection of health, education, and social inclusion within Gypsy, Roma, and Traveller (GRT) communities. Drawing on both lived experience and professional expertise, our guest speakers will address the systemic and cultural factors influencing GRT health outcomes and educational engagement.",
     "TargetAudience": "All RDaSH Staff",
-    "Trainer": "Doncaster Adults Care Group ",
-    "Venue": "Opal Centre Conference Room",
-    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=QTSLSWKCZ9Q931L.aTxwI4qk0a.a4w9MbmZPcnqgW-rjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+    "Venue": "Conference Room, Upstairs, Opal Centre",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=TREVTSYfEQeLn-h6WfPV0yN74Qtp.xppkJaeozhNeujjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
     "Course": "Neurodevelopment Online Q&A",
@@ -867,5 +866,126 @@
     "Trainer": "Roberta Radcliffe-Birds",
     "Venue": "Honeysuckle Lodge Conference Room",
     "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=tHlIYb8vMr7AmS2KM5DztyKV0.NCSHWVOJ3toK6pEB3jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "British Sign Language (BSL) courses",
+    "Description": "Are you interested in learning British Sign Language (BSL) and enhancing your communication skills?\nThe Carr Fenton Foundation is offering a fantastic opportunity with a free BSL course designed for anyone eager to learn this valuable language. Whether you're looking to support a friend or family member who is deaf or simply want to expand your skillset, this course is perfect for you!\nThe course covers the basics of British Sign Language, including everyday signs, fingerspelling, and conversational skills. It's a great starting point for beginners and a valuable resource for those looking to refresh their existing knowledge. By learning BSL, you'll be able to communicate more effectively with deaf individuals, fostering greater inclusivity and understanding in your community.",
+    "TargetAudience": "LHD offer to all colleagues",
+    "Trainer": "The Carr Fenton Foundation",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=7Qb6q.0iCxDRjrsW1p0Gj9nlf9stvwf3bT4DkAp5SU7jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
+    "ExternalLink": "https://www.doncasterdeafsign.org.uk"
+  },
+  {
+    "Course": "Dysphagia - Swallowing Disorders",
+    "Description": "Ward Staff - to be completed every 3 years.\nAim - To raise awareness of swallowing disorders - Dysphagia.\nLearning Objective - To feel confident in: Identifying Dysphagia, Implementing first line STRATEGIES to reduce associated risk, identifying and implementing IDDSI recommendations. Making a thickened drink, Knowing how to raise concerns and how to refer to Speech and Language Therapy (SALT).",
+    "TargetAudience": "Ward Staff Doncaster only Physical and Mental Health",
+    "Trainer": "Jayne Brocklehurst",
+    "Venue": "Bergamot Centre, TRH",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=Wc80puwuGAb9c5Q5xiYz8RPBD-dNTPbivY0JsPj2Uq3jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "ADOS Inter Reliability",
+    "Description": "A session for Neurodevelopment staff in the Children's Care Group discussing the Inter Reliability of ADOS Assessments",
+    "TargetAudience": "Children's Neurodevelopment Staff",
+    "Trainer": "Alison Howard",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=R0ehXxpP3j8oZSSDhXT90gOGz0GmNIrpuzJeOPLxKU7jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn Pharmacy - Anticoagulation Training",
+    "Description": "Anticoagulation Training, available on Portal",
+    "TargetAudience": "Clinicians",
+    "Trainer": "James Trim",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=paRd4LOflMAJNLL7s0KP1zYUej6N9QohIUJCpxeUtsjjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn Pharmacy - Mental Health Act",
+    "Description": "Mental Health Act training, available on Portal",
+    "TargetAudience": "Clinicians",
+    "Trainer": "Carolina Gonzalez, Adriana Budes",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=UyJeD35Akl-VFIN1S8SSsYG4QAA2WxIPqFo4ZcI4iLnjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn: Omitted Doses/ Critical Medication and Covert Administration of Medication",
+    "Description": "Omitted Doses training, available on Portal",
+    "TargetAudience": "Clinicians",
+    "Trainer": "Adriana Budes, Alica Ortega-Gomez",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=ZzpvCoiUQ1svvGyUVk4prXEc2KJZ2IHLsHXp3OoBUVrjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Pharmacy - Community Electronic Prescribing",
+    "Description": "Showing new prescribers in the community how to do electronic prescribing",
+    "TargetAudience": "New Prescribers",
+    "Trainer": "James Trim",
+    "Venue": "1 Jubilee Close, Meeting Room / Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=U6NaROEefvHgm0Ncpz9ewUU1tA1V0ITHcCiH7UJzhyXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Pharmacy - Inpatients Electronic Prescribing",
+    "Description": "Showing new prescribers on Wards how to do electronic prescribing",
+    "TargetAudience": "New Prescribers",
+    "Trainer": "Daniel Tuxworth",
+    "Venue": "1 Jubilee Close, Meeting Room / Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=H45oHOH2eu.ZOeZGfdZq1vYOmV9VQ6c-yyGQTpfOt0Ljqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn Pharmacy - Electronic Depot Administration and Re-Call Training",
+    "Description": "Teaching how to identify when next dose is due, prevent missing doses and information to processes going forward if anything is missing",
+    "TargetAudience": "Clinicians",
+    "Trainer": "Kat Davies and Deb Knight",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=ob0ZB1rUP1jpXceO4PF1hbSIGUMf32Y4dQKK-w4bLc3jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn : PRN Training",
+    "Description": "Medication When Required training",
+    "TargetAudience": "Clinicians",
+    "Trainer": "Carolina Gonzalez",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=6NRD0ZwCfC2ZDBGVH0wlvPhjDQ5Tnu2cAFQmul2NBkrjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn : Rapid Tranquillisation Training",
+    "Description": "Teaching how to give medication without consent when in a heightened state and won't take medication",
+    "TargetAudience": "Clinicians",
+    "Trainer": "Alica Ortega-Gomez, Anil Rajpal",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=TyusdHQ8P9JrPKAqxvHk5Wn5HVzmuENsx3.8.Xq1ZePjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn: Transcribing and Minor Ailments Training",
+    "Description": "Transcribing and Minor Ailments Training",
+    "TargetAudience": "Clinicians",
+    "Trainer": "James Trim",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=VE7yQKtInXpBj2gB.p1egY42Ofa0jCjmuQTAg7joHYfjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn: Melatonin Training",
+    "Description": "Training on use of Melatonin (insomnia)",
+    "TargetAudience": "Clinicians",
+    "Trainer": "Anil Rajpal, Carolina Gonzalez",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=gJkKiE6o8hl8V0BbYjYYsQyBpcjcvnDIYjQpRk9DLGbjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn: Antipsychotics Training",
+    "Description": "Antipsychotics Training",
+    "TargetAudience": "Clinicians",
+    "Trainer": "Carolina Gonzalez",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=BokTWx6UF5L6OB1pELv05y3on.9xfaPMsZAowG3WoI3jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+  },
+  {
+    "Course": "Learn: Bipolar Training",
+    "Description": "Bipolar Training",
+    "TargetAudience": "Clinicians",
+    "Trainer": "Adriana Budes",
+    "Venue": "Online",
+    "CourseLink": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4XLdqCsEYqfHhiK0MPgTcqkdMQe0Cm0JQciOOJhDInTjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   }
 ]
