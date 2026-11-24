@@ -74,7 +74,7 @@
     "Start Time": "10:30",
     "End Time": "11:00",
     "Category": "Health & Wellbeing",
-    "Places Remaining": 197,
+    "Places Remaining": 196,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=k-fXSCq9j29Hb4q4nA-9wZFhGpKrEPvznOgIzUj6zCLjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
@@ -87,7 +87,7 @@
     "Start Time": "10:30",
     "End Time": "11:00",
     "Category": "Health & Wellbeing",
-    "Places Remaining": 194,
+    "Places Remaining": 190,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=al2nNCgecLO1KiHk4UUAfGTVcq6WhENr4q4n55WPIgDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c "
   },
   {
@@ -529,7 +529,7 @@
     "Start Time": "10:00",
     "End Time": "12:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 20,
+    "Places Remaining": 19,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=4fthidBGQhz.tdR4ahBH1qlvpk.DMzeueUdq6.AxA5ivOD2wyzXT4SBU7EPGgNFhFGT5UuAaa.aGcKrg74urKWauzCR9mV2ZVrjg8q3Jk7Y"
   },
   {
@@ -841,7 +841,7 @@
     "Start Time": "09:30",
     "End Time": "11:00",
     "Category": "Personal Development",
-    "Places Remaining": 10,
+    "Places Remaining": 5,
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=ghHBbycuYhGkSuvmjvrqpIaipSPZVjvMtT61pnmo-53jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
@@ -919,7 +919,7 @@
     "Start Time": "13:00",
     "End Time": "14:00",
     "Category": "Chaplaincy / Pastoral Care",
-    "Places Remaining": 20,
+    "Places Remaining": 16,
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=5JKR3d2SVAYBUqzWlP6m7VUYSlcaMy6TUSJC7jTQgufjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
   {
@@ -1194,7 +1194,7 @@
     "Start Time": "10:00",
     "End Time": "11:30",
     "Category": "Personal Development",
-    "Places Remaining": 9
+    "Places Remaining": 3
   },
   {
     "Course": "LHD - Self Directed Study Declaration",
@@ -1231,7 +1231,7 @@
     "Start Time": "13:00",
     "End Time": "15:00",
     "Category": "Personal Development",
-    "Places Remaining": 10
+    "Places Remaining": 5
   },
   {
     "Course": "LHD - Learning Half Day Active Bystander Training",
@@ -1243,7 +1243,7 @@
     "Start Time": "14:00",
     "End Time": "15:30",
     "Category": "Personal Development",
-    "Places Remaining": 10
+    "Places Remaining": 5
   },
   {
     "Course": "LHD - Learning Half Day Cultural Humility",
@@ -1267,7 +1267,7 @@
     "Start Time": "15:00",
     "End Time": "16:30",
     "Category": "Personal Development",
-    "Places Remaining": 5
+    "Places Remaining": 3
   },
   {
     "Course": "LHD - Self Directed Study Declaration",
@@ -1530,7 +1530,7 @@
     "Start Time": "13:30",
     "End Time": "14:30",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 0,
+    "Places Remaining": 50,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3v0j8sI0GltLJNt7J1qABtxoNORIMdsCT2mtsAsSesXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3v0j8sI0GltLJNt7J1qABtxoNORIMdsCT2mtsAsSesXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Meeting Link": "https://teams.microsoft.com/meet/327703702632357?p=VQJQXMoXuTUrsyxeu4"
@@ -1545,7 +1545,7 @@
     "Start Time": "09:30",
     "End Time": "10:30",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 0,
+    "Places Remaining": 50,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3v0j8sI0GltLJNt7J1qABtxoNORIMdsCT2mtsAsSesXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3v0j8sI0GltLJNt7J1qABtxoNORIMdsCT2mtsAsSesXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Meeting Link": "https://teams.microsoft.com/meet/38801047174938?p=7uUjI9rTTommTpR7Rr"
@@ -1560,7 +1560,7 @@
     "Start Time": "09:30",
     "End Time": "10:30",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 0,
+    "Places Remaining": 50,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3v0j8sI0GltLJNt7J1qABtxoNORIMdsCT2mtsAsSesXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3v0j8sI0GltLJNt7J1qABtxoNORIMdsCT2mtsAsSesXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Meeting Link": "https://teams.microsoft.com/meet/39812402765163?p=5HymffYNwbMRJdZlr6"
@@ -1575,7 +1575,7 @@
     "Start Time": "13:30",
     "End Time": "14:30",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 0,
+    "Places Remaining": 50,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3v0j8sI0GltLJNt7J1qABtxoNORIMdsCT2mtsAsSesXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=3v0j8sI0GltLJNt7J1qABtxoNORIMdsCT2mtsAsSesXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Meeting Link": "https://teams.microsoft.com/meet/351880748111742?p=hbKXdSDxZpBCzWoMBj"
@@ -1669,7 +1669,7 @@
     "Start Time": "13:00",
     "End Time": "15:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 11,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1683,7 +1683,7 @@
     "Start Time": "09:30",
     "End Time": "11:30",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 8,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1697,7 +1697,7 @@
     "Start Time": "09:30",
     "End Time": "11:30",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 14,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1711,7 +1711,7 @@
     "Start Time": "09:30",
     "End Time": "11:30",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 12,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1725,7 +1725,7 @@
     "Start Time": "09:30",
     "End Time": "11:30",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 11,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1739,7 +1739,7 @@
     "Start Time": "13:00",
     "End Time": "15:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 15,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1753,7 +1753,7 @@
     "Start Time": "13:00",
     "End Time": "15:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 14,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1767,7 +1767,7 @@
     "Start Time": "13:00",
     "End Time": "15:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 15,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1781,7 +1781,7 @@
     "Start Time": "09:00",
     "End Time": "11:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": null,
+    "Places Remaining": 15,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=eCJ5AgJnSOUUy-6562XD5-1j98skoPAWv3C9Xa1jv9Hjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1M"
   },
@@ -1795,7 +1795,7 @@
     "Start Time": "13:00",
     "End Time": "15:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 15,
+    "Places Remaining": 12,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FQ7rTYcSCn38IkpXykxADh-0t-2P7omCPJf8Nn-jWGHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FQ7rTYcSCn38IkpXykxADh-0t-2P7omCPJf8Nn-jWGHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
@@ -1809,7 +1809,7 @@
     "Start Time": "13:00",
     "End Time": "15:00",
     "Category": "Occupational Knowledge & Skills",
-    "Places Remaining": 20,
+    "Places Remaining": 19,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FQ7rTYcSCn38IkpXykxADh-0t-2P7omCPJf8Nn-jWGHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=FQ7rTYcSCn38IkpXykxADh-0t-2P7omCPJf8Nn-jWGHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
@@ -1979,7 +1979,7 @@
     "Start Time": "10:00",
     "End Time": "11:30",
     "Category": "Health & Wellbeing",
-    "Places Remaining": null,
+    "Places Remaining": 15,
     "Offering link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=J99WcOzRLuinlqhfpTpKhwAZcbLC0LNLwHuYgMEmedrjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c",
     "Offering Link": "https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&params=J99WcOzRLuinlqhfpTpKhwAZcbLC0LNLwHuYgMEmedrjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
   },
@@ -2074,10 +2074,10 @@
     "Course": "An Introduction to AMBIT",
     "Offering Name": "An Introduction to AMBIT",
     "Delivery Mode": "Honeysuckle Lodge Conference Room",
-    "Title": "An Introduction to AMBIT 01/12/2026 13:30 - 16:00 Honeysuckle Lodge Conference Room",
+    "Title": "An Introduction to AMBIT 01/12/2026 13:00 - 16:00 Honeysuckle Lodge Conference Room",
     "Start Date": 46357,
     "End Date": 46357,
-    "Start Time": "13:30",
+    "Start Time": "13:00",
     "End Time": "16:00",
     "Category": "Occupational Knowledge & Skills",
     "Places Remaining": 18,
